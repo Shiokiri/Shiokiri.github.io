@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            科学上网 | GFW与SSR简介 | 
+        
+        Polestar上的雅音宫羽o(TヘTo))
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/space.jpg">
+    <link rel="icon" href="/img/space.jpg">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="Across the Great Wall we can reach every corner in the world.">
+    <meta name="keywords" content=",GFW,SSR">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?K3W1y5Ar5y7vA78lpPeUkQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(/img/bg.png);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Polestar上的雅音宫羽o(TヘTo))">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/05/31/GFW/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Polestar上的雅音宫羽o(TヘTo))">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/space.jpg">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/05/31/GFW/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="科学上网 | GFW与SSR简介 | Polestar上的雅音宫羽o(TヘTo))">
+    <meta property="og:image" content="/img/space.jpg">
+    <meta property="og:description" content="Across the Great Wall we can reach every corner in the world.">
+    <meta property="og:article:tag" content="GFW"> <meta property="og:article:tag" content="SSR"> 
+
+    
+        <meta property="article:published_time" content="Fri May 31 2019 21:52:50 GMT+0800">
+        <meta property="article:modified_time" content="Sat Aug 17 2019 21:55:18 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/05/31/GFW/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/05/31/GFW/index.html",
+    "headline": "科学上网 | GFW与SSR简介",
+    "datePublished": "Fri May 31 2019 21:52:50 GMT+0800",
+    "dateModified": "Sat Aug 17 2019 21:55:18 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "pXLoTiMistq",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/space.jpg"
+        },
+        "description": "夜雾里去闪烁 光年外去诉说🌟Iridescent Cosmos
+"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Polestar上的雅音宫羽o(TヘTo))",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/space.jpg"
+        }
+    },
+    "keywords": ",GFW,SSR",
+    "description": "Across the Great Wall we can reach every corner in the world.",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- live2d start -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+            <!-- live2d end -->
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是GFW？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是GFW？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出海光缆"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">出海光缆</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GFW"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">GFW</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他名词"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">其他名词</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#如何科学上网"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何科学上网</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VPN"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">VPN</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lantern"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">Lantern</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有关VPN的风险性"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">有关VPN的风险性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SS-SSR"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">SS | SSR</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简介"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SS"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">SS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSR"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">SSR</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#教程"><span class="post-toc-number">2.2.5.</span> <span class="post-toc-text">教程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#优先阅读"><span class="post-toc-number">2.2.5.1.</span> <span class="post-toc-text">优先阅读</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#机场"><span class="post-toc-number">2.2.6.</span> <span class="post-toc-text">机场</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用技巧"><span class="post-toc-number">2.2.7.</span> <span class="post-toc-text">使用技巧</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#小飞机的颜色"><span class="post-toc-number">2.2.7.1.</span> <span class="post-toc-text">小飞机的颜色</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#快捷键"><span class="post-toc-number">2.2.7.2.</span> <span class="post-toc-text">快捷键</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSTap"><span class="post-toc-number">2.2.8.</span> <span class="post-toc-text">SSTap</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#搭建一个ssr服务"><span class="post-toc-number">2.2.9.</span> <span class="post-toc-text">搭建一个ssr服务</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#V2Ray"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">V2Ray</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Brook"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Brook</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Tor"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Tor</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一些工具"><span class="post-toc-number">3.</span> <span class="post-toc-text">一些工具</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#常用服务"><span class="post-toc-number">4.</span> <span class="post-toc-text">常用服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#website"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">website</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#IM"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">IM</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#website-1"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">website</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                科学上网 | GFW与SSR简介
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/space.jpg" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>pXLoTiMistq</strong>
+        <span>5月 31, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/GFW/">GFW</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/SSR/">SSR</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=科学上网 | GFW与SSR简介&url=http://yoursite.com/2019/05/31/GFW/index.html&pic=http://yoursite.com/img/space.jpg&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=科学上网 | GFW与SSR简介&url=http://yoursite.com/2019/05/31/GFW/index.html&via=pXLoTiMistq" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/05/31/GFW/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=http://yoursite.com/2019/05/31/GFW/index.html&text=科学上网 | GFW与SSR简介" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Across the Great Wall we can reach every corner in the world.</p>
+<a id="more"></a>
+
+<p>由于一些政治原因，中国的网络环境非常特殊，不仅自身进行审查，且对外来信息也会进行审查，如果需要访问境外网站，使用一些境外服务及app则需要突破审查，俗称翻墙，科学上外，搭梯子等。在10010大进行了今年来最为严厉的网络审查，在此之后一些免费的fq软件都不甚理想。<br>本文介绍GFW和常用的翻墙技术，以作备忘和对没有接触过fq的人作简单的了解。</p>
+<p>推荐阅读：<br><a href="https://blog.nfz.moe/archives/network-in-china.html" target="_blank" rel="noopener">中国的互联网 _ neoFelhz’s Blog</a></p>
+<p><a href="https://hynking.org/2017/01/02/The_reason/" target="_blank" rel="noopener">墙与纸飞机</a></p>
+<h1 id="什么是GFW？"><a href="#什么是GFW？" class="headerlink" title="什么是GFW？"></a>什么是GFW？</h1><h2 id="出海光缆"><a href="#出海光缆" class="headerlink" title="出海光缆"></a>出海光缆</h2><p>中国接入$Internet$的情况：<br><a href="https://www.ruanyifeng.com/blog/2010/08/cable_world_map.html" target="_blank" rel="noopener">世界海底光缆分布图 - 阮一峰的网络日志</a></p>
+<p>中国出海光缆有$3$条，分别在青岛、汕头、上海，那么对为数不多的出海光缆控制一下、进行一下审查，便可以达到信息封锁的目的，这个技术的缩写叫做$GFW$，经常被称为墙，曾经由某$Hf$亲自主持建设。</p>
+<h2 id="GFW"><a href="#GFW" class="headerlink" title="GFW"></a>GFW</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank" rel="noopener">防火长城 - 维基百科，自由的百科全书</a></p>
+<p>部分内容</p>
+<pre><code>现阶段防火长城已经具备干扰IPv6隧道的能力。
+
+2013年对代码托管网站GitHub的审查和封锁
+2013年1月20日，中国大陆政府的防火长城利用域名污染和关键词过滤等手段屏蔽
+GitHub。但是，由于屏蔽引发了社会的强烈反应，最终解除了对GitHub的屏蔽。
+
+Steam社区网站被屏蔽
+Steam是世界最大的PC数字游戏平台，其社区网站被用于讨论和分享游戏经验。
+Steam在中国也有着庞大的用户群，根据Steam Spy2017年底的报告，
+Steam的中国区玩家已经突破3000万，其不受中国监管的社群被认为带来了监管方面的挑战。
+Steam自2015年开启人民币结算以来，曾多次因部分网民在社区发表违反中国法律的内容而遭到屏蔽，
+在Valve配合删除相关违规言论并封禁违规用户后均解除了屏蔽。
+但自2017年12月16日起，Steam除了商店，其他功能（社区、市场、库存、创意工坊）均被屏蔽，
+方法是DNS污染和SNI RST，该屏蔽至今仍未解除，玩家需要使用加速器或在修改hosts的
+同时使用本地反向代理等工具才能访问，但中国大陆部分地区的用户即使是使用了加速器或
+本地反向代理，在访问社区的时候仍然会提示“您所在的地区不支持”，原因未知。</code></pre><p>技术</p>
+<pre><code>主要技术
+2.1    域名解析服务缓存污染
+2.2    IP地址或传输层端口封锁
+2.2.1    针对TCP和UDP连接的封锁
+2.2.2    针对UDP连接的干扰
+2.3    TCP连接重置
+2.3.1    针对HTTP协议的关键字阻断
+2.3.2    针对TLS的SNI阻断
+2.3.3    针对TLS的证书传输检测
+2.3.4    对eD2k协议的连接干扰
+2.4    其他
+2.4.1    对破网软件的反制
+2.4.1.1    针对Tor的刺探
+2.4.2    间歇性完全封锁
+2.4.2.1    间歇性封锁国际出口
+2.4.2.2    境内骨干路由器间歇性阻断
+2.4.3    深度包检测
+2.4.4    针对IPv6协议的审查
+2.4.5    对电子邮件通讯的拦截
+2.4.6    网络攻击</code></pre><p>硬件</p>
+<pre><code>据2010年的估计，防火长城可能拥有数百台曙光4000L服务器。
+
+防火长城（北京）使用曙光4000L机群，操作系统为Red Hat系列（从7.2到7.3到AS
+4），周边软件见曙光4000L一般配置
+防火长城实验室（哈尔滨工业大学）使用曙光服务器，Red Hat操作系统
+防火长城（上海）使用Beowulf集群。GFW是曙光4000L的主要需求来源、
+研究发起者、客户、股东、共同开发者。2007年防火长城集群规模进一步扩大，
+北京增至360节点，上海增至128节点，哈尔滨增至64节点，共计552节点。
+机群间星型千兆互联。计划节点数上千。
+有多方证据表明防火长城（广州）存在，但其使用的服务器和系统不确定。
+有理由相信防火长城（北京）拥有16套曙光4000L，每套384节点，
+其中24个服务和数据库节点，360个计算节点。每套价格约两千万到三千万，
+占005工程经费的主要部分。有3套（将）用于虚拟计算环境实验床，计千余节点。
+13套用于骨干网络过滤。总计6144节点，12288CPU，12288GB内存，
+峰值计算速度48万亿次。
+2 GHz CPU的主机Linux操作系统下可达到600Kbps以上的捕包率。
+通过骨干网实验，配置16个数据流总线即可以线速处理八路OC48（一路OC48约2.5Gbps）
+接口网络数据。曙光4000L单结点的接入能力为每秒65万数据包，整个系统能够满足
+32Gbps的实时数据流的并发接入要求。有理由相信GFW的总吞吐量为512Gbps甚至更高
+（北京）。</code></pre><p>典型意义下GFW的线路拓扑：</p>
+<p><img src="/images/gfw.png" alt></p>
+<hr>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E8%A2%AB%E5%B0%81%E9%94%81%E7%BD%91%E7%AB%99%E5%88%97%E8%A1%A8" target="_blank" rel="noopener">中华人民共和国被封锁网站列表 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AE%A1%E6%9F%A5" target="_blank" rel="noopener">中华人民共和国网络审查 - 维基百科，自由的百科全书</a></p>
+<p>其他：<br>面对 HTTPS 加密，GFW 的敏感词过滤失效。</p>
+<h2 id="其他名词"><a href="#其他名词" class="headerlink" title="其他名词"></a>其他名词</h2><p>VPS：虚拟专用服务器（英语：Virtual private server，缩写为 VPS）<br><a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">虚拟专用服务器 - 维基百科，自由的百科全书</a></p>
+<p>代理（英语：Proxy）也称网络代理，是一种特殊的网络服务，允许一个网络终端（一般为客户端）通过这个服务与另一个网络终端（一般为服务器）进行非直接的连接。<br>提供代理服务的计算机系统或其它类型的网络终端称为代理服务器（英文：Proxy Server）。<br><a href="https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">代理服务器 - 维基百科，自由的百科全书</a></p>
+<p>SOCKS是一种网络传输协议，主要用于客户端与外网服务器之间通讯的中间传递。SOCKS是”SOCKetS”的缩写。<br><a href="https://zh.wikipedia.org/wiki/SOCKS" target="_blank" rel="noopener">SOCKS - 维基百科，自由的百科全书</a></p>
+<p>网际协议第6版（英语：Internet Protocol version 6，缩写：IPv6）是网际协议的最新版本，用作互联网的网络层协议。用它来取代IPv4主要是为了解决IPv4地址枯竭问题，同时它也在其他方面对于IPv4有许多改进。<br><a href="https://zh.wikipedia.org/wiki/IPv6" target="_blank" rel="noopener">IPv6 - 维基百科，自由的百科全书</a></p>
+<p>Secure Shell（安全外壳协议，简称SSH）是一种加密的网络传输协议，可在不安全的网络中为网络服务提供安全的传输环境。SSH通过在网络中创建安全隧道来实现SSH客户端与服务器之间的连接。<br><a href="https://zh.wikipedia.org/wiki/Secure_Shell" target="_blank" rel="noopener">Secure Shell - 维基百科，自由的百科全书</a></p>
+<p>超文本传输安全协议（英语：HyperText Transfer Protocol Secure，缩写：HTTPS；常称为HTTP over TLS、HTTP over SSL或HTTP Secure）是一种通过计算机网络进行安全通信的传输协议。HTTPS经由HTTP进行通信，但利用SSL/TLS来加密数据包。HTTPS开发的主要目的，是提供对网站服务器的身份认证，保护交换数据的隐私与完整性。<br><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">超文本传输安全协议 - 维基百科，自由的百科全书</a></p>
+<p>对等式网络（peer-to-peer， 简称P2P），又称点对点技术，是无中心服务器、依靠用户群（peers）交换信息的互联网体系，它的作用在于，减低以往网路传输中的节点，以降低资料遗失的风险。与有中心服务器的中央网络系统不同，对等网络的每个用户端既是一个节点，也有服务器的功能，任何一个节点无法直接找到其他节点，必须依靠其户群进行信息交流。<br><a href="https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%AD%89%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">点对点网络 - 维基百科，自由的百科全书</a></p>
+<p>HTTP状态码（英语：HTTP Status Code）是用以表示网页服务器超文本传输协议响应状态的3位数字代码。<br><a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" target="_blank" rel="noopener">HTTP状态码 - 维基百科，自由的百科全书</a></p>
+<p>中间人攻击（英语：Man-in-the-middle attack，缩写：MITM）在密码学和计算机安全领域中是指攻击者与通讯的两端分别创建独立的联系，并交换其所收到的数据，使通讯的两端认为他们正在通过一个私密的连接与对方直接对话，但事实上整个会话都被攻击者完全控制。在中间人攻击中，攻击者可以拦截通讯双方的通话并插入新的内容。<br><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">中间人攻击 - 维基百科，自由的百科全书</a></p>
+<h1 id="如何科学上网"><a href="#如何科学上网" class="headerlink" title="如何科学上网"></a>如何科学上网</h1><p><a href="https://zh.wikipedia.org/wiki/%E7%AA%81%E7%A0%B4%E7%BD%91%E7%BB%9C%E5%AE%A1%E6%9F%A5" target="_blank" rel="noopener">突破网络审查 - 维基百科，自由的百科全书</a><br>作为修改hosts文件这一常用手段，目前基本已经失效：<br><a href="https://zh.wikipedia.org/wiki/Hosts%E6%96%87%E4%BB%B6" target="_blank" rel="noopener">hosts文件 - 维基百科，自由的百科全书</a></p>
+<pre><code>修改本机 hosts文件，不足之处是需要系统管理员权限（如root权限）来修改，
+对基于IP地址封禁的网站无效。自2018年8月份起，GFW开始启用基于SNI检测
+和TCP连接重置的手段进行封锁，所以修改hosts方法不再完全适用。</code></pre><p>一些相关软件的介绍</p>
+<pre><code>相关软件
+蓝灯（Lantern），免费（3.x以后有付费版本，免费版4.x以后版本为每月500M，
+超出限速）、开源，支持多平台（Windows、Linux、Android）。
+蓝灯能够自动检测一个网站是否被封锁。对那些被封锁的网站，Lantern 通过自有的服务
+器或者未封锁地区的用户运行的 Lantern 来提供访问。
+赛风，免费、开源，支持多平台（Windows、Android、iOS），但链接不稳定
+萤火虫（Firefly），用 Go 语言编写，采取 meek 工作原理，支持多平台（Windows、Android、iOS）
+XXNET
+浏览器集成包，为进一步降低破网难度，有志愿者将Chromium、Firefox等浏览器，
+与已经配置好的翻墙软件（如GoAgent和Shadowsocks的客户端软件）一起打包成一键翻
+墙的浏览器集成包。这类浏览器集成包并不能提供高度安全的隐私保护，因为浏览器集成包
+的制作者可能会在制作过程中加入恶意程序。当然，这类浏览器集成包的确易于使用。
+洋葱路由器（Tor），同时提供暗网及代理。
+大蒜路由器（I2P），Tor的演进版本，基于Java技术，使用 ed2k 技术实现分布式网络避免全网封杀。
+
+代理服务器
+此类软件需要自行在服务器和终端上部署，比一般的翻墙方法更繁琐。
+Shadowsocks，简称SS，需要自行购买VPS并搭建代理服务器，用于翻墙，
+在坊间也有可以直接使用的帐号出售，还有合租一台VPS服务器的情况。
+ShadowsocksR，简称SSR，其使用方式同上，增加了混淆的特性，
+可使翻墙流量伪装成正常流量。
+ShadowsocksRR，简称SSRR，使用方法同上，与SSR相比增加了更多的混淆方式。
+Brook，跨平台，基于 GPL v3 协议授权。
+V2Ray， Project V[11]项目创作的内核，使用自实现的 Vmess 协议及 mKCP 协议，基于 MIT 协议授权。</code></pre><h2 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E7%A7%81%E4%BA%BA%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">虚拟专用网 - 维基百科，自由的百科全书</a></p>
+<pre><code>虚拟私人网络（英语：Virtual Private Network，缩写：VPN）是一种常用于连接
+中、大型企业或团体与团体间的私人网络的通讯方法。它利用隧道协议（Tunneling 
+Protocol）来达到保密、发送端认证、消息准确性等私人消息安全效果，这种技术可以用
+不安全的网络（例如：互联网）来发送可靠、安全的消息。</code></pre><p><a href="https://zh.wikipedia.org/wiki/%E9%9A%A7%E9%81%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">隧道协议 - 维基百科，自由的百科全书</a></p>
+<h3 id="Lantern"><a href="#Lantern" class="headerlink" title="Lantern"></a>Lantern</h3><p><a href="https://github.com/getlantern/download" target="_blank" rel="noopener">蓝灯(Lantern)最新版本下载 Latest version of Lantern 5.3.2</a></p>
+<h3 id="有关VPN的风险性"><a href="#有关VPN的风险性" class="headerlink" title="有关VPN的风险性"></a>有关VPN的风险性</h3><p><a href="http://www.miit.gov.cn/n1146290/n4388791/c5471946/content.html" target="_blank" rel="noopener">工业和信息化部关于清理规范互联网网络接入服务市场的通知 - 中华人民共和国工业和信息化部</a></p>
+<pre><code>2017年1月22日，工业和信息化部发布《工业和信息化部关于清理规范互联网网络接入服务
+市场的通知》，规定未经电信主管部门（各一级行政区通信管理局）批准，不得自行创建或
+租用VPN、国际专线等其他信道开展跨境经营活动。而在境内VPN属于《商用密码管理条
+例》须经国家密码管理局批准。这也意味着在中国大陆的ISP、IDC或CDN提供商租用或创
+建VPN或国际专线开展业务，必须获取各一级行政区通信管理局的批准。</code></pre><p>但是VPN本来的作用并不是专门干这种事的，有一定的缺陷，比如流量特征可能被GFW分析。<br>2019年发生了第一例个人使用VPN访问境外网站受到行政处罚的事件，所以使用VPN将导致可能被查水表或请喝茶，而且面对GFW不断地升级及某些因素影响，一些特殊时间段可能会使VPN使用体验不佳。</p>
+<p><a href="http://www.gdgafz.alldayfilm.com/bookDetail.html?type=1&id=1134323" target="_blank" rel="noopener">行政处罚决定书[2019]1号 - 广东公安执法信息公开平台</a></p>
+<pre><code>2018年12月28日，广东公安执法信息公开平台公布，韶关南雄公安局发出《韶雄公(网)行
+罚决字 [2019]1号》文件：朱某某被警方认为“擅自创建、使用非法定信道进行国际联
+网”而被警告并被罚款1000元。这一行政处罚的依据是1996年颁布的《中华人民共和国计
+算机信息网络国际联网管理暂行规定》第六条、第十四条。</code></pre><h2 id="SS-SSR"><a href="#SS-SSR" class="headerlink" title="SS | SSR"></a>SS | SSR</h2><p>推荐阅读：<br><a href="https://www.5xiaobo.com/?id=650" target="_blank" rel="noopener">浅谈VPN和SS/SSR的区别</a></p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>那么先来介绍一下SS与SSR：<br>全称Shadowsocks | ShadowsocksR</p>
+<p>SS的作者Clowwindy因被喝茶而删除其GitHub的源代码，SSR是breakwa11在SS基础上开发的软件，后因某些原因作者在GitHub上将其源代码删除，二软件开发时皆开源并且原作者停止维护后有人开发并维护与更新至今。</p>
+<h3 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h3><p>sock5协议 开源项目 跨平台<br><a href="http://shadowsocks.org/en/index.html" target="_blank" rel="noopener">官网</a></p>
+<p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">Github</a></p>
+<h3 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h3><p>某已经删除的SSR主页（web archive）：<br><a href="https://web.archive.org/web/20170719134138/https://breakwa11.github.io/" target="_blank" rel="noopener">breakwa11.github.io</a></p>
+<p><a href="https://github.com/breakwa11/shadowsocks-csharp/releases" target="_blank" rel="noopener">Github</a></p>
+<p>简单了解一下：<br><a href="https://zh.wikipedia.org/wiki/Shadowsocks" target="_blank" rel="noopener">Shadowsocks - 维基百科，自由的百科全书</a></p>
+<pre><code>Shadowsocks（简称SS）是一种基于Socks5代理方式的加密传输协议，也可以指实现这
+个协议的各种开发包。当前包使用Python、C、C++、C#、Go语言等编程语言开发，大部
+分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可
+协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端
+程序部署到服务器上面，然后通过客户端连接并创建本地代理。</code></pre><p>目前这是比较主流的工具之一，使用人数多，社区比较活跃，但技术上仍并非绝对完美，目前应对GFW足已使用。使用此软件的主要原因是配置方便及社区生态较好。</p>
+<p>在国内社交网站上为避免审查常因其缩写称为酸酸 | 酸酸乳，而因其图标为一个纸飞机，也常称此软件为小飞机、纸飞机等。对提供服务器节点供多人使用的SSR服务提供商称为“机场”。</p>
+<p>SSR分为服务端和客户端，如果你有境外服务器的话，可以直接安装服务端，然后在客户端上使用。当然没有的话你可能需要买个VPS这种东西，当然再然后如果你不需要服务器或没有优质服务器线路及服务器的话，也可以在“机场”获取节点服务器参数来进行使用，一些机场的使用体验比廉价vps更佳。</p>
+<p>界面：<br><img src="/images/ssr1.png" alt></p>
+<p><img src="/images/ssr2.png" alt></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>有Windows、Linux、Android、IOS、Macos等系统及各种在源软件基础上开发的很多版本。</p>
+<p>一个仍在维护的Windows版本：</p>
+<p><a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases" target="_blank" rel="noopener">https://github.com/shadowsocksrr/shadowsocksr-csharp/releases</a></p>
+<p>一些下载地址及版本介绍：</p>
+<p><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">SS/SSR 简介</a></p>
+<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><h4 id="优先阅读"><a href="#优先阅读" class="headerlink" title="优先阅读"></a>优先阅读</h4><p><a href="https://moe.best/tutorial/shadowsocksr.html" target="_blank" rel="noopener">[ShadowsocksR] 大概是萌新也看得懂的SSR功能详细介绍&amp;使用教程</a></p>
+<p><a href="https://crifan.github.io/scientific_network_summary/website/server_client_mode/ss_client/client_windows.html" target="_blank" rel="noopener">Windows的ss客户端 · 珂学上网相关知识总结</a></p>
+<p>一般的机场都提供教程，也可以谷歌，不再写操作流程了。</p>
+<h3 id="机场"><a href="#机场" class="headerlink" title="机场"></a>机场</h3><p><a href="387099.blogspot.com/2018/03/ssssr.html">浅谈部分机场（SS/SSR提供商）的使用感受</a></p>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><p><a href="https://www.i5seo.com/shadowsocksr-clients-various-hidden-use-techniques.html" target="_blank" rel="noopener">ShadowsocksR 客户端 各种隐藏使用技巧说明</a></p>
+<p><a href="https://blog.jimmyho.net/archives/365/" target="_blank" rel="noopener">ShadowsocksR简明使用教程</a></p>
+<h4 id="小飞机的颜色"><a href="#小飞机的颜色" class="headerlink" title="小飞机的颜色"></a>小飞机的颜色</h4><table>
+<thead>
+<tr>
+<th align="center">颜色</th>
+<th align="center">全局</th>
+<th align="center">PAC</th>
+<th align="center">直连</th>
+<th align="center">负载均衡</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">白</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">青</td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">黄</td>
+<td align="center"></td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">绿</td>
+<td align="center"></td>
+<td align="center">√</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">紫</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center">蓝</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">√</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>对小飞机托盘图标操作</p>
+<table>
+<thead>
+<tr>
+<th align="center">操作</th>
+<th align="center">效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">左键单击</td>
+<td align="center">弹出编辑服务器窗口</td>
+</tr>
+<tr>
+<td align="center">中键单击</td>
+<td align="center">弹出服务器连接统计窗</td>
+</tr>
+<tr>
+<td align="center">右键单击</td>
+<td align="center">弹出菜单</td>
+</tr>
+</tbody></table>
+<h3 id="SSTap"><a href="#SSTap" class="headerlink" title="SSTap"></a>SSTap</h3><p>软件介绍：SSTap全称SOCKSTap, 是一款利用虚拟网卡技术在网络层实现的代理工具。SSTap能在网络层拦截所有连接并转发给HTTP，SOCKS4，5，SHADOWSOCKS代理.而无需对被代理的应用程序做任何修改或设置。它能同时转发TCP,UDP数据包，它非常适合于游戏玩家使用。</p>
+<h3 id="搭建一个ssr服务"><a href="#搭建一个ssr服务" class="headerlink" title="搭建一个ssr服务"></a>搭建一个ssr服务</h3><p>可以谷歌解决，如果日后有时间<del>金钱</del>玩vps的话，会补一个详细的教程。</p>
+<h2 id="V2Ray"><a href="#V2Ray" class="headerlink" title="V2Ray"></a>V2Ray</h2><p>推荐阅读：<br><a href="https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b" target="_blank" rel="noopener">浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别</a></p>
+<p>比SS | SSR更先进的工具之一，用了更多的技术手段。</p>
+<p>V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。</p>
+<p>简单来说，它就是一个模块化代理，可以用来科学上网，支持多平台。</p>
+<p><a href="https://www.v2ray.com/" target="_blank" rel="noopener">Project V · Project V 官方网站</a></p>
+<p><a href="https://github.com/v2ray/v2ray-core" target="_blank" rel="noopener">Github</a></p>
+<h2 id="Brook"><a href="#Brook" class="headerlink" title="Brook"></a>Brook</h2><p><a href="https://github.com/txthinking/brook" target="_blank" rel="noopener">Github</a></p>
+<h2 id="Tor"><a href="#Tor" class="headerlink" title="Tor"></a>Tor</h2><p><a href="https://www.torproject.org/index.html.en" target="_blank" rel="noopener">官网</a></p>
+<h1 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h1><p>一个Chrome的插件</p>
+<pre><code>Yet another flags</code></pre><p>可以很方便的显示服务器IP地址和地理位置。<br>效果：<br><img src="/images/chrome1.png" alt></p>
+<hr>
+<p>一个网站，可以测试网站是否被GFW屏蔽以及文本是否存在被审查的关键字</p>
+<p><a href="https://zh.greatfire.org" target="_blank" rel="noopener">greatfire.org</a></p>
+<h1 id="常用服务"><a href="#常用服务" class="headerlink" title="常用服务"></a>常用服务</h1><p>有GFW</p>
+<h2 id="website"><a href="#website" class="headerlink" title="website"></a>website</h2><p><a href="https://www.google.com.hk" target="_blank" rel="noopener">Google</a></p>
+<p><a href="https://www.youtube.com" target="_blank" rel="noopener">Youtube</a></p>
+<p><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+<p><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>
+<p><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">Wikipedia(zh_CN)</a></p>
+<h2 id="IM"><a href="#IM" class="headerlink" title="IM"></a>IM</h2><p><a href="https://telegram.org" target="_blank" rel="noopener">Telegram</a></p>
+<hr>
+<p>无GFW</p>
+<h2 id="website-1"><a href="#website-1" class="headerlink" title="website"></a>website</h2><p><a href="https://www.quora.com" target="_blank" rel="noopener">Quora</a></p>
+<p><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://yoursite.com/2019/05/31/GFW/">http://yoursite.com/2019/05/31/GFW/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            id: md5(window.location.pathname),
+            clientID: '067813356719236499bf',
+            clientSecret: 'a9afeb0c73b7cd743bfe4a778e45fad86e1031ae',
+            repo: 'ColorfulMist.github.io',
+            owner: 'ColorfulMist',
+            admin: ['ColorfulMist'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/06/04/chrome/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/headerbg.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/space.jpg" alt="pXLoTiMistq's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        xluoying2017@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:xluoying@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">style</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
+            </li></ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">flag</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="Links">
+                
+                    <i class="material-icons sidebar-material-icons">apps</i>
+                
+                Links
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="TimeLine">
+                
+                    <i class="material-icons sidebar-material-icons">cloud_queue</i>
+                
+                TimeLine
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">local_offer</i>
+                
+                Tags
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="Gallery">
+                
+                    <i class="material-icons sidebar-material-icons">insert_photo</i>
+                
+                Gallery
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">7</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--right-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/CosMos66CCFF" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/colorfulmist" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/51283000/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/cctcoh" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Steam-->
+    
+        <a href="test" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-segmentfault">
+                <span class="visuallyhidden">Steam</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Polestar上的雅音宫羽o(TヘTo))
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+    
+        <script>lsloader.load("hanabi","/js/hanabi-browser-bundle.js?Pki5+pzkluqu53g+ouMWpA==", true)</script>
+    
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+        
+        
+        HanabiBrowser.start('pre code',true);
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2019;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+            <!-- live2d -->
+            <script src="/live2d-widget/autoload.js"></script>
+            <!-- fireworks -->
+            <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+            <script type="text/javascript" src="/js/src/fireworks.js"></script>
+        </body>
+    
+</html>
