@@ -46,9 +46,9 @@
     
     <title>
         
-            socket套接字学习笔记 | 
+            数论笔记 | 
         
-        Polestar上的雅音宫羽o(TヘTo))
+        Polaris上的雅音宫羽o(TヘTo))
     </title>
 
     <!-- Favicons -->
@@ -56,8 +56,8 @@
     <link rel="icon" href="/img/space.jpg">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content>
-    <meta name="keywords" content=",socket,网络">
+    <meta name="description" itemprop="description" content="只会GCD">
+    <meta name="keywords" content=",数论">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,11 +217,11 @@
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Polestar上的雅音宫羽o(TヘTo))">
-    <meta name="msapplication-starturl" content="https://colorfulmist.github.io/2019/09/09/socket/">
+    <meta name="application-name" content="Polaris上的雅音宫羽o(TヘTo))">
+    <meta name="msapplication-starturl" content="https://66ccff.xyz/2019/number_theory/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Polestar上的雅音宫羽o(TヘTo))">
+    <meta name="apple-mobile-web-app-title" content="Polaris上的雅音宫羽o(TヘTo))">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="/img/space.jpg">
 
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://colorfulmist.github.io/2019/09/09/socket/">
+    <meta property="og:url" content="https://66ccff.xyz/2019/number_theory/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="socket套接字学习笔记 | Polestar上的雅音宫羽o(TヘTo))">
+    <meta property="og:title" content="数论笔记 | Polaris上的雅音宫羽o(TヘTo))">
     <meta property="og:image" content="/img/space.jpg">
-    <meta property="og:description" content>
-    <meta property="og:article:tag" content="socket"> <meta property="og:article:tag" content="网络"> 
+    <meta property="og:description" content="只会GCD">
+    <meta property="og:article:tag" content="数论"> 
 
     
-        <meta property="article:published_time" content="Mon Sep 09 2019 20:01:41 GMT+0800">
-        <meta property="article:modified_time" content="Tue Sep 10 2019 21:02:51 GMT+0800">
+        <meta property="article:published_time" content="Fri Aug 09 2019 14:37:38 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 09 2019 20:09:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://colorfulmist.github.io/2019/09/09/socket/index.html">
+        <link rel="canonical" href="https://66ccff.xyz/2019/number_theory/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://colorfulmist.github.io/2019/09/09/socket/index.html",
-    "headline": "socket套接字学习笔记",
-    "datePublished": "Mon Sep 09 2019 20:01:41 GMT+0800",
-    "dateModified": "Tue Sep 10 2019 21:02:51 GMT+0800",
+    "mainEntityOfPage": "https://66ccff.xyz/2019/number_theory/index.html",
+    "headline": "数论笔记",
+    "datePublished": "Fri Aug 09 2019 14:37:38 GMT+0800",
+    "dateModified": "Mon Sep 09 2019 20:09:07 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -277,14 +277,14 @@
     },
     "publisher": {
         "@type": "Organization",
-        "name": "Polestar上的雅音宫羽o(TヘTo))",
+        "name": "Polaris上的雅音宫羽o(TヘTo))",
         "logo": {
             "@type":"ImageObject",
             "url": "/img/space.jpg"
         }
     },
-    "keywords": ",socket,网络",
-    "description": "",
+    "keywords": ",数论",
+    "description": "只会GCD",
 }
 </script>
 
@@ -347,6 +347,14 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#取模"><span class="post-toc-number">1.</span> <span class="post-toc-text">取模</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#费马小定理"><span class="post-toc-number">2.</span> <span class="post-toc-text">费马小定理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#欧拉定理"><span class="post-toc-number">3.</span> <span class="post-toc-text">欧拉定理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GCD-EXGCD"><span class="post-toc-number">4.</span> <span class="post-toc-text">GCD EXGCD</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CRT-exCRT"><span class="post-toc-number">5.</span> <span class="post-toc-text">CRT exCRT</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#筛法"><span class="post-toc-number">6.</span> <span class="post-toc-text">筛法</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -376,7 +384,7 @@
         
     
             <p class="article-headline-p">
-                socket套接字学习笔记
+                数论笔记
             </p>
         </div>
 
@@ -395,7 +403,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>pXLoTiMistq</strong>
-        <span>9月 09, 2019</span>
+        <span>8月 09, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -419,7 +427,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/socket/">socket</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/网络/">网络</a>
+        <a class="post_tag-link" href="/tags/数论/">数论</a>
     </li></ul>
     
 
@@ -436,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=socket套接字学习笔记&url=https://colorfulmist.github.io/2019/09/09/socket/index.html&pic=https://colorfulmist.github.io/img/space.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数论笔记&url=https://66ccff.xyz/2019/number_theory/index.html&pic=https://66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -445,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=socket套接字学习笔记&url=https://colorfulmist.github.io/2019/09/09/socket/index.html&via=pXLoTiMistq" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=数论笔记&url=https://66ccff.xyz/2019/number_theory/index.html&via=pXLoTiMistq" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -454,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://colorfulmist.github.io/2019/09/09/socket/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://66ccff.xyz/2019/number_theory/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -463,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://colorfulmist.github.io/2019/09/09/socket/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://66ccff.xyz/2019/number_theory/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -478,7 +486,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://colorfulmist.github.io/2019/09/09/socket/index.html&text=socket套接字学习笔记" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://66ccff.xyz/2019/number_theory/index.html&text=数论笔记" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -494,12 +502,57 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>相信每一个从小对计算机感兴趣的你一定看过网络相关的内容，比如ISO模型的网络协议的七层分层，<code>TCP/IP协议</code>之类的东西.</p>
-<p><img src="/images/socket1.jpg" alt></p>
-<p>那么五层分层模型中<code>TCP/IP</code>属于传输层，而<code>socket</code>就是连接应用层和传输层的作用，可以理解为对<code>TCP/IP</code>进行了一定封装并提供<code>API</code>给应用程序使用.</p>
-<p>那这篇文章作为学习笔记，记载一些函数功能和学习过程，也希望能让看到的人更容易的入门<code>socket</code>.</p>
-<hr>
-<p>可能得咕几天……</p>
+        <p>只会<code>GCD</code></p>
+<a id="more"></a>
+<h1 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h1><script type="math/tex; mode=display">(a+b) \bmod p=(a\bmod p+b\bmod p)\bmod p​</script><script type="math/tex; mode=display">(a-b) \bmod p=(a\bmod p-b\bmod p+p)\bmod p​</script><script type="math/tex; mode=display">(a\times b) \bmod p=(a\bmod p\times b\bmod p)\bmod p​</script><p>求$\dfrac{a}{b}\bmod p​$时,求$b^{-1}​$使$b*b^{-1}\equiv1\pmod p​$即$b​$的逆元</p>
+<p>有<script type="math/tex">\dfrac{a}{b}\bmod p=a\times b^{-1}\bmod p</script></p>
+<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><p>定理：当$p​$是质数时$a^{p-1}\equiv 1\pmod p​$</p>
+<p>逆元：由$a^{p-1}\equiv 1\pmod p​$得$a\times a^{p-2}\equiv 1\pmod p​$</p>
+<p>即$a^{p-1}$是$a$在模$p$意义下的逆元</p>
+<h1 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h1><p>若$gcd(a,p)=1$则$a^{\varphi(p)}\equiv1\pmod n$</p>
+<p>当$p$是质数时$\varphi(p)=p-1$</p>
+<p>即$a^{p-1}\equiv1\pmod n$即费马小定理</p>
+<h1 id="GCD-EXGCD"><a href="#GCD-EXGCD" class="headerlink" title="GCD EXGCD"></a>GCD EXGCD</h1><pre><code class="lang-c++">#define ll long long
+ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
+void exgcd(ll a, ll b, ll &amp;x, ll &amp;y) {
+    if(!b) x = 1, y = 0;
+    else exgcd(b, a % b, y, x), y -= a / b * x;
+}
+</code></pre>
+<p>$gcd$用来求解$a，b$的最大公约数</p>
+<p>$lcm(a,b)=\dfrac{a\times b}{gcd(a,b)}​$，lcm是最大公约数</p>
+<p>$exgcd$用来求解$ax+by=gcd(a,b)$，证明大概是化式子构造递归的解法，反正看了也早晚会忘就是了<del>逃</del></p>
+<p>$exgcd$还可以求解$ax\equiv b\pmod p​$形式的同余方程</p>
+<p>$exgcd(a,p,x,y)$求出来的$x$就是$a$关于$p$的逆元</p>
+<h1 id="CRT-exCRT"><a href="#CRT-exCRT" class="headerlink" title="CRT exCRT"></a>CRT exCRT</h1><p>求解一个同余方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x \equiv a_1 \pmod {m_1} \\
+x \equiv a_2 \pmod {m_2} \\
+x \equiv a_n \pmod {m_n}
+\end{cases}</script><p>两种东西都可以通过exgcd两两合并同余方程求解，不过CRT可以直接构造出答案。</p>
+<p>CRT求解的$p​$是质数，exCRT的不是，都可以用exgcd合并做。</p>
+<p>推导参考这个blog：<a href="http://blog.miskcoo.com/2014/09/chinese-remainder-theorem" target="_blank" rel="noopener">扩展欧几里得算法与中国剩余定理</a></p>
+<p>CRT直接构造的解：</p>
+<p>令$M=\prod m_i, M_i=\frac M{m_i}​$，$t_i​$为$M_i​$在模$m_i​$意义下的逆元</p>
+<p>方程组的解为<script type="math/tex">x \equiv \sum_{i=1}^na_it_iM_i \pmod M​</script></p>
+<h1 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h1><p>求$n$是不是素数直接枚举$1$到$\sqrt{n}$试除</p>
+<p>埃筛</p>
+<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) if(!vis[i]) {
+    prime[++cnt] = i;
+    for(int j = 1; i * j &lt;= N; j++)
+           vis[i * j] = 1;
+}
+</code></pre>
+<p>线筛</p>
+<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) {
+    if(!vis[i]) prime[++cnt] = i;
+    for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
+        vis[i * prime[j]] = 1;
+        if(i % prime[j] == 0) break;
+    }
+}
+</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -508,7 +561,7 @@
                             本文由 pXLoTiMistq 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://colorfulmist.github.io/2019/09/09/socket/">https://colorfulmist.github.io/2019/09/09/socket/</a>
+                        <strong>本文链接：</strong><a href="https://66ccff.xyz/2019/number_theory/">https://66ccff.xyz/2019/number_theory/</a>
                     </p>
                 </blockquote>
         
@@ -561,13 +614,21 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
+        <a href="/2019/C++/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/08/16/blog/" id="post_nav-older" class="next-content">
+        <a href="/2019/chrome/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -659,7 +720,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -677,7 +738,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/CS/">CS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/CS/">CS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -755,7 +816,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">8</span>
+                <span class="sidebar-badge">9</span>
             </a>
         </li>
         
@@ -884,7 +945,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Bilibili -->
     
-        <a href="https://space.bilibili.com/51283000/" target="_blank">
+        <a href="https://space.bilibili.com/51283000" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
                 <span class="visuallyhidden">Bilibili</span>
             </button><!--
@@ -909,7 +970,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Polestar上的雅音宫羽o(TヘTo))
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Polaris上的雅音宫羽o(TヘTo))
             
         </div>
 

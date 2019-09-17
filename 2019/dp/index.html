@@ -46,9 +46,9 @@
     
     <title>
         
-            数论笔记 | 
+            动态规划笔记 | 
         
-        Polestar上的雅音宫羽o(TヘTo))
+        Polaris上的雅音宫羽o(TヘTo))
     </title>
 
     <!-- Favicons -->
@@ -56,8 +56,8 @@
     <link rel="icon" href="/img/space.jpg">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="只会GCD">
-    <meta name="keywords" content=",数论">
+    <meta name="description" itemprop="description" content="推不出的DP方程">
+    <meta name="keywords" content=",动态规划">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -217,11 +217,11 @@
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Polestar上的雅音宫羽o(TヘTo))">
-    <meta name="msapplication-starturl" content="https://colorfulmist.github.io/2019/08/09/number_theory/">
+    <meta name="application-name" content="Polaris上的雅音宫羽o(TヘTo))">
+    <meta name="msapplication-starturl" content="https://66ccff.xyz/2019/dp/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Polestar上的雅音宫羽o(TヘTo))">
+    <meta name="apple-mobile-web-app-title" content="Polaris上的雅音宫羽o(TヘTo))">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="/img/space.jpg">
 
@@ -233,16 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://colorfulmist.github.io/2019/08/09/number_theory/">
+    <meta property="og:url" content="https://66ccff.xyz/2019/dp/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="数论笔记 | Polestar上的雅音宫羽o(TヘTo))">
+    <meta property="og:title" content="动态规划笔记 | Polaris上的雅音宫羽o(TヘTo))">
     <meta property="og:image" content="/img/space.jpg">
-    <meta property="og:description" content="只会GCD">
-    <meta property="og:article:tag" content="数论"> 
+    <meta property="og:description" content="推不出的DP方程">
+    <meta property="og:article:tag" content="动态规划"> 
 
     
-        <meta property="article:published_time" content="Fri Aug 09 2019 14:37:38 GMT+0800">
-        <meta property="article:modified_time" content="Mon Sep 09 2019 20:09:07 GMT+0800">
+        <meta property="article:published_time" content="Wed Aug 14 2019 15:04:06 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 09 2019 20:09:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -250,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://colorfulmist.github.io/2019/08/09/number_theory/index.html">
+        <link rel="canonical" href="https://66ccff.xyz/2019/dp/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -262,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://colorfulmist.github.io/2019/08/09/number_theory/index.html",
-    "headline": "数论笔记",
-    "datePublished": "Fri Aug 09 2019 14:37:38 GMT+0800",
-    "dateModified": "Mon Sep 09 2019 20:09:07 GMT+0800",
+    "mainEntityOfPage": "https://66ccff.xyz/2019/dp/index.html",
+    "headline": "动态规划笔记",
+    "datePublished": "Wed Aug 14 2019 15:04:06 GMT+0800",
+    "dateModified": "Mon Sep 09 2019 20:09:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -277,14 +277,14 @@
     },
     "publisher": {
         "@type": "Organization",
-        "name": "Polestar上的雅音宫羽o(TヘTo))",
+        "name": "Polaris上的雅音宫羽o(TヘTo))",
         "logo": {
             "@type":"ImageObject",
             "url": "/img/space.jpg"
         }
     },
-    "keywords": ",数论",
-    "description": "只会GCD",
+    "keywords": ",动态规划",
+    "description": "推不出的DP方程",
 }
 </script>
 
@@ -352,7 +352,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#取模"><span class="post-toc-number">1.</span> <span class="post-toc-text">取模</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#费马小定理"><span class="post-toc-number">2.</span> <span class="post-toc-text">费马小定理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#欧拉定理"><span class="post-toc-number">3.</span> <span class="post-toc-text">欧拉定理</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#GCD-EXGCD"><span class="post-toc-number">4.</span> <span class="post-toc-text">GCD EXGCD</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#CRT-exCRT"><span class="post-toc-number">5.</span> <span class="post-toc-text">CRT exCRT</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#筛法"><span class="post-toc-number">6.</span> <span class="post-toc-text">筛法</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">1.</span> <span class="post-toc-text">Problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#水题"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">水题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Luogu-P1472-奶牛家谱-Cow-Pedigrees"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Luogu P1472 奶牛家谱 Cow Pedigrees</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#正常题"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">正常题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Luogu-P2495-SDOI2011-消耗战"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Luogu P2495 [SDOI2011]消耗战</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Luogu-P2606-ZJOI2010-排列计数"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">Luogu P2606 [ZJOI2010]排列计数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Luogu-P2473-SCOI2008-奖励关"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">Luogu P2473 [SCOI2008]奖励关</span></a></li></ol></li></ol></li></ol>
     </ul>
     
 
@@ -384,7 +384,7 @@
         
     
             <p class="article-headline-p">
-                数论笔记
+                动态规划笔记
             </p>
         </div>
 
@@ -403,7 +403,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>pXLoTiMistq</strong>
-        <span>8月 09, 2019</span>
+        <span>8月 14, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +427,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/数论/">数论</a>
+        <a class="post_tag-link" href="/tags/动态规划/">动态规划</a>
     </li></ul>
     
 
@@ -444,7 +444,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数论笔记&url=https://colorfulmist.github.io/2019/08/09/number_theory/index.html&pic=https://colorfulmist.github.io/img/space.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=动态规划笔记&url=https://66ccff.xyz/2019/dp/index.html&pic=https://66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +453,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=数论笔记&url=https://colorfulmist.github.io/2019/08/09/number_theory/index.html&via=pXLoTiMistq" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=动态规划笔记&url=https://66ccff.xyz/2019/dp/index.html&via=pXLoTiMistq" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -462,7 +462,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://colorfulmist.github.io/2019/08/09/number_theory/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://66ccff.xyz/2019/dp/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -471,7 +471,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://colorfulmist.github.io/2019/08/09/number_theory/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://66ccff.xyz/2019/dp/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -486,7 +486,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://colorfulmist.github.io/2019/08/09/number_theory/index.html&text=数论笔记" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://66ccff.xyz/2019/dp/index.html&text=动态规划笔记" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -502,57 +502,33 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>只会<code>GCD</code></p>
+        <p>推不出的<code>DP</code>方程</p>
 <a id="more"></a>
-<h1 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h1><script type="math/tex; mode=display">(a+b) \bmod p=(a\bmod p+b\bmod p)\bmod p​</script><script type="math/tex; mode=display">(a-b) \bmod p=(a\bmod p-b\bmod p+p)\bmod p​</script><script type="math/tex; mode=display">(a\times b) \bmod p=(a\bmod p\times b\bmod p)\bmod p​</script><p>求$\dfrac{a}{b}\bmod p​$时,求$b^{-1}​$使$b*b^{-1}\equiv1\pmod p​$即$b​$的逆元</p>
-<p>有<script type="math/tex">\dfrac{a}{b}\bmod p=a\times b^{-1}\bmod p</script></p>
-<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><p>定理：当$p​$是质数时$a^{p-1}\equiv 1\pmod p​$</p>
-<p>逆元：由$a^{p-1}\equiv 1\pmod p​$得$a\times a^{p-2}\equiv 1\pmod p​$</p>
-<p>即$a^{p-1}$是$a$在模$p$意义下的逆元</p>
-<h1 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h1><p>若$gcd(a,p)=1$则$a^{\varphi(p)}\equiv1\pmod n$</p>
-<p>当$p$是质数时$\varphi(p)=p-1$</p>
-<p>即$a^{p-1}\equiv1\pmod n$即费马小定理</p>
-<h1 id="GCD-EXGCD"><a href="#GCD-EXGCD" class="headerlink" title="GCD EXGCD"></a>GCD EXGCD</h1><pre><code class="lang-c++">#define ll long long
-ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
-void exgcd(ll a, ll b, ll &amp;x, ll &amp;y) {
-    if(!b) x = 1, y = 0;
-    else exgcd(b, a % b, y, x), y -= a / b * x;
-}
-</code></pre>
-<p>$gcd$用来求解$a，b$的最大公约数</p>
-<p>$lcm(a,b)=\dfrac{a\times b}{gcd(a,b)}​$，lcm是最大公约数</p>
-<p>$exgcd$用来求解$ax+by=gcd(a,b)$，证明大概是化式子构造递归的解法，反正看了也早晚会忘就是了<del>逃</del></p>
-<p>$exgcd$还可以求解$ax\equiv b\pmod p​$形式的同余方程</p>
-<p>$exgcd(a,p,x,y)$求出来的$x$就是$a$关于$p$的逆元</p>
-<h1 id="CRT-exCRT"><a href="#CRT-exCRT" class="headerlink" title="CRT exCRT"></a>CRT exCRT</h1><p>求解一个同余方程组</p>
+<p>随意记点动态规划的方程，大概是NOIP难度的。</p>
+<hr>
+<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><h2 id="水题"><a href="#水题" class="headerlink" title="水题"></a>水题</h2><h3 id="Luogu-P1472-奶牛家谱-Cow-Pedigrees"><a href="#Luogu-P1472-奶牛家谱-Cow-Pedigrees" class="headerlink" title="Luogu P1472 奶牛家谱 Cow Pedigrees"></a>Luogu P1472 奶牛家谱 Cow Pedigrees</h3><p>题意：有$n$个结点$k$层的二叉树结构个数，树只能有$2$个儿子或$0$个儿子。</p>
+<p>设$dp[n][k]$为有$n$个结点不到$k$层的答案，则答案容斥一下为$dp[n][k]-dp[n][k-1]$，转移从下把两棵树连接到上一层结点，枚举$t$为左子树节点个数，则右子树为$总结点个数-t-1$(1是减掉根)，乘法原理把两个乘起来，方程为</p>
 <script type="math/tex; mode=display">
+dp[i][j]=\sum dp[t][j-1]\times dp[i-t-1][j-1]</script><h2 id="正常题"><a href="#正常题" class="headerlink" title="正常题"></a>正常题</h2><h3 id="Luogu-P2495-SDOI2011-消耗战"><a href="#Luogu-P2495-SDOI2011-消耗战" class="headerlink" title="Luogu P2495 [SDOI2011]消耗战"></a>Luogu P2495 [SDOI2011]消耗战</h3><p>题意：给定$n$个点有边权的树，割断边花费边权，求使$k$个点与$1$点不连通的最小花费。</p>
+<p>要用虚树做，写一下方程。</p>
+<p>设$dp[n]$为使以$n$为结点的子树内关键点都不与$n$联通的最小花费，方程为</p>
+<script type="math/tex; mode=display">
+dp[u]=dp[u]+
 \begin{cases}
-x \equiv a_1 \pmod {m_1} \\
-x \equiv a_2 \pmod {m_2} \\
-x \equiv a_n \pmod {m_n}
-\end{cases}</script><p>两种东西都可以通过exgcd两两合并同余方程求解，不过CRT可以直接构造出答案。</p>
-<p>CRT求解的$p​$是质数，exCRT的不是，都可以用exgcd合并做。</p>
-<p>推导参考这个blog：<a href="http://blog.miskcoo.com/2014/09/chinese-remainder-theorem" target="_blank" rel="noopener">扩展欧几里得算法与中国剩余定理</a></p>
-<p>CRT直接构造的解：</p>
-<p>令$M=\prod m_i, M_i=\frac M{m_i}​$，$t_i​$为$M_i​$在模$m_i​$意义下的逆元</p>
-<p>方程组的解为<script type="math/tex">x \equiv \sum_{i=1}^na_it_iM_i \pmod M​</script></p>
-<h1 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h1><p>求$n$是不是素数直接枚举$1$到$\sqrt{n}$试除</p>
-<p>埃筛</p>
-<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) if(!vis[i]) {
-    prime[++cnt] = i;
-    for(int j = 1; i * j &lt;= N; j++)
-           vis[i * j] = 1;
-}
-</code></pre>
-<p>线筛</p>
-<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) {
-    if(!vis[i]) prime[++cnt] = i;
-    for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-        vis[i * prime[j]] = 1;
-        if(i % prime[j] == 0) break;
-    }
-}
-</code></pre>
+\min(dp[v],dist_{u,v})& \text{v不是关键点}\\
+dist_{u,v}& \text{v是关键点}
+\end{cases}</script><h3 id="Luogu-P2606-ZJOI2010-排列计数"><a href="#Luogu-P2606-ZJOI2010-排列计数" class="headerlink" title="Luogu P2606 [ZJOI2010]排列计数"></a>Luogu P2606 [ZJOI2010]排列计数</h3><p>题意：求一个$1\sim n$的排列$P_i$使$ 1\leq  i \leq n$时$P_i&gt;P_{i/2}$的方案数。</p>
+<p>直接做没什么思路，可以想一下除二的关系可以是二叉树，于是换到树上来做，求$n$个节点的二叉树满足小根堆性质树的个数。</p>
+<p>设$dp[i]$表示以$i$为根的子树内满足小根堆性质的方案数，$s[i]$为树结点数，提前把一些越界的初值设为$1$以免判断，转移时组合数算一下选给左子树的点，记得减去根节点，乘一下两颗子树的方案数就ok了，组合数要用lucas，方程</p>
+<script type="math/tex; mode=display">
+dp[i]=C_{s[i]-1}^{s[i\times 2]}dp[i\times 2]dp[i\times 2+1]</script><h3 id="Luogu-P2473-SCOI2008-奖励关"><a href="#Luogu-P2473-SCOI2008-奖励关" class="headerlink" title="Luogu P2473 [SCOI2008]奖励关"></a>Luogu P2473 [SCOI2008]奖励关</h3><p>题意：$m$种物品，给你n次随机在$1\sim m$间的物品，每种物品有价值并且选这种物品需要你在前$n-1$次把集合$S$内的物品种类都选过一次才可以选。</p>
+<p>显然$m$非常小，那么求期望直接枚举就可以了，这样就好做了，然后在考虑一下如果顺推的话需要保证$S$的合法性，这个比较难处理，那么逆推显然更好写。设$dp[i][S]$表示取前$i-1$次的状态为$S$是期望的最大值，$pre[i]$为第$i$种物品的前提集合，方程枚举第i个选第k种</p>
+<script type="math/tex; mode=display">
+dp[i][S]=dp[i][S]+
+\begin{cases}
+\max(dp[i+1][S],dp[i+1][S|(1<<(k-1))]+val[k])& pre[i]\subseteq S \\
+dp[i+1][S]& pre[i]\nsubseteq  S
+\end{cases}</script><p>每次$dp[i][S]$转移完之后变成$\dfrac{dp[i][S]}{n}$来求期望，答案是$dp[1][0]$.</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -561,7 +537,7 @@ x \equiv a_n \pmod {m_n}
                             本文由 pXLoTiMistq 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://colorfulmist.github.io/2019/08/09/number_theory/">https://colorfulmist.github.io/2019/08/09/number_theory/</a>
+                        <strong>本文链接：</strong><a href="https://66ccff.xyz/2019/dp/">https://66ccff.xyz/2019/dp/</a>
                     </p>
                 </blockquote>
         
@@ -614,7 +590,7 @@ x \equiv a_n \pmod {m_n}
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/08/09/C++/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/FFT/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -628,7 +604,7 @@ x \equiv a_n \pmod {m_n}
 
     <!-- Next Nav -->
     
-        <a href="/2019/06/04/chrome/" id="post_nav-older" class="next-content">
+        <a href="/2019/C++/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -720,7 +696,7 @@ x \equiv a_n \pmod {m_n}
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -738,7 +714,7 @@ x \equiv a_n \pmod {m_n}
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/CS/">CS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/CS/">CS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -816,7 +792,7 @@ x \equiv a_n \pmod {m_n}
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">8</span>
+                <span class="sidebar-badge">9</span>
             </a>
         </li>
         
@@ -945,7 +921,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Bilibili -->
     
-        <a href="https://space.bilibili.com/51283000/" target="_blank">
+        <a href="https://space.bilibili.com/51283000" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
                 <span class="visuallyhidden">Bilibili</span>
             </button><!--
@@ -970,7 +946,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Polestar上的雅音宫羽o(TヘTo))
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Polaris上的雅音宫羽o(TヘTo))
             
         </div>
 
