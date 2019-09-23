@@ -46,7 +46,7 @@
     
     <title>
         
-            动态规划笔记 | 
+            「动态规划」 | 
         
         Polaris上的雅音宫羽o(TヘTo))
     </title>
@@ -56,7 +56,8 @@
     <link rel="icon" href="/img/space.jpg">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="推不出的DP方程">
+    <meta name="description" itemprop="description" content="Update on A.D.2019-08-2x
+推不出的DP方程">
     <meta name="keywords" content=",动态规划">
     <meta name="theme-color" content="#66CCFF">
 
@@ -235,14 +236,15 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://blog.66ccff.xyz/2019/dp/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="动态规划笔记 | Polaris上的雅音宫羽o(TヘTo))">
+    <meta property="og:title" content="「动态规划」 | Polaris上的雅音宫羽o(TヘTo))">
     <meta property="og:image" content="/img/space.jpg">
-    <meta property="og:description" content="推不出的DP方程">
+    <meta property="og:description" content="Update on A.D.2019-08-2x
+推不出的DP方程">
     <meta property="og:article:tag" content="动态规划"> 
 
     
         <meta property="article:published_time" content="Wed Aug 14 2019 15:04:06 GMT+0800">
-        <meta property="article:modified_time" content="Thu Sep 19 2019 19:14:11 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 23 2019 16:45:29 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -263,9 +265,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://blog.66ccff.xyz/2019/dp/index.html",
-    "headline": "动态规划笔记",
+    "headline": "「动态规划」",
     "datePublished": "Wed Aug 14 2019 15:04:06 GMT+0800",
-    "dateModified": "Thu Sep 19 2019 19:14:11 GMT+0800",
+    "dateModified": "Mon Sep 23 2019 16:45:29 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -284,7 +286,8 @@
         }
     },
     "keywords": ",动态规划",
-    "description": "推不出的DP方程",
+    "description": "Update on A.D.2019-08-2x
+推不出的DP方程",
 }
 </script>
 
@@ -384,7 +387,7 @@
         
     
             <p class="article-headline-p">
-                动态规划笔记
+                「动态规划」
             </p>
         </div>
 
@@ -444,7 +447,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=动态规划笔记&url=https://blog.66ccff.xyz/2019/dp/index.html&pic=https://blog.66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=「动态规划」&url=https://blog.66ccff.xyz/2019/dp/index.html&pic=https://blog.66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -453,7 +456,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=动态规划笔记&url=https://blog.66ccff.xyz/2019/dp/index.html&via=pXLoTiMistq" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=「动态规划」&url=https://blog.66ccff.xyz/2019/dp/index.html&via=pXLoTiMistq" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -486,7 +489,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.66ccff.xyz/2019/dp/index.html&text=动态规划笔记" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.66ccff.xyz/2019/dp/index.html&text=「动态规划」" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -502,10 +505,10 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>推不出的<code>DP</code>方程</p>
+        <p>Update on A.D.2019-08-2x</p>
+<p>推不出的<code>DP</code>方程</p>
 <a id="more"></a>
 <p>随意记点动态规划的方程，大概是NOIP难度的。</p>
-<hr>
 <h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><h2 id="水题"><a href="#水题" class="headerlink" title="水题"></a>水题</h2><h3 id="Luogu-P1472-奶牛家谱-Cow-Pedigrees"><a href="#Luogu-P1472-奶牛家谱-Cow-Pedigrees" class="headerlink" title="Luogu P1472 奶牛家谱 Cow Pedigrees"></a>Luogu P1472 奶牛家谱 Cow Pedigrees</h3><p>题意：有$n$个结点$k$层的二叉树结构个数，树只能有$2$个儿子或$0$个儿子。</p>
 <p>设$dp[n][k]$为有$n$个结点不到$k$层的答案，则答案容斥一下为$dp[n][k]-dp[n][k-1]$，转移从下把两棵树连接到上一层结点，枚举$t$为左子树节点个数，则右子树为$总结点个数-t-1$(1是减掉根)，乘法原理把两个乘起来，方程为</p>
 <script type="math/tex; mode=display">
@@ -696,7 +699,7 @@ dp[i+1][S]& pre[i]\nsubseteq  S
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -714,7 +717,7 @@ dp[i+1][S]& pre[i]\nsubseteq  S
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文社科/">人文社科<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/语言/">语言<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文社科/">人文社科<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程语言/">编程语言<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -792,7 +795,7 @@ dp[i+1][S]& pre[i]\nsubseteq  S
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">9</span>
+                <span class="sidebar-badge">16</span>
             </a>
         </li>
         
