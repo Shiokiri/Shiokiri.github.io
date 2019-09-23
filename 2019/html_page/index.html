@@ -247,8 +247,8 @@ Update on A.D.2019-09-23
     <meta property="og:article:tag" content="HTML"> <meta property="og:article:tag" content="CSS"> 
 
     
-        <meta property="article:published_time" content="Sun Sep 22 2019 11:01:38 GMT+0800">
-        <meta property="article:modified_time" content="Mon Sep 23 2019 18:27:47 GMT+0800">
+        <meta property="article:published_time" content="Mon Sep 23 2019 18:31:38 GMT+0800">
+        <meta property="article:modified_time" content="Mon Sep 23 2019 18:38:45 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -270,8 +270,8 @@ Update on A.D.2019-09-23
     "@type": "BlogPosting",
     "mainEntityOfPage": "https://blog.66ccff.xyz/2019/html_page/index.html",
     "headline": "Github Pages+HTML5 up制作个人主页及绑定二级域名",
-    "datePublished": "Sun Sep 22 2019 11:01:38 GMT+0800",
-    "dateModified": "Mon Sep 23 2019 18:27:47 GMT+0800",
+    "datePublished": "Mon Sep 23 2019 18:31:38 GMT+0800",
+    "dateModified": "Mon Sep 23 2019 18:38:45 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -404,7 +404,7 @@ Update on A.D.2019-09-23
     <!-- Author Name & Date -->
     <div>
         <strong>pXLoTiMistq</strong>
-        <span>9月 22, 2019</span>
+        <span>9月 23, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -515,7 +515,7 @@ Update on A.D.2019-09-23
 <p>这里介绍一个网站提供了很多个人主页的模板<br><a href="https://html5up.net" target="_blank" rel="noopener">https://html5up.net</a><br>我们选择并下载其中一个，直接修改即可，有一定HTML和CSS基础都可以很轻松的修改，你需要一个浏览器并会使用控制台以及抓取元素和一个编辑器例如vscode即可开始编写.</p>
 <p>那么你还需要会使用git并把这个网站的源代码上传到GitHub的repo上，不会上网找个教程吧.</p>
 <p>那然后就是域名绑定了，如果你用域名绑定过GitHub Pages的话，你就知道域名的DNS设置要设置几个A选项，这里不讲那是啥玩意了，总之这个选项是设置GitHub的ip地址的，有空我再找链接吧，自己去查GitHub的文档就行。然后你要设置一个CNAME，设置<code>YoutGitHubName.github.io</code>，然后在Github的repo里添加一个CNAME文件内容是你的域名全称并且不带https，www这样的前缀.</p>
-<p>那么现在有两个页面，我们可以把主域名解析到个人主页上，使用blog二级域名解析到博客上，具体设置就是在域名DNS设置里设置二级域名并且同样解析到<code>YoutGitHubName.github.io</code>上，然后分别在个人主页的CNAME里设置<code>域名</code>和博客的CNAME里设置<code>blog.域名</code>，记得打开GitHub给你分配的https.</p>
+<p>那么现在有两个页面，我们可以把主域名解析到个人主页上，使用blog二级域名解析到博客上，具体设置就是在域名DNS设置里设置二级域名并且同样解析到<code>YoutGitHubName.github.io</code>上，然后分别在个人主页的CNAME里设置<code>域名</code>和博客的CNAME里设置<code>blog.域名</code>，记得打开GitHub Pages绑定个人域名的https.</p>
 <p>现在等一会DNS解析生效和GitHub的https证书申请完毕应该就没什么问题了.</p>
 
         
@@ -578,21 +578,13 @@ Update on A.D.2019-09-23
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/science_fiction/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/socket/" id="post_nav-older" class="next-content">
+        <a href="/2019/mobius/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1099,22 +1091,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <!-- fireworks -->
             <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
             <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-            <script type="text/javascript" src="/js/src/fireworks.js"></script>
-        <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
+            <script type="text/javascript" src="/js/src/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+        </body>
     
 </html>
