@@ -248,7 +248,7 @@ Update on A.D.2019-09-26
 
     
         <meta property="article:published_time" content="Fri Aug 16 2019 18:37:19 GMT+0800">
-        <meta property="article:modified_time" content="Thu Sep 26 2019 19:22:45 GMT+0800">
+        <meta property="article:modified_time" content="Fri Oct 11 2019 17:07:19 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@ Update on A.D.2019-09-26
     "mainEntityOfPage": "https://blog.66ccff.xyz/2019/blog/index.html",
     "headline": "Hexo博客搭建及material主题使用指南",
     "datePublished": "Fri Aug 16 2019 18:37:19 GMT+0800",
-    "dateModified": "Thu Sep 26 2019 19:22:45 GMT+0800",
+    "dateModified": "Fri Oct 11 2019 17:07:19 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -521,7 +521,7 @@ Update on A.D.2019-09-26
 <blockquote>
 <p><a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">Hexo中文文档</a></p>
 </blockquote>
-<p>然后阅读主题文档，这个主题的网页文档挂了，可以克隆repo的markdown源代码到本地看</p>
+<p>然后阅读主题的文档，这个主题的网页文档挂了，可以克隆repo的markdown源代码到本地看</p>
 <p>&gt;</p>
 <h2 id="Step1-下载软件"><a href="#Step1-下载软件" class="headerlink" title="Step1 | 下载软件"></a>Step1 | 下载软件</h2><p>安装Git</p>
 <p>安装node.js</p>
@@ -537,6 +537,466 @@ Update on A.D.2019-09-26
 <p><a href="https://ffdy.github.io/2019/07/08/Hexo%E5%85%A5%E5%9D%91%E6%95%99%E7%A8%8B-Material/" target="_blank" rel="noopener">Hexo入坑教程-Material</a></p>
 </blockquote>
 <h2 id="Aplayer"><a href="#Aplayer" class="headerlink" title="Aplayer"></a>Aplayer</h2><p>克隆<code>&lt;https://github.com/MoePlayer/APlayer&gt;</code></p>
+<p>放一下我的<code>music.js</code>，一中午用手肝了1.5h粘出来的=_=也没写脚本之类的东西（不怎么好写，只挑了一部分vocaloid的歌，大部分都是中v。如果你喜欢中v的话，可以康康？参数什么的没全设置。</p>
+<pre><code class="lang-js">const ap = new APlayer({
+    container: document.getElementById(&#39;aplayer&#39;),
+    fixed: true,
+    autoplay: false,
+    theme: &#39;#FADFA3&#39;,
+    loop: &#39;all&#39;,
+    order: &#39;list&#39;,
+    preload: &#39;auto&#39;,
+    volume: 0.33,
+    mutex: true,
+    listFolded: true,
+    listMaxHeight: &#39;233px&#39;,
+    lrcType: 3,
+    audio: [
+        {
+            name: &#39;世末歌者&#39;,
+            artist: &#39;乐正绫 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=429460239.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/sZGaAxUHHhuhQ1Zxa2jw4g==/17790098137764958.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/smgz.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;同归世界线&#39;,
+            artist: &#39;乐正绫 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=35807133.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/EnQ0J1f_-p8S2OunnRiGhA==/3298534885062503.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/tgsjx.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;凉雨&#39;,
+            artist: &#39;洛天依 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=477137425.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/COB5xLS-nDUdCvzBSw0eOg==/109951162924485415.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ly.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;唱给雅音宮羽Ⅱ&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29784378.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/a61wnSbpl7iz4juzmlq-gA==/6641050233030998.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cgyygy2.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;繁华唱遍&#39;,
+            artist: &#39;洛天依 | URUUT&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=1362645677.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/Ytdbz--Ui1u_Mvosiv7C1w==/109951164042650892.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/fhcb.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;小小思念&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=28987160.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/L8eZSVnPcNSTXmxMd36gEg==/8976412929211156.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xxsn.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;时间日记&#39;,
+            artist: &#39;洛天依 | 湯ん&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=555103145.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/mwQhrhXSrt7NbR0EX_NLDg==/109951163129515683.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sjrj.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;朝汐&#39;,
+            artist: &#39;洛天依 | 千面音葉7ZH&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=1315517813.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/zx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;寻遍星空&#39;,
+            artist: &#39;洛天依 | 公兔&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29307542.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/VDzqLf2w5SV-VU1FH1AwNg==/6657542906420975.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xbxk.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;岁月流年&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29792008.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/syln.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;天空的味道&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29450488.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/Dqgbz3BMQG3w5dzs9s3-Hw==/3284241233862965.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/tkdwd.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;刹那烟火，落尽清凉&#39;,
+            artist: &#39;洛天依 | 九御kyuugo&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=413188707.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/guXC-WPcWhXdIdzpmRMJ1w==/109951162942281449.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cnyh.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;心跳同步的时光&#39;,
+            artist: &#39;洛天依 | JUSF周存&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=422427110.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/CSmaT-E-XIMzqm2jqpsrJw==/18185922323824829.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xttbdsg.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;为了你唱下去&#39;,
+            artist: &#39;洛天依 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=420397887.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/W3VMsSEjTdvhz7h3a0oxTg==/17782401556325576.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wlncxq.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;绝体绝命&#39;,
+            artist: &#39;洛天依 | 阿良良木健&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=550059604.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/Csw9Gl-c5YDFLJggK-gpyw==/109951163696193010.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jtjm.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;春风来&#39;,
+            artist: &#39;洛天依 | 阿良良木健&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=480243094.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/DPs2L7G6yXTAEvlCV3cEqQ==/109951162955968424.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cfl.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;勾指起誓&#39;,
+            artist: &#39;洛天依 | ilem&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=1345872140.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/eMyCr0gv0kPGlew9XTNjyA==/109951163944178164.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/gzqs.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;深海少女&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29357538.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/yI0SluM1lL2NWofjbXr99w==/109951163926977151.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/shsn.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;与你最后的夏天&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=33715419.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ynzhdxt.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;谷雨&#39;,
+            artist: &#39;洛天依 | 桑葚上的猴子&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=410161057.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/UL_YbIkPg9t6UFpmTRxMPw==/18198016951571087.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/gy.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;咸咸的&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=484710046.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/-mSe3PXd0x66UZQRmip9qQ==/109951162950201713.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xxd.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;前尘如梦&#39;,
+            artist: &#39;洛天依 | 唐乐林&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=27908599.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/A9oKNYp-KPOv_TrMG5ml6w==/3405187512278986.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/qcrm.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;夏天·延长战&#39;,
+            artist: &#39;洛天依 | DOS:Error#&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=499272397.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/ww_5Ayf5s-vwP-GSgEKMwA==/109951163032306409.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xtycz.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;一秒之序&#39;,
+            artist: &#39;洛天依 | PoKeR&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=433059462.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/irEm-wZzV8zfbtc4UqKsyg==/17999005346907532.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ymzx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;Last Natsu&#39;,
+            artist: &#39;洛天依 | KAII&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=532815418.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/Jg7qB9BxGV0XJzkcWBEWEA==/109951163116417673.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/lastnatsu.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;化尘旅行&#39;,
+            artist: &#39;洛天依 | Tuno桐音&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=33854157.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/hclx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;九尾妖狐&#39;,
+            artist: &#39;洛天依 | PoKeR&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=550364401.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/yuPHEbEeTmxpTxMStl-lLw==/109951163230319367.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jwyh.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;异样的风暴中心&#39;,
+            artist: &#39;洛天依 | 杉田朗&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=535915977.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/vKUpCUdQY3jWq8Vpr3R9Tg==/109951163632766055.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/yydfbzx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;被祝福的旅程&#39;,
+            artist: &#39;洛天依 | DELA,雨狸&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=453352408.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/RC1fjVZmE50uTlxOWGspVg==/109951162842875584.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/bzfdlc.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;trii - Feel Your Dream 2018&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=528634797.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/PKPVikQLZb4dqLDqCdqLWg==/109951163101308515.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/fyd2018.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;逆浪千秋&#39;,
+            artist: &#39;言和&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=542364335.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/z4f7Gfge3f1PkY90bozxPQ==/109951163169021511.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/nlqq.lrc&#39;,
+            theme: &#39;#99FFFF&#39;
+        },
+        {
+            name: &#39;梦之雨&#39;,
+            artist: &#39;言和&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29095492.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/YZ4EmG8r5T6XPj_1WBue-A==/3295236350128132.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/mzy.lrc&#39;,
+            theme: &#39;#99FFFF&#39;
+        },
+        {
+            name: &#39;岁月成碑&#39;,
+            artist: &#39;乐正绫 | Days&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=34179200.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/W2ZKq9bj8Y0YgLyTLpQNew==/7930777373220204.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sycb.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;烈火灼冰&#39;,
+            artist: &#39;乐正绫 | 希望索任合资&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=525488258.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/V60ZQN_0tsWwsvQo2B2KQA==/109951163089698048.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/lhzb.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;千里邀月&#39;,
+            artist: &#39;乐正绫 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=1332491711.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/0emegncinMnQQanyBvfK_w==/109951163718505451.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/qlyy.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;梦语&#39;,
+            artist: &#39;乐正绫&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=33190543.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/0NsramhXlm6t4Kex3v2LSA==/109951163926966859.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/my.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;Artificial Emotions&#39;,
+            artist: &#39;心华 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=415090258.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/naihNDWAJXSxy7UE3XVKEg==/17692241602844445.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/arti_emo.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我的海岸线&#39;,
+            artist: &#39;心华 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=453278711.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/jpZu0Ykp1YCJ3xlcvYhbtA==/109951162842712103.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wdhax.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我寻着光而来&#39;,
+            artist: &#39;心华 | 著小生zoki&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=1323549392.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/8ipWcNy5FQu-0E8dRTt1Rw==/109951163651934410.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wxzgel.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;星雨之夜&#39;,
+            artist: &#39;心华 | ilem&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=41672085.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/xZ6LySLSgYz98kO8mGbp4Q==/1387583675775967.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xyzy.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我們的彈幕青春&#39;,
+            artist: &#39;心华 | VelecTi&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=41672084.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/xZ6LySLSgYz98kO8mGbp4Q==/1387583675775967.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wmddmqc.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;万神纪&#39;,
+            artist: &#39;星尘 | 海鲜面&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=459831628.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/ygeaRVdHTDjylMZy8_bmSw==/109951162860064953.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wsj.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;星愿StarWish&#39;,
+            artist: &#39;星尘 | 平行四界Quadimension&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=506607859.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/Xl4Mp9uEudbnYQ79amRJWA==/109951162879679523.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xy.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;一日都市&#39;,
+            artist: &#39;星尘 | 小野道ono&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=494953325.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/wPE3Z922KRX5mo94eGgi5g==/109951162923791285.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/yrds.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;曙光&#39;,
+            artist: &#39;星尘&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=496807835.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/0AZa9x1gcaPHQJNia6IvMA==/109951163031876680.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sg2.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;時計塔中の白兎&#39;,
+            artist: &#39;初音ミク | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=435996054.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/7m5M903sHrRAoXplswrSdw==/18211211091317943.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jst.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;歌に形はないけれど&#39;,
+            artist: &#39;初音ミク | doriko&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=409912.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/Pv6EyvmbbHhewnS5U-8dYw==/2493692371854828.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/srgswx.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;morning haze&#39;,
+            artist: &#39;初音ミク | keeno&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=34690740.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/s06UBcyrFpXUmAf_ly8jTQ==/2901611187579735.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/morning.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;glow&#39;,
+            artist: &#39;初音ミク | keeno&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=29023581.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/58JEcKKl34g-4s5v0RSb9Q==/6625657069114417.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/glow.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;每颗流星都见证&#39;,
+            artist: &#39;初音ミク | 小野道ono&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=526704382.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/KjqhDvfpxkzsrTJ74WV0Zg==/109951163094643593.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/mklxdjz.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;冬去春来再尽年&#39;,
+            artist: &#39;言和,乐正绫,心华,洛天依 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=413074063.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/pGnU2i0-iQMYyGECNWghUw==/18434411951503489.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/dqclzjn.lrc&#39;
+        },
+        {
+            name: &#39;白石溪&#39;,
+            artist: &#39;乐正绫,洛天依 | 純白P&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=415086297.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/naihNDWAJXSxy7UE3XVKEg==/17692241602844445.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/bsx.lrc&#39;
+        },
+        {
+            name: &#39;β受体阻滞剂与星辰&#39;,
+            artist: &#39;洛天依,言和 | Kevinz&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=447943681.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/FWNGckJvrMCQ2lCd7Ot89g==/109951162992552158.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/beita.lrc&#39;
+        },
+        {
+            name: &#39;霜雪千年&#39;,
+            artist: &#39;洛天依,乐正绫 | COP&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=34923862.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sxqn.lrc&#39;
+        },
+        {
+            name: &#39;深夜诗人&#39;,
+            artist: &#39;洛天依,言和 | ilem&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=477936261.mp3&#39;,
+            cover: &#39;http://p2.music.126.net/Bt3dFUR9xWCd8wJlmrsgXg==/3429376768564696.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sysr.lrc&#39;
+        },
+        {
+            name: &#39;普通DISCO&#39;,
+            artist: &#39;洛天依,言和 | ilem&#39;,
+            url: &#39;http://music.163.com/song/media/outer/url?id=31140522.mp3&#39;,
+            cover: &#39;http://p1.music.126.net/FwrkRhTBoI9TNj3BkUy2Hw==/1364493965811296.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ptdisco.lrc&#39;
+        }
+    ]
+});
+</code></pre>
 <h2 id="live2d看板娘"><a href="#live2d看板娘" class="headerlink" title="live2d看板娘"></a>live2d看板娘</h2><blockquote>
 <p>[blogの搭建之next——ctz’s blog(<a href="https://ctz45562.github.io/2019/03/21/blog%E3%81%AE%E6%90%AD%E5%BB%BA/" target="_blank" rel="noopener">https://ctz45562.github.io/2019/03/21/blog%E3%81%AE%E6%90%AD%E5%BB%BA/</a>)</p>
 </blockquote>
@@ -703,8 +1163,7 @@ hexo d
 <h2 id="修改后没记录"><a href="#修改后没记录" class="headerlink" title="修改后没记录"></a>修改后没记录</h2><p>代码高亮</p>
 <p>功能页面 | 独立页面</p>
 <p>material图标</p>
-<h2 id="想添加的功能"><a href="#想添加的功能" class="headerlink" title="想添加的功能"></a>想添加的功能</h2><p><strong>aplayer</strong></p>
-<p><strong>jsdelivr</strong></p>
+<h2 id="想添加的功能"><a href="#想添加的功能" class="headerlink" title="想添加的功能"></a>想添加的功能</h2><p><strong>jsdelivr</strong></p>
 <p>插入pdf</p>
 <p>rss订阅</p>
 <p>代码复制功能</p>
@@ -918,7 +1377,7 @@ git push origin branch_name
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
             </li></ul>
         </li>
         
@@ -1014,7 +1473,7 @@ git push origin branch_name
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">17</span>
+                <span class="sidebar-badge">19</span>
             </a>
         </li>
         
