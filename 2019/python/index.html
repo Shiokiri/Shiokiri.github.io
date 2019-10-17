@@ -46,7 +46,7 @@
     
     <title>
         
-            socket套接字学习笔记 | 
+            VSCode配置Python环境及Python入门学习 | 
         
         Polaris上的雅音宫羽o(TヘTo))
     </title>
@@ -57,9 +57,9 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="
-Update on A.D.2019-09-09 | 待更新
+Update on A.D.2019.10.17 内容完善中!
 ">
-    <meta name="keywords" content=",socket,网络">
+    <meta name="keywords" content=",python">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -220,7 +220,7 @@ Update on A.D.2019-09-09 | 待更新
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Polaris上的雅音宫羽o(TヘTo))">
-    <meta name="msapplication-starturl" content="https://blog.66ccff.xyz/2019/socket/">
+    <meta name="msapplication-starturl" content="https://blog.66ccff.xyz/2019/python/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Polaris上的雅音宫羽o(TヘTo))">
@@ -235,18 +235,18 @@ Update on A.D.2019-09-09 | 待更新
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://blog.66ccff.xyz/2019/socket/">
+    <meta property="og:url" content="https://blog.66ccff.xyz/2019/python/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="socket套接字学习笔记 | Polaris上的雅音宫羽o(TヘTo))">
+    <meta property="og:title" content="VSCode配置Python环境及Python入门学习 | Polaris上的雅音宫羽o(TヘTo))">
     <meta property="og:image" content="/img/space.jpg">
     <meta property="og:description" content="
-Update on A.D.2019-09-09 | 待更新
+Update on A.D.2019.10.17 内容完善中!
 ">
-    <meta property="og:article:tag" content="socket"> <meta property="og:article:tag" content="网络"> 
+    <meta property="og:article:tag" content="python"> 
 
     
-        <meta property="article:published_time" content="Mon Sep 09 2019 20:01:41 GMT+0800">
-        <meta property="article:modified_time" content="Sun Sep 22 2019 21:34:04 GMT+0800">
+        <meta property="article:published_time" content="Tue Sep 17 2019 21:53:37 GMT+0800">
+        <meta property="article:modified_time" content="Thu Oct 17 2019 16:42:33 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -254,7 +254,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://blog.66ccff.xyz/2019/socket/index.html">
+        <link rel="canonical" href="https://blog.66ccff.xyz/2019/python/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -266,10 +266,10 @@ Update on A.D.2019-09-09 | 待更新
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://blog.66ccff.xyz/2019/socket/index.html",
-    "headline": "socket套接字学习笔记",
-    "datePublished": "Mon Sep 09 2019 20:01:41 GMT+0800",
-    "dateModified": "Sun Sep 22 2019 21:34:04 GMT+0800",
+    "mainEntityOfPage": "https://blog.66ccff.xyz/2019/python/index.html",
+    "headline": "VSCode配置Python环境及Python入门学习",
+    "datePublished": "Tue Sep 17 2019 21:53:37 GMT+0800",
+    "dateModified": "Thu Oct 17 2019 16:42:33 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "pXLoTiMistq",
@@ -287,9 +287,9 @@ Update on A.D.2019-09-09 | 待更新
             "url": "/img/space.jpg"
         }
     },
-    "keywords": ",socket,网络",
+    "keywords": ",python",
     "description": "
-Update on A.D.2019-09-09 | 待更新
+Update on A.D.2019.10.17 内容完善中!
 ",
 }
 </script>
@@ -353,6 +353,14 @@ Update on A.D.2019-09-09 | 待更新
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基础语法"><span class="post-toc-number">2.</span> <span class="post-toc-text">基础语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数字"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">数字</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符串"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">字符串</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#运算符"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">运算符</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据结构"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">数据结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列表list"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">列表list</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#调用库"><span class="post-toc-number">3.</span> <span class="post-toc-text">调用库</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#练习"><span class="post-toc-number">4.</span> <span class="post-toc-text">练习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用b站视频av号查询数据"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">使用b站视频av号查询数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#获取b站视频总播放排名并绘制柱状图"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">获取b站视频总播放排名并绘制柱状图</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -382,7 +390,7 @@ Update on A.D.2019-09-09 | 待更新
         
     
             <p class="article-headline-p">
-                socket套接字学习笔记
+                VSCode配置Python环境及Python入门学习
             </p>
         </div>
 
@@ -401,7 +409,7 @@ Update on A.D.2019-09-09 | 待更新
     <!-- Author Name & Date -->
     <div>
         <strong>pXLoTiMistq</strong>
-        <span>9月 09, 2019</span>
+        <span>9月 17, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -425,7 +433,7 @@ Update on A.D.2019-09-09 | 待更新
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/socket/">socket</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/网络/">网络</a>
+        <a class="post_tag-link" href="/tags/python/">python</a>
     </li></ul>
     
 
@@ -442,7 +450,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=socket套接字学习笔记&url=https://blog.66ccff.xyz/2019/socket/index.html&pic=https://blog.66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=VSCode配置Python环境及Python入门学习&url=https://blog.66ccff.xyz/2019/python/index.html&pic=https://blog.66ccff.xyz/img/space.jpg&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -451,7 +459,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=socket套接字学习笔记&url=https://blog.66ccff.xyz/2019/socket/index.html&via=pXLoTiMistq" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=VSCode配置Python环境及Python入门学习&url=https://blog.66ccff.xyz/2019/python/index.html&via=pXLoTiMistq" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -460,7 +468,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.66ccff.xyz/2019/socket/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.66ccff.xyz/2019/python/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -469,7 +477,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.66ccff.xyz/2019/socket/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://blog.66ccff.xyz/2019/python/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -484,7 +492,7 @@ Update on A.D.2019-09-09 | 待更新
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.66ccff.xyz/2019/socket/index.html&text=socket套接字学习笔记" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://blog.66ccff.xyz/2019/python/index.html&text=VSCode配置Python环境及Python入门学习" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -501,15 +509,281 @@ Update on A.D.2019-09-09 | 待更新
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>Update on A.D.2019-09-09 | 待更新</p>
+<p>Update on A.D.2019.10.17 内容完善中!</p>
 </blockquote>
 <a id="more"></a>
-<p>相信每一个从小对计算机感兴趣的你一定看过网络相关的内容，比如ISO模型的网络协议的七层分层，<code>TCP/IP协议</code>之类的东西.</p>
-<p><img src="/images/socket1.jpg" alt></p>
-<p>那么五层分层模型中<code>TCP/IP</code>属于传输层，而<code>socket</code>就是连接应用层和传输层的作用，可以理解为对<code>TCP/IP</code>进行了一定封装并提供<code>API</code>给应用程序使用.</p>
-<p>那这篇文章作为学习笔记，记载一些函数功能和学习过程，也希望能让看到的人更容易的入门<code>socket</code>.</p>
+<p>大概七月份花了一天的时间把python的基础语法看了一遍，十月份再花了一点时间学习，主要用于写绘制数据图片、网页爬虫、图形界面。</p>
+<p>如果你会C++的话，我在这里就写一下如何以最快的速度看完语法，并且学会调用一些基本的库，尽量写到最简，不熟悉的语法和库可以直接查文档或者Google解决。</p>
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><p>首先去官网下载合适版本并安装</p>
+<p><a href="https://www.python.org/" target="_blank" rel="noopener">https://www.python.org/</a></p>
+<p>安装时</p>
+<p><img src="/images/py1.png" alt></p>
+<p>记得勾选上<code>Add Python 3.x to PATH</code>再进行安装，这样不用自行配置环境变量</p>
+<p>在cmd或者powershell下输入<code>python</code></p>
+<p>出现</p>
+<pre><code class="lang-powershell">Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+<p>即代表安装成功</p>
+<p>在VSCode中安装</p>
+<p><img src="/images/py2-1571294333991.png" alt></p>
+<p>这个插件</p>
+<p>按下<code>Ctrl+Shift+P</code>选择<code>Python: 选择解析器 Python: Select Interpreter</code>填写python解析器路径<code>C:/Users/UserName/AppData/Local/Programs/Python/Python37-32/python.exe</code>（默认安装路径是这个）</p>
+<p>检查并设置<code>.vscode</code>文件夹下的文件</p>
+<p>launch.json</p>
+<pre><code class="lang-json">{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+
+        {
+            &quot;name&quot;: &quot;Python&quot;,
+            &quot;type&quot;: &quot;python&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;${file}&quot;,
+            &quot;console&quot;: &quot;integratedTerminal&quot;
+        }
+    ]
+}
+</code></pre>
+<p>settings.json</p>
+<pre><code class="lang-json">{
+    &quot;python.pythonPath&quot;: &quot;C:\\Users\\UserName\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe&quot;,
+}
+</code></pre>
+<p>右键-在终端中运行python文件</p>
+<p>调试-启动调试</p>
+<p>调试-在不调试的情况下启动</p>
+<p>都可以运行，调试可以设置断点</p>
 <hr>
-<p>直接先写一个服务端和客户端发送消息的程序来看看套接字函数的用法与程序实现过程.</p>
+<p>在<code>cmd</code>或者<code>powershell</code>下输入<code>python</code>进入交互环境</p>
+<p>使用<code>python 文件名.py</code>运行python文件</p>
+<p>使用<code>pip install 库名称</code>安装库</p>
+<p>使用<code>pip list</code>查看已安装的库</p>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>在赋值时被创建</p>
+<h3 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h3><p>int整型 float浮点型 complex复数</p>
+<p>类型转换：int(x) float(x) complex(x,y)</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>使用’’或””创建，下标从零开始</p>
+<p>转义字符：和C++类似</p>
+<p>运算：+连接 *重复 []获取字符</p>
+<p>[:]截取，左闭右开</p>
+<pre><code class="lang-python">&gt;&gt;&gt;a = &quot;12345&quot;
+&gt;&gt;&gt;a[1:4]
+234
+</code></pre>
+<p>格式化输出：print(“XXX%sXXX%dXXX” % (‘xxx’, 10))</p>
+<p>占位符和C++相同</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>** 幂</p>
+<p>/ 除</p>
+<p>// 整除</p>
+<pre><code class="lang-python">&gt;&gt;&gt;2**3
+8
+&gt;&gt;&gt;21/10
+2.1
+&gt;&gt;&gt;21//10
+2
+</code></pre>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>C++</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$$</td>
+<td>and</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\</td>
+<td></td>
+<td>or</td>
+</tr>
+<tr>
+<td>!</td>
+<td>not</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>in 在序列中找到值返回True 否则返回False</p>
+<p>not in 相反</p>
+<p>is 判断两个</p>
+<p>其余和C++相同</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>下标从0开始</p>
+<h3 id="列表list"><a href="#列表list" class="headerlink" title="列表list"></a>列表list</h3><p>类似C++中的vector</p>
+<pre><code class="lang-python">l = [&#39;A&#39;, &#39;B&#39;, 2019, 2020]
+print(l[0]) #第0个
+print(l[-2]) #倒数第2个
+print(l[1:3]) #第1到第2个
+del l[1] #删除第一个
+print(l)
+list.append(2021) #在末尾添加新对象
+print(l)
+---
+输出：
+A
+2019
+[&#39;B&#39;,2019]
+[&#39;A&#39;, 2019, 2020]
+[&#39;A&#39;, 2019, 2020, 2021]
+</code></pre>
+<p>剩余内容待更新</p>
+<h1 id="调用库"><a href="#调用库" class="headerlink" title="调用库"></a>调用库</h1><p>剩余内容待更新</p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>随便练习写了写的东西，但是tkinter不方便也不好看，所以我要再学一下PyQt，也方便以后学习C++的Qt</p>
+<h2 id="使用b站视频av号查询数据"><a href="#使用b站视频av号查询数据" class="headerlink" title="使用b站视频av号查询数据"></a>使用b站视频av号查询数据</h2><p>调用了b站的api</p>
+<p>使用了<code>tkinter</code>最简单的功能</p>
+<pre><code class="lang-python">import tkinter as tk
+import json
+import re
+from urllib.request import urlopen
+
+def GetDict(date, keys, default=None):
+    keys_list = keys.split(&#39;.&#39;)
+    if isinstance(date,dict):
+        dictionary = dict(date)
+        for i in keys_list:
+            try:
+                if dictionary.get(i) != None:
+                    dict_values = dictionary.get(i)
+                elif dictionary.get(i) == None:
+                    dict_values = dictionary.get(int(i))
+            except:
+                return default
+            dictionary = dict_values
+        return dictionary
+
+Videojson = &quot;&quot;
+def WebRequest(id):
+    global Videojson
+    Videojson = urlopen(&quot;https://api.bilibili.com/x/article/archives?ids=&quot;+id).read().decode(&#39;utf-8&#39;)
+    Data = json.loads(Videojson)
+    return Data
+
+window = tk.Tk()
+window.title(&#39;哔哩哔哩数据查询&#39;)
+window.geometry(&#39;485x475&#39;)
+
+def insert_point():
+    VideoId = ScanId.get()
+    VideoData = WebRequest(VideoId)
+    ViewTextWindow.delete(0.0, &#39;end&#39;)
+    TitleTextWindow.delete(0.0, &#39;end&#39;)
+    FavoriteTextWindow.delete(0.0, &#39;end&#39;)
+    DanmuTextWindow.delete(0.0, &#39;end&#39;)
+    ReplyTextWindow.delete(0.0, &#39;end&#39;)
+    CoinTextWindow.delete(0.0, &#39;end&#39;)
+    JsonTextWindow.delete(0.0, &#39;end&#39;)
+    ViewTextWindow.insert(&#39;insert&#39;, str(GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.stat.view&quot;)))
+    TitleTextWindow.insert(&#39;insert&#39;, GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.title&quot;))
+    FavoriteTextWindow.insert(&#39;insert&#39;, str(GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.stat.favorite&quot;)))
+    DanmuTextWindow.insert(&#39;insert&#39;, str(GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.stat.danmaku&quot;)))
+    ReplyTextWindow.insert(&#39;insert&#39;, str(GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.stat.reply&quot;)))
+    CoinTextWindow.insert(&#39;insert&#39;, str(GetDict(VideoData, &quot;data.&quot;+VideoId+&quot;.stat.coin&quot;)))
+    JsonTextWindow.insert(&#39;insert&#39;, Videojson)
+
+tk.Label(window, text=&quot;输入视频AV号&quot;).place(x=350, y=10, anchor=&#39;nw&#39;)
+
+ScanId = tk.Entry(window)
+ScanId.place(x=320, y=45, anchor=&#39;nw&#39;)
+
+query = tk.Button(window, text=&quot;查询&quot;, width=6, height=1, command=insert_point)
+query.place(x=370, y=70, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;标题&quot;).place(x=10, y=10, anchor=&#39;nw&#39;)
+TitleTextWindow = tk.Text(window,height=1,width=35)
+TitleTextWindow.place(x=45, y=15, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;播放&quot;).place(x=10, y=40, anchor=&#39;nw&#39;)
+ViewTextWindow = tk.Text(window,height=1,width=35)
+ViewTextWindow.place(x=45, y=45, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;收藏&quot;).place(x=10, y=70, anchor=&#39;nw&#39;)
+FavoriteTextWindow = tk.Text(window,height=1,width=35)
+FavoriteTextWindow.place(x=45, y=75, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;弹幕&quot;).place(x=10, y=100, anchor=&#39;nw&#39;)
+DanmuTextWindow = tk.Text(window,height=1,width=35)
+DanmuTextWindow.place(x=45, y=105, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;回复&quot;).place(x=10, y=130, anchor=&#39;nw&#39;)
+ReplyTextWindow = tk.Text(window,height=1,width=35)
+ReplyTextWindow.place(x=45, y=135, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;硬币&quot;).place(x=10, y=160, anchor=&#39;nw&#39;)
+CoinTextWindow = tk.Text(window,height=1,width=35)
+CoinTextWindow.place(x=45, y=165, anchor=&#39;nw&#39;)
+
+tk.Label(window, text=&quot;json&quot;).place(x=10, y=190, anchor=&#39;nw&#39;)
+JsonTextWindow = tk.Text(window,height=20,width=60)
+JsonTextWindow.place(x=45, y=195, anchor=&#39;nw&#39;)
+
+window.mainloop()
+</code></pre>
+<h2 id="获取b站视频总播放排名并绘制柱状图"><a href="#获取b站视频总播放排名并绘制柱状图" class="headerlink" title="获取b站视频总播放排名并绘制柱状图"></a>获取b站视频总播放排名并绘制柱状图</h2><p>需要<code>matplotlib</code>库</p>
+<p>使用<code>https://www.kanbilibili.com</code>的数据，获取更多数据需要写js对网页进行交互，等待python学习以及前端学习来进行改善</p>
+<pre><code class="lang-python">from urllib.request import urlopen
+import json
+import re
+import matplotlib.pyplot as plt
+import numpy as np
+import requests
+# -*- coding: UTF-8 -*-
+
+def get_dict_value(date, keys, default=None):
+    keys_list = keys.split(&#39;.&#39;)
+    if isinstance(date,dict):
+        dictionary = dict(date)
+        for i in keys_list:
+            try:
+                if dictionary.get(i) != None:
+                    dict_values = dictionary.get(i)
+                elif dictionary.get(i) == None:
+                    dict_values = dictionary.get(int(i))
+            except:
+                return default
+            dictionary = dict_values
+        return dictionary
+
+videoData = urlopen(&quot;https://www.kanbilibili.com/rank/videos&quot;).read().decode(&#39;utf-8&#39;)
+videoAvList = re.findall(r&#39;href=&quot;/video/av(.*?)&quot;&#39;, videoData) # &lt;a href=&quot;/video/av36570707&quot; 
+videoVisit = {}
+cnt = 0
+Y = []
+
+for i in range(0, len(videoAvList)):
+    video_id = videoAvList[i]
+    if(video_id in videoVisit): continue
+    videoVisit[video_id] = 1
+    jsonData = urlopen(
+        &quot;https://api.bilibili.com/x/article/archives?ids=&quot; + video_id
+    ).read().decode(&#39;utf-8&#39;)
+    Data = json.loads(jsonData)
+    cnt += 1
+    Y.append(get_dict_value(Data, &quot;data.&quot;+video_id+&quot;.stat.view&quot;))
+    print(&#39;rank: %d | av: %s | 播放数：%s&#39; % (cnt, video_id, get_dict_value(Data, &quot;data.&quot;+video_id+&quot;.stat.view&quot;)))
+    print(&#39;标题：%s&#39; % get_dict_value(Data, &quot;data.&quot;+video_id+&#39;.title&#39;))
+
+n = cnt
+X = np.arange(n)
+plt.bar(X, Y)
+plt.bar(X, Y, facecolor=&#39;#66ccff&#39;, edgecolor=&#39;white&#39;)
+plt.xlim((-0.5, 99))
+plt.ylim((1, 100000000))
+plt.xlabel(&#39;Rank&#39;)
+plt.ylabel(&#39;View&#39;)
+new_ticks1 = np.linspace(0, 100000000, 11)
+plt.yticks(new_ticks1)
+new_ticks = np.linspace(0, 99, 100)
+plt.xticks(new_ticks)
+plt.show()
+</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -518,7 +792,7 @@ Update on A.D.2019-09-09 | 待更新
                             本文由 pXLoTiMistq 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://blog.66ccff.xyz/2019/socket/">https://blog.66ccff.xyz/2019/socket/</a>
+                        <strong>本文链接：</strong><a href="https://blog.66ccff.xyz/2019/python/">https://blog.66ccff.xyz/2019/python/</a>
                     </p>
                 </blockquote>
         
@@ -677,7 +951,7 @@ Update on A.D.2019-09-09 | 待更新
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -695,7 +969,7 @@ Update on A.D.2019-09-09 | 待更新
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文社科/">人文社科<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程语言/">编程语言<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/categories/PC/">PC<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/人文社科/">人文社科<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/生活/">生活<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程语言/">编程语言<span class="sidebar_archives-count">3</span></a>
             </li></ul>
         </li>
         
@@ -1038,26 +1312,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- MathJax Load-->
-
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    });
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-    <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
 
 
 <!-- Bing Background -->
