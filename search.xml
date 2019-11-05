@@ -230,9 +230,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[links]]></title>
+    <url>%2Flinks%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[关于]]></title>
     <url>%2Fabout%2Findex.html</url>
     <content type="text"><![CDATA[放弃挣扎的OIer、高中生 喜欢中v、PC游戏、一点ACGN和写代码 想当互联网全栈工程师、游戏开发程序员 技术语言看过Java | C# 写过HTML | CSS | JavaScript | node.js 会写C | C++ | Python 工具看过LaTeX 用过Markdown | Git 游戏喜欢FPS（CS）、RTS（RA2）、开放世界（GTA5、MC） 小型游戏或者独立游戏，如泰拉瑞亚、空洞骑士 文学喜欢看一点诗词和读科幻小说 爱好中文Vocaloid、画画]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gallery]]></title>
+    <url>%2Fgallery%2Findex.html</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[闲聊]]></title>
@@ -245,18 +255,8 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[gallery]]></title>
-    <url>%2Fgallery%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[tags]]></title>
     <url>%2Ftags%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[links]]></title>
-    <url>%2Flinks%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>

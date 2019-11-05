@@ -5,7 +5,7 @@ const ap = new APlayer({
     theme: '#FADFA3',
     loop: 'all',
     order: 'list',
-    preload: 'metadata',
+    preload: 'none',
     volume: 0.33,
     mutex: true,
     listFolded: true,
