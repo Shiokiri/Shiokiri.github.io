@@ -40,17 +40,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[OI生活的所有记录]]></title>
-    <url>%2F2019%2Foi%2F</url>
-    <content type="text"><![CDATA[Update on A.D.2019-10-17 NOIP2017游记NOIP2018游记初赛中午颓了会计算机科学导论，下午就去了，非常没意思，考试前就在楼前面晃荡以及谈笑风生，当然一会就一如既往的到考场坐下，发下卷子，先翻一遍看看，？……貌似不是很难？于是开始做选择，单选自然是猜猜算算的，没有很难的题，好像都能猜出来？noi第一届？我会！在1984年这个经常翻noi官网的我当然记住了（滑稽）。然后各种算式子的题枝的公式好像是猜猜算算化一下式子就看出来了？然而卡特兰数一直没看，于是卡特兰数的题随便猜了个就错了，多选的话吧Dijkstra的概念题少选了一个= =，然后把阅读理解第一题算错了，后面两题看出来干什么了就做对了，最后题干是求next_permutation的个数然而没记住自己的答案并不知道自己算得对不对，完型填空第一题看不懂啊，只能蒙了然后对称填甚至全蒙对了，对答案时很激动，第二题费力的读完了，猜了明显的2个空然后猜猜填上了其他几个。 下午考完了之后回机房对了对答案，= =……阅读理解第一题 -8分，然而貌似还不错的样子，大概64~70分的样子，因为并不知道next_permutation那个题对不对，于是大概快70分吧，对于去年pj初赛考了41分的我来说应该还算海星然而初赛没什么用。 复赛 飞雪连天射白鹿, 笑书神侠倚碧鸳 $ 2018/12/14 $ 经历了 $noip$ 玩完的心态爆炸之后，还是决定稍微写一下游记记录一下QAQ，以免以后就忘了。 然后打算先写个框架之后再慢慢补上细节。 $ Day 0 $ 大约中午 $ 12:30 $ 便从slyz出发，cyyz自然是很近的，不用2个小时便到了，路上坐在全程自闭的yym旁边，感到很凄凉，一天都感觉很头疼而且有点发烧，感到noip凉的预兆。 到了cyyz于是便是一波常规抽签的操作，一把抽到了外校，顿感心情 - -，于是在宿舍看了看手机并愉快的颓废，去吃晚饭回来路上去超市买了点水和饮料，感到非常头痛，问$ Juanfeng $ %%% 要了包感冒药吃了，并愉快地喝了会饮料。 去试机等车的时候，在湖边转了转，便和一群同学会面并愉快的%%%，便接着在台阶上吹冷风以缓解头疼与燥热。 试机的时候键盘退格键只有一格大，顿感rp—，于是愉快的写完了对拍并写了个线段树，由于鬼畜的键盘这时时间便到了，于是便回去睡觉了，空调很暖和……看了会手机，又背了背印了几张纸的板子，感觉感冒考noip并不会受影响。 $ Day 1 $ 早晨便是很早醒了，感觉头不是很疼了，而且没发烧，顿感rp++，便去吃了早饭（有面条？233），怀揣这激动的心情，我又去了湖边等车，于是一如既往地到了考场，拿好了笔和咖啡，等到发密码 $ Fei Xue Lian Tian $（符号大小写都忘了不管了233）虽然没见过但感觉挺好听的…… $ T1 $ 读了几遍题，发现好像没读错就是2013原题，于是手玩了几下，便开始写了，测过大样例就不管了，此时是$ 8:50 $，非常激动，顿感$rp++$便看T2 $ T2 $ 读了好多遍，感觉非常玄学啊，怎么会有这样的玩法，难道要自己构造出答案的值吗（凉凉前兆），于是对着题瞪眼了1h，期间一度感觉暴力都没有任何思路，想特判掉30分算了，可感觉特判都不会写，于是又看看，好像$ b\subset a $ ? 于是就写了个枚举a的子集（然而没想到排序），然而判定条件又是写的完全错的，所以愉快的爆0了，然后出了考场别人便说是排序+完全背包，便想到了做法，于是noip就在这个题上GG了。 $ T3 $读完便知道了这是个树上的二分答案+判定，用贪心或者dp，然而想了想没什么思路，便先写了链的二分，然后树的直径不会，便匆忙写了从1节点找两条最长链加起来，然后菊花图没想出来，又很焦躁，觉得自己应该做不了了，便放弃了。 day1预估 100 + [0,20] + [20,30] = [120,150] day1实际 100 + 0 + 25 = 125 考完出来都告诉我上200了？感觉day1考成这样，day2基本无望啊，差不多1=也没戏了吧，于是愈发自闭地吃完午饭下午看看书颓会手机了，晚上心情很差。 $ Day2 $ 有空再写233 好的今天是2019-10-17，过了11个月的我来补游记了。 早上很早就起来了，看了会手机便去吃饭，没什么事。 抱有一丝翻盘的希望进了考场，看了题以后然后心灰意冷，就想尽力做吧。 $2018/11/25$ 一次d1t2愉快爆零的NOIP]]></content>
-      <categories>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Github Pages+HTML5 up制作个人主页及绑定二级域名]]></title>
     <url>%2F2019%2Fhtml_page%2F</url>
     <content type="text"><![CDATA[Update on A.D.2019-09-23 好看是第一生产力​qwq 单个GitHub帐号下添加多个GitHub Pages的相关问题| 我很好奇 首先我们要知道GitHub Pages可以有多个，项目名为YourGitHubName.github.io的Pages使用这个域名访问，新添加一个项目ProjectName并设置为Pages项目后，使用YourGitHubName.github.io/ProjectName进行访问，那么我们可以使用一个Pages托管Hexo博客，一个Pages托管个人主页. 这里介绍一个网站提供了很多个人主页的模板https://html5up.net我们选择并下载其中一个，直接修改即可，有一定HTML和CSS基础都可以很轻松的修改，你需要一个浏览器并会使用控制台以及抓取元素和一个编辑器例如vscode即可开始编写. 那么你还需要会使用git并把这个网站的源代码上传到GitHub的repo上，不会上网找个教程吧. 那然后就是域名绑定了，如果你用域名绑定过GitHub Pages的话，你就知道域名的DNS设置要设置几个A选项，这里不讲那是啥玩意了，总之这个选项是设置GitHub的ip地址的，有空我再找链接吧，自己去查GitHub的文档就行。然后你要设置一个CNAME，设置YoutGitHubName.github.io，然后在Github的repo里添加一个CNAME文件内容是你的域名全称并且不带https，www这样的前缀. 那么现在有两个页面，我们可以把主域名解析到个人主页上，使用blog二级域名解析到博客上，具体设置就是在域名DNS设置里设置二级域名并且同样解析到YoutGitHubName.github.io上，然后分别在个人主页的CNAME里设置域名和博客的CNAME里设置blog.域名，记得打开GitHub Pages绑定个人域名的https. 现在等一会DNS解析生效和GitHub的https证书申请完毕应该就没什么问题了.]]></content>
@@ -230,8 +219,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[links]]></title>
-    <url>%2Flinks%2Findex.html</url>
+    <title><![CDATA[gallery]]></title>
+    <url>%2Fgallery%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
@@ -240,23 +229,23 @@
     <content type="text"><![CDATA[放弃挣扎的OIer、高中生 喜欢中v、PC游戏、一点ACGN和写代码 想当互联网全栈工程师、游戏开发程序员 技术语言看过Java | C# 写过HTML | CSS | JavaScript | node.js 会写C | C++ | Python 工具看过LaTeX 用过Markdown | Git 游戏喜欢FPS（CS）、RTS（RA2）、开放世界（GTA5、MC） 小型游戏或者独立游戏，如泰拉瑞亚、空洞骑士 文学喜欢看一点诗词和读科幻小说 爱好中文Vocaloid、画画]]></content>
   </entry>
   <entry>
-    <title><![CDATA[gallery]]></title>
-    <url>%2Fgallery%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
     <title><![CDATA[闲聊]]></title>
     <url>%2Fchat%2Findex.html</url>
     <content type="text"><![CDATA[最后更新：A.D.2019-09-09 我全咕咕咕了…… 纪念生命中的过往烟云 历史 Date String 2019-6-0x 搭建了此Blog 2019-9-12 购买了域名66ccff.xyz 2019-9-22 用HTML5 up模板制作个人主页并使用域名66ccff.xyz，Blog改为二级域名blog.66ccff.xyz 2019-9-22 往主域名下加了几个网页游戏 2019-11-04 创建了Virtual Dimension页面 随想 Date String 2019-6-0x 词语时光 岁月 年华 2019-9-7 读完了《白鹿原》 2019-9-8 吃了一颗柠檬 2019-9-10 开坑套接字 2019-9-14 看完了刀剑神域Animation的SAO篇 2019-9-15 打了第一场Codeforces和AtCoder 歌词中文Vocaloid Lyrics Song 每一个梦都是个旋律 漫天回忆该如何去聆听 Step on your heart -心印-(Album ver) Luna Safari 晨风中的一缕光 折射梦想的宽广 Trii - Feel Your Dream 2018 血色夕阳 温热化作苍凉 岁月成碑 破晓夕阳 残月也吝啬藏起光芒 是谁把声音阻挡 月白色倒影的少女 如果还能找到你 就让风儿告诉你 Artificial Emotions 曾经许下的约定 寻找蔚蓝神秘的行星 不知道 何时才能苏醒 你却留下另一个自己 Artificial Emotions 虚和实的叠重，光和影的交错，触摸流云和清风勾勒的美梦 寻遍星空 如今的我，徘徊在楼宇的阡陌 寻遍星空 夜雾里去闪烁，光年外去诉说，让星辉照耀我浩瀚的宇宙 寻遍星空 乘天马遥望北辰飞向云外的月宫 寻遍星空 风，将我的思绪打乱，也看不清未来 梦，穿越过人山人海，快要醒来 化尘旅行 阳光斜照进窗台，记忆皆化作尘埃 化尘旅行 踏着凉鞋 提起裙边 随蝴蝶转啊转 翩飞花前 夏之歌 唱，你许下的梦想，在心底里徜徉，就像那梦一样，吹向四面八方 唱给雅音宫羽Ⅱ 花落尽时候，又是一个秋 唱给雅音宫羽Ⅱ 黑暗里总有光 春风来 寻觅着，风的波折 世末歌者 用这双手拨出残缺染了锈迹的弦音，都隐没于云雨雾雨幕无声无息 世末歌者 或哽咽 或低泣 都融进了泡沫里 拖曳疲惫身躯 沉入冰冷的池底 注视着色彩褪去 世末歌者 踏上未知列车 一直飞到云层最高空 紊乱的波形中 猜测前方可能的轮廓 躲藏在月光背后 电讯号变得神秘又莫测 一日都市 ACGN Lyrics Song 星月相掩与大海上 在这个世界相遇 微风摇曳细雨也彷徨 在这个世界相遇 海浪无声将夜幕深深淹没，漫过天空尽头的角落 大鱼 看海天一色，听风起雨落，执子手吹散苍茫茫烟波 大鱼 日月星辰悄悄，升了又落，我却不知白天黑夜的存在 湫兮如风 诗词还没啥心情去整理复制粘贴…… 日月星辰渔家傲 李清照 天接云涛连晓雾，星河欲转千帆舞。仿佛梦魂归帝所。闻天语，殷勤问我归何处。 我报路长嗟日暮，学诗谩有惊人句。九万里风鹏正举。风休住，蓬舟吹取三山去。 念奴娇·过洞庭 张孝祥 洞庭青草，近中秋，更无一点风色。玉鉴琼田三万顷，着我扁舟一叶。素月分辉，明河共影，表里俱澄澈。悠然心会，妙处难与君说。 应念岭表经年，孤光自照，肝胆皆冰雪。短发萧骚襟袖冷，稳泛沧溟空阔。尽挹西江，细斟北斗，万象为宾客。扣舷独啸，不知今夕何夕。 七律-送瘟神 毛泽东 绿水青山枉自多，华佗无奈小虫何。千村薜荔人遗矢，万户萧疏鬼唱歌。坐地日行八万里，巡天遥看一千河。牛郎欲问瘟神事，一样悲欢逐逝波。 自然风景人物设定Vocaloid Name_1 Name_2 Source $\color{rgb(102,204,255)}{洛天依}$ Luo Tianyi Vocaloid-天矢禾念 $\color{rgb(238,0,0)}{乐正绫}$ Yuezheng Ling Vocaloid-天矢禾念 $\color{rgb(0,255,204)}{言和}$ Yan He Vocaloid-天矢禾念 $\color{rgb(153,153,255)}{星尘}\quad$$\color{rgb(255,255,0)}{星尘}$ Stardust Vocaloid-平行四界 $\color{rgb(238,130,238)}{心华}$ Xin Hua Vocaloid-上海望乘 $\color{rgb(255,192,203)}{IA}$ イア Vocaloid-1st PLACE Vtuber Name_1 Name_2 Source A.I.Channel 神乐めあ 神乐七奈 白上吹雪 hololive一期生 猫宫日向 时乃空 夏色祭 hololive一期生 新科娘 CCTV ACGN Name_1 Name_2 Source ACGN 西宫结弦 《声之形》 AC 西宫硝子 《声之形》 AC 宫水三叶 《你的名字》 A 幼刀丛雨 ムラサメ 《千恋*万花》 G 艾米莉亚 《Re:0》 ACN 结城明日奈 《刀剑神域》 桐谷和人 《刀剑神域》 高板桐乃 和泉纱雾 动画感觉我从来没好好看完过一部番的样子……在这里记载一下完整看完的动画作品 连载 Pic String Date 《刀剑神域》第一季 2019-9-30 月色真美 2019-10-4 电影 Pic String Date 大鱼海棠 你的名字 声之形 风之谷 视频Bilibili Macro Link-Visual Release 2019]]></content>
   </entry>
   <entry>
-    <title><![CDATA[timeline]]></title>
-    <url>%2Ftimeline%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[links]]></title>
+    <url>%2Flinks%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[timeline]]></title>
+    <url>%2Ftimeline%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
