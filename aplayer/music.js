@@ -34,7 +34,7 @@ const ap = new APlayer({
             url: 'http://music.163.com/song/media/outer/url?id=477137425.mp3',
             cover: 'http://p1.music.126.net/COB5xLS-nDUdCvzBSw0eOg==/109951162924485415.jpg',
             lrc: '/./aplayer/lrc/ly.lrc',
-            theme: '#EE82EE'
+            theme: '#66CCFF'
         },
         {
             name: '唱给雅音宮羽Ⅱ',
