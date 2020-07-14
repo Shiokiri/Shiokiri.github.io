@@ -13,6 +13,14 @@ const ap = new APlayer({
     lrcType: 3,
     audio: [
         {
+            name: '朝汐',
+            artist: '洛天依 | 千面音葉7ZH',
+            url: 'https://music.163.com/song/media/outer/url?id=1315517813.mp3',
+            cover: 'https://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg',
+            lrc: '/./aplayer/lrc/zx.lrc',
+            theme: '#66CCFF'
+        },
+        {
             name: '世末歌者',
             artist: '乐正绫 | COP',
             url: 'https://music.163.com/song/media/outer/url?id=429460239.mp3',
@@ -66,14 +74,6 @@ const ap = new APlayer({
             url: 'https://music.163.com/song/media/outer/url?id=555103145.mp3',
             cover: 'https://p1.music.126.net/mwQhrhXSrt7NbR0EX_NLDg==/109951163129515683.jpg',
             lrc: '/./aplayer/lrc/sjrj.lrc',
-            theme: '#66CCFF'
-        },
-        {
-            name: '朝汐',
-            artist: '洛天依 | 千面音葉7ZH',
-            url: 'https://music.163.com/song/media/outer/url?id=1315517813.mp3',
-            cover: 'https://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg',
-            lrc: '/./aplayer/lrc/zx.lrc',
             theme: '#66CCFF'
         },
         {
