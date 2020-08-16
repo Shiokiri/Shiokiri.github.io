@@ -61,7 +61,7 @@
     <meta name="description" itemprop="description" content="
 蝉时雨 化成淡墨渲染暮色
 ">
-    <meta name="keywords" content=",-经历">
+    <meta name="keywords" content=",经历">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -244,11 +244,11 @@
     <meta property="og:description" content="
 蝉时雨 化成淡墨渲染暮色
 ">
-    <meta property="og:article:tag" content="-经历"> 
+    <meta property="og:article:tag" content="经历"> 
 
     
         <meta property="article:published_time" content="Sun Aug 16 2020 22:03:37 GMT+0800">
-        <meta property="article:modified_time" content="Sun Aug 16 2020 22:47:41 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 16 2020 22:51:37 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -271,7 +271,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2020/august/index.html",
     "headline": "烦躁沉寂的八月",
     "datePublished": "Sun Aug 16 2020 22:03:37 GMT+0800",
-    "dateModified": "Sun Aug 16 2020 22:47:41 GMT+0800",
+    "dateModified": "Sun Aug 16 2020 22:51:37 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "ShioKiri",
@@ -289,7 +289,7 @@
             "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/space.jpg"
         }
     },
-    "keywords": ",-经历",
+    "keywords": ",经历",
     "description": "
 蝉时雨 化成淡墨渲染暮色
 ",
@@ -439,7 +439,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/经历/">-经历</a>
+        <a class="post_tag-link" href="/tags/经历/">经历</a>
     </li></ul>
     
 
@@ -720,7 +720,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/写作/">-写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
             </li></ul>
         </li>
         
@@ -1149,7 +1149,22 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <link rel="stylesheet" href="/aplayer/APlayer.min.css">
             <div id="aplayer" style="z-index: 11;"></div>
             <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
-            <script type="text/javascript" src="/aplayer/music.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        </body>
+            <script type="text/javascript" src="/aplayer/music.js"></script>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>

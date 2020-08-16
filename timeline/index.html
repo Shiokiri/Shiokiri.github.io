@@ -726,10 +726,10 @@ Update on A.D.2019-10-17
                     			<div class="md-timeline-title"><a href="/2020/august/">烦躁沉寂的八月</a></div>
 					<div class="md-timeline-info">
 						<span class="md-timeline-info-span">Categories:
-							<a class="category-link" href="/categories/写作/">-写作</a>
+							<a class="category-link" href="/categories/写作/">写作</a>
 						</span>
 						<span class="md-timeline-info-span">Tags:
-							<a class="tag-link" href="/tags/经历/">-经历</a>
+							<a class="tag-link" href="/tags/经历/">经历</a>
 						</span>
 						
 					</div>
@@ -1456,7 +1456,7 @@ Across the Great Wall we can reach every corner in the world.
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/写作/">-写作<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
             </li></ul>
         </li>
         
@@ -1868,7 +1868,22 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <link rel="stylesheet" href="/aplayer/APlayer.min.css">
             <div id="aplayer" style="z-index: 11;"></div>
             <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
-            <script type="text/javascript" src="/aplayer/music.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-        </body>
+            <script type="text/javascript" src="/aplayer/music.js"></script>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>
