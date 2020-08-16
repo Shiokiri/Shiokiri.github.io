@@ -13,12 +13,12 @@ const ap = new APlayer({
     lrcType: 3,
     audio: [
         {
-            name: '朝汐',
-            artist: '洛天依 | 千面音葉7ZH',
-            url: 'https://music.163.com/song/media/outer/url?id=1315517813.mp3',
-            cover: 'https://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg',
-            lrc: '/./aplayer/lrc/zx.lrc',
-            theme: '#66CCFF'
+            name: 'My Soul,Your Beats!',
+            artist: '麻枝准',
+            url: 'https://music.163.com/song/media/outer/url?id=28699614.mp3',
+            cover: 'https://p2.music.126.net/tw0Vs85YAsvUpDsM7f2JMQ==/109951163914291289.jpg',
+            lrc: '/./aplayer/lrc/none.lrc',
+            theme: '#9370DB'
         },
         {
             name: '世末歌者',
@@ -109,6 +109,14 @@ const ap = new APlayer({
             theme: '#66CCFF'
         },
         {
+            name: '朝汐',
+            artist: '洛天依 | 千面音葉7ZH',
+            url: 'https://music.163.com/song/media/outer/url?id=1315517813.mp3',
+            cover: 'https://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg',
+            lrc: '/./aplayer/lrc/zx.lrc',
+            theme: '#66CCFF'
+        },
+        {
             name: '心跳同步的时光',
             artist: '洛天依 | JUSF周存',
             url: 'https://music.163.com/song/media/outer/url?id=422427110.mp3',
@@ -186,6 +194,14 @@ const ap = new APlayer({
             url: 'https://music.163.com/song/media/outer/url?id=27908599.mp3',
             cover: 'https://p1.music.126.net/A9oKNYp-KPOv_TrMG5ml6w==/3405187512278986.jpg',
             lrc: '/./aplayer/lrc/qcrm.lrc',
+            theme: '#66CCFF'
+        },
+        {
+            name: '梨花泽泽远山远 ',
+            artist: '洛天依 | MeLo',
+            url: 'https://music.163.com/song/media/outer/url?id=425710799.mp3',
+            cover: 'https://p2.music.126.net/vjwCPafPafceVxULtWFSfg==/18020995579444517.jpg',
+            lrc: '/./aplayer/lrc/lhzzysy.lrc',
             theme: '#66CCFF'
         },
         {
@@ -338,6 +354,14 @@ const ap = new APlayer({
             url: 'https://music.163.com/song/media/outer/url?id=41672084.mp3',
             cover: 'https://p1.music.126.net/xZ6LySLSgYz98kO8mGbp4Q==/1387583675775967.jpg',
             lrc: '/./aplayer/lrc/wmddmqc.lrc',
+            theme: '#EE82EE'
+        },
+        {
+            name: '绯焰悲空',
+            artist: '心华 | 純白P',
+            url: 'https://music.163.com/song/media/outer/url?id=415085220.mp3',
+            cover: 'https://p2.music.126.net/b8Ubr5n4QytBg7Pc7O3pjw==/780653265867628.jpg',
+            lrc: '/./aplayer/lrc/fybk.lrc',
             theme: '#EE82EE'
         },
         {
