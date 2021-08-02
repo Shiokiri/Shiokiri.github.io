@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            Hexo博客搭建及material主题使用指南 | 
+        
+        落影汐雾 | 虚空印刷体
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="
+Update on A.D.2019.10.17
+
+前端真好玩qvq">
+    <meta name="keywords" content=",Blog">
+    <meta name="theme-color" content="#66CCFF">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?YfsvbV6D9I9YkPbVXZ/63Q==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?0C3vUxiIwM6EogYa3l55Yw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/atelier-seaside-light.min.css?b71t6V/NeTk95fu056Paxw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #66CCFF !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #66CCFF !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #66CCFF !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/bg.jpg);
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="落影汐雾 | 虚空印刷体">
+    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2019/blog/">
+    <meta name="msapplication-navbutton-color" content="#66CCFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="落影汐雾 | 虚空印刷体">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="UA-151632153-1">
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://x.lyxw.xyz/2019/blog/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Hexo博客搭建及material主题使用指南 | 落影汐雾 | 虚空印刷体">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
+    <meta property="og:description" content="
+Update on A.D.2019.10.17
+
+前端真好玩qvq">
+    <meta property="og:article:tag" content="Blog"> 
+
+    
+        <meta property="article:published_time" content="Fri Aug 16 2019 18:37:19 GMT+0800">
+        <meta property="article:modified_time" content="Sun Aug 16 2020 09:54:50 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://x.lyxw.xyz/2019/blog/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://x.lyxw.xyz/2019/blog/index.html",
+    "headline": "Hexo博客搭建及material主题使用指南",
+    "datePublished": "Fri Aug 16 2019 18:37:19 GMT+0800",
+    "dateModified": "Sun Aug 16 2020 09:54:50 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "落影汐雾",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
+        },
+        "description": "夜雾里去闪烁 光年外去诉说 🌟 不存在的夏天 ~"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "落影汐雾 | 虚空印刷体",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
+        }
+    },
+    "keywords": ",Blog",
+    "description": "
+Update on A.D.2019.10.17
+
+前端真好玩qvq",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- live2d start -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+            <!-- live2d end -->
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用GitHub-Pages搭建Hexo博客"><span class="post-toc-number">1.</span> <span class="post-toc-text">使用GitHub Pages搭建Hexo博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Step1-下载软件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Step1 | 下载软件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Step2-创建GitHub账号"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Step2 | 创建GitHub账号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Step3-使用Git进行搭建操作"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Step3 | 使用Git进行搭建操作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Step4-写作、美化及功能修改"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Step4 | 写作、美化及功能修改</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Markdown相关问题"><span class="post-toc-number">2.</span> <span class="post-toc-text">Markdown相关问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#表格合并单元格"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">表格合并单元格</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#插入视频"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">插入视频</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Material主题配置及修改记录"><span class="post-toc-number">3.</span> <span class="post-toc-text">Material主题配置及修改记录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Aplayer"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Aplayer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#live2d看板娘"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">live2d看板娘</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#黑幕效果"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">黑幕效果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#添加Gitalk评论"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">添加Gitalk评论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitHub限制label长度gitalk无法创建issue"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">GitHub限制label长度gitalk无法创建issue</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Blog内容搜索"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Blog内容搜索</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#markdown文件名大小写问题"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">markdown文件名大小写问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS的修改"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">CSS的修改</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文章框体透明"><span class="post-toc-number">3.7.1.</span> <span class="post-toc-text">文章框体透明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tag颜色及悬停颜色"><span class="post-toc-number">3.7.2.</span> <span class="post-toc-text">Tag颜色及悬停颜色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#copyright位置"><span class="post-toc-number">3.7.3.</span> <span class="post-toc-text">copyright位置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MathJax"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">MathJax</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义页脚sns链接"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">自定义页脚sns链接</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#license"><span class="post-toc-number">3.10.</span> <span class="post-toc-text">license</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#鼠标点击烟花特效"><span class="post-toc-number">3.11.</span> <span class="post-toc-text">鼠标点击烟花特效</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些主题的小问题"><span class="post-toc-number">3.12.</span> <span class="post-toc-text">一些主题的小问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#天坑"><span class="post-toc-number">4.</span> <span class="post-toc-text">天坑</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修改后没记录"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">修改后没记录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#想添加的功能"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">想添加的功能</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Git指令"><span class="post-toc-number">5.</span> <span class="post-toc-text">Git指令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用指令"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">常用指令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">分支</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Hexo博客搭建及material主题使用指南
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>落影汐雾</strong>
+        <span>8月 16, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB30lEQVR42u3aS27DMAwFwNz/0u22QGD3kVLq2hytglhINF4Q4uf19Yj1wsDAwMDAwMD4N4xXvJL9P/e8739/2jsDBgbGTMYvoe30iMnvrDw9xGNgYIxkJAH0/I/Pdx6Gzt4ZMDAwMIKrXvJ9ckHEwMDA+PuAu07CwMDA2JBALpfnLs7FMTAwbsioHusTny/ob2BgYNyEUR5xyP8mfh0XzIxgYGDcipEMRhwdNE+Gq6SonYCBgTGGcR4iz/f0hiqS0FxOYjEwMAYwPlEOy/c3XxkGBsYYRlLQL1zXll9BM+BiYGA8mpE3KavlthVwlDZjYGCMZPRCat4MyPdEF1YMDIwxjF1DXdWkFAMDA2PXWFj1ktdriPaaDRgYGBjVUYm8rFZtZGJgYGCslMCqwbfaHih3YjEwMB7KyC9z1cQ1ZzSHzDAwMMYw8qZjL6Tml8syHgMDYxhjJU1Nwm51aGPDsAUGBsbjGPmqgsupad6owMDAGMPY2waoDo31inoYGBgzGSsl+2QIo5f0YmBgYORXt/XSWzWJ3dbfwMDAGMnIE9fe+FchfGNgYGD02orx0aPS/3kQx8DAGMlIfq4aOve2FjAwMCYzeo2BXZfCZgqNgYExhnHfhYGBgYGBgYFx6foGQpGHXD4FAhMAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Blog/">Blog</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo博客搭建及material主题使用指南&url=https://x.lyxw.xyz/2019/blog/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo博客搭建及material主题使用指南&url=https://x.lyxw.xyz/2019/blog/index.html&via=落影汐雾" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2019/blog/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://x.lyxw.xyz/2019/blog/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2019/blog/index.html&text=Hexo博客搭建及material主题使用指南" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>Update on A.D.2019.10.17</p>
+</blockquote>
+<p>前端真好玩qvq</p>
+<a id="more"></a>
+<h1 id="使用GitHub-Pages搭建Hexo博客"><a href="#使用GitHub-Pages搭建Hexo博客" class="headerlink" title="使用GitHub Pages搭建Hexo博客"></a>使用GitHub Pages搭建Hexo博客</h1><p>博客出现问题首先可以阅读文档，其次可以<code>Google</code>解决.</p>
+<p>建议搭建完成以后首先看这个文档</p>
+<blockquote>
+<p><a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">Hexo中文文档</a></p>
+</blockquote>
+<p>然后阅读主题的文档，这个主题的网页文档挂了，可以克隆repo的markdown源代码到本地看</p>
+<h2 id="Step1-下载软件"><a href="#Step1-下载软件" class="headerlink" title="Step1 | 下载软件"></a>Step1 | 下载软件</h2><p>安装Git</p>
+<p>安装node.js</p>
+<h2 id="Step2-创建GitHub账号"><a href="#Step2-创建GitHub账号" class="headerlink" title="Step2 | 创建GitHub账号"></a>Step2 | 创建GitHub账号</h2><p>注册</p>
+<p>创建库</p>
+<p>将本地ssh和远程库绑定</p>
+<h2 id="Step3-使用Git进行搭建操作"><a href="#Step3-使用Git进行搭建操作" class="headerlink" title="Step3 | 使用Git进行搭建操作"></a>Step3 | 使用Git进行搭建操作</h2><p>hexo init</p>
+<h2 id="Step4-写作、美化及功能修改"><a href="#Step4-写作、美化及功能修改" class="headerlink" title="Step4 | 写作、美化及功能修改"></a>Step4 | 写作、美化及功能修改</h2><h1 id="Markdown相关问题"><a href="#Markdown相关问题" class="headerlink" title="Markdown相关问题"></a>Markdown相关问题</h1><h2 id="表格合并单元格"><a href="#表格合并单元格" class="headerlink" title="表格合并单元格"></a>表格合并单元格</h2><p>markdown表格支持功能很少，合并单元格只能用HTML</p>
+<p>markdown可以直接插入HTML代码</p>
+<p>用<a href="http://www.tablesgenerator.com/html_tables编辑可以直接生成HTML代码" target="_blank" rel="noopener">http://www.tablesgenerator.com/html_tables编辑可以直接生成HTML代码</a></p>
+<h2 id="插入视频"><a href="#插入视频" class="headerlink" title="插入视频"></a>插入视频</h2><p>在Bilibili、Youtube等网站可以直接获取视频外链的HTML代码，在markdown中插入即可，长宽可能需要调整</p>
+<h1 id="Material主题配置及修改记录"><a href="#Material主题配置及修改记录" class="headerlink" title="Material主题配置及修改记录"></a>Material主题配置及修改记录</h1><p>这个主题一些好的教程</p>
+<blockquote>
+<p><a href="https://ffdy.github.io/2019/07/08/Hexo%E5%85%A5%E5%9D%91%E6%95%99%E7%A8%8B-Material/" target="_blank" rel="noopener">Hexo入坑教程-Material</a></p>
+</blockquote>
+<h2 id="Aplayer"><a href="#Aplayer" class="headerlink" title="Aplayer"></a>Aplayer</h2><p>克隆<code>&lt;https://github.com/MoePlayer/APlayer&gt;</code></p>
+<p>放一下我的<code>music.js</code>，一中午用手肝了1.5h粘出来的=_=也没写脚本之类的东西（不怎么好写，只挑了一部分vocaloid的歌，大部分都是中v。如果你喜欢中v的话，可以康康？参数什么的没有全部设置。</p>
+<p>因为没法折叠而且太长了，在文章最后放。</p>
+<h2 id="live2d看板娘"><a href="#live2d看板娘" class="headerlink" title="live2d看板娘"></a>live2d看板娘</h2><blockquote>
+<p>[blogの搭建之next——ctz’s blog(<a href="https://ctz45562.github.io/2019/03/21/blog%E3%81%AE%E6%90%AD%E5%BB%BA/" target="_blank" rel="noopener">https://ctz45562.github.io/2019/03/21/blog%E3%81%AE%E6%90%AD%E5%BB%BA/</a>)</p>
+</blockquote>
+<p>有一些问题还参考了github-repo的README.</p>
+<pre><code class="lang-bash">git clone https://github.com/stevenjoezhang/live2d-widget
+</code></pre>
+<p>文件夹<code>live2d-widget</code>放到<code>\themes\主题名称\source</code>下,<br>打开文件夹里的<code>autoload.js</code>修改为</p>
+<pre><code class="lang-js">const live2d_path = &quot;/live2d-widget/&quot;;
+</code></pre>
+<p>这个文件夹的名字可以自行修改.</p>
+<p>打开<code>\themes\主题名称\layout\_layout.swig/ejs</code>这个文件</p>
+<p>在<code>&lt;body&gt;</code>内的开头添加</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;/&gt;
+</code></pre>
+<p>在<code>&lt;/body&gt;</code>上方添加</p>
+<pre><code class="lang-html">&lt;script src=&quot;/live2d-widget/autoload.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>不同之处可以自行修改<code>layout.ejs</code>文件</p>
+<h2 id="黑幕效果"><a href="#黑幕效果" class="headerlink" title="黑幕效果"></a>黑幕效果</h2><blockquote>
+<p><a href="https://lastmc.github.io/2019/03/11/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%BB%91%E5%B9%95/" target="_blank" rel="noopener">如何实现黑幕</a></p>
+</blockquote>
+<p>添加<code>CSS</code></p>
+<pre><code class="lang-css">//黑幕
+.heimu,.heimu a{
+    background-color: #252525;
+    color:#252525;
+    text-shadow: none;
+}::selection{
+    background:#9ab0c0;
+    color:#fff;
+}
+//鼠标悬停
+.heimu:hover,.heimu:hover a{
+    transition:color .13s linear;
+    color:#fff;
+}
+</code></pre>
+<p>使用直接插入<code>HTML</code></p>
+<pre><code class="lang-html">&lt;span class=&#39;heimu&#39; title=&#39;你知道的太多了&#39;&gt;黑幕测试&lt;/span&gt;
+</code></pre>
+<p>效果</p>
+<p><span class="heimu" title="你知道的太多了">黑幕测试</span></p>
+<h2 id="添加Gitalk评论"><a href="#添加Gitalk评论" class="headerlink" title="添加Gitalk评论"></a>添加Gitalk评论</h2><p>主题实现好了一些评论的配置，具体看主题的文档即可。</p>
+<blockquote>
+<p><a href="https://gitalk.github.io" target="_blank" rel="noopener">Gitalk</a> 和 Gitment 一样都是一个基于 GitHub Issue 的评论系统。在完成 GitHub Oauth App 的申请并获取 key 后，在主题配置文件中填入 <code>gitalk_repo</code> <code>gitalk_owner</code> <code>gitalk_client_id</code> <code>gitalk_client_secret</code> 参数即可。</p>
+</blockquote>
+<p>在主题配置文件里修改这几项即可，repo可以用博客的，后两项需要用到<code>GitHub Oauth App</code>的API，搜索引擎自行解决即可。</p>
+<pre><code class="lang-yml">comment:
+    use: gitalk
+    gitalk_repo: # git repo of the hexo
+    gitalk_owner: # git repo&#39;s owner
+    gitalk_client_id:  # github app client id
+    gitalk_client_secret:  # github app client secret
+</code></pre>
+<h3 id="GitHub限制label长度gitalk无法创建issue"><a href="#GitHub限制label长度gitalk无法创建issue" class="headerlink" title="GitHub限制label长度gitalk无法创建issue"></a>GitHub限制label长度gitalk无法创建issue</h3><blockquote>
+<p><a href="https://github.com/viosey/hexo-theme-material/issues/622" target="_blank" rel="noopener">GitHub限制label长度导致gitment/gitalk可能无法创建issue #622
+</a></p>
+</blockquote>
+<p>对于全新安装有如下解决方案，解决方案如下：<br><code>hexo根目录\themes\material\layout\_widget\comment\gitalk</code><br>在此目录下编辑main.ejs文件<br>在其中新增如下内容</p>
+<pre><code class="lang-html">&lt;script src=&quot;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>在gittalk下增加id属性，增加后完整文件内容如下：</p>
+<pre><code class="lang-html">&lt;!-- Gitalk 评论框 --&gt;
+&lt;div id=&quot;gitalk-container&quot;&gt;&lt;/div&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/gitalk/dist/gitalk.css&quot;&gt;
+
+&lt;script src=&quot;https://unpkg.com/gitalk/dist/gitalk.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var gitalk = new Gitalk({
+            clientID: &#39;&lt;%= theme.comment.gitalk_client_id %&gt;&#39;,
+            clientSecret: &#39;&lt;%= theme.comment.gitalk_client_secret %&gt;&#39;,
+            repo: &#39;&lt;%= theme.comment.gitalk_repo %&gt;&#39;,
+            owner: &#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;,
+            admin: [&#39;&lt;%= theme.comment.gitalk_owner %&gt;&#39;],
+            id: md5(window.location.pathname),
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render(&#39;gitalk-container&#39;)
+&lt;/script&gt;
+</code></pre>
+<h2 id="Blog内容搜索"><a href="#Blog内容搜索" class="headerlink" title="Blog内容搜索"></a>Blog内容搜索</h2><p>安装<code>hexo-generator-search</code>插件</p>
+<p>修改主题配置文件</p>
+<pre><code class="lang-yml">search:
+    use: local
+    swiftype_key:
+</code></pre>
+<p>修改hexo配置文件：</p>
+<pre><code class="lang-yml">search:
+    path: search.xml
+    field: all
+</code></pre>
+<h2 id="markdown文件名大小写问题"><a href="#markdown文件名大小写问题" class="headerlink" title="markdown文件名大小写问题"></a>markdown文件名大小写问题</h2><p>参考：<a href="https://perphyyoung.github.io/2018/09/27/hexo-faq/" target="_blank" rel="noopener">Hexo 常见问题 | py’s blog</a></p>
+<p>问题：<br>当在本地改变<code>md</code>文件的大小写时，部署到<code>GitHub</code> 上后，改变了文件名的博客不能被访问。<br>原因：<br><code>Hexo</code>默认的<code>git</code>操作会忽略大小写。<br>解决：</p>
+<ol>
+<li>修改根目录下<code>.deploy_git/.git/config</code>文件，将<code>ignorecase</code>的值由<code>true</code>改为<code>false</code></li>
+<li>删除<code>.deploy_git</code>目录下除<code>.git</code>目录外的其他文件</li>
+<li><code>cd</code>到<code>.deploy_git</code>目录下，手动做一次推送<pre><code class="lang-bash">git add .
+git commit -m &quot;delete all hexo generated files&quot;
+git push
+</code></pre>
+</li>
+<li>重新生成并部署<pre><code class="lang-bash">hexo g
+hexo d
+</code></pre>
+</li>
+</ol>
+<h2 id="CSS的修改"><a href="#CSS的修改" class="headerlink" title="CSS的修改"></a>CSS的修改</h2><h3 id="文章框体透明"><a href="#文章框体透明" class="headerlink" title="文章框体透明"></a>文章框体透明</h3><p>打开<code>Blog\themes\hexo-theme-material-1.5.6\source\css</code>打开<code>style.min.css</code>搜索<code>#scheme-Paradox .material-layout .mdl-card</code>的第一项，在其中添加<code>background-color: rgba(255,255,255,0.8) !important;</code></p>
+<h3 id="Tag颜色及悬停颜色"><a href="#Tag颜色及悬停颜色" class="headerlink" title="Tag颜色及悬停颜色"></a>Tag颜色及悬停颜色</h3><pre><code class="lang-css">.material-tagscloud a{
+        background-color: rgba(255,255,255,.9);
+        text-decoration:none;
+        padding: 1px 9px;
+        margin: 9px 1px;
+        line-height: 40px;
+        white-space: nowrap;
+        transition: .6s;
+        opacity: .85;
+    }
+</code></pre>
+<pre><code class="lang-css">.material-tagscloud a:hover{
+        transition: .6s;
+        opacity: 1;
+        background: rgba(156,241,150,.7) !important;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+</code></pre>
+<h3 id="copyright位置"><a href="#copyright位置" class="headerlink" title="copyright位置"></a>copyright位置</h3><pre><code class="lang-css">#scheme-Paradox .mdl-mini-footer--right-section {
+    margin-right: 25px;
+}
+</code></pre>
+<pre><code class="lang-css">#scheme-Paradox #copyright {
+    margin-left: auto;
+    margin-right: 25px;
+    text-align: center;
+}
+</code></pre>
+<h2 id="MathJax"><a href="#MathJax" class="headerlink" title="MathJax"></a>MathJax</h2><p>主题配置文件中的<code>mathjax</code> 引用cdn<code>https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js</code><br>$\LaTeX$换行因为某些网页渲染的原因把<code>\\</code>换为<code>\\\\</code>即可.</p>
+<p>修改hexo的渲染规则可以避免LaTex代码出现问题：</p>
+<p><a href="https://docs.nexmoe.com/hexo/math.html#%E4%BD%BF%E7%94%A8kramed%E4%BB%A3%E6%9B%BF-marked" target="_blank" rel="noopener">https://docs.nexmoe.com/hexo/math.html#%E4%BD%BF%E7%94%A8kramed%E4%BB%A3%E6%9B%BF-marked</a></p>
+<p>MathJax测试</p>
+<script type="math/tex; mode=display">
+\begin{array}{|rc|} \hline \verb+\color{black}{text}+ & \color{black}{text} \\ \verb+\color{gray}{text}+ & \color{gray}{text} \\ \verb+\color{silver}{text}+ & \color{silver}{text} \\ \verb+\color{white}{text}+ & \color{white}{text} \\ \hline \verb+\color{maroon}{text}+ & \color{maroon}{text} \\ \verb+\color{red}{text}+ & \color{red}{text} \\ \verb+\color{yellow}{text}+ & \color{yellow}{text} \\ \verb+\color{lime}{text}+ & \color{lime}{text} \\ \verb+\color{olive}{text}+ & \color{olive}{text} \\ \verb+\color{green}{text}+ & \color{green}{text} \\ \verb+\color{teal}{text}+ & \color{teal}{text} \\ \verb+\color{aqua}{text}+ & \color{aqua}{text} \\ \verb+\color{blue}{text}+ & \color{blue}{text} \\ \verb+\color{navy}{text}+ & \color{navy}{text} \\ \verb+\color{purple}{text}+ & \color{purple}{text} \\ \verb+\color{fuchsia}{text}+ & \color{magenta}{text} \\ \hline \end{array}</script><h2 id="自定义页脚sns链接"><a href="#自定义页脚sns链接" class="headerlink" title="自定义页脚sns链接"></a>自定义页脚sns链接</h2><blockquote>
+<p><a href="https://story.wavky.com/2018/08/16/Hexo-Material%E4%B8%BB%E9%A2%98%E4%B9%8B-footer-SNS%E5%AE%9A%E5%88%B6/" target="_blank" rel="noopener">Hexo Material主题之 footer SNS定制</a></p>
+</blockquote>
+<p>svg图标如果在CSS里写实在还有问题放一个文件直接引用也可以.</p>
+<p>sns换到右边把ejs文件里的<code>left</code>改为<code>right</code>即可.</p>
+<h2 id="license"><a href="#license" class="headerlink" title="license"></a>license</h2><p>license: ‘本文由 Name 原创，采用<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>‘</p>
+<h2 id="鼠标点击烟花特效"><a href="#鼠标点击烟花特效" class="headerlink" title="鼠标点击烟花特效"></a>鼠标点击烟花特效</h2><p><code>themes/主体名称/source/js/src</code>新建<code>fireworks.js</code>文件</p>
+<pre><code class="lang-js">&quot;use strict&quot;;function updateCoords(e){pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top}function setParticuleDirection(e){var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return{x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)}}function createParticule(e,t){var a={};return a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function(){ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()},a}function createCircle(e,t){var a={};return a.x=e,a.y=t,a.color=&quot;#F00&quot;,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function(){ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1},a}function renderParticule(e){for(var t=0;t&lt;e.animatables.length;t++){e.animatables[t].target.draw()}}function animateParticules(e,t){for(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++){n.push(createParticule(e,t))}anime.timeline().add({targets:n,x:function(e){return e.endPos.x},y:function(e){return e.endPos.y},radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule}).add({targets:a,radius:anime.random(80,160),lineWidth:0,alpha:{value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)},duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0})}function debounce(e,t){var a;return function(){var n=this,i=arguments;clearTimeout(a),a=setTimeout(function(){e.apply(n,i)},t)}}var canvasEl=document.querySelector(&quot;.fireworks&quot;);if(canvasEl){var ctx=canvasEl.getContext(&quot;2d&quot;),numberOfParticules=30,pointerX=0,pointerY=0,tap=&quot;mousedown&quot;,colors=[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize=debounce(function(){canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+&quot;px&quot;,canvasEl.style.height=window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)},500),render=anime({duration:1/0,update:function(){ctx.clearRect(0,0,canvasEl.width,canvasEl.height)}});document.addEventListener(tap,function(e){&quot;sidebar&quot;!==e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!==e.target.id&amp;&amp;&quot;A&quot;!==e.target.nodeName&amp;&amp;&quot;IMG&quot;!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))},!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)}&quot;use strict&quot;;function updateCoords(e){pointerX=(e.clientX||e.touches[0].clientX)-canvasEl.getBoundingClientRect().left,pointerY=e.clientY||e.touches[0].clientY-canvasEl.getBoundingClientRect().top}function setParticuleDirection(e){var t=anime.random(0,360)*Math.PI/180,a=anime.random(50,180),n=[-1,1][anime.random(0,1)]*a;return{x:e.x+n*Math.cos(t),y:e.y+n*Math.sin(t)}}function createParticule(e,t){var a={};return a.x=e,a.y=t,a.color=colors[anime.random(0,colors.length-1)],a.radius=anime.random(16,32),a.endPos=setParticuleDirection(a),a.draw=function(){ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.fillStyle=a.color,ctx.fill()},a}function createCircle(e,t){var a={};return a.x=e,a.y=t,a.color=&quot;#F00&quot;,a.radius=0.1,a.alpha=0.5,a.lineWidth=6,a.draw=function(){ctx.globalAlpha=a.alpha,ctx.beginPath(),ctx.arc(a.x,a.y,a.radius,0,2*Math.PI,!0),ctx.lineWidth=a.lineWidth,ctx.strokeStyle=a.color,ctx.stroke(),ctx.globalAlpha=1},a}function renderParticule(e){for(var t=0;t&lt;e.animatables.length;t++){e.animatables[t].target.draw()}}function animateParticules(e,t){for(var a=createCircle(e,t),n=[],i=0;i&lt;numberOfParticules;i++){n.push(createParticule(e,t))}anime.timeline().add({targets:n,x:function(e){return e.endPos.x},y:function(e){return e.endPos.y},radius:0.1,duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule}).add({targets:a,radius:anime.random(80,160),lineWidth:0,alpha:{value:0,easing:&quot;linear&quot;,duration:anime.random(600,800)},duration:anime.random(1200,1800),easing:&quot;easeOutExpo&quot;,update:renderParticule,offset:0})}function debounce(e,t){var a;return function(){var n=this,i=arguments;clearTimeout(a),a=setTimeout(function(){e.apply(n,i)},t)}}var canvasEl=document.querySelector(&quot;.fireworks&quot;);if(canvasEl){var ctx=canvasEl.getContext(&quot;2d&quot;),numberOfParticules=30,pointerX=0,pointerY=0,tap=&quot;mousedown&quot;,colors=[&quot;#FF1461&quot;,&quot;#18FF92&quot;,&quot;#5A87FF&quot;,&quot;#FBF38C&quot;],setCanvasSize=debounce(function(){canvasEl.width=2*window.innerWidth,canvasEl.height=2*window.innerHeight,canvasEl.style.width=window.innerWidth+&quot;px&quot;,canvasEl.style.height=window.innerHeight+&quot;px&quot;,canvasEl.getContext(&quot;2d&quot;).scale(2,2)},500),render=anime({duration:1/0,update:function(){ctx.clearRect(0,0,canvasEl.width,canvasEl.height)}});document.addEventListener(tap,function(e){&quot;sidebar&quot;!==e.target.id&amp;&amp;&quot;toggle-sidebar&quot;!==e.target.id&amp;&amp;&quot;A&quot;!==e.target.nodeName&amp;&amp;&quot;IMG&quot;!==e.target.nodeName&amp;&amp;(render.play(),updateCoords(e),animateParticules(pointerX,pointerY))},!1),setCanvasSize(),window.addEventListener(&quot;resize&quot;,setCanvasSize,!1)};
+</code></pre>
+<p>在<code>themes/主体名称/layout/_layout.swig/ejs</code>的<code>&lt;/body&gt;</code>上方添加</p>
+<pre><code class="lang-ejs">&lt;canvas class=&quot;fireworks&quot; style=&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;/canvas&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;//cdn.bootcss.com/animejs/2.2.0/anime.min.js&quot;&gt;&lt;/script&gt; 
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/fireworks.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="一些主题的小问题"><a href="#一些主题的小问题" class="headerlink" title="一些主题的小问题"></a>一些主题的小问题</h2><p>独立页面<code>toc</code>不是默认为<code>true</code>的，需要手动开</p>
+<pre><code>toc: true
+</code></pre><p>独立页面的<code>license</code>会在最后加上<code>index.html</code>，点击这个链接会导致<code>gitalk</code>再次创建<code>issue</code>，目前没有去解决.</p>
+<h1 id="天坑"><a href="#天坑" class="headerlink" title="天坑"></a>天坑</h1><p>咕了很久全忘了，觉得以后再修blog就凉了，有空就填。</p>
+<h2 id="修改后没记录"><a href="#修改后没记录" class="headerlink" title="修改后没记录"></a>修改后没记录</h2><p>代码高亮</p>
+<p>功能页面 | 独立页面</p>
+<p>material图标</p>
+<h2 id="想添加的功能"><a href="#想添加的功能" class="headerlink" title="想添加的功能"></a>想添加的功能</h2><p><strong>jsdelivr</strong></p>
+<p>插入pdf</p>
+<p>rss订阅</p>
+<p>代码复制功能</p>
+<p>鼠标特效fireworks遮挡</p>
+<p>文章头图自定义</p>
+<p>js时间统计，页脚动态效果</p>
+<p>hexo-addlink</p>
+<p>文章置顶</p>
+<p>字体，代码字体</p>
+<p>背景js动态效果</p>
+<p>文章头图</p>
+<p>Site Information</p>
+<p>npm install hexo-math —save</p>
+<h1 id="Git指令"><a href="#Git指令" class="headerlink" title="Git指令"></a>Git指令</h1><h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><p>克隆</p>
+<pre><code class="lang-bash">git clone repo
+</code></pre>
+<p>克隆分支</p>
+<pre><code class="lang-bash">git clone -b branch_name repo
+</code></pre>
+<hr>
+<p>上传文件</p>
+<pre><code class="lang-bash">git add .
+git commit -m &#39;update_name&#39;
+git push origin branch_name
+</code></pre>
+<hr>
+<p>Hexo指令</p>
+<pre><code class="lang-bash">hexo init
+hexo clean g d
+hexo s
+hexo new name categories
+</code></pre>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p><a href="https://zdran.com/20180326.html" target="_blank" rel="noopener">https://zdran.com/20180326.html</a></p>
+<p>创建源文件git目录</p>
+<pre><code class="lang-bash">git init
+git remote add origin https://github.com/xx/xx.github.io // 填入你的repo地址
+</code></pre>
+<p>创建分支</p>
+<pre><code class="lang-bash">git checkout -b branch_name
+git add .
+git commit -m &#39;add branch_name&#39;
+git push origin branch_name
+</code></pre>
+<p>切换分支</p>
+<pre><code class="lang-bash">git checkout branch_name
+</code></pre>
+<hr>
+<pre><code class="lang-js">const ap = new APlayer({
+    container: document.getElementById(&#39;aplayer&#39;),
+    fixed: true,
+    autoplay: false,
+    theme: &#39;#FADFA3&#39;,
+    loop: &#39;all&#39;,
+    order: &#39;list&#39;,
+    preload: &#39;none&#39;,
+    volume: 0.33,
+    mutex: true,
+    listFolded: true,
+    listMaxHeight: &#39;233px&#39;,
+    lrcType: 3,
+    audio: [
+        {
+            name: &#39;My Soul,Your Beats!&#39;,
+            artist: &#39;麻枝准&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=28699614.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/tw0Vs85YAsvUpDsM7f2JMQ==/109951163914291289.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/none.lrc&#39;,
+            theme: &#39;#9370DB&#39;
+        },
+        {
+            name: &#39;世末歌者&#39;,
+            artist: &#39;乐正绫 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=429460239.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/sZGaAxUHHhuhQ1Zxa2jw4g==/17790098137764958.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/smgz.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;同归世界线&#39;,
+            artist: &#39;乐正绫 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=35807133.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/EnQ0J1f_-p8S2OunnRiGhA==/3298534885062503.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/tgsjx.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;凉雨&#39;,
+            artist: &#39;洛天依 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=477137425.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/COB5xLS-nDUdCvzBSw0eOg==/109951162924485415.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ly.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;唱给雅音宮羽Ⅱ&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29784378.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/a61wnSbpl7iz4juzmlq-gA==/6641050233030998.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cgyygy2.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;繁华唱遍&#39;,
+            artist: &#39;洛天依 | URUUT&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=1362645677.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/Ytdbz--Ui1u_Mvosiv7C1w==/109951164042650892.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/fhcb.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;小小思念&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=28987160.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/L8eZSVnPcNSTXmxMd36gEg==/8976412929211156.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xxsn.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;时间日记&#39;,
+            artist: &#39;洛天依 | 湯ん&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=555103145.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/mwQhrhXSrt7NbR0EX_NLDg==/109951163129515683.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sjrj.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;寻遍星空&#39;,
+            artist: &#39;洛天依 | 公兔&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29307542.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/VDzqLf2w5SV-VU1FH1AwNg==/6657542906420975.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xbxk.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;岁月流年&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29792008.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/syln.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;天空的味道&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29450488.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/Dqgbz3BMQG3w5dzs9s3-Hw==/3284241233862965.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/tkdwd.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;刹那烟火，落尽清凉&#39;,
+            artist: &#39;洛天依 | 九御kyuugo&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=413188707.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/guXC-WPcWhXdIdzpmRMJ1w==/109951162942281449.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cnyh.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;朝汐&#39;,
+            artist: &#39;洛天依 | 千面音葉7ZH&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=1315517813.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/R_DVp-6qp8aJuXGetjzVmg==/109951163587343726.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/zx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;心跳同步的时光&#39;,
+            artist: &#39;洛天依 | JUSF周存&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=422427110.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/CSmaT-E-XIMzqm2jqpsrJw==/18185922323824829.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xttbdsg.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;为了你唱下去&#39;,
+            artist: &#39;洛天依 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=420397887.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/W3VMsSEjTdvhz7h3a0oxTg==/17782401556325576.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wlncxq.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;绝体绝命&#39;,
+            artist: &#39;洛天依 | 阿良良木健&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=550059604.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/Csw9Gl-c5YDFLJggK-gpyw==/109951163696193010.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jtjm.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;春风来&#39;,
+            artist: &#39;洛天依 | 阿良良木健&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=480243094.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/DPs2L7G6yXTAEvlCV3cEqQ==/109951162955968424.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/cfl.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;勾指起誓&#39;,
+            artist: &#39;洛天依 | ilem&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=1345872140.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/eMyCr0gv0kPGlew9XTNjyA==/109951163944178164.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/gzqs.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;深海少女&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29357538.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/yI0SluM1lL2NWofjbXr99w==/109951163926977151.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/shsn.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;与你最后的夏天&#39;,
+            artist: &#39;洛天依&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=33715419.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ynzhdxt.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;谷雨&#39;,
+            artist: &#39;洛天依 | 桑葚上的猴子&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=410161057.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/UL_YbIkPg9t6UFpmTRxMPw==/18198016951571087.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/gy.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;咸咸的&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=484710046.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/-mSe3PXd0x66UZQRmip9qQ==/109951162950201713.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xxd.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;前尘如梦&#39;,
+            artist: &#39;洛天依 | 唐乐林&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=27908599.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/A9oKNYp-KPOv_TrMG5ml6w==/3405187512278986.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/qcrm.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;梨花泽泽远山远 &#39;,
+            artist: &#39;洛天依 | MeLo&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=425710799.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vjwCPafPafceVxULtWFSfg==/18020995579444517.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/lhzzysy.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;夏天·延长战&#39;,
+            artist: &#39;洛天依 | DOS:Error#&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=499272397.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/ww_5Ayf5s-vwP-GSgEKMwA==/109951163032306409.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xtycz.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;一秒之序&#39;,
+            artist: &#39;洛天依 | PoKeR&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=433059462.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/irEm-wZzV8zfbtc4UqKsyg==/17999005346907532.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ymzx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;Last Natsu&#39;,
+            artist: &#39;洛天依 | KAII&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=532815418.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/Jg7qB9BxGV0XJzkcWBEWEA==/109951163116417673.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/lastnatsu.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;化尘旅行&#39;,
+            artist: &#39;洛天依 | Tuno桐音&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=33854157.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/hclx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;九尾妖狐&#39;,
+            artist: &#39;洛天依 | PoKeR&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=550364401.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/yuPHEbEeTmxpTxMStl-lLw==/109951163230319367.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jwyh.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;异样的风暴中心&#39;,
+            artist: &#39;洛天依 | 杉田朗&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=535915977.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vKUpCUdQY3jWq8Vpr3R9Tg==/109951163632766055.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/yydfbzx.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;被祝福的旅程&#39;,
+            artist: &#39;洛天依 | DELA,雨狸&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=453352408.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/RC1fjVZmE50uTlxOWGspVg==/109951162842875584.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/bzfdlc.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;trii - Feel Your Dream 2018&#39;,
+            artist: &#39;洛天依 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=528634797.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/PKPVikQLZb4dqLDqCdqLWg==/109951163101308515.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/fyd2018.lrc&#39;,
+            theme: &#39;#66CCFF&#39;
+        },
+        {
+            name: &#39;逆浪千秋&#39;,
+            artist: &#39;言和&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=542364335.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/z4f7Gfge3f1PkY90bozxPQ==/109951163169021511.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/nlqq.lrc&#39;,
+            theme: &#39;#99FFFF&#39;
+        },
+        {
+            name: &#39;梦之雨&#39;,
+            artist: &#39;言和&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29095492.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/YZ4EmG8r5T6XPj_1WBue-A==/3295236350128132.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/mzy.lrc&#39;,
+            theme: &#39;#99FFFF&#39;
+        },
+        {
+            name: &#39;岁月成碑&#39;,
+            artist: &#39;乐正绫 | Days&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=34179200.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/W2ZKq9bj8Y0YgLyTLpQNew==/7930777373220204.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sycb.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;烈火灼冰&#39;,
+            artist: &#39;乐正绫 | 希望索任合资&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=525488258.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/V60ZQN_0tsWwsvQo2B2KQA==/109951163089698048.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/lhzb.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;千里邀月&#39;,
+            artist: &#39;乐正绫 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=1332491711.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/0emegncinMnQQanyBvfK_w==/109951163718505451.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/qlyy.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;梦语&#39;,
+            artist: &#39;乐正绫&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=33190543.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/0NsramhXlm6t4Kex3v2LSA==/109951163926966859.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/my.lrc&#39;,
+            theme: &#39;#EE0000&#39;
+        },
+        {
+            name: &#39;Artificial Emotions&#39;,
+            artist: &#39;心华 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=415090258.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/naihNDWAJXSxy7UE3XVKEg==/17692241602844445.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/arti_emo.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我的海岸线&#39;,
+            artist: &#39;心华 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=453278711.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/jpZu0Ykp1YCJ3xlcvYhbtA==/109951162842712103.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wdhax.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我寻着光而来&#39;,
+            artist: &#39;心华 | 著小生zoki&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=1323549392.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/8ipWcNy5FQu-0E8dRTt1Rw==/109951163651934410.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wxzgel.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;星雨之夜&#39;,
+            artist: &#39;心华 | ilem&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=41672085.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/xZ6LySLSgYz98kO8mGbp4Q==/1387583675775967.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xyzy.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;我們的彈幕青春&#39;,
+            artist: &#39;心华 | VelecTi&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=41672084.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/xZ6LySLSgYz98kO8mGbp4Q==/1387583675775967.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wmddmqc.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;绯焰悲空&#39;,
+            artist: &#39;心华 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=415085220.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/b8Ubr5n4QytBg7Pc7O3pjw==/780653265867628.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/fybk.lrc&#39;,
+            theme: &#39;#EE82EE&#39;
+        },
+        {
+            name: &#39;万神纪&#39;,
+            artist: &#39;星尘 | 海鲜面&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=459831628.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/ygeaRVdHTDjylMZy8_bmSw==/109951162860064953.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/wsj.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;星愿StarWish&#39;,
+            artist: &#39;星尘 | 平行四界Quadimension&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=506607859.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/Xl4Mp9uEudbnYQ79amRJWA==/109951162879679523.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/xy.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;一日都市&#39;,
+            artist: &#39;星尘 | 小野道ono&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=494953325.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/wPE3Z922KRX5mo94eGgi5g==/109951162923791285.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/yrds.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;曙光&#39;,
+            artist: &#39;星尘&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=496807835.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/0AZa9x1gcaPHQJNia6IvMA==/109951163031876680.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sg2.lrc&#39;,
+            theme: &#39;#9999FF&#39;
+        },
+        {
+            name: &#39;時計塔中の白兎&#39;,
+            artist: &#39;初音ミク | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=435996054.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/7m5M903sHrRAoXplswrSdw==/18211211091317943.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/jst.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;歌に形はないけれど&#39;,
+            artist: &#39;初音ミク | doriko&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=409912.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/Pv6EyvmbbHhewnS5U-8dYw==/2493692371854828.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/srgswx.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;morning haze&#39;,
+            artist: &#39;初音ミク | keeno&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=34690740.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/s06UBcyrFpXUmAf_ly8jTQ==/2901611187579735.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/morning.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;glow&#39;,
+            artist: &#39;初音ミク | keeno&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=29023581.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/58JEcKKl34g-4s5v0RSb9Q==/6625657069114417.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/glow.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;每颗流星都见证&#39;,
+            artist: &#39;初音ミク | 小野道ono&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=526704382.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/KjqhDvfpxkzsrTJ74WV0Zg==/109951163094643593.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/mklxdjz.lrc&#39;,
+            theme: &#39;#39C5BB&#39;
+        },
+        {
+            name: &#39;冬去春来再尽年&#39;,
+            artist: &#39;言和,乐正绫,心华,洛天依 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=413074063.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/pGnU2i0-iQMYyGECNWghUw==/18434411951503489.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/dqclzjn.lrc&#39;
+        },
+        {
+            name: &#39;白石溪&#39;,
+            artist: &#39;乐正绫,洛天依 | 純白P&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=415086297.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/naihNDWAJXSxy7UE3XVKEg==/17692241602844445.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/bsx.lrc&#39;
+        },
+        {
+            name: &#39;β受体阻滞剂与星辰&#39;,
+            artist: &#39;洛天依,言和 | Kevinz&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=447943681.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/FWNGckJvrMCQ2lCd7Ot89g==/109951162992552158.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/beita.lrc&#39;
+        },
+        {
+            name: &#39;霜雪千年&#39;,
+            artist: &#39;洛天依,乐正绫 | COP&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=34923862.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/vkoQqphGwk6TyRFai3ZBdw==/3238061743857732.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sxqn.lrc&#39;
+        },
+        {
+            name: &#39;深夜诗人&#39;,
+            artist: &#39;洛天依,言和 | ilem&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=477936261.mp3&#39;,
+            cover: &#39;https://p2.music.126.net/Bt3dFUR9xWCd8wJlmrsgXg==/3429376768564696.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/sysr.lrc&#39;
+        },
+        {
+            name: &#39;普通DISCO&#39;,
+            artist: &#39;洛天依,言和 | ilem&#39;,
+            url: &#39;https://music.163.com/song/media/outer/url?id=31140522.mp3&#39;,
+            cover: &#39;https://p1.music.126.net/FwrkRhTBoI9TNj3BkUy2Hw==/1364493965811296.jpg&#39;,
+            lrc: &#39;/./aplayer/lrc/ptdisco.lrc&#39;
+        }
+    ]
+});
+</code></pre>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文由 ShioKiri 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2019/blog/">https://x.lyxw.xyz/2019/blog/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            id: md5(window.location.pathname),
+            clientID: '067813356719236499bf',
+            clientSecret: 'a9afeb0c73b7cd743bfe4a778e45fad86e1031ae',
+            repo: 'shiokiri.github.io',
+            owner: 'shiokiri',
+            admin: ['shiokiri'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/science_fiction/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/FFT/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png" alt="落影汐雾's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        xluoying2017@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:xluoying2017@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/写作/">写作<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
+            </li></ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">assignment_ind</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/chat" title="闲聊">
+                
+                    <i class="material-icons sidebar-material-icons">chat_bubble_outline</i>
+                
+                闲聊
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">apps</i>
+                
+                友链
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">style</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="映像">
+                
+                    <i class="material-icons sidebar-material-icons">crop_original</i>
+                
+                映像
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">28</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--right-section sns-list">
+     <!-- Github -->
+     
+        <a href="https://github.com/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+    --></a>
+    
+
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/ameshiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+   
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/51283000" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Steam-->
+    
+        <a href="https://steamcommunity.com/id/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-steam">
+                <span class="visuallyhidden">Steam</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+        <!--Copyright-->
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/31/2019 21:52:00");
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" d "+hnum + " h " + mnum + " m " + snum + " s";
+            } 
+            setInterval("createtime()",250);
+        </script>
+
+        <div id="copyright">
+            <span id="timeDate"></span>
+            <span class="my-face">ღゝ◡╹)ノ♡</span>
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;落影汐雾
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2019;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+            <!-- live2d -->
+            <script src="/live2d-widget/autoload.js"></script>
+            <!-- fireworks -->
+            <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 9; pointer-events: none;" ></canvas> 
+            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+            <script type="text/javascript" src="/js/src/fireworks.js"></script>
+            <!-- aplayer -->
+            <link rel="stylesheet" href="/aplayer/APlayer.min.css">
+            <div id="aplayer" style="z-index: 11;"></div>
+            <script type="text/javascript" src="/aplayer/APlayer.min.js"></script>
+            <script type="text/javascript" src="/aplayer/music.js"></script>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+    
+</html>
