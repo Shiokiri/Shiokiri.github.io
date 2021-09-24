@@ -222,9 +222,9 @@
     <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/tags/编程/"/>
-    
     <category term="经历" scheme="https://x.lyxw.xyz/tags/经历/"/>
+    
+    <category term="编程" scheme="https://x.lyxw.xyz/tags/编程/"/>
     
   </entry>
   
@@ -270,9 +270,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
-    
     <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
+    
+    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
     
   </entry>
   
@@ -281,7 +281,7 @@
     <link href="https://x.lyxw.xyz/2019/python/"/>
     <id>https://x.lyxw.xyz/2019/python/</id>
     <published>2019-10-17T08:46:37.000Z</published>
-    <updated>2020-08-16T02:12:54.376Z</updated>
+    <updated>2021-09-24T08:51:21.125Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -633,7 +633,7 @@
     <link href="https://x.lyxw.xyz/2019/GFW/"/>
     <id>https://x.lyxw.xyz/2019/GFW/</id>
     <published>2019-06-01T13:52:50.000Z</published>
-    <updated>2020-08-16T02:22:55.715Z</updated>
+    <updated>2021-09-24T08:43:01.210Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
