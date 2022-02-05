@@ -34,16 +34,54 @@
   </entry>
   
   <entry>
+    <title>后端开发学习</title>
+    <link href="https://x.lyxw.xyz/2022/backend/"/>
+    <id>https://x.lyxw.xyz/2022/backend/</id>
+    <published>2022-01-29T20:24:25.000Z</published>
+    <updated>2022-01-29T21:39:37.813Z</updated>
+    
+    
+    
+    
+    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>电子产品评测</title>
+    <link href="https://x.lyxw.xyz/2022/electronics/"/>
+    <id>https://x.lyxw.xyz/2022/electronics/</id>
+    <published>2022-01-29T20:23:12.000Z</published>
+    <updated>2022-01-29T21:39:10.567Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最后更新：A.D.2022-1-30&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    
+    
+    <category term="评测" scheme="https://x.lyxw.xyz/tags/评测/"/>
+    
+    <category term="电子产品" scheme="https://x.lyxw.xyz/tags/电子产品/"/>
+    
+  </entry>
+  
+  <entry>
     <title>「观测者轻语」杂谈</title>
     <link href="https://x.lyxw.xyz/2021/talk_1/"/>
     <id>https://x.lyxw.xyz/2021/talk_1/</id>
     <published>2021-08-08T02:18:09.000Z</published>
-    <updated>2021-09-04T15:16:15.553Z</updated>
+    <updated>2022-01-29T19:54:30.349Z</updated>
     
     
-    <summary type="html">&lt;p&gt;1.关于有机生命体存在的意义&lt;/p&gt;
+    <summary type="html">&lt;p&gt;1.关于生活意义&lt;/p&gt;
 &lt;p&gt;2.关于电子游戏&lt;/p&gt;
-&lt;p&gt;3.关于计算机科学与编程学习&lt;/p&gt;</summary>
+&lt;p&gt;3.关于编程学习&lt;/p&gt;</summary>
     
     
     
@@ -55,11 +93,32 @@
   </entry>
   
   <entry>
+    <title>落影汐雾的记录集</title>
+    <link href="https://x.lyxw.xyz/2021/record_set/"/>
+    <id>https://x.lyxw.xyz/2021/record_set/</id>
+    <published>2021-07-31T20:33:26.000Z</published>
+    <updated>2022-01-29T21:37:38.220Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;最后更新：A.D.2021-9-24&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    
+    
+    <category term="记录" scheme="https://x.lyxw.xyz/tags/记录/"/>
+    
+  </entry>
+  
+  <entry>
     <title>夏日小日记</title>
     <link href="https://x.lyxw.xyz/2021/diary_1/"/>
     <id>https://x.lyxw.xyz/2021/diary_1/</id>
     <published>2021-07-29T02:18:09.000Z</published>
-    <updated>2021-09-04T15:19:49.234Z</updated>
+    <updated>2022-01-29T19:20:55.109Z</updated>
     
     
     <summary type="html">&lt;p&gt;o(=•ェ•=)m  以此或多或少记录下一点暑假的生活&lt;/p&gt;</summary>
@@ -78,11 +137,11 @@
     <link href="https://x.lyxw.xyz/2021/end_1/"/>
     <id>https://x.lyxw.xyz/2021/end_1/</id>
     <published>2021-06-26T07:33:26.000Z</published>
-    <updated>2021-10-02T11:27:51.515Z</updated>
+    <updated>2022-01-29T20:35:51.389Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;都没什么大不了的了&lt;/p&gt;
+&lt;p&gt;也确实到了结束的的时候了&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -90,7 +149,7 @@
     <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
     
     
-    <category term="经历" scheme="https://x.lyxw.xyz/tags/经历/"/>
+    <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
     
   </entry>
   
@@ -118,7 +177,7 @@
     <link href="https://x.lyxw.xyz/2020/august/"/>
     <id>https://x.lyxw.xyz/2020/august/</id>
     <published>2020-08-16T14:03:37.000Z</published>
-    <updated>2021-06-26T07:39:20.283Z</updated>
+    <updated>2022-01-29T20:35:38.791Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -130,7 +189,7 @@
     <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
     
     
-    <category term="经历" scheme="https://x.lyxw.xyz/tags/经历/"/>
+    <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
     
   </entry>
   
@@ -181,7 +240,7 @@
     <link href="https://x.lyxw.xyz/2020/marxist_philosophy_1/"/>
     <id>https://x.lyxw.xyz/2020/marxist_philosophy_1/</id>
     <published>2020-05-18T15:23:35.000Z</published>
-    <updated>2020-07-11T23:09:33.050Z</updated>
+    <updated>2022-01-29T20:37:14.862Z</updated>
     
     
       
@@ -254,7 +313,7 @@
     <link href="https://x.lyxw.xyz/2019/pyqt/"/>
     <id>https://x.lyxw.xyz/2019/pyqt/</id>
     <published>2019-10-25T11:50:55.000Z</published>
-    <updated>2020-08-16T02:21:38.995Z</updated>
+    <updated>2022-01-29T20:28:16.833Z</updated>
     
     
       
@@ -272,7 +331,7 @@
     
     <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    <category term="python" scheme="https://x.lyxw.xyz/tags/python/"/>
     
   </entry>
   
@@ -281,7 +340,7 @@
     <link href="https://x.lyxw.xyz/2019/python/"/>
     <id>https://x.lyxw.xyz/2019/python/</id>
     <published>2019-10-17T08:46:37.000Z</published>
-    <updated>2021-09-24T08:51:21.125Z</updated>
+    <updated>2022-01-29T20:28:43.736Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -293,7 +352,7 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    <category term="python" scheme="https://x.lyxw.xyz/tags/python/"/>
     
   </entry>
   
@@ -500,7 +559,7 @@
     <link href="https://x.lyxw.xyz/2019/blog/"/>
     <id>https://x.lyxw.xyz/2019/blog/</id>
     <published>2019-08-16T10:37:19.000Z</published>
-    <updated>2020-08-16T01:54:50.301Z</updated>
+    <updated>2022-01-29T21:22:37.818Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
