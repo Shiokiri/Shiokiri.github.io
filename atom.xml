@@ -61,7 +61,7 @@
     <link href="https://x.lyxw.xyz/2022/backend/"/>
     <id>https://x.lyxw.xyz/2022/backend/</id>
     <published>2022-01-29T20:24:25.000Z</published>
-    <updated>2022-02-12T17:27:03.256Z</updated>
+    <updated>2022-02-12T18:01:09.071Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -80,6 +80,8 @@
     <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
     
     <category term="SpringMVC" scheme="https://x.lyxw.xyz/tags/SpringMVC/"/>
+    
+    <category term="Golang" scheme="https://x.lyxw.xyz/tags/Golang/"/>
     
   </entry>
   
@@ -111,7 +113,7 @@
     <link href="https://x.lyxw.xyz/2022/python_web_crawler/"/>
     <id>https://x.lyxw.xyz/2022/python_web_crawler/</id>
     <published>2022-01-11T17:01:20.000Z</published>
-    <updated>2022-02-12T17:24:27.593Z</updated>
+    <updated>2022-02-12T18:01:29.808Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -372,7 +374,7 @@
     <link href="https://x.lyxw.xyz/2019/pyqt/"/>
     <id>https://x.lyxw.xyz/2019/pyqt/</id>
     <published>2019-10-25T11:50:55.000Z</published>
-    <updated>2022-01-29T20:28:16.833Z</updated>
+    <updated>2022-02-12T18:01:38.336Z</updated>
     
     
       
@@ -390,7 +392,7 @@
     
     <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
     
-    <category term="python" scheme="https://x.lyxw.xyz/tags/python/"/>
+    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
     
   </entry>
   
@@ -399,7 +401,7 @@
     <link href="https://x.lyxw.xyz/2019/python/"/>
     <id>https://x.lyxw.xyz/2019/python/</id>
     <published>2019-10-17T08:46:37.000Z</published>
-    <updated>2022-01-29T20:28:43.736Z</updated>
+    <updated>2022-02-12T18:01:43.274Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -411,7 +413,7 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="python" scheme="https://x.lyxw.xyz/tags/python/"/>
+    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
     
   </entry>
   
@@ -511,7 +513,7 @@
     <link href="https://x.lyxw.xyz/2019/C++_stl/"/>
     <id>https://x.lyxw.xyz/2019/C++_stl/</id>
     <published>2019-09-23T01:13:16.000Z</published>
-    <updated>2020-02-29T08:36:20.079Z</updated>
+    <updated>2022-02-12T18:03:27.681Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -523,9 +525,11 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="stl_queue" scheme="https://x.lyxw.xyz/tags/stl-queue/"/>
+    <category term="Queue" scheme="https://x.lyxw.xyz/tags/Queue/"/>
     
-    <category term="stl_set" scheme="https://x.lyxw.xyz/tags/stl-set/"/>
+    <category term="Stack" scheme="https://x.lyxw.xyz/tags/Stack/"/>
+    
+    <category term="STL" scheme="https://x.lyxw.xyz/tags/STL/"/>
     
   </entry>
   
@@ -730,7 +734,7 @@
     <link href="https://x.lyxw.xyz/2019/chrome/"/>
     <id>https://x.lyxw.xyz/2019/chrome/</id>
     <published>2019-06-04T09:54:25.000Z</published>
-    <updated>2020-02-29T08:40:58.365Z</updated>
+    <updated>2022-02-12T18:02:14.329Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -742,7 +746,7 @@
     <category term="计算机" scheme="https://x.lyxw.xyz/categories/计算机/"/>
     
     
-    <category term="chrome" scheme="https://x.lyxw.xyz/tags/chrome/"/>
+    <category term="Chrome" scheme="https://x.lyxw.xyz/tags/Chrome/"/>
     
   </entry>
   
