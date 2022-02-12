@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>落影汐雾 | 虚空印刷体</title>
+  <title>落影汐雾的x号虚空印刷站</title>
   
   
   <link href="https://x.lyxw.xyz/atom.xml" rel="self"/>
   
   <link href="https://x.lyxw.xyz/"/>
-  <updated>2021-10-02T11:26:31.491Z</updated>
+  <updated>2022-02-12T17:26:35.768Z</updated>
   <id>https://x.lyxw.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://x.lyxw.xyz/2033/post-index/"/>
     <id>https://x.lyxw.xyz/2033/post-index/</id>
     <published>2033-07-12T15:59:59.000Z</published>
-    <updated>2021-10-02T11:26:31.491Z</updated>
+    <updated>2022-02-12T17:26:35.768Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2021-08-08&lt;/p&gt;
+&lt;p&gt;更新于 A.D.2022.2.13&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -34,17 +34,52 @@
   </entry>
   
   <entry>
+    <title>使用Gmail进行域名邮箱邮件收发</title>
+    <link href="https://x.lyxw.xyz/2022/domain_mail/"/>
+    <id>https://x.lyxw.xyz/2022/domain_mail/</id>
+    <published>2022-02-12T15:48:00.000Z</published>
+    <updated>2022-02-12T17:27:14.416Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    
+    
+    <category term="域名邮箱" scheme="https://x.lyxw.xyz/tags/域名邮箱/"/>
+    
+    <category term="Gmail" scheme="https://x.lyxw.xyz/tags/Gmail/"/>
+    
+  </entry>
+  
+  <entry>
     <title>后端开发学习</title>
     <link href="https://x.lyxw.xyz/2022/backend/"/>
     <id>https://x.lyxw.xyz/2022/backend/</id>
     <published>2022-01-29T20:24:25.000Z</published>
-    <updated>2022-01-29T21:39:37.813Z</updated>
+    <updated>2022-02-12T17:27:03.256Z</updated>
     
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
+    
+    <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
+    
+    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    
+    <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
+    
+    <category term="SpringMVC" scheme="https://x.lyxw.xyz/tags/SpringMVC/"/>
     
   </entry>
   
@@ -53,11 +88,11 @@
     <link href="https://x.lyxw.xyz/2022/electronics/"/>
     <id>https://x.lyxw.xyz/2022/electronics/</id>
     <published>2022-01-29T20:23:12.000Z</published>
-    <updated>2022-01-29T21:39:10.567Z</updated>
+    <updated>2022-02-12T16:42:31.705Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;最后更新：A.D.2022-1-30&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2022.1.30&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -72,11 +107,34 @@
   </entry>
   
   <entry>
+    <title>Python网络爬虫学习</title>
+    <link href="https://x.lyxw.xyz/2022/python_web_crawler/"/>
+    <id>https://x.lyxw.xyz/2022/python_web_crawler/</id>
+    <published>2022-01-11T17:01:20.000Z</published>
+    <updated>2022-02-12T17:24:27.593Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    
+    
+    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    
+    <category term="爬虫" scheme="https://x.lyxw.xyz/tags/爬虫/"/>
+    
+  </entry>
+  
+  <entry>
     <title>「观测者轻语」杂谈</title>
     <link href="https://x.lyxw.xyz/2021/talk_1/"/>
     <id>https://x.lyxw.xyz/2021/talk_1/</id>
     <published>2021-08-08T02:18:09.000Z</published>
-    <updated>2022-01-29T19:54:30.349Z</updated>
+    <updated>2022-02-12T17:28:12.824Z</updated>
     
     
     <summary type="html">&lt;p&gt;1.关于生活意义&lt;/p&gt;
@@ -85,7 +143,7 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="杂谈" scheme="https://x.lyxw.xyz/tags/杂谈/"/>
@@ -97,12 +155,13 @@
     <link href="https://x.lyxw.xyz/2021/record_set/"/>
     <id>https://x.lyxw.xyz/2021/record_set/</id>
     <published>2021-07-31T20:33:26.000Z</published>
-    <updated>2022-01-29T21:37:38.220Z</updated>
+    <updated>2022-02-12T16:46:00.474Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;最后更新：A.D.2021-9-24&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+&lt;p&gt;最后更新：A.D.2022.2.13&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这篇文章大概就是用来在网页上看看的……（？&lt;/p&gt;</summary>
     
     
     
@@ -118,14 +177,14 @@
     <link href="https://x.lyxw.xyz/2021/diary_1/"/>
     <id>https://x.lyxw.xyz/2021/diary_1/</id>
     <published>2021-07-29T02:18:09.000Z</published>
-    <updated>2022-01-29T19:20:55.109Z</updated>
+    <updated>2022-02-12T17:29:54.121Z</updated>
     
     
-    <summary type="html">&lt;p&gt;o(=•ェ•=)m  以此或多或少记录下一点暑假的生活&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;o(=•ェ•=)m  以此或多或少记录下一点暑假的生活 \(￣︶￣*\))&lt;/p&gt;</summary>
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="日记" scheme="https://x.lyxw.xyz/tags/日记/"/>
@@ -137,7 +196,7 @@
     <link href="https://x.lyxw.xyz/2021/end_1/"/>
     <id>https://x.lyxw.xyz/2021/end_1/</id>
     <published>2021-06-26T07:33:26.000Z</published>
-    <updated>2022-01-29T20:35:51.389Z</updated>
+    <updated>2022-02-12T15:55:30.946Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -146,7 +205,7 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
@@ -177,7 +236,7 @@
     <link href="https://x.lyxw.xyz/2020/august/"/>
     <id>https://x.lyxw.xyz/2020/august/</id>
     <published>2020-08-16T14:03:37.000Z</published>
-    <updated>2022-01-29T20:35:38.791Z</updated>
+    <updated>2022-02-12T15:54:11.270Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -186,7 +245,7 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
@@ -219,14 +278,14 @@
     <link href="https://x.lyxw.xyz/2020/metagame/"/>
     <id>https://x.lyxw.xyz/2020/metagame/</id>
     <published>2020-05-18T15:53:35.000Z</published>
-    <updated>2021-07-12T06:54:21.846Z</updated>
+    <updated>2022-02-12T15:53:26.003Z</updated>
     
     
     <summary type="html">&lt;p&gt;meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。&lt;/p&gt;</summary>
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="metagame" scheme="https://x.lyxw.xyz/tags/metagame/"/>
@@ -240,7 +299,7 @@
     <link href="https://x.lyxw.xyz/2020/marxist_philosophy_1/"/>
     <id>https://x.lyxw.xyz/2020/marxist_philosophy_1/</id>
     <published>2020-05-18T15:23:35.000Z</published>
-    <updated>2022-02-08T15:18:10.480Z</updated>
+    <updated>2022-02-12T15:53:49.554Z</updated>
     
     
       
@@ -253,10 +312,10 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
-    <category term="小作文" scheme="https://x.lyxw.xyz/tags/小作文/"/>
+    <category term="作文" scheme="https://x.lyxw.xyz/tags/作文/"/>
     
   </entry>
   
@@ -265,7 +324,7 @@
     <link href="https://x.lyxw.xyz/2020/about-program/"/>
     <id>https://x.lyxw.xyz/2020/about-program/</id>
     <published>2020-02-29T02:18:09.000Z</published>
-    <updated>2021-09-04T15:23:28.750Z</updated>
+    <updated>2022-02-12T17:41:35.097Z</updated>
     
     
       
@@ -278,7 +337,7 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="编程" scheme="https://x.lyxw.xyz/tags/编程/"/>
@@ -538,7 +597,7 @@
     <link href="https://x.lyxw.xyz/2019/science_fiction/"/>
     <id>https://x.lyxw.xyz/2019/science_fiction/</id>
     <published>2019-09-22T13:22:07.000Z</published>
-    <updated>2020-02-29T08:38:02.666Z</updated>
+    <updated>2022-02-12T15:55:21.259Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -547,7 +606,7 @@
     
     
     
-    <category term="写作" scheme="https://x.lyxw.xyz/categories/写作/"/>
+    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
     
     
     <category term="科幻" scheme="https://x.lyxw.xyz/tags/科幻/"/>
@@ -555,15 +614,15 @@
   </entry>
   
   <entry>
-    <title>Hexo博客搭建及material主题使用指南</title>
+    <title>Hexo博客搭建及Material主题使用指南</title>
     <link href="https://x.lyxw.xyz/2019/blog/"/>
     <id>https://x.lyxw.xyz/2019/blog/</id>
     <published>2019-08-16T10:37:19.000Z</published>
-    <updated>2022-01-29T21:22:37.818Z</updated>
+    <updated>2022-02-12T16:35:22.084Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019.10.17&lt;/p&gt;
+&lt;p&gt;更新于： A.D.2022.2.13&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;前端真好玩qvq&lt;/p&gt;</summary>
     
