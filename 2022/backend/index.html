@@ -256,7 +256,7 @@
 
     
         <meta property="article:published_time" content="Sun Jan 30 2022 04:24:25 GMT+0800">
-        <meta property="article:modified_time" content="Sun Feb 13 2022 02:01:09 GMT+0800">
+        <meta property="article:modified_time" content="Wed Mar 30 2022 22:57:27 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2022/backend/index.html",
     "headline": "后端开发学习",
     "datePublished": "Sun Jan 30 2022 04:24:25 GMT+0800",
-    "dateModified": "Sun Feb 13 2022 02:01:09 GMT+0800",
+    "dateModified": "Wed Mar 30 2022 22:57:27 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -368,7 +368,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Java"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#环境配置"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">环境配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Golang"><span class="post-toc-number">2.</span> <span class="post-toc-text">Golang</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#环境配置-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">环境配置</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Java"><span class="post-toc-number">1.</span> <span class="post-toc-text">Java</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#环境配置"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">环境配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Maven-XML配置"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Maven XML配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据库配置"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">数据库配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用注解"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">常用注解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#HTTP协议请求类型"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">HTTP协议请求类型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JPA"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">JPA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关系映射"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">关系映射</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Jpa接口"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">Jpa接口</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Shiro框架"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Shiro框架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AOP"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">AOP</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Golang"><span class="post-toc-number">2.</span> <span class="post-toc-text">Golang</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#环境配置-1"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">环境配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hello-wolrd"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Hello wolrd</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -540,21 +540,133 @@
 </blockquote>
 <a id="more"></a>
 <hr>
-<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><p>主要学习<code>SpringBoot</code>和<code>SpringMVC</code>后端开发，文档书写等</p>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><p>主要学习<code>SpringBoot</code>、<code>Shiro</code>、<code>MySql</code>、<code>JPA</code>、<code>AOP</code>思想、设计模式等</p>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>1.安装<code>IntelliJ IDEA 2021.2.3</code>，用于Java开发</p>
 <p>2.安装<code>Navicat Premium 15</code>，用于图形化查看MySQL数据</p>
 <p>3.安装<code>MySQL Workbench</code>，用于数据库管理</p>
 <p>4.安装<code>Postman</code>，用于接口测试</p>
 <p>5.配置<code>MySQL</code>，用于数据库环境</p>
 <p>6.配置<code>Maven</code>，用于项目管理</p>
-<h1 id="Golang"><a href="#Golang" class="headerlink" title="Golang"></a>Golang</h1><h2 id="环境配置-1"><a href="#环境配置-1" class="headerlink" title="环境配置"></a>环境配置</h2><p>1.配置<code>Golang</code>编译器，环境变量与<code>VSCode</code>开发环境，用于学习语法</p>
+<h2 id="Maven-XML配置"><a href="#Maven-XML配置" class="headerlink" title="Maven XML配置"></a>Maven XML配置</h2><p>pom.xml</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.6.3&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;&lt;/groupId&gt;
+    &lt;artifactId&gt;&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;&lt;/name&gt;
+    &lt;description&gt;&lt;/description&gt;
+    &lt;properties&gt;
+        &lt;java.version&gt;11&lt;/java.version&gt;
+    &lt;/properties&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>在dependencies中添加依赖项</p>
+<h2 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h2><p>src/…/resources/application.yml</p>
+<pre><code class="lang-yml">server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/DataBaseName
+    username: root
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+</code></pre>
+<p>jpa:hibernate:ddl-auto</p>
+<pre><code>create：
+每次加载hibernate时都会删除上一次的生成的表，然后根据你的model类再重新来生成新表，哪怕两次没有任何改变也要这样执行，这就是导致数据库表数据丢失的一个重要原因。
+create-drop ：
+每次加载hibernate时根据model类生成表，但是sessionFactory一关闭,表就自动删除。
+update：
+最常用的属性，第一次加载hibernate时根据model类会自动建立起表的结构（前提是先建立好数据库），以后加载hibernate时根据 model类自动更新表结构，即使表结构改变了但表中的行仍然存在不会删除以前的行。要注意的是当部署到服务器后，表结构是不会被马上建立起来的，是要等 应用第一次运行起来后才会。
+validate ：
+每次加载hibernate时，验证创建数据库表结构，只会和数据库中的表进行比较，不会创建新表，但是会插入新值。
+</code></pre><h2 id="常用注解"><a href="#常用注解" class="headerlink" title="常用注解"></a>常用注解</h2><pre><code>@SpringBootApplication
+@Entity
+@Id
+@GeneratedValue
+@Column
+@PathVariable
+@RequestParam
+@___Mapping
+@RestController
+@Getter
+@Setter
+</code></pre><h2 id="HTTP协议请求类型"><a href="#HTTP协议请求类型" class="headerlink" title="HTTP协议请求类型"></a>HTTP协议请求类型</h2><pre><code>GET
+PUT
+POST
+DELETE
+</code></pre><h2 id="JPA"><a href="#JPA" class="headerlink" title="JPA"></a>JPA</h2><h3 id="关系映射"><a href="#关系映射" class="headerlink" title="关系映射"></a>关系映射</h3><pre><code>@OneToOne
+@OneToMany
+@ManyToOne
+@ManyToMany
+</code></pre><h3 id="Jpa接口"><a href="#Jpa接口" class="headerlink" title="Jpa接口"></a>Jpa接口</h3><pre><code>extends JpaRepository
+</code></pre><h2 id="Shiro框架"><a href="#Shiro框架" class="headerlink" title="Shiro框架"></a>Shiro框架</h2><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2><h1 id="Golang"><a href="#Golang" class="headerlink" title="Golang"></a>Golang</h1><h2 id="环境配置-1"><a href="#环境配置-1" class="headerlink" title="环境配置"></a>环境配置</h2><p>1.配置<code>Golang</code>编译器，环境变量与<code>VSCode</code>开发环境，用于学习语法</p>
 <p>2.安装<code>GoLand 2021.2.2</code>，用于<code>Golang</code>开发</p>
+<p>3.配置<code>Gin</code>框架环境</p>
+<h2 id="Hello-wolrd"><a href="#Hello-wolrd" class="headerlink" title="Hello wolrd"></a>Hello wolrd</h2><pre><code class="lang-go">package main
+
+import &quot;github.com/gin-gonic/gin&quot;
+
+func main() {
+    r := gin.Default()
+    r.GET(&quot;/&quot;, func(c *gin.Context) {
+        c.String(200, &quot;Hello world!&quot;)
+    })
+    r.Run()
+}
+</code></pre>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
                          
-                            本文由 ShioKiri 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
+                            本文由 落影汐雾 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
                         <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2022/backend/">https://x.lyxw.xyz/2022/backend/</a>
