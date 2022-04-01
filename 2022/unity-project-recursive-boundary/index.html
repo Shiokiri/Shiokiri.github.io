@@ -50,7 +50,7 @@
     
     <title>
         
-            个人价值与集体价值的统一性 | 
+            游戏《递归的边界线Recursive Boundary》开发记录 | 
         
         落影汐雾的x号虚空印刷站
     </title>
@@ -60,8 +60,10 @@
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content>
-    <meta name="keywords" content=",作文">
+    <meta name="description" itemprop="description" content="
+更新于：A.D.2022.04.01
+">
+    <meta name="keywords" content=",Unity,Blender,VRoid Studio,C#">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -224,7 +226,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="落影汐雾的x号虚空印刷站">
-    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2020/marxist_philosophy_1/">
+    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="落影汐雾的x号虚空印刷站">
@@ -243,16 +245,18 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://x.lyxw.xyz/2020/marxist_philosophy_1/">
+    <meta property="og:url" content="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="个人价值与集体价值的统一性 | 落影汐雾的x号虚空印刷站">
+    <meta property="og:title" content="游戏《递归的边界线Recursive Boundary》开发记录 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
-    <meta property="og:description" content>
-    <meta property="og:article:tag" content="作文"> 
+    <meta property="og:description" content="
+更新于：A.D.2022.04.01
+">
+    <meta property="og:article:tag" content="Unity"> <meta property="og:article:tag" content="Blender"> <meta property="og:article:tag" content="VRoid Studio"> <meta property="og:article:tag" content="C#"> 
 
     
-        <meta property="article:published_time" content="Mon May 18 2020 23:23:35 GMT+0800">
-        <meta property="article:modified_time" content="Sat Feb 12 2022 23:53:49 GMT+0800">
+        <meta property="article:published_time" content="Fri Apr 01 2022 21:04:25 GMT+0800">
+        <meta property="article:modified_time" content="Fri Apr 01 2022 21:38:56 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -260,7 +264,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html">
+        <link rel="canonical" href="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -272,10 +276,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html",
-    "headline": "个人价值与集体价值的统一性",
-    "datePublished": "Mon May 18 2020 23:23:35 GMT+0800",
-    "dateModified": "Sat Feb 12 2022 23:53:49 GMT+0800",
+    "mainEntityOfPage": "https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html",
+    "headline": "游戏《递归的边界线Recursive Boundary》开发记录",
+    "datePublished": "Fri Apr 01 2022 21:04:25 GMT+0800",
+    "dateModified": "Fri Apr 01 2022 21:38:56 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -293,8 +297,10 @@
             "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
         }
     },
-    "keywords": ",作文",
-    "description": "",
+    "keywords": ",Unity,Blender,VRoid Studio,C#",
+    "description": "
+更新于：A.D.2022.04.01
+",
 }
 </script>
 
@@ -357,6 +363,14 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#剧情编写"><span class="post-toc-number">1.</span> <span class="post-toc-text">剧情编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#剧本编写"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">剧本编写</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unity引擎操作与C-脚本编写"><span class="post-toc-number">2.</span> <span class="post-toc-text">Unity引擎操作与C#脚本编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染管线选取与美术资源预处理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">渲染管线选取与美术资源预处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物模型制作与数据格式转换"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">人物模型制作与数据格式转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称控制系统与动画系统"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">第三人称控制系统与动画系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称射击系统与粒子特效"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">第三人称射击系统与粒子特效</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过泛型应用单例设计模式"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">通过泛型应用单例设计模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景异步加载与跨场景人物传送"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">场景异步加载与跨场景人物传送</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物属性数据设计与存储系统"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">人物属性数据设计与存储系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏操作用户界面与数据显示"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">游戏操作用户界面与数据显示</span></a></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -386,7 +400,7 @@
         
     
             <p class="article-headline-p">
-                个人价值与集体价值的统一性
+                游戏《递归的边界线Recursive Boundary》开发记录
             </p>
         </div>
 
@@ -405,7 +419,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>落影汐雾</strong>
-        <span>5月 18, 2020</span>
+        <span>4月 01, 2022</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -427,7 +441,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQXLDIBAEQP//08kDUsYzKwsTV+ukUsmI5gB4lsfPV18PPDw8PDw8PDy8w3iP+Pr7q2dPnt2vn6yfF33Dw8PD28J7MdUu30k6l7e/Hpqkb3h4eHg7ec8m3NknZ0vC+n79Ph4eHt7JvOQz7Rb8Xd/Fw8PDO5mXLAzr9tct4+Hh4Z3Pa8OCPLZYD0r7/MasBQ8PDy/m5UWm/fdb63t4eHh4Aa+91k3PjhG0MfGLHuLh4eHdzMsn4hafLD/tUEZRCB4eHt7NvFmgkES07dSfLxtFjIuHh4d3Ay85IFUUn0ZTf7LA5EU4PDw8vE/x8k+2B1uTFvLneHh4ePt5efxafODCIa18WcLDw8M7gRdtWEeHDJKOzgZxmLXg4eHhXeC15fw2bH1vgDsMI/Dw8PC282aHBtqpf1ZOw8PDwzuN13YiP8LVxsHFooKHh4d3M6/+qx8vAHnEcKUMhoeHh7ef18a1ebmrLZLNwo56S42Hh4f3Jt4scs1/NStxtVtzPDw8vJ285D6PLfKt8ywCHh4dwMPDw3srbx0ozA4W5Oxk252/g4eHh7eHl1PbYn++QW9jjjprwcPDw7uBd2X724YaSfEs377j4eHhfZbXhgWzEKENNYqBwMPDw7uZ1155CT9fNq4X3vDw8PB28q5Myu01w+Ph4eGdyZstBm3n8neSgXjaWzw8PLyNvHaCbtvJo412+PDw8PDO57VT/JWjV0mbeHh4eP+F14YLVwpjxVEtPDw8vI289mhUe6CqHYh8m46Hh4e3n9dGAHlX1gOUhxf58OHh4eHdzfu+Cw8PDw8PDw8P74DrF42PpYEn+pIJAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACx0lEQVR42u3aQVIDMQwEwPz/0/AAis2MvKEWu/dEQeK4nYOwRq+vI58XNjY2NjY2NjY29iPZr/h5s+iP11yv89vK179f2TM2Njb23uyW9Ntr8s1dvytZuf4asLGxsQ9gX2/u+jXXa+YHkZfGfM/Y2NjY2DN2saGysGFjY2Nj38VOitb1cSQ7wcbGxsa+t6nU8mbr5Af0R700bGxs7Mez89D0OT//ab6NjY2N/WB2+8xGcNryNgub3+wcGxsbe1P2LIjNB3RmxXIWP7w5OGxsbOyt2Tksf1eylTxgmA3uYGNjY2PfO8rTBsOzq0vdS8PGxsbelP25ptLsr8lnDYNebGxs7H/Ozls2eUFqj3W9qZQUUWxsbOxd2W1Baq8T7TBQe0VZCnqxsbGxN2KvkPLAOLowxOvUlyJsbGzsTdltsJpHBbPLQ3tARWyAjY2NfTD73m2tH+7w6LGxsbE3ZddN9vhakhzlrJ2U7wQbGxv7BHZ+YcgLVRsJzL6G/FOwsbGxT2MnRagND1ZGgmbDQNjY2NjnsGflpI1a24vHSsBQj+xgY2Njb8GeDe58+rKRlLFiwAgbGxv7APZKAVtp+rcr5GEwNjY29mnsWUybhA1fwdPupF4fGxsb+zB2u/XZwbWFMw+hhwUMGxsb+5+z83/xkwZQG+KuRwjDAoaNjY29BXs2lDO7crTB7UokjI2NjX0muw1WV1pRs9bV8F3Y2NjYB7NnF5JPBMbtxQkbGxv7BHb75O2k2aZzRntxwsbGxt6V3X58ewQrV5e8oEbhMTY2NvbW7KRozQpYXthmTa5iZBMbGxv7AHY+4NiO+KwUtpWhImxsbGzsvIAl7f52zVnMUKci2NjY2Eeyk219roDNAgxsbGzsE9hJU+n6922okJParwEbGxv7NPZdozPJEcyC4VnLCRsbG/sE9jkPNjY2NjY2NjY29mOeb1rq4pX7SOlJAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -441,7 +455,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/作文/">作文</a>
+        <a class="post_tag-link" href="/tags/Blender/">Blender</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/C/">C#</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Unity/">Unity</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/VRoid-Studio/">VRoid Studio</a>
     </li></ul>
     
 
@@ -469,7 +483,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=个人价值与集体价值的统一性&url=https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=游戏《递归的边界线Recursive Boundary》开发记录&url=https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -478,7 +492,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=个人价值与集体价值的统一性&url=https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html&via=落影汐雾" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=游戏《递归的边界线Recursive Boundary》开发记录&url=https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html&via=落影汐雾" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -487,7 +501,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -505,7 +519,7 @@
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2020/marxist_philosophy_1/index.html&text=个人价值与集体价值的统一性" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html&text=游戏《递归的边界线Recursive Boundary》开发记录" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -521,17 +535,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>疫情上课考试的摸鱼小作文……</p>
-<center> 个人价值与集体价值的统一性</center>  
-
-<p>​       出生于21世纪初的中国人，面临着市场经济的全面到来以及个人主义价值观的输入，同时经历着传统马克思主义哲学以及阶级史观的教育，产生了更加复杂、不同于以往的思想。</p>
-<p>从社会生活的社会生活中即可窥见其现象：当前很多学生崇尚自由。要学习街舞、各种各样的艺术，要有个性，打扮要与众不同，要生活随性，要有“仪式感”与“小确幸”。这一类人更多崇尚个人价值的实现与生活自由的实现。</p>
-<p>​       更加多的一部分人是无法做到这样的自由的：保家卫国的解放军、山火中悄然逝去的消防员、从事科研事业的科学家、兢兢业业的基础设施工人。当他们完成了对社会的建设与保护，为集体价值做出了奉献，却没有资格崇尚个人的自由。可以看到，有了一部分人的自由，就没有了大多数人的自由。</p>
-<p>​       这样一部分人是只注重的自己的自由，他们更希望别人不自由，让自己好自由，做到了“心中有我”，还觉得是自己创造了社会价值，自己是社会的后浪。当然，也可以观察到，绝大部分人仍然感动于默默无闻、辛辛苦苦奉献的人，他们也明白是这一部分人让他们自由，让他们有了实现个人价值的机会，更加感动于“心中无我”的境界，他们更加矛盾，为什么劳动、奉献、付出是正确的，周围的人、周围的事总是不让自己成为这样的人。</p>
-<p>​       这是一个崇尚英雄的时代，传统的教育和意识形态影响让我们没有忘记新中国的根是什么，我们仍然知道社会生产的基础仍然是工人与无产阶级，但是近四十年的现实却让我们不断怀疑这些。要知道，崇尚英雄的时代只是最近的时代，是靠宣传力量才勉强实现的。几年前推崇歌颂马云等资本家、抹黑英雄人物的思想层出不穷，这是由资本主义生产方式的现实决定的意识。人们笃信着用成功学就能实现个人价值的实现，并为之践行。</p>
-<p>​       现在更多的人发现自由从来不属于他们，成功是资本家的成功，自己只是奉献剩余价值还叫好、叫着自己多自由的一无所有的人。他们不禁怀疑什么才是对的，并开始关心英雄人物，思考是谁给了他们生存的条件。他们就是既崇尚自由又崇尚英雄的人。以前的人更加关心集体价值，忽视了个体存在的价值。后来的人更关心自己，忽视集体的作用。现在的人才意识到，先关心集体价值，才有实现自己的自由与个人价值的可能性。</p>
-<p>​       可以看到任何个人价值的实现都以集体价值的实现为前提。举几个例子：没有阿里巴巴所有程序员的工作不会有马云的成功，没有消防员，解放军，医生等社会基础职业的人的工作就没有其他人安全生存的条件，没有整个社会生产活动的进行，就没有具体到个人的享受生活的条件。这样来看，个人价值依附于集体价值，个人价值与集体价值实质上是统一的。</p>
-<p>​       就像大海上后浪接着前浪，浪花下面才是深不见底的海水与底层的岩石，没有这些就没有后浪。没有集体价值的实现就不会有个人价值的实现，先做到“心中无我”，才能有“心中有我“。只做到“心中有我”，只能是建立在剥削他人之上的个人自由。先做到了“心中无我”，最终才能实现人人都能“心中有我”。</p>
+        <blockquote>
+<p>更新于：A.D.2022.04.01</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>括号内的英文为Unity内置概念</p>
+<h1 id="剧情编写"><a href="#剧情编写" class="headerlink" title="剧情编写"></a>剧情编写</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
+<h1 id="Unity引擎操作与C-脚本编写"><a href="#Unity引擎操作与C-脚本编写" class="headerlink" title="Unity引擎操作与C#脚本编写"></a>Unity引擎操作与C#脚本编写</h1><h2 id="渲染管线选取与美术资源预处理"><a href="#渲染管线选取与美术资源预处理" class="headerlink" title="渲染管线选取与美术资源预处理"></a>渲染管线选取与美术资源预处理</h2><p>可编程渲染管线是一个瘦 API 层，允许使用 C# 脚本来调度和配置渲染命令。Unity 将这些命令传递给它的低级图形架构，后者随后将指令发送给图形 API。Unity 的可编程渲染管线 (Scriptable Render Pipeline, SRP) 是一项可以通过 C# 脚本来控制渲染的功能。SRP 技术可以强化通用渲染管线 (URP) 和高清渲染管线 (HDRP)。</p>
+<p>本次项目选用了通用渲染管线（Universal Render Pipeline），首先通过Unity对美术素材中的Shader升级为URP格式，并手动处理升级失败的Shader。</p>
+<h2 id="人物模型制作与数据格式转换"><a href="#人物模型制作与数据格式转换" class="headerlink" title="人物模型制作与数据格式转换"></a>人物模型制作与数据格式转换</h2><p>使用人形模型生成软件VRoid Studio进行角色设计，通过数位板（设备：Wocam CTL672）对贴图进行绘画，选择合适三角形面数导出为VRM数据格式，通过GitHub下载Blender Python插件cats-blender-plugin-0-19-0并安装，转换VRM数据格式为通用数据格式FBX，并对模型网格（Mesh），骨骼（Skeleton）等内容进行修复。</p>
+<p>在动画网站<a href="https://www.mixamo.com/#/上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。" target="_blank" rel="noopener">https://www.mixamo.com/#/上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</a></p>
+<p>导入FBX模型文件进入Unity，设置模型动画格式为人形（Humanoid），选择合适的材质球（Material）格式。</p>
+<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）制作了走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
+<p>配置了瞄准动画的动画状态机设置，并通过检测鼠标右键点击切换动画状态，使用了遮罩（Mask）和IK Pass实现了动画转换，制作了选取头部、颈部、与上肢的骨骼遮罩，使瞄准动画的上体动作不在受到基本动画状态的影响。</p>
+<h2 id="第三人称射击系统与粒子特效"><a href="#第三人称射击系统与粒子特效" class="headerlink" title="第三人称射击系统与粒子特效"></a>第三人称射击系统与粒子特效</h2><p>通过光线投射方法计算当前屏幕中心点在场景模型中的投影，并通过投影点与子弹发出点的坐标计算欧拉角，对子弹使用实例化方法，实例一发子弹沿欧拉角方向射出，给出初始速度，并且使子弹完全沿光线方向射出，不受重力影响。</p>
+<p>配置了子弹的材质（Material）光效，使得子弹模型显示为红色，并在击中目标后显示绿色粒子光效，未击中目标时显示红色粒子光效。</p>
+<p>在瞄准时将虚拟摄像机切换瞄准虚拟摄像机（VirtualCamera），使得人物模型在视野中心偏右，并通过调整图片Alpha值的方法控制UI中心准星的显示，取消瞄准时切换到常规虚拟摄像机，并禁止子弹发出。</p>
+<p>调整了常规和瞄准的视角，常规状态时鼠标可环绕，而模型不会转动方向，瞄准状态时模型随鼠标环绕而转动方向。</p>
+<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的get set方法修改射中物体对象的私有属性血量。</p>
+<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程只有一份对象。并通过C#的泛型方法实现这一设计模式。</p>
+<h2 id="场景异步加载与跨场景人物传送"><a href="#场景异步加载与跨场景人物传送" class="headerlink" title="场景异步加载与跨场景人物传送"></a>场景异步加载与跨场景人物传送</h2><p>通过C#协程（Coroutines）方法，调用UnityEngine继承类中的异步（Asynchronous）加载方法，对场景实行多线程加载。</p>
+<p>设计代码，使用枚举数据类型，在O(n)的时间复杂度下找到对应标签的传送地点，并通过GameManager的单例方法删除原场景中的人物，并使用单例方法在新场景中通过玩家预制体（Prefab）生成玩家（Player）</p>
+<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种private int数据，并通过C#语法糖为变量设置了get set方法，使get set方法通过另一public变量对其他类暴露。</p>
+<h2 id="游戏操作用户界面与数据显示"><a href="#游戏操作用户界面与数据显示" class="headerlink" title="游戏操作用户界面与数据显示"></a>游戏操作用户界面与数据显示</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
+<p>通过一张图片作为底色，控制一张图片的长度实现血量条和子弹条。</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -540,7 +568,7 @@
                             本文由 落影汐雾 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2020/marxist_philosophy_1/">https://x.lyxw.xyz/2020/marxist_philosophy_1/</a>
+                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/">https://x.lyxw.xyz/2022/unity-project-recursive-boundary/</a>
                     </p>
                 </blockquote>
         
@@ -593,7 +621,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2020/metagame/" id="post_nav-newer" class="prev-content">
+        <a href="/2022/C++11/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -607,7 +635,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2020/about-program/" id="post_nav-older" class="next-content">
+        <a href="/2022/computational-geometry/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -699,7 +727,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -717,7 +745,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">3</span></a>
             </li></ul>
         </li>
         
@@ -795,7 +823,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">34</span>
+                <span class="sidebar-badge">37</span>
             </a>
         </li>
         

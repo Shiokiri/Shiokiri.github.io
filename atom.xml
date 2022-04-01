@@ -6,7 +6,7 @@
   <link href="https://x.lyxw.xyz/atom.xml" rel="self"/>
   
   <link href="https://x.lyxw.xyz/"/>
-  <updated>2022-02-12T17:26:35.768Z</updated>
+  <updated>2022-04-01T14:28:25.102Z</updated>
   <id>https://x.lyxw.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://x.lyxw.xyz/2033/post-index/"/>
     <id>https://x.lyxw.xyz/2033/post-index/</id>
     <published>2033-07-12T15:59:59.000Z</published>
-    <updated>2022-02-12T17:26:35.768Z</updated>
+    <updated>2022-04-01T14:28:25.102Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于 A.D.2022.2.13&lt;/p&gt;
+&lt;p&gt;更新于： A.D.2022.04.01&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -34,15 +34,111 @@
   </entry>
   
   <entry>
+    <title>C++11学习笔记</title>
+    <link href="https://x.lyxw.xyz/2022/C++11/"/>
+    <id>https://x.lyxw.xyz/2022/C++11/</id>
+    <published>2022-04-01T13:41:25.000Z</published>
+    <updated>2022-04-01T14:01:59.359Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.04.01&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    
+    
+    <category term="C++11" scheme="https://x.lyxw.xyz/tags/C-11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏《递归的边界线Recursive Boundary》开发记录</title>
+    <link href="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/"/>
+    <id>https://x.lyxw.xyz/2022/unity-project-recursive-boundary/</id>
+    <published>2022-04-01T13:04:25.000Z</published>
+    <updated>2022-04-01T13:38:56.062Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.04.01&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    
+    
+    <category term="Unity" scheme="https://x.lyxw.xyz/tags/Unity/"/>
+    
+    <category term="Blender" scheme="https://x.lyxw.xyz/tags/Blender/"/>
+    
+    <category term="VRoid Studio" scheme="https://x.lyxw.xyz/tags/VRoid-Studio/"/>
+    
+    <category term="C#" scheme="https://x.lyxw.xyz/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>「计算几何」</title>
+    <link href="https://x.lyxw.xyz/2022/computational-geometry/"/>
+    <id>https://x.lyxw.xyz/2022/computational-geometry/</id>
+    <published>2022-04-01T12:43:25.000Z</published>
+    <updated>2022-04-01T12:50:13.925Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.04.01&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    
+    
+    <category term="C++11" scheme="https://x.lyxw.xyz/tags/C-11/"/>
+    
+    <category term="计算几何" scheme="https://x.lyxw.xyz/tags/计算几何/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VRoid Studio-&gt;Blender-&gt;Unity制作人物模型</title>
+    <link href="https://x.lyxw.xyz/2022/vroid-studio-blender-unity/"/>
+    <id>https://x.lyxw.xyz/2022/vroid-studio-blender-unity/</id>
+    <published>2022-04-01T07:04:25.000Z</published>
+    <updated>2022-04-01T13:39:37.318Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.04.01&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    
+    
+    <category term="Unity" scheme="https://x.lyxw.xyz/tags/Unity/"/>
+    
+    <category term="Blender" scheme="https://x.lyxw.xyz/tags/Blender/"/>
+    
+    <category term="VRoid Studio" scheme="https://x.lyxw.xyz/tags/VRoid-Studio/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Gmail进行域名邮箱邮件收发</title>
     <link href="https://x.lyxw.xyz/2022/domain_mail/"/>
     <id>https://x.lyxw.xyz/2022/domain_mail/</id>
     <published>2022-02-12T15:48:00.000Z</published>
-    <updated>2022-02-12T17:27:14.416Z</updated>
+    <updated>2022-04-01T12:47:18.190Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2022.02.13&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -61,11 +157,11 @@
     <link href="https://x.lyxw.xyz/2022/backend/"/>
     <id>https://x.lyxw.xyz/2022/backend/</id>
     <published>2022-01-29T20:24:25.000Z</published>
-    <updated>2022-03-30T14:57:27.886Z</updated>
+    <updated>2022-04-01T12:53:08.925Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2022.03.31&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -293,31 +389,6 @@
     <category term="metagame" scheme="https://x.lyxw.xyz/tags/metagame/"/>
     
     <category term="galgame" scheme="https://x.lyxw.xyz/tags/galgame/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人价值与集体价值的统一性</title>
-    <link href="https://x.lyxw.xyz/2020/marxist_philosophy_1/"/>
-    <id>https://x.lyxw.xyz/2020/marxist_philosophy_1/</id>
-    <published>2020-05-18T15:23:35.000Z</published>
-    <updated>2022-02-12T15:53:49.554Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
-    
-    
-    
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
-    
-    
-    <category term="作文" scheme="https://x.lyxw.xyz/tags/作文/"/>
     
   </entry>
   
@@ -690,11 +761,11 @@
     <link href="https://x.lyxw.xyz/2019/C++/"/>
     <id>https://x.lyxw.xyz/2019/C++/</id>
     <published>2019-08-09T08:04:47.000Z</published>
-    <updated>2020-02-29T08:36:16.977Z</updated>
+    <updated>2022-04-01T14:10:32.542Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-10-17 未全部完成!&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019-10-17 &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Visual Studio&lt;/code&gt;过于复杂&lt;/p&gt;</summary>
     
