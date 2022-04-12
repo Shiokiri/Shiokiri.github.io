@@ -61,9 +61,9 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="
-更新于：A.D.2022.04.01
+更新于：A.D.2022.04.12
 ">
-    <meta name="keywords" content=",Unity,Blender,VRoid Studio,C#">
+    <meta name="keywords" content=",Unity,Blender,C#,VRoid Studio">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -250,13 +250,13 @@
     <meta property="og:title" content="游戏《递归的边界线Recursive Boundary》开发记录 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
     <meta property="og:description" content="
-更新于：A.D.2022.04.01
+更新于：A.D.2022.04.12
 ">
-    <meta property="og:article:tag" content="Unity"> <meta property="og:article:tag" content="Blender"> <meta property="og:article:tag" content="VRoid Studio"> <meta property="og:article:tag" content="C#"> 
+    <meta property="og:article:tag" content="Unity"> <meta property="og:article:tag" content="Blender"> <meta property="og:article:tag" content="C#"> <meta property="og:article:tag" content="VRoid Studio"> 
 
     
         <meta property="article:published_time" content="Fri Apr 01 2022 21:04:25 GMT+0800">
-        <meta property="article:modified_time" content="Fri Apr 01 2022 21:38:56 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 12 2022 23:10:31 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2022/unity-project-recursive-boundary/index.html",
     "headline": "游戏《递归的边界线Recursive Boundary》开发记录",
     "datePublished": "Fri Apr 01 2022 21:04:25 GMT+0800",
-    "dateModified": "Fri Apr 01 2022 21:38:56 GMT+0800",
+    "dateModified": "Tue Apr 12 2022 23:10:31 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -297,9 +297,9 @@
             "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
         }
     },
-    "keywords": ",Unity,Blender,VRoid Studio,C#",
+    "keywords": ",Unity,Blender,C#,VRoid Studio",
     "description": "
-更新于：A.D.2022.04.01
+更新于：A.D.2022.04.12
 ",
 }
 </script>
@@ -368,7 +368,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#剧情编写"><span class="post-toc-number">1.</span> <span class="post-toc-text">剧情编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#剧本编写"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">剧本编写</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unity引擎操作与C-脚本编写"><span class="post-toc-number">2.</span> <span class="post-toc-text">Unity引擎操作与C#脚本编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染管线选取与美术资源预处理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">渲染管线选取与美术资源预处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物模型制作与数据格式转换"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">人物模型制作与数据格式转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称控制系统与动画系统"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">第三人称控制系统与动画系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称射击系统与粒子特效"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">第三人称射击系统与粒子特效</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过泛型应用单例设计模式"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">通过泛型应用单例设计模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景异步加载与跨场景人物传送"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">场景异步加载与跨场景人物传送</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物属性数据设计与存储系统"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">人物属性数据设计与存储系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏操作用户界面与数据显示"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">游戏操作用户界面与数据显示</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#剧情编写与游戏流程设计"><span class="post-toc-number">1.</span> <span class="post-toc-text">剧情编写与游戏流程设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#剧本编写"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">剧本编写</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏流程设计"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">游戏流程设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unity引擎操作与C-脚本编写"><span class="post-toc-number">2.</span> <span class="post-toc-text">Unity引擎操作与C#脚本编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染管线选取与美术资源预处理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">渲染管线选取与美术资源预处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物模型制作与数据格式转换"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">人物模型制作与数据格式转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称控制系统与动画系统"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">第三人称控制系统与动画系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称射击系统与粒子特效"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">第三人称射击系统与粒子特效</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过泛型应用单例设计模式"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">通过泛型应用单例设计模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景异步加载与跨场景人物传送"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">场景异步加载与跨场景人物传送</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物属性数据设计与存储系统"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">人物属性数据设计与存储系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏操作界面UI设计"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">游戏操作界面UI设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开发计划"><span class="post-toc-number">3.</span> <span class="post-toc-text">开发计划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完成游戏整体设计"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">完成游戏整体设计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完成编写实现风格化渲染的Unity-Shader"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">完成编写实现风格化渲染的Unity Shader</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -536,30 +536,43 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>更新于：A.D.2022.04.01</p>
+<p>更新于：A.D.2022.04.12</p>
 </blockquote>
 <a id="more"></a>
 <hr>
 <p>括号内的英文为Unity内置概念</p>
-<h1 id="剧情编写"><a href="#剧情编写" class="headerlink" title="剧情编写"></a>剧情编写</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
+<h1 id="剧情编写与游戏流程设计"><a href="#剧情编写与游戏流程设计" class="headerlink" title="剧情编写与游戏流程设计"></a>剧情编写与游戏流程设计</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p>构思了游戏主要设定，编写了游戏剧情文本，分为五个部分，分别在五个场景中计划进行应用</p>
+<p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
+<h2 id="游戏流程设计"><a href="#游戏流程设计" class="headerlink" title="游戏流程设计"></a>游戏流程设计</h2><p>设计了游戏流程：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/unity-project-recursive-boundary-1.png" alt></p>
 <h1 id="Unity引擎操作与C-脚本编写"><a href="#Unity引擎操作与C-脚本编写" class="headerlink" title="Unity引擎操作与C#脚本编写"></a>Unity引擎操作与C#脚本编写</h1><h2 id="渲染管线选取与美术资源预处理"><a href="#渲染管线选取与美术资源预处理" class="headerlink" title="渲染管线选取与美术资源预处理"></a>渲染管线选取与美术资源预处理</h2><p>可编程渲染管线是一个瘦 API 层，允许使用 C# 脚本来调度和配置渲染命令。Unity 将这些命令传递给它的低级图形架构，后者随后将指令发送给图形 API。Unity 的可编程渲染管线 (Scriptable Render Pipeline, SRP) 是一项可以通过 C# 脚本来控制渲染的功能。SRP 技术可以强化通用渲染管线 (URP) 和高清渲染管线 (HDRP)。</p>
 <p>本次项目选用了通用渲染管线（Universal Render Pipeline），首先通过Unity对美术素材中的Shader升级为URP格式，并手动处理升级失败的Shader。</p>
+<p>为树木材质升级失败的场景手动摆放了不同风格的树木，为场景选择了天空盒（Skybox），并调整了场景太阳光点光源设置，调整了URP渲染管线的配置。</p>
 <h2 id="人物模型制作与数据格式转换"><a href="#人物模型制作与数据格式转换" class="headerlink" title="人物模型制作与数据格式转换"></a>人物模型制作与数据格式转换</h2><p>使用人形模型生成软件VRoid Studio进行角色设计，通过数位板（设备：Wocam CTL672）对贴图进行绘画，选择合适三角形面数导出为VRM数据格式，通过GitHub下载Blender Python插件cats-blender-plugin-0-19-0并安装，转换VRM数据格式为通用数据格式FBX，并对模型网格（Mesh），骨骼（Skeleton）等内容进行修复。</p>
-<p>在动画网站<a href="https://www.mixamo.com/#/上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。" target="_blank" rel="noopener">https://www.mixamo.com/#/上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</a></p>
+<p>在动画网站<a href="https://www.mixamo.com/" target="_blank" rel="noopener">https://www.mixamo.com/</a>上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</p>
 <p>导入FBX模型文件进入Unity，设置模型动画格式为人形（Humanoid），选择合适的材质球（Material）格式。</p>
-<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）制作了走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
+<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）完善了默认的走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
 <p>配置了瞄准动画的动画状态机设置，并通过检测鼠标右键点击切换动画状态，使用了遮罩（Mask）和IK Pass实现了动画转换，制作了选取头部、颈部、与上肢的骨骼遮罩，使瞄准动画的上体动作不在受到基本动画状态的影响。</p>
 <h2 id="第三人称射击系统与粒子特效"><a href="#第三人称射击系统与粒子特效" class="headerlink" title="第三人称射击系统与粒子特效"></a>第三人称射击系统与粒子特效</h2><p>通过光线投射方法计算当前屏幕中心点在场景模型中的投影，并通过投影点与子弹发出点的坐标计算欧拉角，对子弹使用实例化方法，实例一发子弹沿欧拉角方向射出，给出初始速度，并且使子弹完全沿光线方向射出，不受重力影响。</p>
 <p>配置了子弹的材质（Material）光效，使得子弹模型显示为红色，并在击中目标后显示绿色粒子光效，未击中目标时显示红色粒子光效。</p>
 <p>在瞄准时将虚拟摄像机切换瞄准虚拟摄像机（VirtualCamera），使得人物模型在视野中心偏右，并通过调整图片Alpha值的方法控制UI中心准星的显示，取消瞄准时切换到常规虚拟摄像机，并禁止子弹发出。</p>
 <p>调整了常规和瞄准的视角，常规状态时鼠标可环绕，而模型不会转动方向，瞄准状态时模型随鼠标环绕而转动方向。</p>
-<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的get set方法修改射中物体对象的私有属性血量。</p>
-<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程只有一份对象。并通过C#的泛型方法实现这一设计模式。</p>
+<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的setter修改射中物体对象的私有属性血量。</p>
+<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程中代码挂载的对象只产生一份。</p>
+<p>设计工具类Singleton类并编写虚函数和方法，通过泛型继承Singleton类实现这一设计模式。</p>
 <h2 id="场景异步加载与跨场景人物传送"><a href="#场景异步加载与跨场景人物传送" class="headerlink" title="场景异步加载与跨场景人物传送"></a>场景异步加载与跨场景人物传送</h2><p>通过C#协程（Coroutines）方法，调用UnityEngine继承类中的异步（Asynchronous）加载方法，对场景实行多线程加载。</p>
 <p>设计代码，使用枚举数据类型，在O(n)的时间复杂度下找到对应标签的传送地点，并通过GameManager的单例方法删除原场景中的人物，并使用单例方法在新场景中通过玩家预制体（Prefab）生成玩家（Player）</p>
-<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种private int数据，并通过C#语法糖为变量设置了get set方法，使get set方法通过另一public变量对其他类暴露。</p>
-<h2 id="游戏操作用户界面与数据显示"><a href="#游戏操作用户界面与数据显示" class="headerlink" title="游戏操作用户界面与数据显示"></a>游戏操作用户界面与数据显示</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
+<p>通过URP Shader制作传送门特效，为传送门挂载脚本，将传送门保存为预制体（Prefab），在所有场景中摆放传送门并设置传送门自身标签与传送目的标签。</p>
+<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种私有数据存储于数据类中。</p>
+<p>通过另一个接口类的公有方法对其他类暴露，并通过C#语法糖为变量设置了getter setter。</p>
+<h2 id="游戏操作界面UI设计"><a href="#游戏操作界面UI设计" class="headerlink" title="游戏操作界面UI设计"></a>游戏操作界面UI设计</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
 <p>通过一张图片作为底色，控制一张图片的长度实现血量条和子弹条。</p>
+<h1 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h1><h2 id="完成游戏整体设计"><a href="#完成游戏整体设计" class="headerlink" title="完成游戏整体设计"></a>完成游戏整体设计</h2><p>对按照现有整体游戏控制框架，进一步完善游戏内容：</p>
+<p>设计游戏主界面UI，并编写代码完成UI系统</p>
+<p>设计游戏总流程的状态机，编写代码控制对话系统。</p>
+<p>设计敌人的行为树，并编写代码与完善模型与动画资源，完成敌人系统。</p>
+<p>设计数据存储结构，完成数据存档系统。</p>
+<h2 id="完成编写实现风格化渲染的Unity-Shader"><a href="#完成编写实现风格化渲染的Unity-Shader" class="headerlink" title="完成编写实现风格化渲染的Unity Shader"></a>完成编写实现风格化渲染的Unity Shader</h2><p>对至少完成对人物模型的Unity Shader编写，实现二维卡通渲染效果，凸出表现阴影和高光部分。</p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
