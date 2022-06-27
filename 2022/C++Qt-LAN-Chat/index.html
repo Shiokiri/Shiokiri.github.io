@@ -50,7 +50,7 @@
     
     <title>
         
-            「莫比乌斯反演」 | 
+            C++Qt局域网聊天工具 开发记录 | 
         
         落影汐雾的x号虚空印刷站
     </title>
@@ -60,10 +60,8 @@
     <link rel="icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="
-Update on A.D.2019-09-23
-">
-    <meta name="keywords" content=",莫比乌斯反演,整除分块">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content>
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -226,7 +224,7 @@ Update on A.D.2019-09-23
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="落影汐雾的x号虚空印刷站">
-    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2019/mobius/">
+    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="落影汐雾的x号虚空印刷站">
@@ -245,18 +243,16 @@ Update on A.D.2019-09-23
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://x.lyxw.xyz/2019/mobius/">
+    <meta property="og:url" content="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="「莫比乌斯反演」 | 落影汐雾的x号虚空印刷站">
+    <meta property="og:title" content="C++Qt局域网聊天工具 开发记录 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
-    <meta property="og:description" content="
-Update on A.D.2019-09-23
-">
-    <meta property="og:article:tag" content="莫比乌斯反演"> <meta property="og:article:tag" content="整除分块"> 
+    <meta property="og:description" content>
+    
 
     
-        <meta property="article:published_time" content="Mon Sep 23 2019 09:40:00 GMT+0800">
-        <meta property="article:modified_time" content="Thu Oct 17 2019 16:02:25 GMT+0800">
+        <meta property="article:published_time" content="Mon Jun 27 2022 19:46:49 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jun 27 2022 20:25:02 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +260,7 @@ Update on A.D.2019-09-23
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://x.lyxw.xyz/2019/mobius/index.html">
+        <link rel="canonical" href="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -276,10 +272,10 @@ Update on A.D.2019-09-23
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://x.lyxw.xyz/2019/mobius/index.html",
-    "headline": "「莫比乌斯反演」",
-    "datePublished": "Mon Sep 23 2019 09:40:00 GMT+0800",
-    "dateModified": "Thu Oct 17 2019 16:02:25 GMT+0800",
+    "mainEntityOfPage": "https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html",
+    "headline": "C++Qt局域网聊天工具 开发记录",
+    "datePublished": "Mon Jun 27 2022 19:46:49 GMT+0800",
+    "dateModified": "Mon Jun 27 2022 20:25:02 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -297,10 +293,8 @@ Update on A.D.2019-09-23
             "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
         }
     },
-    "keywords": ",莫比乌斯反演,整除分块",
-    "description": "
-Update on A.D.2019-09-23
-",
+    "keywords": "",
+    "description": "",
 }
 </script>
 
@@ -368,7 +362,7 @@ Update on A.D.2019-09-23
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#整除分块"><span class="post-toc-number">1.</span> <span class="post-toc-text">整除分块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#公式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">公式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#时间复杂度"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">时间复杂度</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#代码"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">代码</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数论函数"><span class="post-toc-number">2.</span> <span class="post-toc-text">数论函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#积性函数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">积性函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完全积性函数"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">完全积性函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#狄利克雷卷积"><span class="post-toc-number">3.</span> <span class="post-toc-text">狄利克雷卷积</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常用的狄利克雷卷积"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">常用的狄利克雷卷积</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#莫比乌斯函数"><span class="post-toc-number">4.</span> <span class="post-toc-text">莫比乌斯函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#线性筛求莫比乌斯函数"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">线性筛求莫比乌斯函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性质"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">性质</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#莫比乌斯反演"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">莫比乌斯反演</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">5.</span> <span class="post-toc-text">Problem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P2303-SDOI2012-Longge的问题"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">P2303 [SDOI2012]Longge的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P2257-YY的GCD"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">P2257 YY的GCD</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P3455-POI2007-ZAP-Queries"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">P3455 [POI2007]ZAP-Queries</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#P2522-HAOI2011-Problem-b"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">P2522 [HAOI2011]Problem b</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#配置环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">配置环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#准备工作"><span class="post-toc-number">2.</span> <span class="post-toc-text">准备工作</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开发过程"><span class="post-toc-number">3.</span> <span class="post-toc-text">开发过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#绘制UI"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">绘制UI</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#选取ICON图标"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">选取ICON图标</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写头文件"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">编写头文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#widget-h"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">widget.h</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tcpserver-h"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">tcpserver.h</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tcpclient-h"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">tcpclient.h</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编写源文件"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">编写源文件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#main-cpp"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">main.cpp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#widget-cpp"><span class="post-toc-number">3.4.2.</span> <span class="post-toc-text">widget.cpp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tcpserver-cpp"><span class="post-toc-number">3.4.3.</span> <span class="post-toc-text">tcpserver.cpp</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tcpclient-cpp"><span class="post-toc-number">3.4.4.</span> <span class="post-toc-text">tcpclient.cpp</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#处理报错"><span class="post-toc-number">4.</span> <span class="post-toc-text">处理报错</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#程序测试"><span class="post-toc-number">5.</span> <span class="post-toc-text">程序测试</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#绘制图表"><span class="post-toc-number">6.</span> <span class="post-toc-text">绘制图表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#系统功能模块图"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">系统功能模块图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用户流程图"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">用户流程图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#UML类图"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">UML类图</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#打包封装"><span class="post-toc-number">7.</span> <span class="post-toc-text">打包封装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#以-Release-方式编译生成-exe-程序"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">以 Release 方式编译生成 exe 程序</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成dll动态链接库"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">生成dll动态链接库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在GitHub上发布Release"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">在GitHub上发布Release</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -400,7 +394,7 @@ Update on A.D.2019-09-23
         
     
             <p class="article-headline-p">
-                「莫比乌斯反演」
+                C++Qt局域网聊天工具 开发记录
             </p>
         </div>
 
@@ -419,7 +413,7 @@ Update on A.D.2019-09-23
     <!-- Author Name & Date -->
     <div>
         <strong>落影汐雾</strong>
-        <span>9月 23, 2019</span>
+        <span>6月 27, 2022</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -441,22 +435,13 @@ Update on A.D.2019-09-23
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB80lEQVR42u3aSW7DMBAEQP//08k1gCG7m5QjmSydAoSQWD4MZnv8LPE8MDAwMDAwMDBuw3jEz9/zR294PvN8/uhMfgcMDIw9GW9CW3zm6JMJo70DBgbGnowkyB79tw3ZyfvfBHoMDAyMOL3LSUnAxcDAwDiL0Ra6ydUxMDAwzipiXyd5Y8XtBbU4BgbGFzLGBgPn/n3ZfAMDA+P2jKl1hw8MAC7YGcHAwLg9Y6ytlqSGSaPtTfI3U4tjYGAsx2hD4dhQM2+uRT8HBgbGNox8MJmkd3mLPwniRcDFwMDYgJGncfnAcn6QUNfiGBgYSzOSi7aDzPanmRphYmBgbMPIV07zZO6CIhYDA2M5xtiHx8J0km4WYwMMDIxtGO1Ish1tzq9/1UUsBgbGcozPpW5tQpm37TAwMHZjnDvInE8Ni6IaAwNjG8ZYSG1L37adF+ExMDC2YcysO7RjyJl2W1GLY2BgLMfI07KkQZYvjbXvxMDA2JnRPi0gH23WiSYGBsY2jLGQ2qaAefNuamcEAwNjacZYgZq34drWXvR1DAyMLRljLf6ZgeXJtTgGBgZGGRxz/GlFLAYGBsZJpWm7CFushWFgYGzAGCtixy7ULoF9vBbHwMC4PWN+naK9yuuv/NN8AwMD40sY3/tgYGBgYGBgYFz6/AIM7Erf+rhJhQAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACbElEQVR42u3aQZLjIBAEQP//07vXjZiwp6oRSDObnHyQBMkBcDWvP7+6vfDw8PDw8PDw8B7Ge8Xt3+c///6m+y9Pfu1lNjY8PDy8k7x8QO3zCekzr+4LDw8P7yAv2QySt94Nq2UMx4aHh4f3MF5xtC0Zbb94eHh4P4WXL+Wfv9nGFnh4eHjP5K0Er23YmvR+Q9aCh4eHF/OuLYBd+/tx9T08PLz/nte2d93PIobkO/UI8fDw8DbzPg93NsSV52eFNzw8PLyTvCRiWLk0kHxzFnlEYQQeHh7eBl4eyF41HW2prL6ggIeHh7eZt2+4edAwm75DR2o8PDy8N7w8kpgdtWc95hsGHh4e3kneSpmq6LI8QCdFuLcTh4eHh3eElyzcyVvr20Z7gMbDw8M7z2vLVFcV/mcRRhRt4OHh4W3m5TFre9FqfZou2/fw8PDwNvCKv/qjDSBpbblrGEbg4eHhXcRrA9y8oDUra81KX3h4eHhneElRqg1V2yunyQE9n3Q8PDy83bw2UJgNNN9OZlsOHh4e3nleHt3OwoVZMWx4rQEPDw9vM2+90JWUr2bg5DCNh4eHdxcv+as/ix6SBT1/d+m6Kh4eHt5FvDYCaBfxfCrbbQYPDw/vLt56xNAOaP2tbyYLDw8PbzOvHWi+SbQlseQC1nDfw8PDw9vAyw/Bs4JZGwHPJggPDw/vPG92VTQJZK9q0VTi4eHhPYzXRq55aJsf2Yd3yvDw8PBu5bXLd3uZoI1u8fDw8O7i5cX+5Gi7ElUUB+h8Y8DDw8O7lNcu97Ogti13zYpheHh4eLt5v6/h4eHh4eHh4eE9oP0FJ5VT7wFuvhIAAAAASUVORK5CYII=">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/整除分块/">整除分块</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/莫比乌斯反演/">莫比乌斯反演</a>
-    </li></ul>
     
 
     <!-- Share -->
@@ -483,7 +468,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=「莫比乌斯反演」&url=https://x.lyxw.xyz/2019/mobius/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=C++Qt局域网聊天工具 开发记录&url=https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -492,7 +477,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=「莫比乌斯反演」&url=https://x.lyxw.xyz/2019/mobius/index.html&via=落影汐雾" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=C++Qt局域网聊天工具 开发记录&url=https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html&via=落影汐雾" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -501,7 +486,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2019/mobius/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -519,7 +504,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2019/mobius/index.html&text=「莫比乌斯反演」" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/index.html&text=C++Qt局域网聊天工具 开发记录" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -535,210 +520,1081 @@ Update on A.D.2019-09-23
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <blockquote>
-<p>Update on A.D.2019-09-23</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>参考资料：<br><a href="https://www.luogu.org/blog/An-Amazing-Blog/mu-bi-wu-si-fan-yan-ji-ge-ji-miao-di-dong-xi" target="_blank" rel="noopener">莫比乌斯反演-让我们从基础开始</a><br><a href="http://www.cnblogs.com/peng-ym/p/8647856.html" target="_blank" rel="noopener">莫比乌斯反演_cnblogs_peng-ym</a><br><a href="https://www.luogu.org/problemnew/solution/P2257" target="_blank" rel="noopener">P2257 YY的GCD 题解</a><br><a href="https://www.cnblogs.com/candy99/p/6607559.html" target="_blank" rel="noopener">容斥原理 与 莫比乌斯反演</a><br><a href="http://www.cnblogs.com/peng-ym/p/8661118.html" target="_blank" rel="noopener">整除分块_peng-ym</a><br><a href="https://www.cnblogs.com/pks-t/p/9212764.html#_label4" target="_blank" rel="noopener">OI生涯中的各种数论算法的证明</a></p>
-</blockquote>
-<h1 id="整除分块"><a href="#整除分块" class="headerlink" title="整除分块"></a>整除分块</h1><h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>求：</p>
-<script type="math/tex; mode=display">
-\sum_{i=1}^{n}\lfloor\frac{n}{i}\rfloor</script><p>对于每个$\lfloor\frac{n}{i}\rfloor$值相同的区间$[l,r]$有$r=n/(n/l)$，即对于$\forall x\in [i,n/(n/i)]$有$x=\lfloor\frac{n}{i}\rfloor$.</p>
-<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>$O(\sqrt{n})$</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="lang-c++">for(int l = 1, r; l &lt;= n; l = r + 1)
-{
-    r = n / (n / l);
-    ans += (r - l + 1) * (n / l);
-}
-</code></pre>
-<h1 id="数论函数"><a href="#数论函数" class="headerlink" title="数论函数"></a>数论函数</h1><p>满足$f(ab)=f(a)f(b),gcd(a,b)=1$的数论函数称为积性函数<br>满足$f(ab)=f(a)f(b)$的数论函数称为完全积性函数</p>
-<h2 id="积性函数"><a href="#积性函数" class="headerlink" title="积性函数"></a>积性函数</h2><p>$\varphi(n)$：欧拉函数，表示小于n的正整数中与n互质的数的数目</p>
-<script type="math/tex; mode=display">
-\varphi(x)=x\prod_{i=1}^{n}\left(1-\frac{1}{p_i}\right)</script><p>$\mu(n)$：莫比乌斯函数<br>$\sigma(n)$：因子和函数，表示n的正因子和<br>$d(n)​$：因子个数函数，表示n的正因数个数</p>
-<h2 id="完全积性函数"><a href="#完全积性函数" class="headerlink" title="完全积性函数"></a>完全积性函数</h2><p>$\epsilon(n)=[n=1]$：单位函数<br>$id(n)=n$：恒等函数<br>$1(n)=1$：常函数</p>
-<h1 id="狄利克雷卷积"><a href="#狄利克雷卷积" class="headerlink" title="狄利克雷卷积"></a>狄利克雷卷积</h1><p>对于数论函数$f(n),g(n)$定义<code>Dirichlet卷积</code>为</p>
-<script type="math/tex; mode=display">
-(f\times g)(n)=\sum_{d\mid n}f(d)g(\frac{n}{d})</script><p>若$f,g$为积性函数，$f*g,f\times g$为积性函数</p>
-<h2 id="常用的狄利克雷卷积"><a href="#常用的狄利克雷卷积" class="headerlink" title="常用的狄利克雷卷积"></a>常用的狄利克雷卷积</h2><script type="math/tex; mode=display">
-id=\varphi\times 1\quad n=\sum_{d\mid n}\varphi(d)</script><script type="math/tex; mode=display">
-\epsilon = \mu \times 1 \quad \epsilon(n) = \sum_{d\mid n}\mu(d)</script><script type="math/tex; mode=display">
-\varphi = \mu \times id \quad \varphi(n)=\sum_{d\mid n}d\mu(\frac{n}{d})=\sum_{d\mid n}\mu(d)\frac{n}{d}</script><h1 id="莫比乌斯函数"><a href="#莫比乌斯函数" class="headerlink" title="莫比乌斯函数"></a>莫比乌斯函数</h1><script type="math/tex; mode=display">
-\mu(d) = \left\{\begin{matrix}1,d=1
-\\ (-1)^n,d=\prod_{i=1}^{n}p_i^{k_i} , \forall p_i, k_i=1
-\\ 0,d=\prod_{i=1}^{n}p_i^{k_i} , \exists p_i, k_i\geqslant 2
-\end{matrix}\right.</script><h2 id="线性筛求莫比乌斯函数"><a href="#线性筛求莫比乌斯函数" class="headerlink" title="线性筛求莫比乌斯函数"></a>线性筛求莫比乌斯函数</h2><pre><code class="lang-c++">void sieve()
-{
-    mu[1] = 1;
-    for(int i = 2; i &lt;= N; i++) {
-        if(!vis[i]) prime[++cnt] = i, mu[i] = -1;
-        for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-            vis[i * prime[j]] = 1;
-            if(i % prime[j] == 0) break;
-            mu[i * prime[j]] = -mu[i];
-        }
-    }
-}
-</code></pre>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>由<br>$<br>\mu \times 1 = \epsilon<br>$<br>得</p>
-<script type="math/tex; mode=display">
-\sum_{d|n}\mu(d)=[n=1]</script><h2 id="莫比乌斯反演"><a href="#莫比乌斯反演" class="headerlink" title="莫比乌斯反演"></a>莫比乌斯反演</h2><p>对于函数</p>
-<script type="math/tex; mode=display">
-f=g\times 1</script><p>有</p>
-<script type="math/tex; mode=display">
-g=\mu \times f</script><p>即对于</p>
-<script type="math/tex; mode=display">
-f(n)=\sum_{d\mid n}g(d)</script><p>有</p>
-<script type="math/tex; mode=display">
-g(n)=\sum_{d\mid n}\mu(d)f(\frac{n}{d})</script><h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><h2 id="P2303-SDOI2012-Longge的问题"><a href="#P2303-SDOI2012-Longge的问题" class="headerlink" title="P2303 [SDOI2012]Longge的问题"></a><a href="https://www.luogu.org/problemnew/show/P2303" target="_blank" rel="noopener">P2303 [SDOI2012]Longge的问题</a></h2><script type="math/tex; mode=display">
-\sum_{i=1}^{n}gcd(i,n)\\
-=\sum_{d\mid n}d\times\sum_{i=1}^{n}[gcd(i,n)=d]\\
-=\sum_{d \mid n}d \times \sum_{i=1}^{\frac{n}{d}}[gcd\left ( i,\frac{n}{d}\right)=1]\\
-=\sum_{d \mid n} d \cdot \varphi\left ( \frac{n}{d} \right )</script><h2 id="P2257-YY的GCD"><a href="#P2257-YY的GCD" class="headerlink" title="P2257 YY的GCD"></a><a href="https://www.luogu.org/problemnew/show/P2257" target="_blank" rel="noopener">P2257 YY的GCD</a></h2><p>原式</p>
-<script type="math/tex; mode=display">
-=\sum_{k=1}^{min(n,m)}\sum_{i=1}^{n}\sum_{j=1}^{m}[gcd(i,j)=k](k\in prime)</script><p>由</p>
-<script type="math/tex; mode=display">
-\sum_{d|n}\mu(d)=[n=1]</script><p>得</p>
-<script type="math/tex; mode=display">
-\sum_{d|gcd(i,j)}\mu(d)=[gcd(i,j)=1]</script><p>原式</p>
-<script type="math/tex; mode=display">
-=\sum_{k=1}^{min(n,m)}\sum_{i=1}^{\lfloor{\frac{n}{k}}\rfloor}\sum_{j=1}^{\lfloor{\frac{m}{k}}\rfloor}\sum_{d|gcd(i,j)}\mu(d)(k\in prime)</script><script type="math/tex; mode=display">
-=\sum_{k=1}^{min(n,m)}\sum_{d=1}^{\lfloor{\frac{n}{k}}\rfloor}\mu(d){\lfloor{\frac{n}{kd}}\rfloor}{\lfloor{\frac{m}{kd}}\rfloor})(k\in prime)</script><p>设$T=kd$有原式</p>
-<script type="math/tex; mode=display">
-=\sum_{k=1}^{min(n,m)}\sum_{d=1}^{\lfloor{\frac{n}{k}}\rfloor}\mu(d){\lfloor{\frac{n}{T}}\rfloor}{\lfloor{\frac{m}{T}}\rfloor}(k\in prime)</script><script type="math/tex; mode=display">
-=\sum_{T=1}^{min(n,m)}{\lfloor{\frac{n}{T}}\rfloor}{\lfloor{\frac{m}{T}}\rfloor}\sum_{k|T,k\in prime}\mu(\frac{T}{k})</script><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
+        <h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><p>配置Qt开发环境：<a href="https://www.qt.io/download" target="_blank" rel="noopener">https://www.qt.io/download</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/C++Qt-LAN-Chat_1.png" alt></p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>建立GitHub仓库 <a href="https://github.com/Shiokiri/Qt-LAN-Chat" target="_blank" rel="noopener">https://github.com/Shiokiri/Qt-LAN-Chat</a></p>
+<p>阅读Qt官方文档 <a href="https://doc.qt.io/qt-6/classes.html" target="_blank" rel="noopener">https://doc.qt.io/qt-6/classes.html</a></p>
+<h1 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h1><p>参考了《Qt及Qt Quick开发实战精解》书籍中的实现方法。</p>
+<h2 id="绘制UI"><a href="#绘制UI" class="headerlink" title="绘制UI"></a>绘制UI</h2><p>通过Qt Creator的设计模式进行绘制，参考上述书籍。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/C++Qt-LAN-Chat_2.png" alt></p>
+<h2 id="选取ICON图标"><a href="#选取ICON图标" class="headerlink" title="选取ICON图标"></a>选取ICON图标</h2><p>在 <a href="https://www.iconfont.cn/collections/index" target="_blank" rel="noopener">iconfont-阿里巴巴矢量图标库</a> 选取图标。</p>
+<h2 id="编写头文件"><a href="#编写头文件" class="headerlink" title="编写头文件"></a>编写头文件</h2><p>变量的命名和使用需要和设计模式中命名一致，参考上述书籍。</p>
+<p>部分槽函数的建立需要通过设计模式进行，参考上述书籍。</p>
+<h3 id="widget-h"><a href="#widget-h" class="headerlink" title="widget.h"></a>widget.h</h3><pre><code class="lang-C++">#ifndef WIDGET_H
+#define WIDGET_H
 
-using namespace std;
-const int _ = 10000005, N = 10000000;
-int T, n, m, cnt;
-int vis[_], prime[_], mu[_], f[_], sum[_];
-void sieve()
+#include &lt;QWidget&gt;
+#include &lt;QColorDialog&gt;
+#include &lt;QTextCharFormat&gt;
+
+class QUdpSocket;
+
+class TcpServer;
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class Widget; }
+QT_END_NAMESPACE
+
+enum MessageType {
+    Message, // 消息
+    NewParticipant, // 新用户加入
+    ParticipantLeft, // 用户退出
+    FileName, // 文件名
+    Refuse, // 拒绝接收文件
+};
+
+class Widget : public QWidget
 {
-    mu[1] = 1;
-    for(int i = 2; i &lt;= N; i++) {
-        if(!vis[i]) prime[++cnt] = i, mu[i] = -1;
-        for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-            vis[i * prime[j]] = 1;
-            if(i % prime[j] == 0) break;
-            mu[i * prime[j]] = -mu[i];
-        }
-    }
-    for(int i = 1; i &lt;= cnt; i++)
-        for(int j = 1; prime[i] * j &lt;= N; j++)
-            f[j * prime[i]] += mu[j];
-    for(int i = 1; i &lt;= N; i++)
-        sum[i] = sum[i - 1] + f[i];
+    Q_OBJECT
+
+public:
+    Widget(QWidget * parent = nullptr);
+    ~Widget();
+
+protected:
+    void newParticipant(QString username,
+                        QString localHostName,
+                        QString ipAddress);
+    void participantLeft(QString userName,
+                         QString localHostName,
+                         QString time);
+    void sendMessage(MessageType type,
+                     QString serverAddress = &quot;&quot;);
+
+    QString getIP();
+    QString getUserName();
+    QString getMessage();
+
+    void hasPendingFile(QString userName, QString serverAddress,
+                        QString clientAddress, QString fileName);
+
+    bool saveFile(const QString &amp;fileName);
+
+    void closeEvent(QCloseEvent *);
+
+private:
+    Ui::Widget *ui;
+    QUdpSocket * udpSocket;
+    qint64 port;
+
+    QString fileName;
+    TcpServer * server;
+
+    QColor color;
+
+
+private slots:
+    void processPendingDatagrams();
+
+    void on_sendButton_clicked();
+
+    void getFileName(QString);
+
+    void on_sendToolBtn_clicked();
+    void on_fontComboBox_currentFontChanged(const QFont &amp;f);
+    void on_sizeComboBox_currentTextChanged(const QString &amp;arg1);
+    void on_boldToolBtn_clicked(bool checked);
+    void on_italicToolBtn_clicked(bool checked);
+    void on_underlineToolBtn_clicked(bool checked);
+    void on_colorToolBtn_clicked();
+
+    void currentFormatChanged(const QTextCharFormat &amp;format);
+
+    void on_saveToolBtn_clicked();
+    void on_clearToolBtn_clicked();
+    void on_exitButton_clicked();
+};
+#endif // WIDGET_H
+</code></pre>
+<h3 id="tcpserver-h"><a href="#tcpserver-h" class="headerlink" title="tcpserver.h"></a>tcpserver.h</h3><pre><code class="lang-C++">#ifndef TCPSERVER_H
+#define TCPSERVER_H
+
+#include&lt;QDialog&gt;
+#include&lt;QTcpServer&gt;
+#include&lt;QFile&gt;
+#include&lt;QTcpSocket&gt;
+#include&lt;QTime&gt;
+#include&lt;QFileDialog&gt;
+#include&lt;QString&gt;
+#include&lt;QCloseEvent&gt;
+#include&lt;QWidget&gt;
+#include&lt;QKeyEvent&gt;
+#include&lt;QHostAddress&gt;
+#include&lt;QElapsedTimer&gt;
+
+QT_BEGIN_NAMESPACE
+namespace Ui
+{
+    class TcpServer;
 }
-int main()
+QT_END_NAMESPACE
+
+class QTcpServer;
+class QTcpSocket;
+
+class TcpServer : public QDialog
 {
-    sieve();
-    scanf(&quot;%d&quot;, &amp;T);
-    while(T--) {
-        scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
-        if(n &gt; m) swap(n, m);
-        long long ans = 0;
-        for(int l = 1, r = 0; l &lt;= n; l = r + 1) {
-            r = min(n / (n / l), m / (m / l));
-            ans += 1LL * (n / l) * (m / l) * (sum[r] - sum[l - 1]);
-        }
-        printf(&quot;%lld\n&quot;, ans);
-    }
-    return 0;
+    Q_OBJECT
+
+public:
+    explicit TcpServer(QWidget *parent = nullptr);
+    ~TcpServer();
+
+    void initServer();
+
+    void refused();
+
+protected:
+    void closeEvent(QCloseEvent *);
+
+signals:
+   void sendFileName(QString );
+
+private slots:
+    void on_serverOpenBtn_clicked();
+    void on_serverSendBtn_clicked();
+    void on_serverCloseBtn_clicked();
+
+    void sendMessage();
+
+    void updateClientProgress(qint64);
+
+private:
+    Ui::TcpServer *ui;
+
+    QTcpServer *tcpServer;
+    QTcpSocket *clientConnection;
+    qint16 tcpPort;
+    QFile *localFile ;
+
+    qint64 payloadSize ;
+    qint64 TotalBytes ;
+    qint64 bytesWritten ;
+    qint64 bytestoWrite;
+
+    QString theFileName;
+    QString fileName;
+
+
+    QElapsedTimer elapsedTimer;
+    QByteArray outBlock;
+
+};
+
+#endif
+</code></pre>
+<h3 id="tcpclient-h"><a href="#tcpclient-h" class="headerlink" title="tcpclient.h"></a>tcpclient.h</h3><pre><code class="lang-C++">#ifndef TCPCLIENT_H
+#define TCPCLIENT_H
+
+#include &lt;QDialog&gt;
+#include &lt;QTcpServer&gt;
+#include &lt;QFile&gt;
+#include &lt;QTcpSocket&gt;
+#include &lt;QTime&gt;
+#include &lt;QFileDialog&gt;
+#include &lt;QString&gt;
+#include &lt;QCloseEvent&gt;
+#include &lt;QHostAddress&gt;
+#include &lt;QElapsedTimer&gt;
+
+namespace Ui {
+class TcpClient;
+}
+
+class TcpClient : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit TcpClient(QWidget *parent = nullptr);
+    ~TcpClient();
+
+    void setFileName(QString fileName);
+    void setHostAddress(QHostAddress address);
+
+    void closeEvent(QCloseEvent *);
+
+    QFile *localFile;
+
+private slots:
+    void on_tcpClientCloseBtn_clicked();
+
+    void readMessage();
+
+    void displayError(QAbstractSocket::SocketError);
+
+    void newConnect();
+
+    void on_tcpClientCancelBtn_clicked();
+
+private:
+    Ui::TcpClient *ui;
+
+    QTcpSocket *tcpClient;
+    qint16  tcpPort ;
+
+    QHostAddress hostAddress;
+
+    qint64 TotalBytes ;
+    qint64 bytesReceived;
+    qint64 fileNameSize ;
+    qint64 blockSize;
+    QString fileName;
+
+    QElapsedTimer time;
+    QByteArray inBlock;
+
+};
+
+#endif // TCPCLIENT_H
+</code></pre>
+<h2 id="编写源文件"><a href="#编写源文件" class="headerlink" title="编写源文件"></a>编写源文件</h2><p>变量的命名和使用需要和设计模式中命名一致，参考上述书籍。</p>
+<p>部分槽函数的建立需要通过设计模式进行，参考上述书籍。</p>
+<h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><pre><code class="lang-C++">#include &quot;widget.h&quot;
+
+#include &lt;QApplication&gt;
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    Widget w;
+    w.show();
+    return a.exec();
 }
 </code></pre>
-<h2 id="P3455-POI2007-ZAP-Queries"><a href="#P3455-POI2007-ZAP-Queries" class="headerlink" title="P3455 [POI2007]ZAP-Queries"></a><a href="https://www.luogu.org/problemnew/show/P3455" target="_blank" rel="noopener">P3455 [POI2007]ZAP-Queries</a></h2><script type="math/tex; mode=display">
-\sum_{i=1}^n\sum_{j=1}^m[gcd(i,j)=k]</script><script type="math/tex; mode=display">
-=\sum_{i=1}^{\lfloor{\frac{n}{k}}\rfloor}\sum_{j=1}^{\lfloor{\frac{m}{k}}\rfloor}[gcd(i,j)=1]</script><script type="math/tex; mode=display">
-=\sum_{i=1}^{\lfloor{\frac{n}{k}}\rfloor}\sum_{j=1}^{\lfloor{\frac{m}{k}}\rfloor}\sum_{d\mid gcd(i,j)} \mu(d)</script><script type="math/tex; mode=display">
-=\sum_{d=1}^{min(n,m)}\mu(d)\lfloor{\frac{n}{d}}\rfloor\lfloor{\frac{m}{d}}\rfloor</script><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
+<h3 id="widget-cpp"><a href="#widget-cpp" class="headerlink" title="widget.cpp"></a>widget.cpp</h3><pre><code class="lang-C++">#include &quot;widget.h&quot;
+#include &quot;ui_widget.h&quot;
 
-using namespace std;
-const int _ = 50005, N = 50000;
-int T, n, m, d;
-int vis[_], prime[_], mu[_], sum[_], cnt;
-void sieve()
+#include &quot;tcpserver.h&quot;
+#include &quot;tcpclient.h&quot;
+#include &lt;QFileDialog&gt;
+
+#include &lt;QUdpSocket&gt;
+#include &lt;QHostInfo&gt;
+#include &lt;QMessageBox&gt;
+#include &lt;QscrollBar&gt;
+#include &lt;QDateTime&gt;
+#include &lt;QNetworkInterface&gt;
+#include &lt;QProcess&gt;
+
+Widget::Widget(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::Widget)
 {
-    mu[1] = 1;
-    for(int i = 2; i &lt;= N; i++) {
-        if(!vis[i]) prime[++cnt] = i, mu[i] = -1;
-        for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-            vis[i * prime[j]] = 1;
-            if(i % prime[j] == 0) break;
-            mu[i * prime[j]] = -mu[i];
-        }
-    }
-    for(int i = 1; i &lt;= N; i++) sum[i] = sum[i - 1] + mu[i];
+    ui -&gt; setupUi(this);
+
+    udpSocket = new QUdpSocket(this);
+    port = 45454;
+
+    udpSocket -&gt; bind(port, QUdpSocket::ShareAddress | QUdpSocket::ReuseAddressHint);
+
+    connect(udpSocket, SIGNAL(readyRead()), this, SLOT(processPendingDatagrams()));
+    sendMessage(NewParticipant);
+
+    server = new TcpServer(this);
+    connect(server, SIGNAL(sendFileName(QString)), this, SLOT(getFileName(QString)));
+
 }
-int main()
+
+Widget::~Widget()
 {
-    sieve();
-    scanf(&quot;%d&quot;, &amp;T);
-    while(T--)
+    delete ui;
+}
+
+void Widget::sendMessage(MessageType type, QString serverAddress)
+{
+    QByteArray data;
+    QDataStream out(&amp;data, QIODevice::WriteOnly);
+
+    QString localHostName = QHostInfo::localHostName();
+    QString address = getIP();
+
+    out &lt;&lt; type &lt;&lt; getUserName() &lt;&lt; localHostName;
+
+    switch(type)
     {
-        scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;d);
-        if(n &gt; m) swap(n, m);
-        n /= d; m /= d;
-        long long ans = 0;
-        for(int l = 1, r = 0; l &lt;= n; l = r + 1) {
-            r = min(n / (n / l), m / (m / l));
-            ans += 1LL * (n / l) * (m / l) * (sum[r] - sum[l - 1]);
+        case Message:
+        {
+            if(ui -&gt; messageTextEdit -&gt; toPlainText() == &quot;&quot;)
+            {
+                QMessageBox::warning(0,
+                                     tr(&quot;警告&quot;),
+                                     tr(&quot;发送内容不能为空&quot;),
+                                     QMessageBox::Ok);
+                return;
+            }
+            out &lt;&lt; address &lt;&lt; getMessage();
+            ui -&gt; messageBrowser -&gt; verticalScrollBar()
+               -&gt; setValue(ui -&gt; messageBrowser -&gt; verticalScrollBar() -&gt; maximum());
+            break;
         }
-        printf(&quot;%lld\n&quot;, ans);
-    }
-    return 0;
-}
-</code></pre>
-<h2 id="P2522-HAOI2011-Problem-b"><a href="#P2522-HAOI2011-Problem-b" class="headerlink" title="P2522 [HAOI2011]Problem b"></a><a href="https://www.luogu.org/problemnew/show/P2522" target="_blank" rel="noopener">P2522 [HAOI2011]Problem b</a></h2><script type="math/tex; mode=display">
-\sum_{i=a}^b\sum_{j=c}^d[gcd(i,j)=k]</script><script type="math/tex; mode=display">
-=\sum_{i=1}^b\sum_{j=1}^d[gcd(i,j)=k]-\sum_{i=1}^{a-1}\sum_{j=1}^d[gcd(i,j)=k]-\sum_{i=1}^b\sum_{j=1}^{c-1}[gcd(i,j)=k]+\sum_{i=1}^{a-1}\sum_{j=1}^{c-1}[gcd(i,j)=k]</script><script type="math/tex; mode=display">
-\sum_{i=1}^n\sum_{j=1}^m[gcd(i,j)=k]</script><script type="math/tex; mode=display">
-=\sum_{i=1}^{\lfloor{\frac{n}{k}}\rfloor}\sum_{j=1}^{\lfloor{\frac{m}{k}}\rfloor}[gcd(i,j)=1]</script><script type="math/tex; mode=display">
-=\sum_{i=1}^{\lfloor{\frac{n}{k}}\rfloor}\sum_{j=1}^{\lfloor{\frac{m}{k}}\rfloor}\sum_{d\mid gcd(i,j)} \mu(d)</script><script type="math/tex; mode=display">
-=\sum_{d=1}^{min(n,m)}\mu(d)\lfloor{\frac{n}{d}}\rfloor\lfloor{\frac{m}{d}}\rfloor</script><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
 
-using namespace std;
-const int _ = 50005, N = 50000;
-int T, a, b, c, d, k;
-int vis[_], prime[_], mu[_], sum[_], cnt;
-void sieve()
-{
-    mu[1] = 1;
-    for(int i = 2; i &lt;= N; i++) {
-        if(!vis[i]) prime[++cnt] = i, mu[i] = -1;
-        for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-            vis[i * prime[j]] = 1;
-            if(i % prime[j] == 0) break;
-            mu[i * prime[j]] = -mu[i];
+        case NewParticipant:
+        {
+            out &lt;&lt; address;
+            break;
+
+        }
+
+        case ParticipantLeft:
+        {
+            break;
+        }
+
+        case FileName:
+        {
+            int row = ui -&gt; userTableWidget -&gt; currentRow();
+            QString clientAddress = ui -&gt; userTableWidget -&gt; item(row, 2) -&gt; text();
+            out &lt;&lt; address &lt;&lt; clientAddress &lt;&lt; fileName;
+            break;
+        }
+
+        case Refuse:
+        {
+            out &lt;&lt; serverAddress;
+            break;
         }
     }
-    for(int i = 1; i &lt;= N; i++) sum[i] = sum[i - 1] + mu[i];
+    udpSocket -&gt; writeDatagram(data, data.length(),
+                               QHostAddress::Broadcast,
+                               port);
 }
-long long calc(int n, int m, int k)
+
+void Widget::processPendingDatagrams()
 {
-    long long ans = 0;
-    n = n / k; m = m / k;
-    for(int l = 1, r = 0; l &lt;= min(n, m); l = r + 1) {
-        r = min(n / (n / l), m / (m / l));
-        ans += 1LL * (n / l) * (m / l) * (sum[r] - sum[l - 1]);
-    }
-    return ans;
-}
-int main()
-{
-    sieve();
-    scanf(&quot;%d&quot;, &amp;T);
-    while(T--)
+    qDebug() &lt;&lt; &quot;processPendingDatagrams&quot;;
+
+    while(udpSocket -&gt; hasPendingDatagrams())
     {
-        scanf(&quot;%d%d%d%d%d&quot;, &amp;a, &amp;b, &amp;c, &amp;d, &amp;k);
-        long long ans = calc(b, d, k) - calc(a - 1, d, k) - calc(b, c - 1, k) + calc(a - 1, c - 1, k);
-        printf(&quot;%lld\n&quot;, ans);
+        QByteArray datagram;
+
+        datagram.resize(udpSocket -&gt; pendingDatagramSize());
+        udpSocket -&gt; readDatagram(datagram.data(), datagram.size());
+
+        QDataStream in(&amp;datagram, QIODevice::ReadOnly);
+
+        int messageType;
+        in &gt;&gt; messageType;
+        QString userName, localHostName, ipAddress, message;
+
+        QString time = QDateTime::currentDateTime()
+                .toString(&quot;yyyy-MM-dd hh:mm:ss&quot;);
+
+        switch(messageType)
+        {
+            case Message:
+            {
+                in &gt;&gt; userName &gt;&gt; localHostName &gt;&gt; ipAddress &gt;&gt; message;
+
+                ui -&gt; messageBrowser -&gt; setTextColor(Qt::blue);
+                ui -&gt; messageBrowser -&gt; setCurrentFont(QFont(&quot;Times New Roman&quot;, 12));
+                ui -&gt; messageBrowser -&gt; append(&quot;[ &quot; + userName + &quot; ] &quot; + time);
+                ui -&gt; messageBrowser -&gt; append(message);
+
+                break;
+            }
+
+            case NewParticipant:
+            {
+                in &gt;&gt; userName &gt;&gt; localHostName &gt;&gt; ipAddress;
+                newParticipant(userName, localHostName, ipAddress);
+                break;
+
+            }
+
+            case ParticipantLeft:
+            {
+                in &gt;&gt; userName &gt;&gt; localHostName;
+                participantLeft(userName, localHostName, time);
+                break;
+            }
+
+            case FileName:
+            {
+                qDebug() &lt;&lt; &quot;FileName1&quot;;
+                in &gt;&gt; userName &gt;&gt; localHostName &gt;&gt; ipAddress;
+                QString clientAddress, fileName;
+                in &gt;&gt; clientAddress &gt;&gt; fileName;
+                qDebug() &lt;&lt; &quot;FileName2&quot;;
+                hasPendingFile(userName, ipAddress, clientAddress, fileName);
+                qDebug() &lt;&lt; &quot;FileName end&quot;;
+                break;
+            }
+
+            case Refuse:
+            {
+                in &gt;&gt; userName &gt;&gt; localHostName;
+                QString serverAddress;
+                in &gt;&gt; serverAddress;
+                QString ipAddress = getIP();
+                if(ipAddress == serverAddress)
+                {
+                    server -&gt; refused();
+                }
+                break;
+            }
+
+        }
+
+    }
+
+}
+
+void Widget::newParticipant(QString userName, QString localHostName, QString ipAddress)
+{
+    qDebug() &lt;&lt; &quot;newParticipant&quot;;
+
+    bool isEmpty = ui -&gt; userTableWidget
+            -&gt; findItems(localHostName, Qt::MatchExactly).isEmpty();
+
+    if(isEmpty)
+    {
+        QTableWidgetItem * user = new QTableWidgetItem(userName);
+        QTableWidgetItem * host = new QTableWidgetItem(localHostName);
+        QTableWidgetItem * ip = new QTableWidgetItem(ipAddress);
+
+        ui -&gt; userTableWidget -&gt; insertRow(0);
+        ui -&gt; userTableWidget -&gt; setItem(0, 0, user);
+        ui -&gt; userTableWidget -&gt; setItem(0, 1, host);
+        ui -&gt; userTableWidget -&gt; setItem(0, 2, ip);
+
+        ui -&gt; messageBrowser -&gt; setTextColor(Qt::gray);
+        ui -&gt; messageBrowser -&gt; setCurrentFont(QFont(&quot;Microsoft YaHei UI&quot;, 10));
+        ui -&gt; messageBrowser -&gt; append(tr(&quot;%1在线！&quot;).arg(userName));
+
+        ui -&gt; userNumLabel -&gt; setText(tr(&quot;在线人数：%1&quot;)
+                                      .arg(ui -&gt; userTableWidget -&gt; rowCount()));
+
+        sendMessage(NewParticipant);
+    }
+}
+
+void Widget::participantLeft(QString userName, QString localHostName, QString time)
+{
+    int rowNum = ui -&gt; userTableWidget -&gt; findItems(localHostName,
+                                                    Qt::MatchExactly).first() -&gt; row();
+    ui -&gt; userTableWidget -&gt; removeRow(rowNum);
+    ui -&gt; messageBrowser -&gt; setTextColor(Qt::gray);
+    ui -&gt; messageBrowser -&gt; setCurrentFont(QFont(&quot;Microsoft YaHei UI&quot;, 10));
+    ui -&gt; messageBrowser -&gt; append(tr(&quot;%1于%2离开！&quot;).arg(userName).arg(time));
+    ui -&gt; userNumLabel -&gt; setText(tr(&quot;在线人数：%1&quot;)
+                                  .arg(ui -&gt; userTableWidget -&gt; rowCount()));
+}
+
+QString Widget::getIP()
+{
+    QList&lt;QHostAddress&gt; list = QNetworkInterface::allAddresses();
+    foreach(QHostAddress address, list)
+    {
+        if(address.protocol() == QAbstractSocket::IPv4Protocol)
+            return address.toString();
     }
     return 0;
 }
+
+QString Widget::getUserName()
+{
+    QStringList environment = QProcess::systemEnvironment();
+    QStringList userNameList = environment.filter(&quot;USERNAME&quot;);
+
+    foreach(QString string, userNameList)
+    {
+       QStringList stringList = string.split(&#39;=&#39;);
+       if(stringList.size() == 2 &amp;&amp; stringList.at(0) == &quot;USERNAME&quot;)
+       {
+            return stringList.at(1);
+            break;
+       }
+    }
+    return &quot;unknown&quot;;
+}
+
+QString Widget::getMessage()
+{
+    QString msg = ui -&gt; messageTextEdit -&gt; toHtml();
+
+    ui -&gt; messageTextEdit -&gt; clear();
+    ui -&gt; messageTextEdit -&gt; setFocus();
+
+    return msg;
+}
+
+void Widget::on_sendButton_clicked()
+{
+    sendMessage(Message);
+}
+
+void Widget::getFileName(QString name)
+{
+    qDebug() &lt;&lt; &quot;getFileName&quot;;
+    fileName = name;
+    sendMessage(FileName);
+}
+
+void Widget::on_sendToolBtn_clicked()
+{
+    if(ui -&gt; userTableWidget -&gt; selectedItems().isEmpty())
+    {
+        QMessageBox::warning(0, tr(&quot;选择用户&quot;),
+                             tr(&quot;请先从用户列表选择要传送的用户！&quot;), QMessageBox::Ok);
+        return;
+    }
+    server -&gt; show();
+    server -&gt; initServer();
+
+}
+
+void Widget::hasPendingFile(QString userName,
+                            QString serverAddress,
+                            QString clientAddress,
+                            QString fileName)
+{
+
+    qDebug() &lt;&lt; &quot;hasPendingFile&quot;;
+
+    QString ipAddress = getIP();
+
+    if(ipAddress == clientAddress)
+    {
+        int btn = QMessageBox::information(this, tr(&quot;接收文件&quot;),
+                                           tr(&quot;来自%1(%2)的文件：%3，是否接收？&quot;)
+                                           .arg(userName).arg(serverAddress).arg(fileName),
+                                           QMessageBox::Yes, QMessageBox::No);
+        if(btn == QMessageBox::Yes)
+        {
+            qDebug() &lt;&lt; &quot;hasPendingFile Yes&quot;;
+            QString name = QFileDialog::getSaveFileName(0, tr(&quot;保存文件&quot;), fileName);
+            if(!name.isEmpty())
+            {
+                TcpClient * client = new TcpClient(this);
+                client -&gt; setFileName(name);
+                client -&gt; setHostAddress(QHostAddress(serverAddress));
+                client -&gt; show();
+            }
+        }
+        else
+        {
+            sendMessage(Refuse, serverAddress);
+        }
+    }
+
+    qDebug() &lt;&lt; &quot;hasPendingFile end&quot;;
+}
+
+void Widget::on_fontComboBox_currentFontChanged(const QFont &amp;f)
+{
+    ui -&gt; messageTextEdit -&gt; setCurrentFont(f);
+    ui -&gt; messageTextEdit -&gt; setFocus();
+}
+
+void Widget::on_sizeComboBox_currentTextChanged(const QString &amp;size)
+{
+    ui -&gt; messageTextEdit -&gt; setFontPointSize(size.toDouble());
+    ui -&gt; messageTextEdit -&gt; setFocus();
+}
+
+
+void Widget::on_boldToolBtn_clicked(bool checked)
+{
+    if(checked)
+    {
+        ui -&gt; messageTextEdit -&gt; setFontWeight(QFont::Bold);
+    }
+    else
+    {
+        ui -&gt; messageTextEdit -&gt; setFontWeight(QFont::Normal);
+    }
+    ui -&gt; messageTextEdit -&gt; setFocus();
+}
+
+
+void Widget::on_italicToolBtn_clicked(bool checked)
+{
+    ui -&gt; messageTextEdit -&gt; setFontItalic(checked);
+    ui -&gt; messageTextEdit -&gt; setFocus();
+}
+
+
+void Widget::on_underlineToolBtn_clicked(bool checked)
+{
+    ui -&gt; messageTextEdit -&gt; setFontUnderline(checked);
+    ui -&gt; messageTextEdit -&gt; setFocus();
+}
+
+
+void Widget::on_colorToolBtn_clicked()
+{
+    color = QColorDialog::getColor(color, this);
+    if(color.isValid())
+    {
+        ui -&gt; messageTextEdit -&gt; setTextColor(color);
+        ui -&gt; messageTextEdit -&gt; setFocus();
+    }
+}
+
+
+void Widget::currentFormatChanged(const QTextCharFormat &amp;format)
+{
+    ui -&gt; fontComboBox -&gt; setCurrentFont(format.font());
+
+    if(format.fontPointSize() &lt; 10)
+    {
+        ui -&gt; sizeComboBox -&gt; setCurrentIndex(3);
+    }
+    else
+    {
+        ui -&gt; sizeComboBox -&gt; setCurrentIndex(ui -&gt; sizeComboBox
+                                            -&gt; findText(QString::number(format.fontPointSize())));
+    }
+
+    ui -&gt; boldToolBtn -&gt; setChecked(format.font().bold());
+    ui -&gt; italicToolBtn -&gt; setChecked(format.font().italic());
+    ui -&gt; underlineToolBtn -&gt; setChecked(format.font().underline());
+
+    color = format.foreground().color();
+}
+
+
+void Widget::on_saveToolBtn_clicked()
+{
+    if(ui -&gt; messageBrowser -&gt; document() -&gt; isEmpty())
+    {
+        QMessageBox::warning(0, tr(&quot;警告&quot;),
+                             tr(&quot;聊天记录为空，无法保存！&quot;), QMessageBox::Ok);
+    }
+    else
+    {
+        QString fileName = QFileDialog::getSaveFileName(this,
+        tr(&quot;保存聊天记录&quot;), tr(&quot;聊天记录&quot;), tr(&quot;文本(*.txt);;All File(*.*)&quot;));
+        if(! fileName.isEmpty())
+        {
+            saveFile(fileName);
+        }
+    }
+}
+
+
+bool Widget::saveFile(const QString &amp;fileName)
+{
+    QFile file(fileName);
+    if(! file.open(QFile::WriteOnly | QFile::Text))
+    {
+        QMessageBox::warning(this, tr(&quot;保存文件&quot;),
+                             tr(&quot;无法保存文件%1:\n%2&quot;)
+                             .arg(fileName).arg(file.errorString()));
+        return false;
+    }
+    QTextStream out(&amp;file);
+    out &lt;&lt; ui -&gt; messageBrowser -&gt; toPlainText();
+    return true;
+}
+
+
+void Widget::on_clearToolBtn_clicked()
+{
+    ui -&gt; messageBrowser -&gt; clear();
+}
+
+
+void Widget::on_exitButton_clicked()
+{
+    close();
+}
+
+
+void Widget::closeEvent(QCloseEvent * e)
+{
+    sendMessage(ParticipantLeft);
+    QWidget::closeEvent(e);
+}
 </code></pre>
+<h3 id="tcpserver-cpp"><a href="#tcpserver-cpp" class="headerlink" title="tcpserver.cpp"></a>tcpserver.cpp</h3><pre><code class="lang-C++">#include &quot;tcpserver.h&quot;
+#include &quot;ui_tcpserver.h&quot;
+
+#include&lt;QHostInfo&gt;
+#include&lt;QMessageBox&gt;
+#include&lt;QDateTime&gt;
+#include&lt;QProcess&gt;
+#include&lt;QDataStream&gt;
+#include&lt;QScrollBar&gt;
+#include&lt;QFont&gt;
+#include&lt;QNetworkInterface&gt;
+#include&lt;QStringList&gt;
+#include&lt;QDebug&gt;
+#include&lt;QApplication&gt;
+#include&lt;QTime&gt;
+#include&lt;QElapsedTimer&gt;
+
+TcpServer::TcpServer(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::TcpServer),
+    localFile(nullptr),
+    tcpServer(nullptr),
+    clientConnection(nullptr)
+{
+    ui-&gt;setupUi(this);
+
+    //setFixedSize(350,180);
+
+    tcpPort = 10006;
+    tcpServer = new QTcpServer(this);
+
+    initServer();
+
+    connect(tcpServer, SIGNAL(newConnection()), this, SLOT(sendMessage()));
+
+}
+
+TcpServer::~TcpServer()
+{
+    delete ui;
+}
+
+void TcpServer::initServer()
+{
+    payloadSize = 64 * 1024;
+
+    TotalBytes = 0 ;
+    bytestoWrite = 0;
+    bytesWritten = 0;
+
+    ui -&gt; serverStatusLabel -&gt; setText(tr(&quot;请选择要传送的文件&quot;));
+    ui -&gt; progressBar -&gt; reset();
+    ui -&gt; serverOpenBtn -&gt; setEnabled(true);
+    ui -&gt; serverSendBtn -&gt; setEnabled(false);
+
+    tcpServer -&gt; close();
+}
+
+void TcpServer :: sendMessage()
+{
+    qDebug() &lt;&lt; &quot;sendMessage&quot;;
+    qDebug() &lt;&lt; &quot;TCP的链接已建立&quot;;
+
+    ui -&gt; serverSendBtn -&gt; setEnabled(false);
+    clientConnection = tcpServer -&gt; nextPendingConnection();
+
+    connect(clientConnection, SIGNAL(bytesWritten(qint64)),
+            this, SLOT(updateClientProgress(qint64)));
+
+    ui -&gt; serverStatusLabel -&gt; setText(tr(&quot;开始传送文件:\n %1!&quot;).arg(theFileName));
+
+    localFile = new QFile(fileName);
+    if(!localFile -&gt; open(QFile::ReadOnly)){
+        QMessageBox::warning(this, tr(&quot;应用程序&quot;), tr(&quot;无法读取文件 %1:\n%2&quot;).arg(fileName)
+                                     .arg(localFile -&gt; errorString()));
+        return;
+    }
+
+    TotalBytes = localFile -&gt; size();
+
+    QDataStream sendOut(&amp;outBlock, QIODevice::WriteOnly);
+    sendOut.setVersion(QDataStream::Qt_4_0);
+
+    elapsedTimer.start();
+
+    QString currentFile = fileName.right(fileName.size() - fileName.lastIndexOf(&#39;/&#39;) - 1);
+    sendOut &lt;&lt; qint64(0) &lt;&lt; qint64(0) &lt;&lt; currentFile;
+
+    TotalBytes += outBlock.size();
+    sendOut.device() -&gt; seek(0);
+    sendOut &lt;&lt; TotalBytes &lt;&lt; qint64((outBlock.size() - sizeof(qint64)*2));
+
+    bytestoWrite = TotalBytes - clientConnection -&gt; write(outBlock);
+    outBlock.resize(0);
+}
+
+void TcpServer::updateClientProgress(qint64 numBytes)
+{
+    qDebug() &lt;&lt; &quot;updateClientProgress&quot;;
+    qApp -&gt; processEvents();
+    bytesWritten += (int) numBytes;
+    if(bytestoWrite &gt; 0)
+    {
+        outBlock = localFile -&gt; read(qMin(bytestoWrite,payloadSize));
+        bytestoWrite -= (int)clientConnection -&gt; write(outBlock);
+        outBlock.resize(0);
+
+    }
+    else
+    {
+        localFile -&gt; close();
+    }
+    ui-&gt;progressBar -&gt; setMaximum(TotalBytes);
+    ui-&gt;progressBar -&gt; setValue(bytesWritten);
+
+    float useTime = elapsedTimer.elapsed();
+    qDebug() &lt;&lt; &quot;uerTime:&quot; &lt;&lt; useTime;
+    double speed = bytesWritten / useTime;
+    ui-&gt;serverStatusLabel-&gt;setText(tr(&quot;已发送 %1MB( %2MB/s)&quot;
+                                      &quot;\n共%3MB 已用时:%4秒\n估计剩余时间:%5秒&quot;)
+                                   .arg(bytesWritten / (1024*1024))
+                                   .arg(speed * 1000 /(1024*1024),0,&#39;f&#39;,2)
+                                   .arg(TotalBytes /(1024*1024))
+                                   .arg(useTime/1000,0,&#39;f&#39;,0)
+                                   .arg(TotalBytes/speed/1000 - useTime/1000,0,&#39;f&#39;,0));
+    if(bytesWritten == TotalBytes)
+    {
+        localFile-&gt;close();
+        tcpServer-&gt;close();
+        ui-&gt;serverStatusLabel-&gt;setText(tr(&quot;传送文件: %1成功&quot;).arg(theFileName));
+
+    }
+
+}
+
+
+void TcpServer::on_serverOpenBtn_clicked()
+{
+    fileName = QFileDialog::getOpenFileName(this);
+    if(!fileName.isEmpty())
+    {
+        theFileName = fileName.right(fileName.size()-fileName.lastIndexOf(&#39;/&#39;)-1);
+        qDebug() &lt;&lt; &quot;文件名&quot; &lt;&lt;  theFileName;
+
+        ui-&gt;serverStatusLabel-&gt;setText(tr(&quot;要发送的文件为:%1&quot;).arg(theFileName));
+        ui-&gt;serverSendBtn-&gt;setEnabled(true);
+        ui-&gt;serverOpenBtn-&gt;setEnabled(false);
+
+    }
+    qDebug() &lt;&lt; &quot;openbtn end&quot; &lt;&lt;  theFileName;
+
+}
+
+void TcpServer::on_serverSendBtn_clicked()
+{
+    if(! tcpServer -&gt; listen(QHostAddress::Any, tcpPort))
+    {
+        qDebug() &lt;&lt; &quot;send btn error&quot; &lt;&lt;  theFileName;
+        //qDebug() &lt;&lt; tcpServer -&gt; errorString() &lt;&lt; &quot;ERROR&quot;;
+        close();
+        return;
+    }
+    qDebug() &lt;&lt; &quot;send btn 1&quot; &lt;&lt;  theFileName;
+    ui -&gt; serverSendBtn -&gt; setEnabled(false);
+    ui -&gt; serverStatusLabel -&gt; setText(tr(&quot;等待对方的接受......&quot;));
+
+    qDebug() &lt;&lt; &quot;send btn 2&quot; &lt;&lt;  theFileName;
+
+    emit sendFileName(theFileName);
+
+    qDebug() &lt;&lt; &quot;send btn end&quot; &lt;&lt;  theFileName;
+
+}
+
+void TcpServer::on_serverCloseBtn_clicked()
+{
+    qDebug() &lt;&lt; &quot;关闭&quot; ;
+    if(tcpServer-&gt;isListening())
+    {
+        qDebug() &lt;&lt; &quot;点击了关闭按钮&quot;;
+        tcpServer-&gt;close();
+        if(localFile != nullptr)
+        {
+            if(localFile -&gt; isOpen())
+            {
+                localFile -&gt; close();
+            }
+        }
+        clientConnection-&gt;abort();
+
+    }
+    close();
+
+    ui-&gt;~TcpServer();
+
+}
+
+void TcpServer::refused()
+{
+    qDebug() &lt;&lt; &quot;TcpServer::refused()&quot;;
+    tcpServer-&gt;close();
+    ui-&gt;serverStatusLabel-&gt;setText(tr(&quot;对方拒绝接受!&quot;));
+
+}
+
+void TcpServer::closeEvent(QCloseEvent *)
+{
+    qDebug() &lt;&lt; &quot;退出了server&quot;;
+    on_serverCloseBtn_clicked();
+}
+</code></pre>
+<h3 id="tcpclient-cpp"><a href="#tcpclient-cpp" class="headerlink" title="tcpclient.cpp"></a>tcpclient.cpp</h3><pre><code class="lang-C++">#include &quot;tcpclient.h&quot;
+#include &quot;ui_tcpclient.h&quot;
+
+#include &lt;QMessageBox&gt;
+
+TcpClient::TcpClient(QWidget *parent) :
+    QDialog(parent),
+    tcpClient(nullptr),
+    localFile(nullptr),
+    ui(new Ui::TcpClient)
+{
+    ui-&gt;setupUi(this);
+
+    TotalBytes = 0;
+    bytesReceived = 0;
+    fileNameSize = 0;
+    tcpClient = new QTcpSocket(this);
+    tcpPort = 10006;
+
+    connect(tcpClient, SIGNAL(readyRead()),
+                this, SLOT(readMessage()));
+    //connect(tcpClient, SIGNAL(QAbstractSocket::SocketError),
+    //            this, SLOT(Dialog(QAbstractSocket::SocketError)));
+
+}
+TcpClient::~TcpClient()
+{
+    delete ui;
+}
+
+void TcpClient::setFileName(QString fileName)
+{
+    localFile = new QFile(fileName);
+}
+
+void TcpClient::setHostAddress(QHostAddress address)
+{
+    hostAddress = address;
+    newConnect();
+
+}
+
+
+void TcpClient::newConnect()
+{
+
+    blockSize = 0;
+    tcpClient-&gt;abort();
+    tcpClient-&gt;connectToHost(hostAddress,tcpPort);
+    time.start();
+
+}
+
+void TcpClient::readMessage()
+{
+    qDebug() &lt;&lt; &quot;readMessage&quot;;
+    QDataStream in(tcpClient);
+    in.setVersion(QDataStream::Qt_4_0);
+
+    float useTime = time.elapsed();
+
+    if(bytesReceived &lt;= sizeof(qint64)*2)
+    {
+        if((tcpClient -&gt; bytesAvailable() &gt;= sizeof(qint64)*2) &amp;&amp; (fileNameSize ==0))
+        {
+            in &gt;&gt; TotalBytes &gt;&gt; fileNameSize;
+            bytesReceived += sizeof(qint64)*2;
+        }
+        if((tcpClient -&gt; bytesAvailable() &gt;= fileNameSize) &amp;&amp; (fileNameSize!=0))
+        {
+            in &gt;&gt; fileName;
+            bytesReceived += fileNameSize;
+            if(! localFile -&gt; open(QFile::WriteOnly))
+            {
+                QMessageBox::warning(this,tr(&quot;应用程序&quot;),tr(&quot;无法读取文件 %1:\n%2.&quot;)
+                                     .arg(fileName)
+                                     .arg(localFile-&gt;errorString()));
+                return ;
+            }
+            else return ;
+
+        }
+
+
+    }
+    if(bytesReceived &lt; TotalBytes)
+    {
+        bytesReceived += tcpClient-&gt;bytesAvailable();
+        inBlock = tcpClient-&gt;readAll();
+        localFile -&gt; write(inBlock);
+        inBlock.resize(0);
+
+    }
+
+    ui -&gt; progressBar -&gt; setMaximum(TotalBytes);
+    ui -&gt; progressBar -&gt; setValue(bytesReceived);
+
+    double speed = bytesReceived / useTime;
+    ui-&gt;tcpClientStatusLabel-&gt;setText(tr(&quot;已接收 %1MB( %2MB/s)&quot;
+                                         &quot;\n共%3MB 已用时:%4秒\n估计剩余时间:%5秒&quot;)
+                                      .arg(bytesReceived / (1024*1024))
+                                      .arg(speed *1000/(1024*1024),0,&#39;f&#39;,2)
+                                      .arg(TotalBytes / (1024*1024))
+                                      .arg(useTime/1000,0,&#39;f&#39;,0)
+                                      .arg(TotalBytes/speed/1000 - useTime/1000,0,&#39;f&#39;,0 ));
+    if(bytesReceived == TotalBytes)
+    {
+       localFile -&gt; close();
+       tcpClient-&gt; close();
+       ui-&gt;tcpClientStatusLabel -&gt; setText(tr(&quot;接收文件: %1完毕&quot;).arg(fileName));
+
+    }
+
+
+}
+
+void TcpClient::displayError(QAbstractSocket::SocketError  sockError)
+{
+    switch (sockError) {
+    case QAbstractSocket::RemoteHostClosedError:
+        break;
+    default:
+        qDebug() &lt;&lt; tcpClient -&gt; errorString();
+    }
+
+}
+
+void TcpClient::on_tcpClientCancelBtn_clicked()
+{
+    tcpClient -&gt; abort();
+    if(localFile -&gt; isOpen())
+    {
+        localFile -&gt; close();
+    }
+    close();
+    ui -&gt; ~TcpClient();
+}
+
+
+void TcpClient::on_tcpClientCloseBtn_clicked()
+{
+    on_tcpClientCancelBtn_clicked();
+
+}
+
+
+void TcpClient::closeEvent(QCloseEvent *)
+{
+    on_tcpClientCloseBtn_clicked();
+}
+</code></pre>
+<h1 id="处理报错"><a href="#处理报错" class="headerlink" title="处理报错"></a>处理报错</h1><p>参考 <a href="https://blog.51cto.com/u_15246509/5057290" target="_blank" rel="noopener">Qt项目升级到Qt6吐血经验总结</a></p>
+<p>将QTime类更换为QElapsedTimer类</p>
+<h1 id="程序测试"><a href="#程序测试" class="headerlink" title="程序测试"></a>程序测试</h1><p>测试消息传输功能：部分UDP丢包导致消息收取不到。</p>
+<p>测试文件传输功能：给自身IP地址发送文件会导致卡死。</p>
+<h1 id="绘制图表"><a href="#绘制图表" class="headerlink" title="绘制图表"></a>绘制图表</h1><h2 id="系统功能模块图"><a href="#系统功能模块图" class="headerlink" title="系统功能模块图"></a>系统功能模块图</h2><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/C++Qt-LAN-Chat_3.png" alt></p>
+<h2 id="用户流程图"><a href="#用户流程图" class="headerlink" title="用户流程图"></a>用户流程图</h2><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/C++Qt-LAN-Chat_4.png" alt></p>
+<h2 id="UML类图"><a href="#UML类图" class="headerlink" title="UML类图"></a>UML类图</h2><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/C++Qt-LAN-Chat_5.png" alt></p>
+<h1 id="打包封装"><a href="#打包封装" class="headerlink" title="打包封装"></a>打包封装</h1><p>参考 <a href="https://www.cnblogs.com/linuxAndMcu/p/10974927.html" target="_blank" rel="noopener">Qt之程序发布以及打包成exe安装包</a></p>
+<h2 id="以-Release-方式编译生成-exe-程序"><a href="#以-Release-方式编译生成-exe-程序" class="headerlink" title="以 Release 方式编译生成 exe 程序"></a>以 <strong>Release 方式</strong>编译生成 exe 程序</h2><p>运行成功后，如果勾选了 “shadow build” 将源码路径和构建路径分开，那么将在 build 文件夹下生成 exe 文件； 否则在源码工程目录下的 release 文件夹下生成 exe 文件。</p>
+<p>将exe程序拷贝到别的文件夹中。</p>
+<h2 id="生成dll动态链接库"><a href="#生成dll动态链接库" class="headerlink" title="生成dll动态链接库"></a>生成dll动态链接库</h2><p>在开始菜单的Qt文件夹中找到Qt 6.3.0 (MinGW 11.2.0 64-bit)，打开后进入exe文件目录，输入</p>
+<pre><code>windeployqt 程序名.exe
+</code></pre><p>Qt 就会自动把该程序所需要的所有 dll 拷贝过来。</p>
+<p>这样即可成功运行，但不能保证dll数量最小化，程序体积可能较大。</p>
+<h2 id="在GitHub上发布Release"><a href="#在GitHub上发布Release" class="headerlink" title="在GitHub上发布Release"></a>在GitHub上发布Release</h2><p><a href="https://github.com/Shiokiri/Qt-LAN-Chat/releases/tag/v1.0" target="_blank" rel="noopener">https://github.com/Shiokiri/Qt-LAN-Chat/releases/tag/v1.0</a></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -747,7 +1603,7 @@ int main()
                             本文由 落影汐雾 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2019/mobius/">https://x.lyxw.xyz/2019/mobius/</a>
+                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/">https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/</a>
                     </p>
                 </blockquote>
         
@@ -800,7 +1656,7 @@ int main()
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/html_page/" id="post_nav-newer" class="prev-content">
+        <a href="/2033/post-index/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -814,7 +1670,7 @@ int main()
 
     <!-- Next Nav -->
     
-        <a href="/2019/SA/" id="post_nav-older" class="next-content">
+        <a href="/2022/C++11/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1294,26 +2150,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- MathJax Load-->
-
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    });
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-    <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
 
 
 <!-- Bing Background -->

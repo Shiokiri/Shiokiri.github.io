@@ -34,6 +34,27 @@
   </entry>
   
   <entry>
+    <title>C++Qt局域网聊天工具 开发记录</title>
+    <link href="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/"/>
+    <id>https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/</id>
+    <published>2022-06-27T11:46:49.000Z</published>
+    <updated>2022-06-27T12:25:02.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>C++11学习笔记</title>
     <link href="https://x.lyxw.xyz/2022/C++11/"/>
     <id>https://x.lyxw.xyz/2022/C++11/</id>
@@ -461,9 +482,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
-    
     <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    
+    <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
     
   </entry>
   
