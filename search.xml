@@ -232,8 +232,8 @@
         <category>编程</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>PyQt</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -441,6 +441,11 @@
     <content type="text"></content>
   </entry>
   <entry>
+    <title><![CDATA[links]]></title>
+    <url>%2Flinks%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[闲聊]]></title>
     <url>%2Fchat%2Findex.html</url>
     <content type="text"><![CDATA[更新于：A.D.2022-04-01 Q：喜欢什么样的二次元？ A：https://bangumi.tv/user/shiokiri Q：做过什么算法题？ A：https://www.luogu.com.cn/user/51525&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://leetcode-cn.com/u/shiokiri/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://vjudge.net/user/i/552714&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://codeforces.com/profile/colorfulmist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://atcoder.jp/users/neoSoda]]></content>
@@ -448,11 +453,6 @@
   <entry>
     <title><![CDATA[tags]]></title>
     <url>%2Ftags%2Findex.html</url>
-    <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[links]]></title>
-    <url>%2Flinks%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
