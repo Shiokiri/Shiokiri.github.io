@@ -6,7 +6,7 @@
   <link href="https://x.lyxw.xyz/atom.xml" rel="self"/>
   
   <link href="https://x.lyxw.xyz/"/>
-  <updated>2022-06-28T07:18:43.557Z</updated>
+  <updated>2022-06-28T09:44:26.530Z</updated>
   <id>https://x.lyxw.xyz/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://x.lyxw.xyz/2033/post-index/"/>
     <id>https://x.lyxw.xyz/2033/post-index/</id>
     <published>2033-07-12T15:59:59.000Z</published>
-    <updated>2022-06-28T07:18:43.557Z</updated>
+    <updated>2022-06-28T09:44:26.530Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于： A.D.2022.04.01&lt;/p&gt;
+&lt;p&gt;更新于： A.D.2022.06.28&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -148,9 +148,9 @@
     
     <category term="Blender" scheme="https://x.lyxw.xyz/tags/Blender/"/>
     
-    <category term="C#" scheme="https://x.lyxw.xyz/tags/C/"/>
-    
     <category term="VRoid Studio" scheme="https://x.lyxw.xyz/tags/VRoid-Studio/"/>
+    
+    <category term="C#" scheme="https://x.lyxw.xyz/tags/C/"/>
     
   </entry>
   

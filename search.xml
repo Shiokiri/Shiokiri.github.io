@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[文章索引]]></title>
     <url>%2F2033%2Fpost-index%2F</url>
-    <content type="text"><![CDATA[更新于： A.D.2022.04.01 这是一篇索引. 因为我还不太想去折腾置顶的东西，所以手动置顶. 日期含义是Metro2033+洛天依生日. 关于 闲聊 计算机 3科学上网 | GFW与SSR简介 Chrome浏览器 | 插件与设置 Windows软件快速指南 编程 9PyQt5上手指南 VSCode配置Python环境及Python入门学习 从零开始的C++学习 C++STL的OI常用内容 Python网络爬虫学习 后端开发学习 C++11学习笔记 C++Qt局域网聊天工具 开发记录 MySQL数据库学习笔记 技术 6MMD制作简介 Hexo博客搭建及Material主题使用指南 使用jsDelivr+PicGo对图片进行cdn加速 Github Pages+HTML5 up制作个人主页及绑定二级域名 使用Gmail进行域名邮箱邮件收发 VRoid Studio-&gt;Blender-&gt;Unity制作人物模型 杂谈 7夏日小日记 《意识宇宙》 一切都结束了 烦躁沉寂的八月 「观测者轻语」杂谈 我接触与学习编程及OI的经历 一些metagame的介绍与评价（无剧透） 数学 5「FFT/NTT」「多项式」 「莫比乌斯反演」 「概率期望」 「数论」 「计算几何」 算法 5「动态规划」 「后缀数组」 「线段树」 「网络流」 「分层图」 杂项 3电子产品评测 落影汐雾的记录集 游戏《递归的边界线Recursive Boundary》开发记录]]></content>
+    <content type="text"><![CDATA[更新于： A.D.2022.06.28 这是一篇索引. 因为我还不太想去折腾置顶的东西，所以手动置顶. 日期含义是Metro2033+洛天依生日. 关于 闲聊 计算机 4科学上网 | GFW与SSR简介 Chrome浏览器 | 插件与设置 Windows软件快速指南 计算机科学与技术学习的前置知识 编程 9PyQt5上手指南 VSCode配置Python环境及Python入门学习 从零开始的C++学习 C++STL的OI常用内容 Python网络爬虫学习 后端开发学习 C++11学习笔记 C++Qt局域网聊天工具 开发记录 MySQL数据库学习笔记 技术 6MMD制作简介 Hexo博客搭建及Material主题使用指南 使用jsDelivr+PicGo对图片进行cdn加速 Github Pages+HTML5 up制作个人主页及绑定二级域名 使用Gmail进行域名邮箱邮件收发 VRoid Studio-&gt;Blender-&gt;Unity制作人物模型 杂谈 7夏日小日记 《意识宇宙》 一切都结束了 烦躁沉寂的八月 「观测者轻语」杂谈 我接触与学习编程及OI的经历 一些metagame的介绍与评价（无剧透） 数学 5「FFT/NTT」「多项式」 「莫比乌斯反演」 「概率期望」 「数论」 「计算几何」 算法 5「动态规划」 「后缀数组」 「线段树」 「网络流」 「分层图」 杂项 3电子产品评测 落影汐雾的记录集 游戏《递归的边界线Recursive Boundary》开发记录]]></content>
   </entry>
   <entry>
     <title><![CDATA[计算机科学与技术学习的前置知识]]></title>
@@ -64,8 +64,8 @@
       <tags>
         <tag>Unity</tag>
         <tag>Blender</tag>
-        <tag>C#</tag>
         <tag>VRoid Studio</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -464,18 +464,18 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[关于]]></title>
-    <url>%2Fabout%2Findex.html</url>
-    <content type="text"><![CDATA[落影汐雾，学生 曾经是OIer，用过的id是ColorfulMist 喜欢中文vocaloid、PC游戏、一点ACGN、电子产品和写代码 网站是高中时期摸鱼搭建的静态博客，使用 Hexo，主题是 Material 交换友链在此回复名称+介绍+头像链接+主页链接即可\ (￣︶￣\ *))]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[闲聊]]></title>
     <url>%2Fchat%2Findex.html</url>
     <content type="text"><![CDATA[更新于：A.D.2022-04-01 Q：喜欢什么样的二次元？ A：https://bangumi.tv/user/shiokiri Q：做过什么算法题？ A：https://www.luogu.com.cn/user/51525&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://leetcode-cn.com/u/shiokiri/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://vjudge.net/user/i/552714&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://codeforces.com/profile/colorfulmist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://atcoder.jp/users/neoSoda]]></content>
   </entry>
   <entry>
-    <title><![CDATA[gallery]]></title>
-    <url>%2Fgallery%2Findex.html</url>
+    <title><![CDATA[关于]]></title>
+    <url>%2Fabout%2Findex.html</url>
+    <content type="text"><![CDATA[落影汐雾，学生 曾经是OIer，用过的id是ColorfulMist 喜欢中文vocaloid、PC游戏、一点ACGN、电子产品和写代码 网站是高中时期摸鱼搭建的静态博客，使用 Hexo，主题是 Material 交换友链在此回复名称+介绍+头像链接+主页链接即可\ (￣︶￣\ *))]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
@@ -484,8 +484,8 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[gallery]]></title>
+    <url>%2Fgallery%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
