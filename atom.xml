@@ -6,7 +6,7 @@
   <link href="https://x.lyxw.xyz/atom.xml" rel="self"/>
   
   <link href="https://x.lyxw.xyz/"/>
-  <updated>2022-04-01T14:28:25.102Z</updated>
+  <updated>2022-06-28T04:53:55.509Z</updated>
   <id>https://x.lyxw.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://x.lyxw.xyz/2033/post-index/"/>
     <id>https://x.lyxw.xyz/2033/post-index/</id>
     <published>2033-07-12T15:59:59.000Z</published>
-    <updated>2022-04-01T14:28:25.102Z</updated>
+    <updated>2022-06-28T04:53:55.509Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -38,7 +38,7 @@
     <link href="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/"/>
     <id>https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/</id>
     <published>2022-06-27T11:46:49.000Z</published>
-    <updated>2022-06-27T12:40:36.359Z</updated>
+    <updated>2022-06-28T04:52:43.159Z</updated>
     
     
       
@@ -51,6 +51,14 @@
     
     
     
+    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    
+    
+    <category term="C++" scheme="https://x.lyxw.xyz/tags/C/"/>
+    
+    <category term="Qt" scheme="https://x.lyxw.xyz/tags/Qt/"/>
+    
+    <category term="计算机网络" scheme="https://x.lyxw.xyz/tags/计算机网络/"/>
     
   </entry>
   
