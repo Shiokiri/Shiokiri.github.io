@@ -6,6 +6,18 @@
     <content type="text"><![CDATA[更新于： A.D.2022.04.01 这是一篇索引. 因为我还不太想去折腾置顶的东西，所以手动置顶. 日期含义是Metro2033+洛天依生日. 关于 闲聊 计算机 3科学上网 | GFW与SSR简介 Chrome浏览器 | 插件与设置 Windows软件快速指南 编程 9PyQt5上手指南 VSCode配置Python环境及Python入门学习 从零开始的C++学习 C++STL的OI常用内容 Python网络爬虫学习 后端开发学习 C++11学习笔记 C++Qt局域网聊天工具 开发记录 MySQL数据库学习笔记 技术 6MMD制作简介 Hexo博客搭建及Material主题使用指南 使用jsDelivr+PicGo对图片进行cdn加速 Github Pages+HTML5 up制作个人主页及绑定二级域名 使用Gmail进行域名邮箱邮件收发 VRoid Studio-&gt;Blender-&gt;Unity制作人物模型 杂谈 7夏日小日记 《意识宇宙》 一切都结束了 烦躁沉寂的八月 「观测者轻语」杂谈 我接触与学习编程及OI的经历 一些metagame的介绍与评价（无剧透） 数学 5「FFT/NTT」「多项式」 「莫比乌斯反演」 「概率期望」 「数论」 「计算几何」 算法 5「动态规划」 「后缀数组」 「线段树」 「网络流」 「分层图」 杂项 3电子产品评测 落影汐雾的记录集 游戏《递归的边界线Recursive Boundary》开发记录]]></content>
   </entry>
   <entry>
+    <title><![CDATA[学习计算机科学与技术的前置知识]]></title>
+    <url>%2F2022%2Fbefore-cs%2F</url>
+    <content type="text"><![CDATA[更新于：A.D.2022.06.28 访问网站方法学会科学上网，Google、GitHub、Stack Overflow 可以解决你在开发过程中遇到的 95% 的问题。 计算机操作掌握一些比较基本的快捷键 Ctrl+C/V 复制粘贴 Ctrl/Shift+方向键 文本操作 Ctrl+Tab/Ctrl+Shift+Tab 浏览器页面向前/向后 建立一些解决计算机使用方面问题的基本认识 购买笔记本需要注意什么？怎么判断型号的优劣？ 笔记本可以加装固态硬盘吗？要注意怎么操作？ C盘满了会有什么后果？应该怎么处理？ 资源获取途径信息获取仅仅列出一些常见网站，初步了解一个领域建议在知乎进行关键字搜索 Google 知乎 掘金 思否 V2EX 书籍下载专业书籍可以下载PDF扫描版，文学及小说可以下载EPUB进行多端阅读 Z-Library. The world’s largest ebook library. 搜索与提问学会搜索学会搜索，首先学会使用正确的网站 当遇到问题时，按以下优先级解决： 通过Google搜索汉语描述 通过Google搜索英语描述 通过StackOverflow搜索英语描述 通过专业论坛例如Qt论坛、Unity论坛、Reddit编程版搜索英语描述 通过GitHub等开发页面搜索Issues匹配类似问题 学会提问学会提问，首先学会描述问题 提问的智慧 当搜索无法解决时，选择以下方法： 通过GitHub提出Issue直接咨询开发者 在国内论坛通过汉语提出问题咨询 在国外论坛通过英语提出问题咨询 在StackOverflow通过英语提出问题咨询 向认识的计算机专业人士与程序员咨询 软件安装与环境配置软件安装安装软件，首先选择正确的网站下载安装包，否则就是…… 寻找大型商业软件替代品：AlternativeTo 参考软件列表：作为程序员的你，常用的工具软件有哪些？ 对于IDE选择最新的版本！一定不能用VC++等过时工具 环境配置学会搜索，学会提问 保持耐心，仔细解决可能出现的报错 出现网络问题换国内镜像或代理命令行 配置环境时及时进行记录，便于日后更换机器时寻找资料 工具与IDE工具学会使用Git命令（若需要可学习SVN） 学会使用GitHub，尝试使用Hexo等引擎搭建博客（可以进一步了解域名） 学会使用命令行cmd、powershell、zsh等 学会使用markdown和LaTeX（可以使用Typora、Obsidian等软件） 学会使用ssh连接远程主机（可以使用MobaXterm、XShell、FinalShell等软件） 使用记事本升级版Notepad++，有时可以解决很多简单的文本编辑问题 Downloads | Notepad++ 尝试使用笔记软件Notion、OneNote、语雀等 尝试了解Linux及其发行版Ubuntu、Debian等 尝试了解Windows Terminal及WSL（适用于Linux的Windows子系统 Windows Subsystem for Linux） 详细可以参考CS自学指南的内容 IDE集成开发环境（Integrated Development Environment，简称IDE，也称为Integration Design Environment、Integration Debugging Environment）是一种辅助程序开发人员开发软件的应用软件，在开发工具内部就可以辅助编写源代码文本、并编译打包成为可用的程序，有些甚至可以设计图形接口。 了解编程语言Which Programming Language Should I Learn First? [Infographic] TIOBE Index for June 2022 June Headline: C++ is about to surpass Java HelloGitHub 2022年05月编程语言排行榜 PYPL PopularitY of Programming Language 了解并安装IDETop IDE index 微软方面的VS、VSCode是可能用到的选择 Visual Studio 2022 IDE - 适用于软件开发人员的编程工具 Visual Studio Code - Code Editing. Redefined JetBrains方面的各种语言的IDE也非常人性化、方便 JetBrains 出品的所有开发者工具和产品 参考资料CS自学指南CS自学指南 必学工具：IDE, 翻墙, StackOverflow, Git, GitHub, Vim, LaTeX, GNU Make, 实用工具 … 国外高质量 CS 课程汇总：我将把我上过的所有高质量的国外 CS 课程分门别类进行汇总，并给出相关的自学建议，大部分课程都会有一个独立的仓库维护相关的资源以及我的作业实现。 环境配置：Linux 基础，bash，环境变量，Anaconda … 经典书籍推荐：看过 CSAPP 这本书的同学一定感叹好书的重要，我将列举推荐自己看过的计算机领域的必看好书与资源链接。 MIT-Missing-Semester 计算机教育中缺失的一课The Missing Semester of Your CS Education 中文版 大学里的计算机课程通常专注于讲授从操作系统到机器学习这些学院派的课程或主题，而对于如何精通工具这一主题则往往会留给学生自行探索。在这个系列课程中，我们讲授命令行、强大的文本编辑器的使用、使用版本控制系统提供的多种特性等等。学生在他们受教育阶段就会和这些工具朝夕相处（在他们的职业生涯中更是这样）。 因此，花时间打磨使用这些工具的能力并能够最终熟练地、流畅地使用它们是非常有必要的。 精通这些工具不仅可以帮助您更快的使用工具完成任务，并且可以帮助您解决在之前看来似乎无比复杂的问题。 南京大学 计算机系统基础 课程实验 (PA)南京大学 计算机科学与技术系 计算机系统基础 课程实验 2022 理解”程序如何在计算机上运行”的根本途径是从”零”开始实现一个完整的计算机系统. 南京大学计算机科学与技术系计算机系统基础课程的小型项目 (Programming Assignment, PA)将提出x86/mips32/riscv32(64)架构相应的教学版子集, 指导学生实现一个经过简化但功能完备的x86/mips32/riscv32(64)模拟器NEMU(NJU EMUlator), 最终在NEMU上运行游戏”仙剑奇侠传”, 来让学生探究”程序在计算机上运行”的基本原理. NEMU受到了QEMU的启发, 并去除了大量与课程内容差异较大的部分. PA包括一个准备实验(配置实验环境)以及5部分连贯的实验内容: 图灵机与简易调试器 冯诺依曼计算机系统 批处理系统 分时多任务 程序性能优化 后记了解OI、ACM、CTFOI Wiki CTF Wiki 一些入门学习菜鸟教程 - 学的不仅是技术，更是梦想！ w3school 在线教程 【计算机科学速成课】[40集全/精校] - Crash Course Computer Science 【官方双语/合集】线性代数的本质 - 系列合集 【官方双语/合集】微积分的本质 - 系列合集 软件开发对数学的要求普通的软件开发不需要过多的数学知识，只需要建立对离散数学的认识，掌握数据结构与算法即可 软件开发需要信息的获取与整理能力、良好的沟通能力、规划与设计能力、耐心与仔细地编写代码 对于计算机研究来说，就我通过网络的了解而言： 人工智能（ML、CV、NLP）：数学分析 -&gt; 实变函数 -&gt; 概率论与数理统计 离散数学 算法分析 数据结构 程序语言研究（PLT）：高等代数 -&gt; 代数结构 -&gt; 抽象代数 数理逻辑 类型论 范畴论 计算理论：离散数学 -&gt; 形式语言与自动机 算法分析 求职需要学习的知识编程语言与框架主要依靠自学 C、C++、C#、Java、Python、JavaScript、TypeScript、HTML、CSS、Haskell等 Qt、SpringBoot、Flutter、Vue.js、React.js、Unity、UE5等 我的历史学习路线与计划学习路线 算法与数据结构面试会问，上课好好学 多做题：https://leetcode.cn/ 计算机基础理论知识面试会问，上课好好学 可以看一些经典教材，比如深入理解计算机系统（CS : APP） 操作系统，计算机组成原理，计算机网络，编译原理、数据库系统等 制作实际项目Windows桌面应用、Unity或者UE4游戏、网页前后端、小程序、Android / iOS应用等 软件工程知识学习设计模式与代码规范、软件测试和质量保证等 版本控制系统的使用，例如Git、SVN 背诵八股文面试会问，面试前准备即可 前端工具链，Java的反射、泛型等，各种框架和组件的应用、细节、实现等 我的桌面软件]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>技术工具</tag>
+        <tag>计算机科学</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL数据库学习笔记]]></title>
     <url>%2F2022%2FMySQL%2F</url>
     <content type="text"><![CDATA[更新于：A.D.2022.06.28 参考书籍：《MySQL必知必会》 检索数据SELECT语句检索单个列 SELECT 列 FROM 表; 检索多个列 SELECT 列, 列, 列 FROM 表; 检索所有列 SELECT * FROM 表; 检索不同的行 SELECT 行 FROM 表; SELECT DISTINCT 行 FROM 表; 限制结果 SELECT 列 FROM 表 LIMIT 数量; SELECT 列 FROM 表 LIMIT 数量 OFFSET 行号; 排序检索数据ORDER BY语句按单个列排序 SELECT 列 FROM 表 ORDER BY 列; 按多个列排序 SELECT 列, 列, 列 FROM 表 ORDER BY 列, 列; 指定排序方向 使用DESC关键字，作用于位于前面的列名 SELECT 列, 列, 列 FROM 表 ORDER BY 列 DESC; SELECT 列, 列, 列 FROM 表 ORDER BY 列 DESC, 列; 过滤数据WHERE子句SELECT 列, 列 FROM 表 WHERE 列 = 值; WHERE 子句操作符 操作符 说明 = 等于 &lt;&gt; 不等于 != 不等于 &lt; 小于 &lt;= 小于等于 &gt; 大于 &gt;= 大于等于 BETWEEN 在指定的两个值之间 检查单个值 SELECT 列, 列 FROM 表 WHERE 列 = 值; SELECT 列, 列 FROM 表 WHERE 列 &lt; 值; SELECT 列, 列 FROM 表 WHERE 列 &lt;= 值; 不匹配检查 SELECT 列, 列 FROM 表 WHERE 列 &lt;&gt; 值; SELECT 列, 列 FROM 表 WHERE 列 != 值; 范围值检查 SELECT 列, 列 FROM 表 WHERE 列 BETWEEN 值 AND 值; 空值检查 SELECT 列 FROM 表 WHERE 列 IS NULL;]]></content>
@@ -467,13 +479,13 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[gallery]]></title>
+    <url>%2Fgallery%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[gallery]]></title>
-    <url>%2Fgallery%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
