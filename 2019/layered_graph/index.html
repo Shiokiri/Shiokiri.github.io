@@ -542,7 +542,7 @@ Update on A.D.2019-09-23
 <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在一个无向图$G=(V,E)$中，可以改变$k$条边的权值为$\Delta w$，求单源最短路径。</p>
 <h1 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h1><p>分层图的想法就是如果有$k$条边权值变为$\Delta w$，就建$k+1$层图。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/fct.png" alt></p>
-<p>这个图实际上是这样的，对于每$1$层中相连的点对$(u,v)$连权值为$w$的无向边，对于每个在原图中相连的点对$(u,v)$由$k$层点$u_k$向$k+1$层点$v_{k+1}$以及$k$层点$v_k$向$k+1$层点$u_{k+1}$连权值为$\Delta w$的有向边，方向是从$k$层向$k+1$层。<br>这样构造完成一张分层图后，从第$1$层的起始点$s_1$求单源最短路径，最终第$k + 1$层的终点$t_{k+1}$的单源最短路径值即为答案所求。<br>原理其实很简单，如果从$k$层图到$k+1$层图，有向边$(u_k,v_{k+1})$是一条$\Delta w$权边，走这条边，相当于把$w$权边变成了$\Delta w$权边，并且进入了$k+1$层。这样如果有$k+1$层图的话，相当于进行了$k$次这种操作，自然就在$k+1$层图求最短路中实现了$k$次改变边权的目标。</p>
+<p>这个图实际上是这样的，对于每$1$层中相连的点对$(u,v)$连权值为$w$的无向边，对于每个在原图中相连的点对$(u,v)$由$k$层点$u<em>k$向$k+1$层点$v</em>{k+1}$以及$k$层点$v<em>k$向$k+1$层点$u</em>{k+1}$连权值为$\Delta w$的有向边，方向是从$k$层向$k+1$层。<br>这样构造完成一张分层图后，从第$1$层的起始点$s<em>1$求单源最短路径，最终第$k + 1$层的终点$t</em>{k+1}$的单源最短路径值即为答案所求。<br>原理其实很简单，如果从$k$层图到$k+1$层图，有向边$(u<em>k,v</em>{k+1})$是一条$\Delta w$权边，走这条边，相当于把$w$权边变成了$\Delta w$权边，并且进入了$k+1$层。这样如果有$k+1$层图的话，相当于进行了$k$次这种操作，自然就在$k+1$层图求最短路中实现了$k$次改变边权的目标。</p>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="P2939-USACO09FEB-改造路Revamping-Trails"><a href="#P2939-USACO09FEB-改造路Revamping-Trails" class="headerlink" title="P2939 [USACO09FEB]改造路Revamping Trails"></a><a href="https://www.luogu.org/problemnew/show/P2939" target="_blank" rel="noopener">P2939 [USACO09FEB]改造路Revamping Trails</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
 #include &lt;cstdio&gt;
 #include &lt;cstring&gt;
@@ -927,7 +927,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -945,7 +945,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
             </li></ul>
         </li>
         
@@ -1023,7 +1023,7 @@ int main()
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">40</span>
+                <span class="sidebar-badge">44</span>
             </a>
         </li>
         
@@ -1395,6 +1395,14 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <div id="aplayer" style="z-index: 11;"></div>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/aplayer/APlayer.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.2/aplayer/music.js"></script>
+            
+                <script src='https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js'></script>
+                <script>
+                  if (window.mermaid) {
+                    mermaid.initialize({theme: 'forest'});
+                  }
+                </script>
+            
         <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {

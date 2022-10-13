@@ -555,7 +555,7 @@ dp[u]=dp[u]+
 \begin{cases}
 \min(dp[v],dist_{u,v})& \text{v不是关键点}\\
 dist_{u,v}& \text{v是关键点}
-\end{cases}</script><h3 id="ZJOI2010-排列计数"><a href="#ZJOI2010-排列计数" class="headerlink" title="[ZJOI2010]排列计数"></a>[ZJOI2010]排列计数</h3><p>题意：求一个$1\sim n$的排列$P_i$使$ 1\leq  i \leq n$时$P_i&gt;P_{i/2}$的方案数。</p>
+\end{cases}</script><h3 id="ZJOI2010-排列计数"><a href="#ZJOI2010-排列计数" class="headerlink" title="[ZJOI2010]排列计数"></a>[ZJOI2010]排列计数</h3><p>题意：求一个$1\sim n$的排列$P<em>i$使$ 1\leq  i \leq n$时$P_i&gt;P</em>{i/2}$的方案数。</p>
 <p>直接做没什么思路，可以想一下除二的关系可以是二叉树，于是换到树上来做，求$n$个节点的二叉树满足小根堆性质树的个数。</p>
 <p>设$dp[i]$表示以$i$为根的子树内满足小根堆性质的方案数，$s[i]$为树结点数，提前把一些越界的初值设为$1$以免判断，转移时组合数算一下选给左子树的点，记得减去根节点，乘一下两颗子树的方案数就ok了，组合数要用lucas，方程</p>
 <script type="math/tex; mode=display">
@@ -817,7 +817,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -835,7 +835,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
             </li></ul>
         </li>
         
@@ -913,7 +913,7 @@ int main()
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">40</span>
+                <span class="sidebar-badge">44</span>
             </a>
         </li>
         
@@ -1285,6 +1285,14 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <div id="aplayer" style="z-index: 11;"></div>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/aplayer/APlayer.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.2/aplayer/music.js"></script>
+            
+                <script src='https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js'></script>
+                <script>
+                  if (window.mermaid) {
+                    mermaid.initialize({theme: 'forest'});
+                  }
+                </script>
+            
         <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {

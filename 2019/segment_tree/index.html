@@ -592,7 +592,7 @@ Update on A.D.2019-09-23
 <script type="math/tex; mode=display">\hat{a}=\dfrac{t3-\frac{t1t2}{R-L+1}}{t4-\frac{t1^2}{R-L+1}}</script><h4 id="Add"><a href="#Add" class="headerlink" title="Add"></a>Add</h4><script type="math/tex; mode=display">\Delta x = S \quad \Delta y= T</script><script type="math/tex; mode=display">\sum (x + S) = \sum x_i+(R-L+1)S</script><script type="math/tex; mode=display">\sum(y+T)=\sum y_i+(R-L+1) T</script><script type="math/tex; mode=display">\sum(x+S)(y+T)=\sum(xy+Sy+Tx+ST)=\sum xy+S\sum y+T\sum x+(R-L+1)ST</script><script type="math/tex; mode=display">\sum(x+S)^2=\sum x^2+2S\sum x+(R-L+1)S^2</script><p><strong>下传</strong>Tag：先$upd$后$addX \quad addY$</p>
 <p><strong>顺序</strong>：先$t3,t4$后$t1,t2$</p>
 <h4 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h4><p>自然数平方和：<script type="math/tex">\sum_{i=1}^ni=\frac{n(n+1)(2n+1)}{6}</script></p>
-<p>1.$\forall i \in [L,R]\quad x_i=i  y_i=i$</p>
+<p>1.$\forall i \in [L,R]\quad x_i=i\ \ y_i=i$</p>
 <script type="math/tex; mode=display">\sum x=\sum y = \sum i = \frac{(R-L+1)(R+L)}{2}</script><script type="math/tex; mode=display">\sum x^2 = \sum xy = \sum i ^2 = \sum_{i=1}^R i^2-\sum_{i=1}^{L-1}i^2=\frac{R(R+1)(2R+1)}{6}-\frac{L(L-1)(2L-1)}{6}</script><p><strong>下传</strong>Tag：先$upd$后$addX \quad addY$</p>
 <p><strong>清空</strong>Tag $addX \quad addY$</p>
 <p><strong>标记</strong>Tag $upd$</p>
@@ -759,7 +759,7 @@ int main()
 <p>设离散化后的端点有$M$个，则对如图所示$M-1$个规则矩形编号为$[1,M-1]$，可以由$h_{[i, i+1]}\times(val[i+1] - val[i])$得出第$i$个矩形的面积。</p>
 <p>开一颗区间为$[1,M-1]$的线段树，按$h$从小到大依次对线段树区间覆盖，可以保证高的矩形覆盖了低的矩形的区间，具体操作为对离散化后的$(x,y,h)$，进行线段树$[x,y-1]$区间覆盖$h$值，最终$i$点存储$h_{[i,i+1]}$的最大值。</p>
 <p>$h_{[i, i+1]}$可以通过线段树单点查询$i$点求出。</p>
-<p>答案：$\sum_{i=1}^{M-1}h_{[i, i+1]}\times(val[i+1] - val[i])$</p>
+<p>答案：$\sum<em>{i=1}^{M-1}h</em>{[i, i+1]}\times(val[i+1] - val[i])$</p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre><code class="lang-c++">#include &lt;iostream&gt;
 #include &lt;cstdio&gt;
 #include &lt;algorithm&gt;
@@ -987,7 +987,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -1005,7 +1005,7 @@ int main()
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
             </li></ul>
         </li>
         
@@ -1083,7 +1083,7 @@ int main()
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">40</span>
+                <span class="sidebar-badge">44</span>
             </a>
         </li>
         
@@ -1455,6 +1455,14 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             <div id="aplayer" style="z-index: 11;"></div>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/aplayer/APlayer.min.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.2/aplayer/music.js"></script>
+            
+                <script src='https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js'></script>
+                <script>
+                  if (window.mermaid) {
+                    mermaid.initialize({theme: 'forest'});
+                  }
+                </script>
+            
         <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
