@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="
-更新于：A.D.2022.09.27
+更新于：A.D.2023.03.05
 ">
     <meta name="keywords" content=",数据库,Redis">
     <meta name="theme-color" content="#66CCFF">
@@ -250,13 +250,13 @@
     <meta property="og:title" content="Redis数据库学习笔记 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
     <meta property="og:description" content="
-更新于：A.D.2022.09.27
+更新于：A.D.2023.03.05
 ">
     <meta property="og:article:tag" content="数据库"> <meta property="og:article:tag" content="Redis"> 
 
     
         <meta property="article:published_time" content="Tue Sep 27 2022 15:32:50 GMT+0800">
-        <meta property="article:modified_time" content="Thu Oct 13 2022 20:55:41 GMT+0800">
+        <meta property="article:modified_time" content="Sun Mar 05 2023 03:32:03 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2022/redis/index.html",
     "headline": "Redis数据库学习笔记",
     "datePublished": "Tue Sep 27 2022 15:32:50 GMT+0800",
-    "dateModified": "Thu Oct 13 2022 20:55:41 GMT+0800",
+    "dateModified": "Sun Mar 05 2023 03:32:03 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -299,7 +299,7 @@
     },
     "keywords": ",数据库,Redis",
     "description": "
-更新于：A.D.2022.09.27
+更新于：A.D.2023.03.05
 ",
 }
 </script>
@@ -368,7 +368,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装与配置"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装与配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数据类型"><span class="post-toc-number">2.</span> <span class="post-toc-text">数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#key"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">key</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#String"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">String</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hash"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Hash</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#List"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">List</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Set"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Set</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SpringCache"><span class="post-toc-number">3.</span> <span class="post-toc-text">SpringCache</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是Redis"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么是Redis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为什么需要Redis"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">为什么需要Redis</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Redis基本工作原理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Redis基本工作原理</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Redis应用案例"><span class="post-toc-number">2.</span> <span class="post-toc-text">Redis应用案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#连续签到"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">连续签到</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#消息通知"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">消息通知</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#计数"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">计数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#排行榜"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">排行榜</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#限流"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">限流</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分布式锁"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">分布式锁</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Redis使用注意事项"><span class="post-toc-number">3.</span> <span class="post-toc-text">Redis使用注意事项</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#大Key、热Key"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">大Key、热Key</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#慢查询场景"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">慢查询场景</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -536,11 +536,92 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>更新于：A.D.2022.09.27</p>
+<p>更新于：A.D.2023.03.05</p>
 </blockquote>
 <a id="more"></a>
 <hr>
-<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="key"><a href="#key" class="headerlink" title="key"></a>key</h2><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><h2 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h2><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><h1 id="SpringCache"><a href="#SpringCache" class="headerlink" title="SpringCache"></a>SpringCache</h1>
+<h1 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h1><h2 id="为什么需要Redis"><a href="#为什么需要Redis" class="headerlink" title="为什么需要Redis"></a>为什么需要Redis</h2><ul>
+<li>数据从单表，演进除了分库分表</li>
+<li>MySQL从单机演进出了集群<blockquote>
+<p>数据量增长</p>
+<p>读写数据压力的不断增加</p>
+</blockquote>
+</li>
+<li>数据分冷热<blockquote>
+<p>热数据：经常被访问到的数据</p>
+</blockquote>
+</li>
+<li>将热数据存储到内存中</li>
+</ul>
+<h2 id="Redis基本工作原理"><a href="#Redis基本工作原理" class="headerlink" title="Redis基本工作原理"></a>Redis基本工作原理</h2><ul>
+<li>数据从内存中读写</li>
+<li>数据保存到硬盘上防止重启数据丢失<blockquote>
+<p>增量数据保存到AOF文件</p>
+<p>全量数据RBD文件</p>
+</blockquote>
+</li>
+<li>单线程处理所有操作命令</li>
+</ul>
+<h1 id="Redis应用案例"><a href="#Redis应用案例" class="headerlink" title="Redis应用案例"></a>Redis应用案例</h1><h2 id="连续签到"><a href="#连续签到" class="headerlink" title="连续签到"></a>连续签到</h2><p>String数据结构</p>
+<ul>
+<li>可以存储字符串、数字、二进制数据</li>
+<li>通常和expire配合使用</li>
+<li>场景：存储计数、Session</li>
+</ul>
+<h2 id="消息通知"><a href="#消息通知" class="headerlink" title="消息通知"></a>消息通知</h2><p>用List作为消息队列</p>
+<ul>
+<li>QuickList由一个双向链表和listpack实现</li>
+</ul>
+<h2 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h2><p>一个用户有多项计数需求，可通过Hash结构存储</p>
+<ul>
+<li>Hash数据结构dict</li>
+<li>rehash</li>
+<li>渐进式rehash</li>
+</ul>
+<h2 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h2><p>zset数据结构 zskiplist</p>
+<h2 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h2><h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><p>可以使用Redis的setnx实现</p>
+<ul>
+<li>Redis是单线程执行命令</li>
+<li>setnx只有未设置过才能执行成功</li>
+</ul>
+<h1 id="Redis使用注意事项"><a href="#Redis使用注意事项" class="headerlink" title="Redis使用注意事项"></a>Redis使用注意事项</h1><h2 id="大Key、热Key"><a href="#大Key、热Key" class="headerlink" title="大Key、热Key"></a>大Key、热Key</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>大Key标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String类型</td>
+<td>value的字节数大于10KB即为大Key</td>
+</tr>
+<tr>
+<td>Hash/Set/Zset/List等复杂数据结构类型</td>
+<td>元素个数大于5000个或总value字节数大于10MB即为大Key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>大Key的危害</p>
+<ul>
+<li>读取成本高</li>
+<li>容易导致慢查询（过期、删除）</li>
+<li>主从复制异常、服务阻塞无法正常响应请求</li>
+</ul>
+<p>业务侧使用大Key的表现</p>
+<ul>
+<li>请求Redis超时报错</li>
+</ul>
+<h2 id="慢查询场景"><a href="#慢查询场景" class="headerlink" title="慢查询场景"></a>慢查询场景</h2><p>容易导致Redis慢查询的操作</p>
+<ol>
+<li>批量操作一次性传入过多的key/value，如mset/hmset/sadd/zadd等O(n)操作，建议单批次不要超过100，超过100之后性能下降明显</li>
+<li>zset大部分命令都是O(log(n))，当大小超过5k以上时，简单的zadd/zrem也可能导致慢查询</li>
+<li>操作的单个value过大，超过10KB。也即，避免使用大Key</li>
+<li>对大Key的delete/expire操作也可能导致慢查询，Redis4.0之前不支持异步删除unlink，大Key删除会阻塞Redis</li>
+</ol>
+
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
                     <p><strong>
@@ -707,7 +788,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2033/07/">七月 2033<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/03/">三月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/06/">六月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
             </li></ul>
         </li>
         
@@ -725,7 +806,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂谈/">杂谈<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">4</span></a>
             </li></ul>
         </li>
         
@@ -803,7 +884,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">44</span>
+                <span class="sidebar-badge">45</span>
             </a>
         </li>
         
@@ -902,7 +983,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <!-- Twitter -->
     
-        <a href="https://twitter.com/ameshiokiri" target="_blank">
+        <a href="https://twitter.com/shiokirixw" target="_blank">
             <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
                 <span class="visuallyhidden">Twitter</span>
             </button><!--
@@ -916,6 +997,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/5217668786" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
     
 
     <!-- Instagram -->
@@ -946,6 +1033,12 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/pxltq" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
     
 
     <!-- Segmentfault -->
