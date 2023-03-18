@@ -34,6 +34,50 @@
   </entry>
   
   <entry>
+    <title>构建第一个Vue 3项目</title>
+    <link href="https://x.lyxw.xyz/2023/vue/"/>
+    <id>https://x.lyxw.xyz/2023/vue/</id>
+    <published>2023-03-18T07:32:50.000Z</published>
+    <updated>2023-03-18T14:34:24.153Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.03.18&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    
+    
+    <category term="vue" scheme="https://x.lyxw.xyz/tags/vue/"/>
+    
+    <category term="前端" scheme="https://x.lyxw.xyz/tags/前端/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>云服务器购买与Linux使用经验</title>
+    <link href="https://x.lyxw.xyz/2023/cloud_server/"/>
+    <id>https://x.lyxw.xyz/2023/cloud_server/</id>
+    <published>2023-03-17T07:32:50.000Z</published>
+    <updated>2023-03-18T14:21:08.375Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.03.18&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    
+    
+    <category term="服务器" scheme="https://x.lyxw.xyz/tags/服务器/"/>
+    
+  </entry>
+  
+  <entry>
     <title>让我们开始记忆一些Linux命令</title>
     <link href="https://x.lyxw.xyz/2023/linux/"/>
     <id>https://x.lyxw.xyz/2023/linux/</id>
@@ -184,9 +228,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
-    
     <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    
+    <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
     
     <category term="数据库" scheme="https://x.lyxw.xyz/tags/数据库/"/>
     
@@ -353,9 +397,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
-    
     <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
+    
+    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
     
     <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
     
