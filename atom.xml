@@ -228,9 +228,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
-    
     <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
+    
+    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
     
     <category term="数据库" scheme="https://x.lyxw.xyz/tags/数据库/"/>
     
@@ -397,9 +397,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
-    
     <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    
+    <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
     
     <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
     
