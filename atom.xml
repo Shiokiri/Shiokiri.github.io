@@ -228,9 +228,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
-    
     <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    
+    <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
     
     <category term="数据库" scheme="https://x.lyxw.xyz/tags/数据库/"/>
     
@@ -397,9 +397,9 @@
     <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
     
     
-    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
-    
     <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
+    
+    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
     
     <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
     
@@ -514,27 +514,6 @@
     
     
     <category term="日记" scheme="https://x.lyxw.xyz/tags/日记/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一切都结束了</title>
-    <link href="https://x.lyxw.xyz/2021/end_1/"/>
-    <id>https://x.lyxw.xyz/2021/end_1/</id>
-    <published>2021-06-26T07:33:26.000Z</published>
-    <updated>2022-02-12T15:55:30.946Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;也确实到了结束的的时候了&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
-    
-    
-    <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
     
   </entry>
   
