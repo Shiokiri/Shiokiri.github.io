@@ -50,7 +50,7 @@
     
     <title>
         
-            「概率期望」 | 
+            Debian在LVM下ext4文件系统调整/和/home分区大小 | 
         
         落影汐雾的x号虚空印刷站
     </title>
@@ -61,9 +61,9 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="
-Update on A.D.2019-09-23
+更新于：A.D.2022.07.06
 ">
-    <meta name="keywords" content=",概率,期望">
+    <meta name="keywords" content=",Linux,Debian">
     <meta name="theme-color" content="#66CCFF">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -226,7 +226,7 @@ Update on A.D.2019-09-23
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="落影汐雾的x号虚空印刷站">
-    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2019/probability/">
+    <meta name="msapplication-starturl" content="https://x.lyxw.xyz/2023/linux-lvm/">
     <meta name="msapplication-navbutton-color" content="#66CCFF">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="落影汐雾的x号虚空印刷站">
@@ -245,18 +245,18 @@ Update on A.D.2019-09-23
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://x.lyxw.xyz/2019/probability/">
+    <meta property="og:url" content="https://x.lyxw.xyz/2023/linux-lvm/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="「概率期望」 | 落影汐雾的x号虚空印刷站">
+    <meta property="og:title" content="Debian在LVM下ext4文件系统调整/和/home分区大小 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
     <meta property="og:description" content="
-Update on A.D.2019-09-23
+更新于：A.D.2022.07.06
 ">
-    <meta property="og:article:tag" content="概率"> <meta property="og:article:tag" content="期望"> 
+    <meta property="og:article:tag" content="Linux"> <meta property="og:article:tag" content="Debian"> 
 
     
-        <meta property="article:published_time" content="Mon Sep 23 2019 09:34:34 GMT+0800">
-        <meta property="article:modified_time" content="Mon Aug 02 2021 15:07:11 GMT+0800">
+        <meta property="article:published_time" content="Thu Jul 06 2023 15:32:50 GMT+0800">
+        <meta property="article:modified_time" content="Thu Jul 06 2023 20:21:21 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -264,7 +264,7 @@ Update on A.D.2019-09-23
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://x.lyxw.xyz/2019/probability/index.html">
+        <link rel="canonical" href="https://x.lyxw.xyz/2023/linux-lvm/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -276,10 +276,10 @@ Update on A.D.2019-09-23
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "https://x.lyxw.xyz/2019/probability/index.html",
-    "headline": "「概率期望」",
-    "datePublished": "Mon Sep 23 2019 09:34:34 GMT+0800",
-    "dateModified": "Mon Aug 02 2021 15:07:11 GMT+0800",
+    "mainEntityOfPage": "https://x.lyxw.xyz/2023/linux-lvm/index.html",
+    "headline": "Debian在LVM下ext4文件系统调整/和/home分区大小",
+    "datePublished": "Thu Jul 06 2023 15:32:50 GMT+0800",
+    "dateModified": "Thu Jul 06 2023 20:21:21 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -297,9 +297,9 @@ Update on A.D.2019-09-23
             "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png"
         }
     },
-    "keywords": ",概率,期望",
+    "keywords": ",Linux,Debian",
     "description": "
-Update on A.D.2019-09-23
+更新于：A.D.2022.07.06
 ",
 }
 </script>
@@ -368,7 +368,7 @@ Update on A.D.2019-09-23
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#概率公式"><span class="post-toc-number">1.</span> <span class="post-toc-text">概率公式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#条件概率公式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">条件概率公式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#乘法公式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">乘法公式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#全概率公式"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">全概率公式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#贝叶斯公式"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">贝叶斯公式</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#数学期望"><span class="post-toc-number">2.</span> <span class="post-toc-text">数学期望</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Problem"><span class="post-toc-number">3.</span> <span class="post-toc-text">Problem</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#过程"><span class="post-toc-number">2.</span> <span class="post-toc-text">过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用recovery-mode启动"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">使用recovery mode启动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看磁盘使用情况"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查看磁盘使用情况</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#卸载-home"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">卸载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缩减-home大小"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">缩减/home大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#挂载-home"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">挂载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看LVM卷组的元数据"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">查看LVM卷组的元数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩充-大小"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">扩充/大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检查结果"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">检查结果</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">3.</span> <span class="post-toc-text">注意事项</span></a></li></ol>
     </ul>
     
 
@@ -400,7 +400,7 @@ Update on A.D.2019-09-23
         
     
             <p class="article-headline-p">
-                「概率期望」
+                Debian在LVM下ext4文件系统调整/和/home分区大小
             </p>
         </div>
 
@@ -419,7 +419,7 @@ Update on A.D.2019-09-23
     <!-- Author Name & Date -->
     <div>
         <strong>落影汐雾</strong>
-        <span>9月 23, 2019</span>
+        <span>7月 06, 2023</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -441,7 +441,7 @@ Update on A.D.2019-09-23
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACY0lEQVR42u3awU7kMBAE0Pn/n4Yr0ihQ5U6cMHo5rdgQ/HywW931+vro54WHh4eHh4eHh/cw3it+Dj/343/f33z/QvLOZG14eHh4e3h/HLUnLejoy0f4xbXh4eHhbeQdLejonXaha7+Vrw0PDw/vybz2ekgK8XyD8PDw8P47ry3E20YGHh4e3pN5baP296bD2jbd3GvBw8PDi3n5kGn/v7fO9/Dw8PACXh1pCora9lhP3lwMXeHh4eFdwMsP4vl1slYu1yEwPDw8vI289gKYBLbyN/P2Bx4eHt5+3qRZMBmArY3KDv8uHh4e3hZe3hRoI6f5OC2/qPDw8PDu5U3iApPDfTIGK6IDeHh4eBfwWkY7JDsLf0kzAg8PD2/AaxumeWugbT2sjdPw8PDwdvKSY31eEOftj3y7o+gAHh4e3mW8/GLIkXkpnF88i70WPDw8vMvauEkUYBIvSC6D/HrAw8PDu4u3VsJOljgfsF3Sa8HDw8MrefPBVVtMt8GsxWYEHh4e3mW85EkCBJPxf3tFLUYH8PDw8E7i/f6TteK7jRdM4gh4eHh4T+O1RXYbEcjHaUlhjYeHh3cXLw9dtexJ7CDaAjw8PLwH8OoR1FILI29PnNCMwMPDwxvw2mfSksiDAvkVgoeHh7efNzmUJ7CWelqmDA8PD+8kXtsyyI/p/Gtr4S08PDy8e3ltCGAtgNW2httmMR4eHt4zeW10YG301UYN8PDw8J7MWyus1zau3gg8PDy8jbxJcZwD2gZEXcrj4eHhbeHlLYDJ+5PrIdl0PDw8vD28z3vw8PDw8PDw8PAe8HwDT8wWEUgnMS0AAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZUlEQVR42u3aQXLDIAwF0Nz/0u0BWjtfQthO5rHqZKjxYwGypNfPV48XHh4eHh4eHh7ew3iveBzN/2eBP/PP5xy+aPHd8PDw8K7kJctUFz6an/y+9G54eHh4F/LOL4Pz+ef4ld/zOXh4eHjP5CWh8+w24eHh4X0Hr3qIVwceHh7ep/CSD/489dALu2/OteDh4eHFvJXDevffN9T38PDw8E55zcamIOCeetoNPWV4eHh4p7w8XZsc5XnDQb4dSciOh4eHdxevV746f60kMZFsYuEXPDw8vJt4PXDeVpWnPJLUCR4eHt6VvPxQzstXK81V+VqHW4CHh4e3mdcrRK0Uq6pXyJY0Lh4eHt4oL3n0VKtBTh34YsDDw8PbwEuC4B3NWL0y2EAaFw8PD2+BV03mVjciv3h66V08PDy8K3m98HqqDavXfFDOUuPh4eGN8qqNAtXS13ryd0vTFR4eHt4Cr3oN5AmFaqNAdcvw8PDwnsOrJlVnmwPWG7bw8PDwdvOqYXGy5FL5qvh8PDw8vOt5s+WualtAtYQWrYWHh4e3mZcX8pMCf94ckDynuZV4eHh4m3nVlMRsAN0Lst88AQ8PD28zrxm2topV+y4bPDw8vCt51ZE3Y/Uap6oJ30JIjYeHhzfEWy/85y2q+fOTtEU514KHh4c3yuslF6rJgjyYzv83+mLAw8PD28YrHL5DB3p1REE/Hh4e3ofw8lTFylpLITUeHh7eTbxqQNwLo6sbhIeHh3cXr9cIlYTIU5fHRbkWPDw8vLjpqlqgSrYpTyKMNSLg4eHhbeZ938DDw8PDw8PDw3vA+AX4ONM3TMIIAgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -455,7 +455,7 @@ Update on A.D.2019-09-23
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/期望/">期望</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/概率/">概率</a>
+        <a class="post_tag-link" href="/tags/Debian/">Debian</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Linux/">Linux</a>
     </li></ul>
     
 
@@ -483,7 +483,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=「概率期望」&url=https://x.lyxw.xyz/2019/probability/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Debian在LVM下ext4文件系统调整/和/home分区大小&url=https://x.lyxw.xyz/2023/linux-lvm/index.html&pic=https://x.lyxw.xyzhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -492,7 +492,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=「概率期望」&url=https://x.lyxw.xyz/2019/probability/index.html&via=落影汐雾" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Debian在LVM下ext4文件系统调整/和/home分区大小&url=https://x.lyxw.xyz/2023/linux-lvm/index.html&via=落影汐雾" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -501,7 +501,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2019/probability/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://x.lyxw.xyz/2023/linux-lvm/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -519,7 +519,7 @@ Update on A.D.2019-09-23
 
     <!-- Share Telegram -->
     
-        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2019/probability/index.html&text=「概率期望」" target="_blank">
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://x.lyxw.xyz/2023/linux-lvm/index.html&text=Debian在LVM下ext4文件系统调整/和/home分区大小" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Telegram
             </li>
@@ -536,15 +536,112 @@ Update on A.D.2019-09-23
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>Update on A.D.2019-09-23</p>
+<p>更新于：A.D.2022.07.06</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="概率公式"><a href="#概率公式" class="headerlink" title="概率公式"></a>概率公式</h1><h2 id="条件概率公式"><a href="#条件概率公式" class="headerlink" title="条件概率公式"></a>条件概率公式</h2><p>设$A,B$是两个事件，且$P(B)&gt;0$,则在事件$B$发生的条件下，事件$A$发生的条件概率为$P(A|B)=\dfrac{P(AB)}{P(B)}$</p>
-<h2 id="乘法公式"><a href="#乘法公式" class="headerlink" title="乘法公式"></a>乘法公式</h2><p>1.由条件概率公式得$P(AB)=P(A|B)P(B)=P(B|A)P(A)$<br>2.推广：对$\forall n \geq 2$当$P(A<em>1A_2…A</em>{n-1})&gt;0$时<br>有 $P(A<em>1A_2…A</em>{n-1}A{n})=P(A<em>1)P(A_2|A_1)P(A_3|A_1A_2)…P(A_n|A_1A_2…A</em>{n-1})$</p>
-<h2 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h2><p>如果事件组$B<em>1,B_2,…,B_n$满足<br>1.$\forall i\neq j\in \left {1,2,\cdots ,n  \right },B_i\cap B_j = \varnothing$<br>2.$B_1\cup B_2\cup …\cup B_n=\Omega$<br>则称事件组$B_1,B_2,…,B_n$是样本空间$\Omega$的一个划分,或称为样本空间$\Omega$的一个完备事件组。<br>设事件组$\left {B_i \right }$是样本空间$\Omega$的一个划分，且$P(B_i)&gt;0(i \in \left {1,2,\cdots ,n  \right })$<br>对任一事件$A$，有$P(A)=\sum</em>{i=1}^{n}P(B_i)P(A|B_i)$</p>
-<h2 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h2><p>设事件组$\left {B<em>i \right }$是样本空间$\Omega$的一个划分，则对任一事件$A(P(A)&gt;0)$,有<br>$P(B_i|A)=\dfrac{P(AB_i)}{P(A)}=\dfrac{P(B_i)P(A|B_i)}{\sum</em>{j=1}^{n}P(B_j)P(A|B_j)}$<br>上式即为贝叶斯公式，$B_i$常被视为导致试验结果$A$发生的”原因“，$P(B_i)(i\in \left {1,2,\cdots ,n  \right })$表示各种原因发生的可能性大小，故称先验概率；$P(B_i|A)(i\in \left {1,2,\cdots ,n  \right })$则反映当试验产生了结果$A$之后，再对各种原因概率的新认识，故称后验概率。</p>
-<h1 id="数学期望"><a href="#数学期望" class="headerlink" title="数学期望"></a>数学期望</h1><p>离散型随机变量$X$的取值为$x<em>1,x_2,x_3,…,x</em>{n}$，$p<em>1,p_2,p_3,…,p</em>{n}$为$X$对应取值的概率<br>则称$E(X)=\sum<em>{i=1}^{n}p</em>{i}x_{i}$为离散型随机变量$X$的<strong>数学期望</strong><br>性质：$E(aX+bY)=aE(X)+bE(Y)$</p>
-<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p><a href="https://www.luogu.org/problemnew/show/P4316" target="_blank" rel="noopener">P4316 绿豆蛙的归宿</a><br>设$F[x]$表示从$x$走到$N$期望长度<br>$F[x]=\frac{1}{k}\sum<em>{i=1}^{k}(F[y</em>{i}]+z<em>{i})$<br>$F[N]=0$<br>$Ans=F[1]$<br><a href="https://www.luogu.org/problemnew/show/P1365" target="_blank" rel="noopener">P1365 WJMZBMR打osu! / Easy</a><br>设$f[x]$表示到$x$期望得分  $g[x]$表示以$x$结尾期望$o$序列长度<br>$s[i]==x\ f[i]=f[i-1],g[i]=0$<br>$s[i]==o\ f[i]=f[i-1]+2*g[i-1]+1,g[i]=g[i-1]+1$<br>$s[i]==?\ f[i]=f[i-1]+\frac{(2g[i-1]+1)+0}{2},g[i]=\frac{(g[i-1]+1)+0}{2}$<br>$Ans=f[n]$<br><a href="https://www.luogu.org/problemnew/show/P1654" target="_blank" rel="noopener">P1654 OSU!</a><br>$p[i]$表示$i$位置成功概率<br>设$f[i]$表示到$i$期望得分 $x1[i]$以$i$结尾$1$序列期望长度 $x2[i]$表示以$i$结尾$1$序列期望长度平方<br>$(x+1)^{3}=(x^{2}+2x+1)(x+1)=x^{3}+3x^{2}+3x+1$<br>若第$i$次成功且有$f[i-1]=x^{3}则f[i]=f[i-1]+3x^{2}+3x+1$<br>$x1[i]=(x1[i-1]+1)p[i]$<br>$x2[i]=(x2[i-1]+2x1[i-1]+1)p[i]$<br>$f[i]=f[i-1]+(3x2[i-1]+3x1[i-1]+1)p[i]$<br>$Ans=f[n]$<br><a href="https://www.luogu.org/problemnew/show/P1297" target="_blank" rel="noopener">P1297 [国家集训队]单选错位</a><br>$Ans=\sum</em>{i=1}^{n-1}\frac{1}{max(a<em>i,a</em>{i+1})}+\frac{1}{max(a_1,a_n)}$</p>
+<hr>
+<p>安装系统时给/home分配的空间过大，/空间太小，重新进行分配。</p>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><pre><code>shiokiri@thinkpad-e15:~$ neofetch
+       _,met$$$$$gg.          shiokiri@thinkpad-e15 
+    ,g$$$$$$$$$$$$$$$P.       --------------------- 
+  ,g$$P&quot;     &quot;&quot;&quot;Y$$.&quot;.        OS: Debian GNU/Linux 11 (bullseye) x86_64 
+ ,$$P&#39;              `$$$.     Host: 20YG001YCD ThinkPad E15 Gen 3 
+&#39;,$$P       ,ggs.     `$$b:   Kernel: 5.10.0-23-amd64 
+`d$$&#39;     ,$P&quot;&#39;   .    $$$    Uptime: 27 mins 
+ $$P      d$&#39;     ,    $$P    Packages: 2191 (dpkg) 
+ $$:      $$.   -    ,d$$&#39;    Shell: bash 5.1.4 
+ $$;      Y$b._   _,d$P&#39;      Resolution: 3840x2160 
+ Y$$.    `.`&quot;Y$$$$P&quot;&#39;         DE: GNOME 3.38.6 
+ `$$b      &quot;-.__              WM: Mutter 
+  `Y$$                        WM Theme: Adwaita 
+   `Y$$.                      Theme: Ant [GTK2/3] 
+     `$$b.                    Icons: Adwaita [GTK2/3] 
+       `Y$$b.                 Terminal: gnome-terminal 
+          `&quot;Y$b._             CPU: AMD Ryzen 5 5500U with Radeon Graphics (12) @ 2.100GHz 
+              `&quot;&quot;&quot;            GPU: AMD ATI 04:00.0 Lucienne 
+                              Memory: 1064MiB / 14868MiB
+</code></pre><h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="使用recovery-mode启动"><a href="#使用recovery-mode启动" class="headerlink" title="使用recovery mode启动"></a>使用recovery mode启动</h2><p>在GRUB启动页面选择即可</p>
+<h2 id="查看磁盘使用情况"><a href="#查看磁盘使用情况" class="headerlink" title="查看磁盘使用情况"></a>查看磁盘使用情况</h2><pre><code># df -hT
+</code></pre><p>示例（非操作过程中数据）：</p>
+<pre><code>文件系统                    类型      容量  已用  可用 已用% 挂载点
+udev                        devtmpfs  7.2G     0  7.2G    0% /dev
+tmpfs                       tmpfs     1.5G  9.9M  1.5G    1% /run
+/dev/mapper/debian--vg-root ext4      222G   23G  190G   11% /
+tmpfs                       tmpfs     7.3G   12M  7.3G    1% /dev/shm
+tmpfs                       tmpfs     5.0M  4.0K  5.0M    1% /run/lock
+/dev/nvme0n1p2              ext2      471M  117M  330M   27% /boot
+/dev/nvme0n1p1              vfat      511M  5.8M  506M    2% /boot/efi
+/dev/mapper/debian--vg-home ext4      246G   39G  196G   17% /home
+tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
+</code></pre><h2 id="卸载-home"><a href="#卸载-home" class="headerlink" title="卸载/home"></a>卸载/home</h2><p>不能在线缩减，需要先卸载</p>
+<pre><code># umount /home 卸载挂载的lv
+# mount 查看挂载的lv是否卸载成功
+</code></pre><h2 id="缩减-home大小"><a href="#缩减-home大小" class="headerlink" title="缩减/home大小"></a>缩减/home大小</h2><blockquote>
+<p>不得更改顺序！！！必须先缩减逻辑卷的逻辑边界，再缩减物理边界</p>
+<p>确保缩减后的空间大小依然能存储原有的所有数据</p>
+</blockquote>
+<ol>
+<li>e2fsck 在缩减之前应该先强行检查文件，以确保文件系统处于一致性状态</li>
+<li>resize2fs 对lv逻辑卷的逻辑边界空间大小调整为缩减后的大小</li>
+<li>lvreduce 对lv逻辑卷的物理边界进行缩减</li>
+</ol>
+<pre><code># e2fsck -f /dev/mapper/debian--vg-home
+# resize2fs -p /dev/mapper/debian--vg-home 250G 调整逻辑卷的逻辑边界大小为250G
+# lvreduce -L 250G /dev/mapper/debian--vg-home 对逻辑卷的物理边界缩减为250G
+</code></pre><h2 id="挂载-home"><a href="#挂载-home" class="headerlink" title="挂载/home"></a>挂载/home</h2><p>挂载lv逻辑卷</p>
+<pre><code># mount /dev/mapper/debian--vg-home /home
+</code></pre><h2 id="查看LVM卷组的元数据"><a href="#查看LVM卷组的元数据" class="headerlink" title="查看LVM卷组的元数据"></a>查看LVM卷组的元数据</h2><pre><code># vgdisplay
+</code></pre><p>示例（非操作过程中数据）：</p>
+<pre><code>  --- Volume group ---
+  VG Name               debian-vg
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  11
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                3
+  Open LV               3
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               475.96 GiB
+  PE Size               4.00 MiB
+  Total PE              121846
+  Alloc PE / Size       121846 / 475.96 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               oU51kj-3uiu-4nPI-1OTp-K4NN-i4IG-gqsZrE
+</code></pre><h2 id="扩充-大小"><a href="#扩充-大小" class="headerlink" title="扩充/大小"></a>扩充/大小</h2><blockquote>
+<p>不得更改顺序！！！必须先扩展逻辑卷的物理边界，再扩展逻辑边界</p>
+</blockquote>
+<ol>
+<li><p>lvextend 扩展逻辑卷的物理边界</p>
+<ul>
+<li>lvextend -L [+]# /PATH/TO/LV_NAME  指定扩展后的容量，+表示在目前容量上直接增加#容量，不用+表示，扩展后的容量为#</li>
+<li>lvextend -l +100%FREE /PATH/TO/LV_NAME  把所有空余容量进行分配</li>
+</ul>
+</li>
+<li><p>resize2fs 扩展逻辑卷的逻辑边界</p>
+<ul>
+<li><p>resize2fs /PATH/TO/LV #    扩展逻辑边界到#，该值不能超过物理边界</p>
+</li>
+<li><p>resize2fs -p /PATH/TO/LV    -p表示扩展逻辑边界跟物理边界一样大</p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code># lvextend -l +100%FREE /dev/mapper/debian--vg-root
+# resize2fs -p /dev/mapper/debian--vg-root
+</code></pre><h2 id="检查结果"><a href="#检查结果" class="headerlink" title="检查结果"></a>检查结果</h2><pre><code># df -hT
+</code></pre><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li><p>ext4才可以缩减，xfs不能缩减</p>
+</li>
+<li><p>扩充空间一定是先lvresize后resize2fs！！！</p>
+</li>
+<li><p>缩减空间一定是先resize2fs后lvresize！！！</p>
+</li>
+</ul>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -553,7 +650,7 @@ Update on A.D.2019-09-23
                             本文由 落影汐雾 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2019/probability/">https://x.lyxw.xyz/2019/probability/</a>
+                        <strong>本文链接：</strong><a href="https://x.lyxw.xyz/2023/linux-lvm/">https://x.lyxw.xyz/2023/linux-lvm/</a>
                     </p>
                 </blockquote>
         
@@ -606,7 +703,7 @@ Update on A.D.2019-09-23
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/SA/" id="post_nav-newer" class="prev-content">
+        <a href="/2033/post-index/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -620,7 +717,7 @@ Update on A.D.2019-09-23
 
     <!-- Next Nav -->
     
-        <a href="/2019/C++_stl/" id="post_nav-older" class="next-content">
+        <a href="/2023/vue/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -1112,26 +1209,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- MathJax Load-->
-
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
-        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
-        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
-        messageStyle: "none"
-    });
-</script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-
-    <script src="https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
 
 
 <!-- Bing Background -->
