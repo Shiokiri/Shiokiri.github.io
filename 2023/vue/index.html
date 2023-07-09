@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content="
-更新于：A.D.2022.03.18
+更新于：A.D.2023.03.18
 ">
     <meta name="keywords" content=",vue,前端">
     <meta name="theme-color" content="#66CCFF">
@@ -250,13 +250,13 @@
     <meta property="og:title" content="构建第一个Vue 3项目 | 落影汐雾的x号虚空印刷站">
     <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png">
     <meta property="og:description" content="
-更新于：A.D.2022.03.18
+更新于：A.D.2023.03.18
 ">
     <meta property="og:article:tag" content="vue"> <meta property="og:article:tag" content="前端"> 
 
     
         <meta property="article:published_time" content="Sat Mar 18 2023 15:32:50 GMT+0800">
-        <meta property="article:modified_time" content="Sat Mar 18 2023 22:34:24 GMT+0800">
+        <meta property="article:modified_time" content="Sun Jul 09 2023 22:40:40 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2023/vue/index.html",
     "headline": "构建第一个Vue 3项目",
     "datePublished": "Sat Mar 18 2023 15:32:50 GMT+0800",
-    "dateModified": "Sat Mar 18 2023 22:34:24 GMT+0800",
+    "dateModified": "Sun Jul 09 2023 22:40:40 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -299,7 +299,7 @@
     },
     "keywords": ",vue,前端",
     "description": "
-更新于：A.D.2022.03.18
+更新于：A.D.2023.03.18
 ",
 }
 </script>
@@ -536,7 +536,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>更新于：A.D.2022.03.18</p>
+<p>更新于：A.D.2023.03.18</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -1273,8 +1273,23 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
                   if (window.mermaid) {
                     mermaid.initialize({theme: 'forest'});
                   }
-                </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+                </script>
             
-        </body>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>

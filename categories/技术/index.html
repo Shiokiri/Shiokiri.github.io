@@ -328,7 +328,7 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             
-更新于：A.D.2022.07.06
+更新于：A.D.2023.07.06
 
         
         &nbsp;&nbsp;&nbsp;
@@ -391,7 +391,7 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             
-更新于：A.D.2022.03.18
+更新于：A.D.2023.03.18
 
         
         &nbsp;&nbsp;&nbsp;
@@ -454,7 +454,7 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             
-更新于：A.D.2022.03.18
+更新于：A.D.2023.03.18
 
         
         &nbsp;&nbsp;&nbsp;
@@ -517,7 +517,7 @@
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
             
-更新于：A.D.2022.03.05
+更新于：A.D.2023.03.05
 
         
         &nbsp;&nbsp;&nbsp;
@@ -1682,8 +1682,23 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
                   if (window.mermaid) {
                     mermaid.initialize({theme: 'forest'});
                   }
-                </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+                </script>
             
-        </body>
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
     
 </html>

@@ -120,409 +120,6 @@ int x = 0, y = 0;
       </tags>
   </entry>
   <entry>
-    <title>C++STL的OI常用内容</title>
-    <url>/2019/C++_stl/</url>
-    <content><![CDATA[<blockquote>
-<p>Update on A.D.2019-09-23</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>参考资料:<br><a href="https://oi.men.ci/stl-in-oi/" target="_blank" rel="noopener">STL 在 OI 中的应用</a><br><a href="https://www.cnblogs.com/ChinaHook/p/6985444.html" target="_blank" rel="noopener">[C++ STL]Set和Multiset</a></p>
-</blockquote>
-<h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><h2 id="stack-后入先出（LIFO）栈"><a href="#stack-后入先出（LIFO）栈" class="headerlink" title="stack 后入先出（LIFO）栈"></a>stack 后入先出（LIFO）栈</h2><h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;stack&gt;
-</code></pre>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">stack&lt;int&gt; s;
-</code></pre>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>q.top()</td>
-<td>获取栈顶元素（并不删除）</td>
-</tr>
-<tr>
-<td>q.pop()</td>
-<td>删除栈顶元素</td>
-</tr>
-<tr>
-<td>q.push(x)</td>
-<td>向栈中加入元素</td>
-</tr>
-<tr>
-<td>q.empty()</td>
-<td>判断栈是否为空</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h1><h2 id="queue-先入先出（FIFO）队列"><a href="#queue-先入先出（FIFO）队列" class="headerlink" title="queue 先入先出（FIFO）队列"></a>queue 先入先出（FIFO）队列</h2><h3 id="头文件-1"><a href="#头文件-1" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;queue&gt;
-</code></pre>
-<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">queue&lt;int&gt; q;
-</code></pre>
-<h3 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>q.front()</td>
-<td>获取队首元素（并不删除）</td>
-</tr>
-<tr>
-<td>q.pop()</td>
-<td>删除队首元素</td>
-</tr>
-<tr>
-<td>q.push(x)</td>
-<td>向队列中加入元素</td>
-</tr>
-<tr>
-<td>q.empty()</td>
-<td>判断队列是否为空</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="priority-queue-优先队列"><a href="#priority-queue-优先队列" class="headerlink" title="priority_queue 优先队列"></a>priority_queue 优先队列</h2><h3 id="头文件-2"><a href="#头文件-2" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;queue&gt;
-</code></pre>
-<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">priority_queue&lt;int&gt; q; // 队头最大
-</code></pre>
-<pre><code class="lang-c++">priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; q; 队头最小
-</code></pre>
-<h3 id="函数-2"><a href="#函数-2" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>函数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>q.top()</td>
-<td>获取优先队列中最大的元素（并不删除），其时间复杂度为$O(1)$</td>
-</tr>
-<tr>
-<td>q.pop()</td>
-<td>删除优先队列中最大元素，其时间复杂度为$O(log n)$</td>
-</tr>
-<tr>
-<td>q.push(x)</td>
-<td>向优先队列中加入元素，其时间复杂度为$O(log n)$</td>
-</tr>
-<tr>
-<td>q.empty()</td>
-<td>判断优先队列是否为空</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="Set-与-Multiset"><a href="#Set-与-Multiset" class="headerlink" title="Set 与 Multiset"></a>Set 与 Multiset</h1><blockquote>
-<p>set不允许重复 multiset允许重复</p>
-<pre><code>例: set : 1 2 3 4 5 6
-multiset : 1 2 2 3 3 3
-</code></pre></blockquote>
-<h2 id="头文件-3"><a href="#头文件-3" class="headerlink" title="头文件"></a>头文件</h2><pre><code class="lang-c++">#include &lt;set&gt;
-</code></pre>
-<h2 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h2><pre><code class="lang-c++">multiset&lt;int&gt; s[N];//定义
-multiset&lt;int&gt;::iterator it;//迭代器
-</code></pre>
-<h2 id="函数-3"><a href="#函数-3" class="headerlink" title="函数"></a>函数</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>s.size()</td>
-<td>返回当前的元素数量</td>
-</tr>
-<tr>
-<td>s.empty ()</td>
-<td>判断大小是否为零，等同于$0==size()$，效率更高</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>count (elem)</td>
-<td>返回元素值为$elem$的个数</td>
-</tr>
-<tr>
-<td>find(elem)</td>
-<td>返回元素值为$elem$的第一个元素，如果没有返回$end()$</td>
-</tr>
-<tr>
-<td>lower _bound(elem)</td>
-<td>返回元素值$&gt;=elem$的第一个元素位置</td>
-</tr>
-<tr>
-<td>upper _bound (elem)</td>
-<td>返回元素值$&gt;elem$的第一个元素位置</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>s.begin()</td>
-<td>返回一个随机存取迭代器，指向第一个元素</td>
-</tr>
-<tr>
-<td>s.end()</td>
-<td>返回一个随机存取迭代器，指向最后一个元素的下一个位置</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>操作</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>s.insert(elem)</td>
-<td>插入一个$elem$副本，返回新元素位置，无论插入成功与否。</td>
-</tr>
-<tr>
-<td>s.erase(elem)</td>
-<td>删除与$elem$相等的所有元素，返回被移除的元素个数。</td>
-</tr>
-<tr>
-<td>s.erase(pos)</td>
-<td>移除迭代器$pos$所指位置元素，无返回值。</td>
-</tr>
-<tr>
-<td>s.clear()</td>
-<td>移除所有元素，将容器清空</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="std-unique"><a href="#std-unique" class="headerlink" title="std::unique"></a>std::unique</h2><p>功能：对有序的容器重新排列，将第一次出现的元素从前往后排，其他重复出现的元素依次排在后面<br>返回值：返回迭代器，迭代器指向的是重复元素的首地址</p>
-<h2 id="std-lower-bound"><a href="#std-lower-bound" class="headerlink" title="std::lower_bound"></a>std::lower_bound</h2><p>lower_bound()返回一个 iterator 它指向在[first,last)标记的有序序列中可以插入value，而不会破坏容器顺序的第一个位置，而这个位置标记了第一个大于等于value 的值。<br>ForwardIter lower_bound(ForwardIter first, ForwardIter last,const _Tp&amp; val)算法返回一个非递减序列[first, last)中的第一个大于等于值val的位置。</p>
-<h2 id="std-upper-bound"><a href="#std-upper-bound" class="headerlink" title="std::upper_bound"></a>std::upper_bound</h2><p>upper_bound()返回一个 iterator 它指向在[first,last)标记的有序序列中可以插入value，而不会破坏容器顺序的第一个位置，而这个位置标记了第一个大于value 的值。这两个函数为C++ STL内的函数。<br>ForwardIter upper_bound(ForwardIter first, ForwardIter last, const _Tp&amp; val)算法返回一个非递减序列[first, last)中第一个大于val的位置。</p>
-<pre><code class="lang-c++">std::sort(b + 1, b + cnt + 1);
-int *end = std::unique(b + 1, b + cnt + 1);
-for(int i = 1; i &lt;= n; i++)
-a[i] = lower_bound(b + 1, end, a[i]) - b;
-</code></pre>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Queue</tag>
-        <tag>Stack</tag>
-        <tag>STL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>科学上网 | GFW与SSR简介</title>
-    <url>/2019/GFW/</url>
-    <content><![CDATA[<blockquote>
-<p>Update on A.D.2019-05-31</p>
-</blockquote>
-<p>Across the Great Wall we can reach every corner in the world.</p>
-<a id="more"></a>
-<p>在配置开发环境、依赖项等过程中，不可避免的会遇到无法下载、下载速度过慢的情况。</p>
-<p>在编程学习中，如果可以使用Google、StackOverflow，往往可以解决很多问题。</p>
-<p>本文简要介绍GFW和常见的科学上网技术。</p>
-<p>删减了大部分内容，推荐观看<a href="https://www.youtube.com/channel/UCZVThl_MRppEdGUPGjXSSdg" target="_blank" rel="noopener">电丸科技AK</a>制作的<a href="https://www.youtube.com/watch?v=XKZM_AjCUr0&amp;list=PLqybz7NWybwUgR-S6m78tfd-lV4sBvGFG" target="_blank" rel="noopener">https://www.youtube.com/watch?v=XKZM_AjCUr0&amp;list=PLqybz7NWybwUgR-S6m78tfd-lV4sBvGFG</a> 这一系列视频，推荐简单学习计算机网络知识。</p>
-<p><strong>推荐阅读：</strong></p>
-<p><del><a href="https://blog.nfz.moe/archives/network-in-china.html" target="_blank" rel="noopener">中国的互联网 _ neoFelhz’s Blog[已失效]</a></del></p>
-<p><a href="https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b" target="_blank" rel="noopener">浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别</a></p>
-<p><a href="https://hynking.org/2017/01/02/The_reason/" target="_blank" rel="noopener">墙与纸飞机</a></p>
-<p><a href="https://young1lin.me/2020/10/30/GFW/#%E5%8E%9F%E7%90%86" target="_blank" rel="noopener">什么是 SSR、V2ray、Trojan、Clash，什么是机场？</a></p>
-<p><a href="https://yuerblog.cc/2017/01/03/how-vpn-works-and-how-to-setup-pptp/" target="_blank" rel="noopener">vpn工作原理和搭建方法</a></p>
-<p><a href="https://www.zhihu.com/question/268204483/answer/334644846" target="_blank" rel="noopener">代理，网关，隧道，有什么区别与联系？</a></p>
-<h1 id="什么是GFW"><a href="#什么是GFW" class="headerlink" title="什么是GFW"></a>什么是GFW</h1><h2 id="GFW"><a href="#GFW" class="headerlink" title="GFW"></a>GFW</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank" rel="noopener">防火长城 - 维基百科，自由的百科全书</a></p>
-<p>线路拓扑：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/gfw.png" alt></p>
-<h2 id="一些名词"><a href="#一些名词" class="headerlink" title="一些名词"></a>一些名词</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">虚拟专用服务器 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">代理服务器 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/SOCKS" target="_blank" rel="noopener">SOCKS - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/IPv6" target="_blank" rel="noopener">IPv6 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/Secure_Shell" target="_blank" rel="noopener">Secure Shell - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">超文本传输安全协议 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%AD%89%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">点对点网络 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" target="_blank" rel="noopener">HTTP状态码 - 维基百科，自由的百科全书</a></p>
-<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">中间人攻击 - 维基百科，自由的百科全书</a></p>
-<h1 id="如何科学上网"><a href="#如何科学上网" class="headerlink" title="如何科学上网"></a>如何科学上网</h1><h2 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E7%A7%81%E4%BA%BA%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">虚拟专用网 - 维基百科，自由的百科全书</a></p>
-<pre><code>虚拟私人网络（英语：Virtual Private Network，缩写：VPN）是一种常用于连接
-中、大型企业或团体与团体间的私人网络的通讯方法。它利用隧道协议（Tunneling 
-Protocol）来达到保密、发送端认证、消息准确性等私人消息安全效果，这种技术可以用
-不安全的网络（例如：互联网）来发送可靠、安全的消息。
-</code></pre><p><a href="https://zh.wikipedia.org/wiki/%E9%9A%A7%E9%81%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">隧道协议 - 维基百科，自由的百科全书</a></p>
-<h2 id="SS-SSR"><a href="#SS-SSR" class="headerlink" title="SS | SSR"></a>SS | SSR</h2><p>推荐阅读：<br><a href="https://www.5xiaobo.com/?id=650" target="_blank" rel="noopener">浅谈VPN和SS/SSR的区别</a></p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>全称Shadowsocks | ShadowsocksR</p>
-<p>SS的作者Clowwindy删除了GitHub的源代码，SSR是breakwa11在SS基础上开发的软件，后作者在GitHub上将其源代码删除，SS与SSR开发时皆开源，原作者停止维护后有人开发并维护与更新至今。</p>
-<h3 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h3><p><a href="http://shadowsocks.org/en/index.html" target="_blank" rel="noopener">官网</a></p>
-<p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">GitHub</a></p>
-<h3 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h3><p>已经删除的主页（web archive）：<br><a href="https://web.archive.org/web/20170719134138/https://breakwa11.github.io/" target="_blank" rel="noopener">breakwa11.github.io</a></p>
-<p><a href="https://github.com/breakwa11/shadowsocks-csharp/releases" target="_blank" rel="noopener">GitHub</a></p>
-<p>简单了解一下：<br><a href="https://zh.wikipedia.org/wiki/Shadowsocks" target="_blank" rel="noopener">Shadowsocks - 维基百科，自由的百科全书</a></p>
-<p>界面：<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/ssr1.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/ssr2.png" alt></p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>有Windows、Linux、Android、IOS、Macos等系统及各种在源软件基础上开发的很多版本。</p>
-<p>一个仍在维护的Windows版本：</p>
-<p><a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases" target="_blank" rel="noopener">https://github.com/shadowsocksrr/shadowsocksr-csharp/releases</a></p>
-<p>一些下载地址及版本介绍：</p>
-<p><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">SS/SSR 简介</a></p>
-<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><h4 id="优先阅读"><a href="#优先阅读" class="headerlink" title="优先阅读"></a>优先阅读</h4><p><a href="https://moe.best/tutorial/shadowsocksr.html" target="_blank" rel="noopener">[ShadowsocksR] 大概是萌新也看得懂的SSR功能详细介绍&amp;使用教程</a></p>
-<p><a href="https://crifan.github.io/scientific_network_summary/website/server_client_mode/ss_client/client_windows.html" target="_blank" rel="noopener">Windows的ss客户端 · 珂学上网相关知识总结</a></p>
-<h3 id="机场"><a href="#机场" class="headerlink" title="机场"></a>机场</h3><p><a href="387099.blogspot.com/2018/03/ssssr.html">浅谈部分机场（SS/SSR提供商）的使用感受</a></p>
-<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><p><a href="https://www.i5seo.com/shadowsocksr-clients-various-hidden-use-techniques.html" target="_blank" rel="noopener">ShadowsocksR 客户端 各种隐藏使用技巧说明</a></p>
-<p><a href="https://blog.jimmyho.net/archives/365/" target="_blank" rel="noopener">ShadowsocksR简明使用教程</a></p>
-<h4 id="小飞机的颜色"><a href="#小飞机的颜色" class="headerlink" title="小飞机的颜色"></a>小飞机的颜色</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">颜色</th>
-<th style="text-align:center">全局</th>
-<th style="text-align:center">PAC</th>
-<th style="text-align:center">直连</th>
-<th style="text-align:center">负载均衡</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">白</td>
-<td style="text-align:center">√</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-</tr>
-<tr>
-<td style="text-align:center">青</td>
-<td style="text-align:center">√</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">黄</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-</tr>
-<tr>
-<td style="text-align:center">绿</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">蓝</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">紫</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">√</td>
-<td style="text-align:center">√</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>对小飞机托盘图标操作</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">操作</th>
-<th style="text-align:center">效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">左键单击</td>
-<td style="text-align:center">弹出编辑服务器窗口</td>
-</tr>
-<tr>
-<td style="text-align:center">中键单击</td>
-<td style="text-align:center">弹出服务器连接统计窗</td>
-</tr>
-<tr>
-<td style="text-align:center">右键单击</td>
-<td style="text-align:center">弹出菜单</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="SSTap"><a href="#SSTap" class="headerlink" title="SSTap"></a>SSTap</h3><p>软件介绍：SSTap全称SOCKSTap, 是一款利用虚拟网卡技术在网络层实现的代理工具。SSTap能在网络层拦截所有连接并转发给HTTP，SOCKS4，5，SHADOWSOCKS代理.而无需对被代理的应用程序做任何修改或设置。它能同时转发TCP,UDP数据包，它非常适合于游戏玩家使用。</p>
-<h3 id="搭建SSR服务"><a href="#搭建SSR服务" class="headerlink" title="搭建SSR服务"></a>搭建SSR服务</h3><p>购买VPS，部署Linux发行版和SSR服务端（没有搭建博客、使用服务器等用途不推荐）</p>
-<h2 id="Trojan"><a href="#Trojan" class="headerlink" title="Trojan"></a>Trojan</h2><p><a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener">trojan-gfw / trojan</a></p>
-<h2 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h2><p><a href="https://github.com/Dreamacro/clash" target="_blank" rel="noopener">Dreamacro / clash</a></p>
-<h2 id="V2Ray"><a href="#V2Ray" class="headerlink" title="V2Ray"></a>V2Ray</h2><p>推荐阅读：<br><a href="https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b" target="_blank" rel="noopener">浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别</a></p>
-<p>V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。</p>
-<p>简单来说，它就是一个模块化代理，可以用来科学上网，支持多平台。</p>
-<p><a href="https://www.v2ray.com/" target="_blank" rel="noopener">Project V · Project V 官方网站</a></p>
-<p><a href="https://github.com/v2ray/v2ray-core" target="_blank" rel="noopener">Github</a></p>
-<h3 id="TLS"><a href="#TLS" class="headerlink" title="TLS"></a>TLS</h3><h2 id="Brook"><a href="#Brook" class="headerlink" title="Brook"></a>Brook</h2><p><a href="https://github.com/txthinking/brook" target="_blank" rel="noopener">txthinking / brook</a></p>
-<h2 id="Tor"><a href="#Tor" class="headerlink" title="Tor"></a>Tor</h2><p><a href="https://www.torproject.org/index.html.en" target="_blank" rel="noopener">torproject</a></p>
-<h1 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h1><p>一个Chrome的插件</p>
-<pre><code>Yet another flags
-</code></pre><p>可以很方便的显示服务器IP地址和地理位置。<br>效果：<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/chrome1.png" alt></p>
-<h1 id="常用互联网服务"><a href="#常用互联网服务" class="headerlink" title="常用互联网服务"></a>常用互联网服务</h1><h2 id="无法访问"><a href="#无法访问" class="headerlink" title="无法访问"></a>无法访问</h2><h3 id="website"><a href="#website" class="headerlink" title="website"></a>website</h3><p><a href="https://www.google.com.hk" target="_blank" rel="noopener">Google</a></p>
-<p><a href="https://www.youtube.com" target="_blank" rel="noopener">Youtube</a></p>
-<p><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
-<p><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>
-<p><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">Wikipedia(zh_CN)</a></p>
-<h3 id="IM"><a href="#IM" class="headerlink" title="IM"></a>IM</h3><p><a href="https://telegram.org" target="_blank" rel="noopener">Telegram</a></p>
-<hr>
-<h2 id="正常访问"><a href="#正常访问" class="headerlink" title="正常访问"></a>正常访问</h2><h3 id="website-1"><a href="#website-1" class="headerlink" title="website"></a>website</h3><p><a href="https://www.quora.com" target="_blank" rel="noopener">Quora</a></p>
-<p><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>GFW</tag>
-        <tag>SSR</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++Qt局域网聊天工具 开发记录</title>
     <url>/2022/C++Qt-LAN-Chat/</url>
     <content><![CDATA[<blockquote>
@@ -1655,6 +1252,238 @@ void TcpClient::closeEvent(QCloseEvent *)
       </tags>
   </entry>
   <entry>
+    <title>C++STL的OI常用内容</title>
+    <url>/2019/C++_stl/</url>
+    <content><![CDATA[<blockquote>
+<p>Update on A.D.2019-09-23</p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>参考资料:<br><a href="https://oi.men.ci/stl-in-oi/" target="_blank" rel="noopener">STL 在 OI 中的应用</a><br><a href="https://www.cnblogs.com/ChinaHook/p/6985444.html" target="_blank" rel="noopener">[C++ STL]Set和Multiset</a></p>
+</blockquote>
+<h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><h2 id="stack-后入先出（LIFO）栈"><a href="#stack-后入先出（LIFO）栈" class="headerlink" title="stack 后入先出（LIFO）栈"></a>stack 后入先出（LIFO）栈</h2><h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;stack&gt;
+</code></pre>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">stack&lt;int&gt; s;
+</code></pre>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q.top()</td>
+<td>获取栈顶元素（并不删除）</td>
+</tr>
+<tr>
+<td>q.pop()</td>
+<td>删除栈顶元素</td>
+</tr>
+<tr>
+<td>q.push(x)</td>
+<td>向栈中加入元素</td>
+</tr>
+<tr>
+<td>q.empty()</td>
+<td>判断栈是否为空</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h1><h2 id="queue-先入先出（FIFO）队列"><a href="#queue-先入先出（FIFO）队列" class="headerlink" title="queue 先入先出（FIFO）队列"></a>queue 先入先出（FIFO）队列</h2><h3 id="头文件-1"><a href="#头文件-1" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;queue&gt;
+</code></pre>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">queue&lt;int&gt; q;
+</code></pre>
+<h3 id="函数-1"><a href="#函数-1" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q.front()</td>
+<td>获取队首元素（并不删除）</td>
+</tr>
+<tr>
+<td>q.pop()</td>
+<td>删除队首元素</td>
+</tr>
+<tr>
+<td>q.push(x)</td>
+<td>向队列中加入元素</td>
+</tr>
+<tr>
+<td>q.empty()</td>
+<td>判断队列是否为空</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="priority-queue-优先队列"><a href="#priority-queue-优先队列" class="headerlink" title="priority_queue 优先队列"></a>priority_queue 优先队列</h2><h3 id="头文件-2"><a href="#头文件-2" class="headerlink" title="头文件"></a>头文件</h3><pre><code class="lang-c++">#include&lt;queue&gt;
+</code></pre>
+<h3 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h3><pre><code class="lang-c++">priority_queue&lt;int&gt; q; // 队头最大
+</code></pre>
+<pre><code class="lang-c++">priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt; q; 队头最小
+</code></pre>
+<h3 id="函数-2"><a href="#函数-2" class="headerlink" title="函数"></a>函数</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q.top()</td>
+<td>获取优先队列中最大的元素（并不删除），其时间复杂度为$O(1)$</td>
+</tr>
+<tr>
+<td>q.pop()</td>
+<td>删除优先队列中最大元素，其时间复杂度为$O(log n)$</td>
+</tr>
+<tr>
+<td>q.push(x)</td>
+<td>向优先队列中加入元素，其时间复杂度为$O(log n)$</td>
+</tr>
+<tr>
+<td>q.empty()</td>
+<td>判断优先队列是否为空</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Set-与-Multiset"><a href="#Set-与-Multiset" class="headerlink" title="Set 与 Multiset"></a>Set 与 Multiset</h1><blockquote>
+<p>set不允许重复 multiset允许重复</p>
+<pre><code>例: set : 1 2 3 4 5 6
+multiset : 1 2 2 3 3 3
+</code></pre></blockquote>
+<h2 id="头文件-3"><a href="#头文件-3" class="headerlink" title="头文件"></a>头文件</h2><pre><code class="lang-c++">#include &lt;set&gt;
+</code></pre>
+<h2 id="定义-3"><a href="#定义-3" class="headerlink" title="定义"></a>定义</h2><pre><code class="lang-c++">multiset&lt;int&gt; s[N];//定义
+multiset&lt;int&gt;::iterator it;//迭代器
+</code></pre>
+<h2 id="函数-3"><a href="#函数-3" class="headerlink" title="函数"></a>函数</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s.size()</td>
+<td>返回当前的元素数量</td>
+</tr>
+<tr>
+<td>s.empty ()</td>
+<td>判断大小是否为零，等同于$0==size()$，效率更高</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count (elem)</td>
+<td>返回元素值为$elem$的个数</td>
+</tr>
+<tr>
+<td>find(elem)</td>
+<td>返回元素值为$elem$的第一个元素，如果没有返回$end()$</td>
+</tr>
+<tr>
+<td>lower _bound(elem)</td>
+<td>返回元素值$&gt;=elem$的第一个元素位置</td>
+</tr>
+<tr>
+<td>upper _bound (elem)</td>
+<td>返回元素值$&gt;elem$的第一个元素位置</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s.begin()</td>
+<td>返回一个随机存取迭代器，指向第一个元素</td>
+</tr>
+<tr>
+<td>s.end()</td>
+<td>返回一个随机存取迭代器，指向最后一个元素的下一个位置</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s.insert(elem)</td>
+<td>插入一个$elem$副本，返回新元素位置，无论插入成功与否。</td>
+</tr>
+<tr>
+<td>s.erase(elem)</td>
+<td>删除与$elem$相等的所有元素，返回被移除的元素个数。</td>
+</tr>
+<tr>
+<td>s.erase(pos)</td>
+<td>移除迭代器$pos$所指位置元素，无返回值。</td>
+</tr>
+<tr>
+<td>s.clear()</td>
+<td>移除所有元素，将容器清空</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="离散化"><a href="#离散化" class="headerlink" title="离散化"></a>离散化</h1><h2 id="std-unique"><a href="#std-unique" class="headerlink" title="std::unique"></a>std::unique</h2><p>功能：对有序的容器重新排列，将第一次出现的元素从前往后排，其他重复出现的元素依次排在后面<br>返回值：返回迭代器，迭代器指向的是重复元素的首地址</p>
+<h2 id="std-lower-bound"><a href="#std-lower-bound" class="headerlink" title="std::lower_bound"></a>std::lower_bound</h2><p>lower_bound()返回一个 iterator 它指向在[first,last)标记的有序序列中可以插入value，而不会破坏容器顺序的第一个位置，而这个位置标记了第一个大于等于value 的值。<br>ForwardIter lower_bound(ForwardIter first, ForwardIter last,const _Tp&amp; val)算法返回一个非递减序列[first, last)中的第一个大于等于值val的位置。</p>
+<h2 id="std-upper-bound"><a href="#std-upper-bound" class="headerlink" title="std::upper_bound"></a>std::upper_bound</h2><p>upper_bound()返回一个 iterator 它指向在[first,last)标记的有序序列中可以插入value，而不会破坏容器顺序的第一个位置，而这个位置标记了第一个大于value 的值。这两个函数为C++ STL内的函数。<br>ForwardIter upper_bound(ForwardIter first, ForwardIter last, const _Tp&amp; val)算法返回一个非递减序列[first, last)中第一个大于val的位置。</p>
+<pre><code class="lang-c++">std::sort(b + 1, b + cnt + 1);
+int *end = std::unique(b + 1, b + cnt + 1);
+for(int i = 1; i &lt;= n; i++)
+a[i] = lower_bound(b + 1, end, a[i]) - b;
+</code></pre>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Queue</tag>
+        <tag>Stack</tag>
+        <tag>STL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>「FFT/NTT」「多项式」</title>
     <url>/2019/FFT/</url>
     <content><![CDATA[<blockquote>
@@ -1803,6 +1632,177 @@ int main()
       </categories>
       <tags>
         <tag>MMD</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>科学上网 | GFW与SSR简介</title>
+    <url>/2019/GFW/</url>
+    <content><![CDATA[<blockquote>
+<p>Update on A.D.2019-05-31</p>
+</blockquote>
+<p>Across the Great Wall we can reach every corner in the world.</p>
+<a id="more"></a>
+<p>在配置开发环境、依赖项等过程中，不可避免的会遇到无法下载、下载速度过慢的情况。</p>
+<p>在编程学习中，如果可以使用Google、StackOverflow，往往可以解决很多问题。</p>
+<p>本文简要介绍GFW和常见的科学上网技术。</p>
+<p>删减了大部分内容，推荐观看<a href="https://www.youtube.com/channel/UCZVThl_MRppEdGUPGjXSSdg" target="_blank" rel="noopener">电丸科技AK</a>制作的<a href="https://www.youtube.com/watch?v=XKZM_AjCUr0&amp;list=PLqybz7NWybwUgR-S6m78tfd-lV4sBvGFG" target="_blank" rel="noopener">https://www.youtube.com/watch?v=XKZM_AjCUr0&amp;list=PLqybz7NWybwUgR-S6m78tfd-lV4sBvGFG</a> 这一系列视频，推荐简单学习计算机网络知识。</p>
+<p><strong>推荐阅读：</strong></p>
+<p><del><a href="https://blog.nfz.moe/archives/network-in-china.html" target="_blank" rel="noopener">中国的互联网 _ neoFelhz’s Blog[已失效]</a></del></p>
+<p><a href="https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b" target="_blank" rel="noopener">浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别</a></p>
+<p><a href="https://hynking.org/2017/01/02/The_reason/" target="_blank" rel="noopener">墙与纸飞机</a></p>
+<p><a href="https://young1lin.me/2020/10/30/GFW/#%E5%8E%9F%E7%90%86" target="_blank" rel="noopener">什么是 SSR、V2ray、Trojan、Clash，什么是机场？</a></p>
+<p><a href="https://yuerblog.cc/2017/01/03/how-vpn-works-and-how-to-setup-pptp/" target="_blank" rel="noopener">vpn工作原理和搭建方法</a></p>
+<p><a href="https://www.zhihu.com/question/268204483/answer/334644846" target="_blank" rel="noopener">代理，网关，隧道，有什么区别与联系？</a></p>
+<h1 id="什么是GFW"><a href="#什么是GFW" class="headerlink" title="什么是GFW"></a>什么是GFW</h1><h2 id="GFW"><a href="#GFW" class="headerlink" title="GFW"></a>GFW</h2><p><a href="https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E" target="_blank" rel="noopener">防火长城 - 维基百科，自由的百科全书</a></p>
+<p>线路拓扑：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/gfw.png" alt></p>
+<h2 id="一些名词"><a href="#一些名词" class="headerlink" title="一些名词"></a>一些名词</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">虚拟专用服务器 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">代理服务器 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/SOCKS" target="_blank" rel="noopener">SOCKS - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/IPv6" target="_blank" rel="noopener">IPv6 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/Secure_Shell" target="_blank" rel="noopener">Secure Shell - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E8%B6%85%E6%96%87%E6%9C%AC%E4%BC%A0%E8%BE%93%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">超文本传输安全协议 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%B0%8D%E7%AD%89%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">点对点网络 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/HTTP%E7%8A%B6%E6%80%81%E7%A0%81" target="_blank" rel="noopener">HTTP状态码 - 维基百科，自由的百科全书</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">中间人攻击 - 维基百科，自由的百科全书</a></p>
+<h1 id="如何科学上网"><a href="#如何科学上网" class="headerlink" title="如何科学上网"></a>如何科学上网</h1><h2 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h2><p><a href="https://zh.wikipedia.org/wiki/%E8%99%9B%E6%93%AC%E7%A7%81%E4%BA%BA%E7%B6%B2%E8%B7%AF" target="_blank" rel="noopener">虚拟专用网 - 维基百科，自由的百科全书</a></p>
+<pre><code>虚拟私人网络（英语：Virtual Private Network，缩写：VPN）是一种常用于连接
+中、大型企业或团体与团体间的私人网络的通讯方法。它利用隧道协议（Tunneling 
+Protocol）来达到保密、发送端认证、消息准确性等私人消息安全效果，这种技术可以用
+不安全的网络（例如：互联网）来发送可靠、安全的消息。
+</code></pre><p><a href="https://zh.wikipedia.org/wiki/%E9%9A%A7%E9%81%93%E5%8D%8F%E8%AE%AE" target="_blank" rel="noopener">隧道协议 - 维基百科，自由的百科全书</a></p>
+<h2 id="SS-SSR"><a href="#SS-SSR" class="headerlink" title="SS | SSR"></a>SS | SSR</h2><p>推荐阅读：<br><a href="https://www.5xiaobo.com/?id=650" target="_blank" rel="noopener">浅谈VPN和SS/SSR的区别</a></p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>全称Shadowsocks | ShadowsocksR</p>
+<p>SS的作者Clowwindy删除了GitHub的源代码，SSR是breakwa11在SS基础上开发的软件，后作者在GitHub上将其源代码删除，SS与SSR开发时皆开源，原作者停止维护后有人开发并维护与更新至今。</p>
+<h3 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h3><p><a href="http://shadowsocks.org/en/index.html" target="_blank" rel="noopener">官网</a></p>
+<p><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">GitHub</a></p>
+<h3 id="SSR"><a href="#SSR" class="headerlink" title="SSR"></a>SSR</h3><p>已经删除的主页（web archive）：<br><a href="https://web.archive.org/web/20170719134138/https://breakwa11.github.io/" target="_blank" rel="noopener">breakwa11.github.io</a></p>
+<p><a href="https://github.com/breakwa11/shadowsocks-csharp/releases" target="_blank" rel="noopener">GitHub</a></p>
+<p>简单了解一下：<br><a href="https://zh.wikipedia.org/wiki/Shadowsocks" target="_blank" rel="noopener">Shadowsocks - 维基百科，自由的百科全书</a></p>
+<p>界面：<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/ssr1.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/ssr2.png" alt></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>有Windows、Linux、Android、IOS、Macos等系统及各种在源软件基础上开发的很多版本。</p>
+<p>一个仍在维护的Windows版本：</p>
+<p><a href="https://github.com/shadowsocksrr/shadowsocksr-csharp/releases" target="_blank" rel="noopener">https://github.com/shadowsocksrr/shadowsocksr-csharp/releases</a></p>
+<p>一些下载地址及版本介绍：</p>
+<p><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">SS/SSR 简介</a></p>
+<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><h4 id="优先阅读"><a href="#优先阅读" class="headerlink" title="优先阅读"></a>优先阅读</h4><p><a href="https://moe.best/tutorial/shadowsocksr.html" target="_blank" rel="noopener">[ShadowsocksR] 大概是萌新也看得懂的SSR功能详细介绍&amp;使用教程</a></p>
+<p><a href="https://crifan.github.io/scientific_network_summary/website/server_client_mode/ss_client/client_windows.html" target="_blank" rel="noopener">Windows的ss客户端 · 珂学上网相关知识总结</a></p>
+<h3 id="机场"><a href="#机场" class="headerlink" title="机场"></a>机场</h3><p><a href="387099.blogspot.com/2018/03/ssssr.html">浅谈部分机场（SS/SSR提供商）的使用感受</a></p>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><p><a href="https://www.i5seo.com/shadowsocksr-clients-various-hidden-use-techniques.html" target="_blank" rel="noopener">ShadowsocksR 客户端 各种隐藏使用技巧说明</a></p>
+<p><a href="https://blog.jimmyho.net/archives/365/" target="_blank" rel="noopener">ShadowsocksR简明使用教程</a></p>
+<h4 id="小飞机的颜色"><a href="#小飞机的颜色" class="headerlink" title="小飞机的颜色"></a>小飞机的颜色</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">颜色</th>
+<th style="text-align:center">全局</th>
+<th style="text-align:center">PAC</th>
+<th style="text-align:center">直连</th>
+<th style="text-align:center">负载均衡</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">白</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">青</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">黄</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">绿</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">蓝</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">紫</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>对小飞机托盘图标操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">左键单击</td>
+<td style="text-align:center">弹出编辑服务器窗口</td>
+</tr>
+<tr>
+<td style="text-align:center">中键单击</td>
+<td style="text-align:center">弹出服务器连接统计窗</td>
+</tr>
+<tr>
+<td style="text-align:center">右键单击</td>
+<td style="text-align:center">弹出菜单</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="SSTap"><a href="#SSTap" class="headerlink" title="SSTap"></a>SSTap</h3><p>软件介绍：SSTap全称SOCKSTap, 是一款利用虚拟网卡技术在网络层实现的代理工具。SSTap能在网络层拦截所有连接并转发给HTTP，SOCKS4，5，SHADOWSOCKS代理.而无需对被代理的应用程序做任何修改或设置。它能同时转发TCP,UDP数据包，它非常适合于游戏玩家使用。</p>
+<h3 id="搭建SSR服务"><a href="#搭建SSR服务" class="headerlink" title="搭建SSR服务"></a>搭建SSR服务</h3><p>购买VPS，部署Linux发行版和SSR服务端（没有搭建博客、使用服务器等用途不推荐）</p>
+<h2 id="Trojan"><a href="#Trojan" class="headerlink" title="Trojan"></a>Trojan</h2><p><a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener">trojan-gfw / trojan</a></p>
+<h2 id="Clash"><a href="#Clash" class="headerlink" title="Clash"></a>Clash</h2><p><a href="https://github.com/Dreamacro/clash" target="_blank" rel="noopener">Dreamacro / clash</a></p>
+<h2 id="V2Ray"><a href="#V2Ray" class="headerlink" title="V2Ray"></a>V2Ray</h2><p>推荐阅读：<br><a href="https://medium.com/@thomas_summon/%E6%B5%85%E8%B0%88vpn-vps-proxy%E4%BB%A5%E5%8F%8Ashadowsocks%E4%B9%8B%E9%97%B4%E7%9A%84%E8%81%94%E7%B3%BB%E5%92%8C%E5%8C%BA%E5%88%AB-b0198f92db1b" target="_blank" rel="noopener">浅谈vpn、vps、Proxy以及shadowsocks之间的联系和区别</a></p>
+<p>V2Ray 是一个模块化的代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。</p>
+<p>简单来说，它就是一个模块化代理，可以用来科学上网，支持多平台。</p>
+<p><a href="https://www.v2ray.com/" target="_blank" rel="noopener">Project V · Project V 官方网站</a></p>
+<p><a href="https://github.com/v2ray/v2ray-core" target="_blank" rel="noopener">Github</a></p>
+<h3 id="TLS"><a href="#TLS" class="headerlink" title="TLS"></a>TLS</h3><h2 id="Brook"><a href="#Brook" class="headerlink" title="Brook"></a>Brook</h2><p><a href="https://github.com/txthinking/brook" target="_blank" rel="noopener">txthinking / brook</a></p>
+<h2 id="Tor"><a href="#Tor" class="headerlink" title="Tor"></a>Tor</h2><p><a href="https://www.torproject.org/index.html.en" target="_blank" rel="noopener">torproject</a></p>
+<h1 id="一些工具"><a href="#一些工具" class="headerlink" title="一些工具"></a>一些工具</h1><p>一个Chrome的插件</p>
+<pre><code>Yet another flags
+</code></pre><p>可以很方便的显示服务器IP地址和地理位置。<br>效果：<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/chrome1.png" alt></p>
+<h1 id="常用互联网服务"><a href="#常用互联网服务" class="headerlink" title="常用互联网服务"></a>常用互联网服务</h1><h2 id="无法访问"><a href="#无法访问" class="headerlink" title="无法访问"></a>无法访问</h2><h3 id="website"><a href="#website" class="headerlink" title="website"></a>website</h3><p><a href="https://www.google.com.hk" target="_blank" rel="noopener">Google</a></p>
+<p><a href="https://www.youtube.com" target="_blank" rel="noopener">Youtube</a></p>
+<p><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+<p><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>
+<p><a href="https://zh.wikipedia.org" target="_blank" rel="noopener">Wikipedia(zh_CN)</a></p>
+<h3 id="IM"><a href="#IM" class="headerlink" title="IM"></a>IM</h3><p><a href="https://telegram.org" target="_blank" rel="noopener">Telegram</a></p>
+<hr>
+<h2 id="正常访问"><a href="#正常访问" class="headerlink" title="正常访问"></a>正常访问</h2><h3 id="website-1"><a href="#website-1" class="headerlink" title="website"></a>website</h3><p><a href="https://www.quora.com" target="_blank" rel="noopener">Quora</a></p>
+<p><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>GFW</tag>
+        <tag>SSR</tag>
       </tags>
   </entry>
   <entry>
@@ -2713,7 +2713,7 @@ git push origin branch_name
     <title>云服务器购买与Linux使用经验</title>
     <url>/2023/cloud_server/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.03.18</p>
+<p>更新于：A.D.2023.03.18</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -2748,68 +2748,6 @@ git push origin branch_name
       </categories>
       <tags>
         <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>夏日小日记</title>
-    <url>/2021/diary_1/</url>
-    <content><![CDATA[<p>以此或多或少记录下一点暑假的生活 \ (￣︶￣\ *))</p>
-<a id="more"></a>
-<hr>
-<h1 id="6-7-6-10"><a href="#6-7-6-10" class="headerlink" title="6.7-6.10"></a>6.7-6.10</h1><p>6.7第一天上午语文没什么特殊的地方，中规中矩弄完，十分幸运地在文言文翻译提笔忘字，诗歌看不太懂写了一堆废话（大概是寄了😭，发现选择也错了），考完感觉就……还挺正常的。</p>
-<p>中午食堂的饭挺好吃的，也不想多聊天。</p>
-<p>下午好热，考试的时候特别焦燥，数学选择第八题把概念弄错了，然后第十二题匆匆看完AB选项选了一个不太想接着做了，接着……第四个填空第二个空算错好几次，最后还把n写成k了日。这时候已经快开考一个小时了，心里开始很慌张，第三个大题写成了$cos(A)=cos(\pi-A)$😅，第四个大题把底面画错了，虽然后面做对了可都错了靠前的步骤，第五第六个大题就剩了15分钟，匆匆写了一问，圆锥联立韦达了一下，导数考的东西学得也不太会。考完出来就烦得要命，还特别热……想了想也很无奈，不过我同桌勇敢和对答案发现比我更惨，不想说什么了。</p>
-<p>晚上想了想发现填空第四题公式写错了字母……心态有点不太好。</p>
-<p>第二天上午来了聊聊天，课间出去走了走，心里估计可能只能上600分了（事实也是这样）。</p>
-<p>下午英语的难度刚好能让我看懂，到时间刚刚写完作文，挺正常的。这两天搬到了实验室，圆凳真是坐得让人腰疼得要死🥵。心态还算好，希望化学别裂开。</p>
-<p>第三天物理前面都还好，最后一题出个弹簧一直都不太会，估计没分了。化学单选都记不清知识点，多选后两个依然不会，有机倒是倒推完，就能全写出来了，最后一题发挥想象力编了几个空上去。</p>
-<p>晚上一直在想考完怎么玩半天没睡着……</p>
-<p>最后一天考试的时候下起来了雨，感觉很期待结束，但是也不着急。生物多选后四个可能都单选了，遗传就会前三个空，基因工程一个不会，猜了一个酶切位点和用想象力写满了这个题，考完两个大题只会三个空，都不好说什么了。挺难受的……最有把握的数学就这么寄了😥。出来还下大雨，淋了半天才出校门😰。</p>
-<p>出了成绩感觉和想象的差不多，最后……专业没去什么天坑🥰，我真是感恩戴德。</p>
-<h1 id="6-10-6-30"><a href="#6-10-6-30" class="headerlink" title="6.10 - 6.30"></a>6.10 - 6.30</h1><p>6月10日中午天晴了，去河边转了转，下午回去收拾了教室。很怅然若失吗？</p>
-<p>6月23日去了毕业典礼，去了机房，也是最后一次回高中。</p>
-<h1 id="7-1-7-28"><a href="#7-1-7-28" class="headerlink" title="7.1 - 7.28"></a>7.1 - 7.28</h1><p>考了科目一，玩游戏，买了csgo深海复仇的ak47皮肤，又买了只狼、死亡细胞、undertale、恋爱绮谭，报志愿，查录取结果，买了电脑和ipad。</p>
-<h1 id="7-29"><a href="#7-29" class="headerlink" title="7.29"></a>7.29</h1><p>台风到了但是雨下得不是特别大，早晨起来先给域名续了费，namesilo买的xyz域名，第一年0.99美元，续费9.29美元，namesilo用起来还是挺靠谱的。</p>
-<p>现在早上要去练车，不过下雨了难得放个假，早饭先去吃了一包火鸡面，依旧是等录取通知书的一天。</p>
-<p>终于收集够了原神雪山的80个绯红玉髓，因为我想要那个翅膀……</p>
-<p>今天把台式机上的博客源文件之类的东西用局域网转移到笔记本上来了。</p>
-<p>晚上和同学打csgo和gta5，麦克风又出了点小问题，调了半天。</p>
-<h1 id="7-30"><a href="#7-30" class="headerlink" title="7.30"></a>7.30</h1><p>今天上午接着练车，倒车入库……</p>
-<p>中午apple pencil到了，ems还要签收签字，不得不说ems送件员工的工作态度是真的好。</p>
-<p>好像要下周三才能发录取通知书了= =真是绝了。</p>
-<p>中午雨过天晴后难得有这么清澈的阳光啊了，天很蓝。</p>
-<p>又睡了一下午，不怎么想玩了，随便翻翻书了，晚上想看看K-On，或许是因为看到了某虚拟偶像的事。</p>
-<p>不知不觉就快到八月了。</p>
-<h1 id="7-31"><a href="#7-31" class="headerlink" title="7.31"></a>7.31</h1><p>上午练车，其余时间睡觉。</p>
-<h1 id="8-1"><a href="#8-1" class="headerlink" title="8.1"></a>8.1</h1><p>睡觉，拿ems快递，试水airpods听听歌，漫无止境的八月到了。</p>
-<h1 id="8-2"><a href="#8-2" class="headerlink" title="8.2"></a>8.2</h1><p>中午把node.js环境之类的东西配一下，设置一下github的ssh密钥，调整了一下blog。</p>
-<h1 id="8-3"><a href="#8-3" class="headerlink" title="8.3"></a>8.3</h1><p>光猫坏了……等明天来修，出去骑车转转。</p>
-<h1 id="8-4"><a href="#8-4" class="headerlink" title="8.4"></a>8.4</h1><p>今天不用练车，录取通知书终于发货了，ems应该明天就能到。</p>
-<h1 id="8-5"><a href="#8-5" class="headerlink" title="8.5"></a>8.5</h1><p>中午通知书到了，开箱。</p>
-<p>下午找同学玩，交流一番，有可爱的猫猫和狗，喝了咖啡豆磨的咖啡。</p>
-<h1 id="8-6"><a href="#8-6" class="headerlink" title="8.6"></a>8.6</h1><p>在家，无事，阅读CSAPP，浏览bilibili、zhihu等网络平台</p>
-<h1 id="8-7"><a href="#8-7" class="headerlink" title="8.7"></a>8.7</h1><p>立秋，下午试了试<a href="https://twitter.com/ameshiokiri/status/1424054632985161729" target="_blank" rel="noopener">基岩版我的世界光线追踪</a>，晚上和同学出去聊天，回忆高中生活。</p>
-<h1 id="8-8"><a href="#8-8" class="headerlink" title="8.8"></a>8.8</h1><p>晨起，写一点东西。</p>
-<p>下午去工商银行改一下预留信息……</p>
-<p>买了ipad保护套。</p>
-<h1 id="8-9"><a href="#8-9" class="headerlink" title="8.9"></a>8.9</h1><p>睡了一天觉，买了《心庭荧彩》</p>
-<h1 id="8-10"><a href="#8-10" class="headerlink" title="8.10"></a>8.10</h1><p>中午看了一点CSAPP，下午和同学玩你画我猜，接龙模式笑死了。买了个四级的题看看。</p>
-<h1 id="8-11-8-25"><a href="#8-11-8-25" class="headerlink" title="8.11 - 8.25"></a>8.11 - 8.25</h1><p>开箱ipad，用ipad试试看了一点网络的书。看了一点数字电路</p>
-<p>20号去考了科目二，好累……</p>
-<p>和同学出去吃火锅</p>
-<p>收拾了开学物品</p>
-<h1 id="8-26"><a href="#8-26" class="headerlink" title="8.26"></a>8.26</h1><p>初中同学聚会</p>
-<h1 id="8-27"><a href="#8-27" class="headerlink" title="8.27"></a>8.27</h1><p>来报到，去领了好多小礼品</p>
-<h1 id="8-28"><a href="#8-28" class="headerlink" title="8.28"></a>8.28</h1><p>早上去工商银行补办了因为曾用名问题没有随录取通知书寄送的银行卡</p>
-<h1 id="8-30"><a href="#8-30" class="headerlink" title="8.30"></a>8.30</h1><p>上午下雨，下午开学典礼，躺平</p>
-<h1 id="8-31"><a href="#8-31" class="headerlink" title="8.31"></a>8.31</h1><p>军训，下大雨，躺平</p>
-<h1 id="9-1"><a href="#9-1" class="headerlink" title="9.1"></a>9.1</h1><p>军训，去海边拉练，听各种讲座，本篇至此结束</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
@@ -3124,6 +3062,68 @@ int main()
       <tags>
         <tag>C++11</tag>
         <tag>计算几何</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>夏日小日记</title>
+    <url>/2021/diary_1/</url>
+    <content><![CDATA[<p>以此或多或少记录下一点暑假的生活 \ (￣︶￣\ *))</p>
+<a id="more"></a>
+<hr>
+<h1 id="6-7-6-10"><a href="#6-7-6-10" class="headerlink" title="6.7-6.10"></a>6.7-6.10</h1><p>6.7第一天上午语文没什么特殊的地方，中规中矩弄完，十分幸运地在文言文翻译提笔忘字，诗歌看不太懂写了一堆废话（大概是寄了😭，发现选择也错了），考完感觉就……还挺正常的。</p>
+<p>中午食堂的饭挺好吃的，也不想多聊天。</p>
+<p>下午好热，考试的时候特别焦燥，数学选择第八题把概念弄错了，然后第十二题匆匆看完AB选项选了一个不太想接着做了，接着……第四个填空第二个空算错好几次，最后还把n写成k了日。这时候已经快开考一个小时了，心里开始很慌张，第三个大题写成了$cos(A)=cos(\pi-A)$😅，第四个大题把底面画错了，虽然后面做对了可都错了靠前的步骤，第五第六个大题就剩了15分钟，匆匆写了一问，圆锥联立韦达了一下，导数考的东西学得也不太会。考完出来就烦得要命，还特别热……想了想也很无奈，不过我同桌勇敢和对答案发现比我更惨，不想说什么了。</p>
+<p>晚上想了想发现填空第四题公式写错了字母……心态有点不太好。</p>
+<p>第二天上午来了聊聊天，课间出去走了走，心里估计可能只能上600分了（事实也是这样）。</p>
+<p>下午英语的难度刚好能让我看懂，到时间刚刚写完作文，挺正常的。这两天搬到了实验室，圆凳真是坐得让人腰疼得要死🥵。心态还算好，希望化学别裂开。</p>
+<p>第三天物理前面都还好，最后一题出个弹簧一直都不太会，估计没分了。化学单选都记不清知识点，多选后两个依然不会，有机倒是倒推完，就能全写出来了，最后一题发挥想象力编了几个空上去。</p>
+<p>晚上一直在想考完怎么玩半天没睡着……</p>
+<p>最后一天考试的时候下起来了雨，感觉很期待结束，但是也不着急。生物多选后四个可能都单选了，遗传就会前三个空，基因工程一个不会，猜了一个酶切位点和用想象力写满了这个题，考完两个大题只会三个空，都不好说什么了。挺难受的……最有把握的数学就这么寄了😥。出来还下大雨，淋了半天才出校门😰。</p>
+<p>出了成绩感觉和想象的差不多，最后……专业没去什么天坑🥰，我真是感恩戴德。</p>
+<h1 id="6-10-6-30"><a href="#6-10-6-30" class="headerlink" title="6.10 - 6.30"></a>6.10 - 6.30</h1><p>6月10日中午天晴了，去河边转了转，下午回去收拾了教室。很怅然若失吗？</p>
+<p>6月23日去了毕业典礼，去了机房，也是最后一次回高中。</p>
+<h1 id="7-1-7-28"><a href="#7-1-7-28" class="headerlink" title="7.1 - 7.28"></a>7.1 - 7.28</h1><p>考了科目一，玩游戏，买了csgo深海复仇的ak47皮肤，又买了只狼、死亡细胞、undertale、恋爱绮谭，报志愿，查录取结果，买了电脑和ipad。</p>
+<h1 id="7-29"><a href="#7-29" class="headerlink" title="7.29"></a>7.29</h1><p>台风到了但是雨下得不是特别大，早晨起来先给域名续了费，namesilo买的xyz域名，第一年0.99美元，续费9.29美元，namesilo用起来还是挺靠谱的。</p>
+<p>现在早上要去练车，不过下雨了难得放个假，早饭先去吃了一包火鸡面，依旧是等录取通知书的一天。</p>
+<p>终于收集够了原神雪山的80个绯红玉髓，因为我想要那个翅膀……</p>
+<p>今天把台式机上的博客源文件之类的东西用局域网转移到笔记本上来了。</p>
+<p>晚上和同学打csgo和gta5，麦克风又出了点小问题，调了半天。</p>
+<h1 id="7-30"><a href="#7-30" class="headerlink" title="7.30"></a>7.30</h1><p>今天上午接着练车，倒车入库……</p>
+<p>中午apple pencil到了，ems还要签收签字，不得不说ems送件员工的工作态度是真的好。</p>
+<p>好像要下周三才能发录取通知书了= =真是绝了。</p>
+<p>中午雨过天晴后难得有这么清澈的阳光啊了，天很蓝。</p>
+<p>又睡了一下午，不怎么想玩了，随便翻翻书了，晚上想看看K-On，或许是因为看到了某虚拟偶像的事。</p>
+<p>不知不觉就快到八月了。</p>
+<h1 id="7-31"><a href="#7-31" class="headerlink" title="7.31"></a>7.31</h1><p>上午练车，其余时间睡觉。</p>
+<h1 id="8-1"><a href="#8-1" class="headerlink" title="8.1"></a>8.1</h1><p>睡觉，拿ems快递，试水airpods听听歌，漫无止境的八月到了。</p>
+<h1 id="8-2"><a href="#8-2" class="headerlink" title="8.2"></a>8.2</h1><p>中午把node.js环境之类的东西配一下，设置一下github的ssh密钥，调整了一下blog。</p>
+<h1 id="8-3"><a href="#8-3" class="headerlink" title="8.3"></a>8.3</h1><p>光猫坏了……等明天来修，出去骑车转转。</p>
+<h1 id="8-4"><a href="#8-4" class="headerlink" title="8.4"></a>8.4</h1><p>今天不用练车，录取通知书终于发货了，ems应该明天就能到。</p>
+<h1 id="8-5"><a href="#8-5" class="headerlink" title="8.5"></a>8.5</h1><p>中午通知书到了，开箱。</p>
+<p>下午找同学玩，交流一番，有可爱的猫猫和狗，喝了咖啡豆磨的咖啡。</p>
+<h1 id="8-6"><a href="#8-6" class="headerlink" title="8.6"></a>8.6</h1><p>在家，无事，阅读CSAPP，浏览bilibili、zhihu等网络平台</p>
+<h1 id="8-7"><a href="#8-7" class="headerlink" title="8.7"></a>8.7</h1><p>立秋，下午试了试<a href="https://twitter.com/ameshiokiri/status/1424054632985161729" target="_blank" rel="noopener">基岩版我的世界光线追踪</a>，晚上和同学出去聊天，回忆高中生活。</p>
+<h1 id="8-8"><a href="#8-8" class="headerlink" title="8.8"></a>8.8</h1><p>晨起，写一点东西。</p>
+<p>下午去工商银行改一下预留信息……</p>
+<p>买了ipad保护套。</p>
+<h1 id="8-9"><a href="#8-9" class="headerlink" title="8.9"></a>8.9</h1><p>睡了一天觉，买了《心庭荧彩》</p>
+<h1 id="8-10"><a href="#8-10" class="headerlink" title="8.10"></a>8.10</h1><p>中午看了一点CSAPP，下午和同学玩你画我猜，接龙模式笑死了。买了个四级的题看看。</p>
+<h1 id="8-11-8-25"><a href="#8-11-8-25" class="headerlink" title="8.11 - 8.25"></a>8.11 - 8.25</h1><p>开箱ipad，用ipad试试看了一点网络的书。看了一点数字电路</p>
+<p>20号去考了科目二，好累……</p>
+<p>和同学出去吃火锅</p>
+<p>收拾了开学物品</p>
+<h1 id="8-26"><a href="#8-26" class="headerlink" title="8.26"></a>8.26</h1><p>初中同学聚会</p>
+<h1 id="8-27"><a href="#8-27" class="headerlink" title="8.27"></a>8.27</h1><p>来报到，去领了好多小礼品</p>
+<h1 id="8-28"><a href="#8-28" class="headerlink" title="8.28"></a>8.28</h1><p>早上去工商银行补办了因为曾用名问题没有随录取通知书寄送的银行卡</p>
+<h1 id="8-30"><a href="#8-30" class="headerlink" title="8.30"></a>8.30</h1><p>上午下雨，下午开学典礼，躺平</p>
+<h1 id="8-31"><a href="#8-31" class="headerlink" title="8.31"></a>8.31</h1><p>军训，下大雨，躺平</p>
+<h1 id="9-1"><a href="#9-1" class="headerlink" title="9.1"></a>9.1</h1><p>军训，去海边拉练，听各种讲座，本篇至此结束</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
@@ -3642,7 +3642,7 @@ int main()
     <title>Debian在LVM下ext4文件系统调整/和/home分区大小</title>
     <url>/2023/linux-lvm/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.07.06</p>
+<p>更新于：A.D.2023.07.06</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -3761,7 +3761,7 @@ tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
     <title>让我们开始记忆一些Linux命令</title>
     <url>/2023/linux/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.03.05</p>
+<p>更新于：A.D.2023.03.05</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -3834,6 +3834,54 @@ cd !$ 把上个命令的参数作为cd参数使用
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些metagame的介绍与评价（无剧透）</title>
+    <url>/2020/metagame/</url>
+    <content><![CDATA[<p>meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。</p>
+<a id="more"></a>
+<blockquote>
+<p>后设小说（英语：Metafiction）又称元小说、超小说，是一种小说类型，透过自我意识的觉醒，刻意凸显书中虚构的错觉。威廉·加斯在1970年〈哲学与小说形式〉一文中首度提出“后设小说”的说法。典型的写作技巧包括将原先的剧情设定为一件文学作品，随后揭露故事的“真相”。后设小说透过讽刺和自我反省等手法，引导读者思考小说与现实之间的关联，进而有意识、有组织地探讨小说本身的虚构性。<br>出自：<a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA</a></p>
+</blockquote>
+<p>meta游戏与元小说类似，都会与现实中的读者或游玩者产生一定的交互，如同元小说会突出小说本身的虚构性，meta游戏也会着重显明自身世界的编程程序性或与该世界与玩家世界的关联性（我会将其分为程序代码型和平行世界型两种类型）并引导真实世界的游玩者通过游戏程序机制来获取到游戏世界本身并不具有的能力以此来改变游戏剧情，最终模糊虚拟和现实的边界。</p>
+<p>程序代码型的游戏会和计算机本身产生一定的交互，并需要通过游戏程序以外的计算机内部操作完成游戏剧情的推进，或（且）会明确游戏本身是程序运行的结果。</p>
+<p>平行世界型的游戏不会对计算机产生交互，但你可以通过自己的外部操作（存档/读档）改变平行世界的剧情走向，或（且）会明确游戏本身是独立于程序存在的一个世界，但程序可以改变此世界的一些时间线。</p>
+<p>一般来说虽然meta游戏中你都可以完全操控主角的操作，但程序代码型会倾向于使你对游戏本身产生更多的操作，同时从前期就开始就强调主角和游玩者是两个不同的角色，而平行世界型一般会在后期点明游玩者的介入性，并强调主角对游玩者的操控性，但不会着重强调这两个角色的区分性和发挥的不同作用。</p>
+<p>meta游戏的最主要特点是将真实世界中的游戏玩家作为游戏内容本身的参与者而不是游戏角色的操控者，也常常会有种说法指明meta游戏打破了第四面墙（显示器屏幕）。</p>
+<!--more-->
+<h1 id="Ever17-—the-out-of-infinity—-时空轮回"><a href="#Ever17-—the-out-of-infinity—-时空轮回" class="headerlink" title="Ever17 —the out of infinity— 时空轮回"></a>Ever17 —the out of infinity— 时空轮回</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta1.jpg" alt></p>
+<p>平行世界型</p>
+<p>AVG/galgame，科幻悬疑，设定不是非常非常科学但还是很有科学因素的，前期流程非常冗长无趣，主要体验最后解密快感。强烈推荐优先游玩此游戏，可以说此游戏也十分独特，且不存在惊吓和血腥内容。</p>
+<h1 id="Doki-Doki-Literature-Club-心跳文学部"><a href="#Doki-Doki-Literature-Club-心跳文学部" class="headerlink" title="Doki Doki Literature Club 心跳文学部"></a>Doki Doki Literature Club 心跳文学部</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta2.jpg" alt></p>
+<p>程序代码型</p>
+<p>AVG/<del>galgame</del>，剧情简短明确，流程在2h左右，主要体验比较独特的吓人方式，游戏制作方不建议心理承受能力差及13岁以下人群游玩。</p>
+<h1 id="君と彼女と彼女の恋"><a href="#君と彼女と彼女の恋" class="headerlink" title="君と彼女と彼女の恋"></a>君と彼女と彼女の恋</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_1.webp" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_2.webp" alt></p>
+<p>程序代码型</p>
+<p>AVG/<del>galgame</del>，部分精神污染极其严重，不要轻易尝试，有画面反色，文件修改等内容。前期的画面非常不错，淡色且偏水彩风格，适合看风景，前期一些设定让你一度以为这是个科幻故事，我倒是挺希望偏向一个科幻来叙事的，但是最后还是说归结到了计算机和程序这种设定上。总的来说也是很独特的游戏，这种风格的游戏几乎找不出第二个了。</p>
+<h1 id="Undertale"><a href="#Undertale" class="headerlink" title="Undertale"></a>Undertale</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta4.webp" alt></p>
+<p>平行世界型</p>
+<p>RPG游戏，总体来说也非常新奇，有很独特的地方，值得一玩。</p>
+<h1 id="Oneshot"><a href="#Oneshot" class="headerlink" title="Oneshot"></a>Oneshot</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta5.jpg" alt></p>
+<p>程序代码型</p>
+<p>冒险解谜游戏，一周目通关，部分解谜方式很新颖，会和你的计算机本身有所交互，没有在别的游戏里见过。二周目的剧情比较完善，也令人有所感动。缺点在于寻找东西的解谜就略显枯燥。</p>
+<h1 id="艾希-Icey"><a href="#艾希-Icey" class="headerlink" title="艾希 Icey"></a>艾希 Icey</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta6.jpg" alt></p>
+<p>程序代码型</p>
+<p>横版动作游戏，没有玩过，偏重于计算机方面的设定，平面砍杀，类似于空洞骑士。</p>
+<h1 id="史丹利的寓言-The-Stanley-Parable"><a href="#史丹利的寓言-The-Stanley-Parable" class="headerlink" title="史丹利的寓言 The Stanley Parable"></a>史丹利的寓言 The Stanley Parable</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta7.jpg" alt></p>
+<p>程序代码型</p>
+<p>冒险解谜游戏，有一些场景会有不安的感觉，本身内容不算太多，一共有十几个左右的结局。</p>
+<h1 id="恋爱绮谭-不存在的夏天"><a href="#恋爱绮谭-不存在的夏天" class="headerlink" title="恋爱绮谭~不存在的夏天~"></a>恋爱绮谭~不存在的夏天~</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta_8.jpg" alt></p>
+<p>平行世界型</p>
+<p>这部游戏的meta成分很少，寥寥几句话，但在国产galgame中是我见过的最新奇的一部作品了。<br>整个题材融合了虚拟主播、都市怪谈、中国传统灵异设定、MtF、校园恋爱、悬疑以及部分科学性的解释、各种让人会心一笑的梗、一些故事和哲学的讨论、结尾的meta元素也不显突兀。<br>不存在的夏天这一游戏名也一语双关，玩到后期我才明白这个名字的巧妙之处。<br>总体来说虽然分离的故事在一开始关联性不强，但在最后给出的解释都比较合理，串联起了不同人的故事，各种悬疑也都在后期给出逻辑上并不问题的答案，对于悬疑性的体验还是不错的。<br>我个人比较喜欢这种能融合各种现实元素的游戏，只得一提的便是游戏创新性设计的手机系统、前后文字位置的变化和声字不同的设计都显示出了这部游戏设计的独特之处，可以肯定这款游戏代表了国产galgame的一流水平。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>metagame</tag>
+        <tag>galgame</tag>
       </tags>
   </entry>
   <entry>
@@ -4050,54 +4098,6 @@ int main()
       <tags>
         <tag>莫比乌斯反演</tag>
         <tag>整除分块</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些metagame的介绍与评价（无剧透）</title>
-    <url>/2020/metagame/</url>
-    <content><![CDATA[<p>meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。</p>
-<a id="more"></a>
-<blockquote>
-<p>后设小说（英语：Metafiction）又称元小说、超小说，是一种小说类型，透过自我意识的觉醒，刻意凸显书中虚构的错觉。威廉·加斯在1970年〈哲学与小说形式〉一文中首度提出“后设小说”的说法。典型的写作技巧包括将原先的剧情设定为一件文学作品，随后揭露故事的“真相”。后设小说透过讽刺和自我反省等手法，引导读者思考小说与现实之间的关联，进而有意识、有组织地探讨小说本身的虚构性。<br>出自：<a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA</a></p>
-</blockquote>
-<p>meta游戏与元小说类似，都会与现实中的读者或游玩者产生一定的交互，如同元小说会突出小说本身的虚构性，meta游戏也会着重显明自身世界的编程程序性或与该世界与玩家世界的关联性（我会将其分为程序代码型和平行世界型两种类型）并引导真实世界的游玩者通过游戏程序机制来获取到游戏世界本身并不具有的能力以此来改变游戏剧情，最终模糊虚拟和现实的边界。</p>
-<p>程序代码型的游戏会和计算机本身产生一定的交互，并需要通过游戏程序以外的计算机内部操作完成游戏剧情的推进，或（且）会明确游戏本身是程序运行的结果。</p>
-<p>平行世界型的游戏不会对计算机产生交互，但你可以通过自己的外部操作（存档/读档）改变平行世界的剧情走向，或（且）会明确游戏本身是独立于程序存在的一个世界，但程序可以改变此世界的一些时间线。</p>
-<p>一般来说虽然meta游戏中你都可以完全操控主角的操作，但程序代码型会倾向于使你对游戏本身产生更多的操作，同时从前期就开始就强调主角和游玩者是两个不同的角色，而平行世界型一般会在后期点明游玩者的介入性，并强调主角对游玩者的操控性，但不会着重强调这两个角色的区分性和发挥的不同作用。</p>
-<p>meta游戏的最主要特点是将真实世界中的游戏玩家作为游戏内容本身的参与者而不是游戏角色的操控者，也常常会有种说法指明meta游戏打破了第四面墙（显示器屏幕）。</p>
-<!--more-->
-<h1 id="Ever17-—the-out-of-infinity—-时空轮回"><a href="#Ever17-—the-out-of-infinity—-时空轮回" class="headerlink" title="Ever17 —the out of infinity— 时空轮回"></a>Ever17 —the out of infinity— 时空轮回</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta1.jpg" alt></p>
-<p>平行世界型</p>
-<p>AVG/galgame，科幻悬疑，设定不是非常非常科学但还是很有科学因素的，前期流程非常冗长无趣，主要体验最后解密快感。强烈推荐优先游玩此游戏，可以说此游戏也十分独特，且不存在惊吓和血腥内容。</p>
-<h1 id="Doki-Doki-Literature-Club-心跳文学部"><a href="#Doki-Doki-Literature-Club-心跳文学部" class="headerlink" title="Doki Doki Literature Club 心跳文学部"></a>Doki Doki Literature Club 心跳文学部</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta2.jpg" alt></p>
-<p>程序代码型</p>
-<p>AVG/<del>galgame</del>，剧情简短明确，流程在2h左右，主要体验比较独特的吓人方式，游戏制作方不建议心理承受能力差及13岁以下人群游玩。</p>
-<h1 id="君と彼女と彼女の恋"><a href="#君と彼女と彼女の恋" class="headerlink" title="君と彼女と彼女の恋"></a>君と彼女と彼女の恋</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_1.webp" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_2.webp" alt></p>
-<p>程序代码型</p>
-<p>AVG/<del>galgame</del>，部分精神污染极其严重，不要轻易尝试，有画面反色，文件修改等内容。前期的画面非常不错，淡色且偏水彩风格，适合看风景，前期一些设定让你一度以为这是个科幻故事，我倒是挺希望偏向一个科幻来叙事的，但是最后还是说归结到了计算机和程序这种设定上。总的来说也是很独特的游戏，这种风格的游戏几乎找不出第二个了。</p>
-<h1 id="Undertale"><a href="#Undertale" class="headerlink" title="Undertale"></a>Undertale</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta4.webp" alt></p>
-<p>平行世界型</p>
-<p>RPG游戏，总体来说也非常新奇，有很独特的地方，值得一玩。</p>
-<h1 id="Oneshot"><a href="#Oneshot" class="headerlink" title="Oneshot"></a>Oneshot</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta5.jpg" alt></p>
-<p>程序代码型</p>
-<p>冒险解谜游戏，一周目通关，部分解谜方式很新颖，会和你的计算机本身有所交互，没有在别的游戏里见过。二周目的剧情比较完善，也令人有所感动。缺点在于寻找东西的解谜就略显枯燥。</p>
-<h1 id="艾希-Icey"><a href="#艾希-Icey" class="headerlink" title="艾希 Icey"></a>艾希 Icey</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta6.jpg" alt></p>
-<p>程序代码型</p>
-<p>横版动作游戏，没有玩过，偏重于计算机方面的设定，平面砍杀，类似于空洞骑士。</p>
-<h1 id="史丹利的寓言-The-Stanley-Parable"><a href="#史丹利的寓言-The-Stanley-Parable" class="headerlink" title="史丹利的寓言 The Stanley Parable"></a>史丹利的寓言 The Stanley Parable</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta7.jpg" alt></p>
-<p>程序代码型</p>
-<p>冒险解谜游戏，有一些场景会有不安的感觉，本身内容不算太多，一共有十几个左右的结局。</p>
-<h1 id="恋爱绮谭-不存在的夏天"><a href="#恋爱绮谭-不存在的夏天" class="headerlink" title="恋爱绮谭~不存在的夏天~"></a>恋爱绮谭~不存在的夏天~</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta_8.jpg" alt></p>
-<p>平行世界型</p>
-<p>这部游戏的meta成分很少，寥寥几句话，但在国产galgame中是我见过的最新奇的一部作品了。<br>整个题材融合了虚拟主播、都市怪谈、中国传统灵异设定、MtF、校园恋爱、悬疑以及部分科学性的解释、各种让人会心一笑的梗、一些故事和哲学的讨论、结尾的meta元素也不显突兀。<br>不存在的夏天这一游戏名也一语双关，玩到后期我才明白这个名字的巧妙之处。<br>总体来说虽然分离的故事在一开始关联性不强，但在最后给出的解释都比较合理，串联起了不同人的故事，各种悬疑也都在后期给出逻辑上并不问题的答案，对于悬疑性的体验还是不错的。<br>我个人比较喜欢这种能融合各种现实元素的游戏，只得一提的便是游戏创新性设计的手机系统、前后文字位置的变化和声字不同的设计都显示出了这部游戏设计的独特之处，可以肯定这款游戏代表了国产galgame的一流水平。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>metagame</tag>
-        <tag>galgame</tag>
       </tags>
   </entry>
   <entry>
@@ -4416,49 +4416,6 @@ x \equiv a_n \pmod {m_n}
       </tags>
   </entry>
   <entry>
-    <title>3D建模的PBR流程</title>
-    <url>/2022/pbr/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.09.27</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="一种PBR流程"><a href="#一种PBR流程" class="headerlink" title="一种PBR流程"></a>一种PBR流程</h1><ol>
-<li>3ds Max / Maya 制作中模</li>
-<li>Zbrush 雕刻高模</li>
-<li>3ds Max / Maya 拓扑低模</li>
-<li>3ds Max / Maya UV展开</li>
-<li>Substance Painter 烘培贴图</li>
-<li>Substance Painter 绘制PBR贴图</li>
-</ol>
-<h1 id="贴图类型"><a href="#贴图类型" class="headerlink" title="贴图类型"></a>贴图类型</h1><ol>
-<li><p>漫反射贴图 Diffuse map </p>
-</li>
-<li><p>凹凸贴图 Bump maps</p>
-<p>2.1. 法线贴图 Normal maps</p>
-<p>2.2. 高度贴图 Height maps</p>
-</li>
-<li><p>高光贴图 Specular maps</p>
-</li>
-<li><p>AO贴图 Ambient Occlusiont</p>
-</li>
-<li><p>环境贴图 Cube map</p>
-</li>
-<li><p>光照纹理 Light map</p>
-</li>
-<li><p>Mip map和Detail map</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>渲染</tag>
-        <tag>三维建模</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文章索引</title>
     <url>/2033/post-index/</url>
     <content><![CDATA[<blockquote>
@@ -4511,6 +4468,49 @@ x \equiv a_n \pmod {m_n}
 <p><a href="https://x.lyxw.xyz/2021/record_set/">落影汐雾的记录集</a></p>
 <p><a href="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/">游戏《递归的边界线Recursive Boundary》开发记录</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>3D建模的PBR流程</title>
+    <url>/2022/pbr/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2022.09.27</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="一种PBR流程"><a href="#一种PBR流程" class="headerlink" title="一种PBR流程"></a>一种PBR流程</h1><ol>
+<li>3ds Max / Maya 制作中模</li>
+<li>Zbrush 雕刻高模</li>
+<li>3ds Max / Maya 拓扑低模</li>
+<li>3ds Max / Maya UV展开</li>
+<li>Substance Painter 烘培贴图</li>
+<li>Substance Painter 绘制PBR贴图</li>
+</ol>
+<h1 id="贴图类型"><a href="#贴图类型" class="headerlink" title="贴图类型"></a>贴图类型</h1><ol>
+<li><p>漫反射贴图 Diffuse map </p>
+</li>
+<li><p>凹凸贴图 Bump maps</p>
+<p>2.1. 法线贴图 Normal maps</p>
+<p>2.2. 高度贴图 Height maps</p>
+</li>
+<li><p>高光贴图 Specular maps</p>
+</li>
+<li><p>AO贴图 Ambient Occlusiont</p>
+</li>
+<li><p>环境贴图 Cube map</p>
+</li>
+<li><p>光照纹理 Light map</p>
+</li>
+<li><p>Mip map和Detail map</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>渲染</tag>
+        <tag>三维建模</tag>
+      </tags>
   </entry>
   <entry>
     <title>「概率期望」</title>
@@ -4883,462 +4883,6 @@ plt.show()
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python网络爬虫学习</title>
-    <url>/2022/python_web_crawler/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.2.13</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="按模块学习"><a href="#按模块学习" class="headerlink" title="按模块学习"></a>按模块学习</h1><h2 id="urllib库"><a href="#urllib库" class="headerlink" title="urllib库"></a>urllib库</h2><h2 id="json库"><a href="#json库" class="headerlink" title="json库"></a>json库</h2><h1 id="按功能学习"><a href="#按功能学习" class="headerlink" title="按功能学习"></a>按功能学习</h1><h2 id="下载HTML源代码"><a href="#下载HTML源代码" class="headerlink" title="下载HTML源代码"></a>下载HTML源代码</h2><pre><code class="lang-python">from urllib.request import urlopen
-
-import sys
-
-html = urlopen(
-    &quot;url&quot;
-).read().decode(&#39;utf-8&#39;)
-
-if sys.getdefaultencoding() == &#39;ascii&#39;:
-    sys.stdout = open(&quot;2.输出html.html&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
-else:
-    sys.stdout = open(&quot;2.输出html.html&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
-
-print(html)
-</code></pre>
-<h2 id="下载网页图片"><a href="#下载网页图片" class="headerlink" title="下载网页图片"></a>下载网页图片</h2><pre><code class="lang-python">from urllib.request import urlopen
-import urllib.parse
-import sys
-import re
-import os
-
-def getHtml(url):
-    html = urlopen(url).read().decode(&#39;utf-8&#39;)
-    return html
-
-def printImg(imgList, url):
-    for i in imgList:
-        imgName = i.split(&quot;/&quot;)[-1]
-        imgPicture = urlopen(url + i)
-        File = open(&#39;\\image\\&#39; + imgName, &#39;wb&#39;)
-        File.write(imgPicture.read())
-        File.close()
-
-def downloadImg(url):
-    html = getHtml(url)
-    rule_1 = r&#39;&lt;img src=&quot;([^&quot;]+\.png)&quot;&#39;
-    rule_2 = r&#39;&lt;img src=&quot;([^&quot;]+\.jpg)&quot;&#39;
-    imgList_1 = re.findall(rule_1, html)
-    printImg(imgList_1, url)
-    imgList_2 = re.findall(rule_2, html)
-    printImg(imgList_2, url)
-
-if __name__ == &#39;__main__&#39;:
-    url = &quot;url&quot;
-    downloadImg(url)
-</code></pre>
-<h2 id="下载通知"><a href="#下载通知" class="headerlink" title="下载通知"></a>下载通知</h2><pre><code class="lang-python">from urllib.request import urlopen
-
-import sys
-import re
-
-def getHtml(url):
-    html = urlopen(url).read().decode(&#39;utf-8&#39;)
-    return html
-
-def printList(list_1, list_2, list_3):
-    if sys.getdefaultencoding() == &#39;ascii&#39;:
-        sys.stdout = open(&quot;4.爬取通知.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
-    else:
-        sys.stdout = open(&quot;4.爬取通知.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
-    for i in range(0, len(list_1)):
-        print(&#39;#%d&#39; % (i+1))
-        print(&#39;标题：&#39; + list_2[i])
-        print(&#39;日期：&#39; + list_3[i])
-        print(&#39;网址：&#39; + &#39;url&#39; + list_1[i])
-        print(&#39;&#39;)
-
-def download(url):
-    html = getHtml(url)
-    rule_1 = r&#39;&lt;a target=&quot;_blank&quot; href=&quot;([^&quot;]+\.htm)&quot;&gt;&#39;
-    List_1 = re.findall(rule_1, html)
-    rule_2 = r&#39;&lt;a target=&quot;_blank&quot; href=.*?&gt;(.*?)&lt;/a&gt;&#39;
-    List_2 = re.findall(rule_2, html)
-    rule_3 = r&#39;&lt;font color=&quot;#3a6399&quot;&gt;&amp;nbsp;&amp;nbsp;(.*?)&lt;/font&gt;&#39;
-    List_3 = re.findall(rule_3, html)
-    printList(List_1, List_2, List_3)
-
-if __name__ == &#39;__main__&#39;:
-    url = &quot;url&quot;
-    download(url)
-</code></pre>
-<h2 id="下载任意页数通知"><a href="#下载任意页数通知" class="headerlink" title="下载任意页数通知"></a>下载任意页数通知</h2><pre><code class="lang-python">from urllib.request import urlopen
-
-import sys
-import re
-
-def getHtml(url):
-    html = urlopen(url).read().decode(&#39;utf-8&#39;)
-    return html
-
-def printList(list_1, list_2, list_3):
-    if sys.getdefaultencoding() == &#39;ascii&#39;:
-        sys.stdout = open(&quot;5.爬取任意页数通知.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
-    else:
-        sys.stdout = open(&quot;5.爬取任意页数通知.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
-    print(&#39;通知页数：第&#39; + pageNumber + &#39;页&#39;)
-    print(&#39;&#39;)
-    for i in range(0, len(list_1)):
-        print(&#39;#%d&#39; % (i+1))
-        print(&#39;标题：&#39; + list_2[i])
-        print(&#39;日期：&#39; + list_3[i])
-        print(&#39;网址：&#39; + &#39;url&#39; + list_1[i])
-        print(&#39;&#39;)
-
-def download(url):
-    html = getHtml(url)
-    rule_1 = r&#39;&lt;a target=&quot;_blank&quot; href=&quot;([^&quot;]+\.htm)&quot;&gt;&#39;
-    List_1 = re.findall(rule_1, html)
-    rule_2 = r&#39;&lt;a target=&quot;_blank&quot; href=.*?&gt;(.*?)&lt;/a&gt;&#39;
-    List_2 = re.findall(rule_2, html)
-    rule_3 = r&#39;&lt;font color=&quot;#3a6399&quot;&gt;&amp;nbsp;&amp;nbsp;(.*?)&lt;/font&gt;&#39;
-    List_3 = re.findall(rule_3, html)
-    printList(List_1, List_2, List_3)
-
-if __name__ == &#39;__main__&#39;:
-    print(&#39;请输入需要爬取的通知页数：&#39;)
-    pageNumber = input()
-    url = &quot;url&quot; + pageNumber + &quot;.html&quot;
-    download(url)
-</code></pre>
-<h1 id="Bilibili-Favorites-Download"><a href="#Bilibili-Favorites-Download" class="headerlink" title="Bilibili-Favorites-Download"></a>Bilibili-Favorites-Download</h1><p>用于下载B站个人收藏夹信息</p>
-<p><a href="https://github.com/ShioKiri/Bilibili-Favorites-Download" target="_blank" rel="noopener">https://github.com/ShioKiri/Bilibili-Favorites-Download</a></p>
-<ul>
-<li>因为调用一个外部网站API查询了失效视频且没有处理失败情况，目前因为API有一定问题，不能稳定运行，可以自行删去处理失效视频的代码使用</li>
-<li>没有使用数据库和图形界面，直接保存为TXT或者CSV文件</li>
-</ul>
-<h2 id="生成TXT文件"><a href="#生成TXT文件" class="headerlink" title="生成TXT文件"></a>生成TXT文件</h2><p>按照一定格式保存为TXT，推荐使用编辑器打开TXT避免速度过慢</p>
-<pre><code class="lang-python">from urllib.request import urlopen
-import json
-import re
-import time
-import sys
-import logging
-# -*- coding: UTF-8 -*-
-
-bilibili_uid = 0
-aFavVideoCnt = 0
-totVideoCnt = 0
-totVideoNum = 0
-
-def initUid():
-    global bilibili_uid
-    bilibili_uid = int(input())
-
-def getJsonUrl(url):
-    Data = urlopen(url).read().decode(&#39;utf-8&#39;)
-    jsonData = json.loads(Data)
-    return jsonData
-
-def getFavoriteList(uid):
-    global totVideoNum
-    favoriteListUrl = &#39;https://api.bilibili.com/medialist/gateway/base/created?pn=1&amp;ps=100&amp;up_mid={uid}&amp;is_space=0&amp;jsonp=jsonp&#39;.format(uid=uid)
-    favoriteListData = getJsonUrl(favoriteListUrl)
-    listInfo = favoriteListData[&#39;data&#39;][&#39;list&#39;]
-    favNum = len(listInfo)
-    for i in range(0, favNum):
-        totVideoNum += listInfo[i][&#39;media_count&#39;]
-    for i in range(0, favNum):
-        print(&#39;收藏夹编号:#%d 名称:%s 视频数量:%d\n&#39; % (i+1, listInfo[i][&#39;title&#39;], listInfo[i][&#39;media_count&#39;]))
-        getFavListVideo(uid, listInfo[i][&#39;fid&#39;])
-
-def getFavListVideo(uid, fid):
-    global aFavVideoCnt, totVideoCnt, totVideoNum
-    aFavVideoCnt = 0
-    favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid,fid=fid,page=1)
-    favPageDate = getJsonUrl(favPageUrl)
-    printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;])
-    pageCount = favPageDate[&#39;data&#39;][&#39;pagecount&#39;]
-    for i in range(2, pageCount+1):
-        favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid,fid=fid,page=i)
-        favPageDate = getJsonUrl(favPageUrl)
-        printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;])
-
-def printInfo(Info):
-    print(&#39;投稿时间:&#39; + time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;pubdate&#39;])))
-    print(&#39;描述:%s&#39; % (Info[&#39;desc&#39;]))
-    print(&#39;分区:%s&#39; % (Info[&#39;tname&#39;]))
-    print(&#39;标签:%s&#39; % (Info[&#39;dynamic&#39;]))
-    print(&#39;up主用户名:%s  up主uid:%s&#39; % (Info[&#39;owner&#39;][&#39;name&#39;], Info[&#39;owner&#39;][&#39;mid&#39;]))
-    print(&#39;播放:%s  弹幕:%s  回复:%s  收藏:%s  硬币:%s  分享:%s  喜欢:%s&#39; % (Info[&#39;stat&#39;][&#39;view&#39;], Info[&#39;stat&#39;][&#39;danmaku&#39;], Info[&#39;stat&#39;][&#39;reply&#39;], Info[&#39;stat&#39;][&#39;favorite&#39;], Info[&#39;stat&#39;][&#39;coin&#39;], Info[&#39;stat&#39;][&#39;share&#39;], Info[&#39;stat&#39;][&#39;like&#39;],))
-    print(&#39;收藏时间:&#39; + time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;fav_at&#39;])))
-    print()
-
-def printVideoInfo(aPageInfo):
-    global aFavVideoCnt, totVideoCnt, totVideoNum
-    for i in range(0, len(aPageInfo)):
-        aFavVideoCnt += 1
-        totVideoCnt += 1
-        if totVideoCnt % 10 == 0 or totVideoCnt == totVideoNum: logging.info(&#39;已经完成了{num1}/{num2}个视频...&#39;.format(num1 = totVideoCnt,num2 = totVideoNum))
-        Info = aPageInfo[i]
-        video_id = Info[&#39;aid&#39;]
-        if Info[&#39;title&#39;] == &#39;已失效视频&#39;:
-            getInvalidVideoInfo(video_id, Info)
-        else:
-            print(&#39;视频编号:#%d  AV号:%d  视频标题:%s&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], Info[&#39;title&#39;]))
-            print(&#39;封面图片:%s&#39; % (Info[&#39;pic&#39;]))
-            printInfo(Info)
-
-biliplusApiCnt = 0
-runTime = 0
-
-def getInvalidVideoInfo(video_id, Info):
-    global aFavVideoCnt, biliplusApiCnt, runTime
-    biliplusApiCnt += 1
-    while biliplusApiCnt / ((time.time() - runTime) / 60.0) &gt;= 5: time.sleep(1)
-    url = &#39;https://www.biliplus.com/api/view?id={vid}&#39;.format(vid = video_id)
-    InvVideoInfo = getJsonUrl(url)
-    if &#39;code&#39; in InvVideoInfo:
-        print(&#39;视频编号:#%d  [已失效][BiliplusApi数据缺失]  AV号:%d  视频标题:已失效视频&#39; % (aFavVideoCnt, video_id))
-        print(&#39;封面图片:%s&#39; % (Info[&#39;pic&#39;]))
-        printInfo(Info)
-    else:
-        print(&#39;视频编号:#%d  [已失效][BiliplusApi获得标题与封面图片]  AV号:%d  视频标题:%s&#39; % (aFavVideoCnt, video_id, InvVideoInfo[&#39;title&#39;]))
-        print(&#39;封面图片:%s&#39; % (InvVideoInfo[&#39;pic&#39;]))
-        printInfo(Info)
-
-def start(): # for cmd
-    global totVideoNum, runTime
-    logging.basicConfig(level=logging.DEBUG)
-    if sys.getdefaultencoding() == &#39;ascii&#39;:
-        sys.stdout = open(&quot;FavoriteVideoList.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
-    else:
-        sys.stdout = open(&quot;FavoriteVideoList.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
-    initUid()
-    runTime = time.time()
-    getFavoriteList(bilibili_uid)
-    print(&#39;你的收藏夹共有%d个视频&#39; % (totVideoNum))
-    logging.info(&#39;已完成！&#39;)
-
-# def windowMain(Uid, filePath): # for window ui
-
-if __name__ == &#39;__main__&#39;: # cmd
-    start()
-</code></pre>
-<h2 id="生成CSV文件"><a href="#生成CSV文件" class="headerlink" title="生成CSV文件"></a>生成CSV文件</h2><p>生成可以用<code>Excel</code>打开的逗号分隔值文件，因为<code>Unicode(UTF-8)</code>文件头没有<code>BOM编码</code>会导致编码错误（后期会处理），可以使用<code>Notepad++</code>修改<code>Unicode(UTF-8)</code>为<code>ANSI</code>，或者修改为<code>带BOM编码格式的Unicode(UTF-8)文件</code>。</p>
-<pre><code class="lang-python">from urllib.request import urlopen
-import json
-import re
-import time
-import sys
-import logging
-# -*- coding: UTF-8 -*-
-
-bilibili_uid = 0
-aFavVideoCnt = 0
-totVideoCnt = 0
-totVideoNum = 0
-
-def initUid():
-    global bilibili_uid
-    bilibili_uid = int(input())
-
-def getJsonUrl(url):
-    Data = urlopen(url).read().decode(&#39;utf-8&#39;)
-    jsonData = json.loads(Data)
-    return jsonData
-
-def getFavoriteList(uid):
-    global totVideoNum
-    print(&#39;收藏夹编号,收藏夹名称,收藏夹视频数量,视频编号,AV号,视频状态,视频标题,封面图片,投稿时间,描述,分区,标签,up主用户名,up主uid,播放,弹幕,回复,收藏,硬币,分享,喜欢,收藏时间,&#39;)
-    favoriteListUrl = &#39;https://api.bilibili.com/medialist/gateway/base/created?pn=1&amp;ps=100&amp;up_mid={uid}&amp;is_space=0&amp;jsonp=jsonp&#39;.format(uid=uid)
-    favoriteListData = getJsonUrl(favoriteListUrl)
-    listInfo = favoriteListData[&#39;data&#39;][&#39;list&#39;]
-    favNum = len(listInfo)
-    for i in range(0, favNum):
-        totVideoNum += listInfo[i][&#39;media_count&#39;]
-    for i in range(0, favNum):
-        favInformation = &#39;#{x1},{x2},{x3}&#39;.format(x1=i+1, x2=listInfo[i][&#39;title&#39;], x3=listInfo[i][&#39;media_count&#39;])
-        getFavListVideo(uid, listInfo[i][&#39;fid&#39;], favInformation)
-
-def printInfo(Info):
-    print(time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;pubdate&#39;])), end=&#39;,&#39;)
-    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;desc&#39;]), end=&#39;,&#39;)
-    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;tname&#39;]), end=&#39;,&#39;)
-    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;dynamic&#39;]), end=&#39;,&#39;)
-    print(&#39;&quot;%s&quot;,&quot;%s&quot;&#39; % (Info[&#39;owner&#39;][&#39;name&#39;], Info[&#39;owner&#39;][&#39;mid&#39;]), end=&#39;,&#39;)
-    print(&#39;%s,%s,%s,%s,%s,%s,%s&#39; % (Info[&#39;stat&#39;][&#39;view&#39;], Info[&#39;stat&#39;][&#39;danmaku&#39;], Info[&#39;stat&#39;][&#39;reply&#39;], Info[&#39;stat&#39;][&#39;favorite&#39;], Info[&#39;stat&#39;][&#39;coin&#39;], Info[&#39;stat&#39;][&#39;share&#39;], Info[&#39;stat&#39;][&#39;like&#39;],), end=&#39;,&#39;)
-    print(time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;fav_at&#39;])), end=&#39;,&#39;)
-    print()
-
-def getFavListVideo(uid, fid, favInfo):
-    global aFavVideoCnt, totVideoCnt, totVideoNum
-    aFavVideoCnt = 0
-    favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid, fid=fid, page=1)
-    favPageDate = getJsonUrl(favPageUrl)
-    printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;], favInfo)
-    pageCount = favPageDate[&#39;data&#39;][&#39;pagecount&#39;]
-    for i in range(2, pageCount+1):
-        favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid, fid=fid, page=i)
-        favPageDate = getJsonUrl(favPageUrl)
-        printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;], favInfo)
-
-def printVideoInfo(aPageInfo, favInfo):
-    global aFavVideoCnt, totVideoCnt, totVideoNum
-    for i in range(0, len(aPageInfo)):
-        print(favInfo, end=&#39;,&#39;)
-        aFavVideoCnt += 1
-        totVideoCnt += 1
-        if totVideoCnt % 10 == 0 or totVideoCnt == totVideoNum: logging.info(&#39;已经完成了{num1}/{num2}个视频...&#39;.format(num1=totVideoCnt, num2=totVideoNum))
-        Info = aPageInfo[i]
-        video_id = Info[&#39;aid&#39;]
-        if Info[&#39;title&#39;] == &#39;已失效视频&#39;:
-            getInvalidVideoInfo(video_id, Info)
-        else:
-            print(&#39;#%d,%d,[有效],&quot;%s&quot;,&quot;%s&quot;&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], Info[&#39;title&#39;], Info[&#39;pic&#39;]), end=&#39;,&#39;)
-            printInfo(Info)
-
-biliplusApiCnt = 0
-runTime = 0
-
-def getInvalidVideoInfo(video_id, Info):
-    global aFavVideoCnt, biliplusApiCnt, runTime
-    biliplusApiCnt += 1
-    while biliplusApiCnt / ((time.time() - runTime) / 60.0) &gt;= 5: time.sleep(1)
-    url = &#39;https://www.biliplus.com/api/view?id={vid}&#39;.format(vid = video_id)
-    InvVideoInfo = getJsonUrl(url)
-    if &#39;code&#39; in InvVideoInfo:
-        print(&#39;#%d,%d,[失效][BiliplusApi数据缺失],已失效视频,(·w·)&#39; % (aFavVideoCnt, Info[&#39;aid&#39;]), end=&#39;,&#39;)
-        printInfo(Info)
-    else:
-        print(&#39;#%d,%d,有效,&quot;%s&quot;,&quot;%s&quot;&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], InvVideoInfo[&#39;title&#39;], InvVideoInfo[&#39;pic&#39;]), end=&#39;,&#39;)
-        printInfo(Info)
-
-def start(): # for cmd
-    global totVideoNum, runTime
-    logging.basicConfig(level=logging.DEBUG)
-    if sys.getdefaultencoding() == &#39;ascii&#39;:
-        sys.stdout = open(&quot;FavoriteVideoList.csv&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
-    else:
-        sys.stdout = open(&quot;FavoriteVideoList.csv&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
-    initUid()
-    runTime = time.time()
-    getFavoriteList(bilibili_uid)
-    print(&#39;你的收藏夹共有%d个视频&#39; % (totVideoNum))
-    logging.info(&#39;已完成！&#39;)
-
-# def windowMain(Uid, filePath): # for window ui
-
-if __name__ == &#39;__main__&#39;: # cmd
-    start()
-</code></pre>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis数据库学习笔记</title>
-    <url>/2022/redis/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2023.03.05</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h1><h2 id="为什么需要Redis"><a href="#为什么需要Redis" class="headerlink" title="为什么需要Redis"></a>为什么需要Redis</h2><ul>
-<li>数据从单表，演进除了分库分表</li>
-<li>MySQL从单机演进出了集群<blockquote>
-<p>数据量增长</p>
-<p>读写数据压力的不断增加</p>
-</blockquote>
-</li>
-<li>数据分冷热<blockquote>
-<p>热数据：经常被访问到的数据</p>
-</blockquote>
-</li>
-<li>将热数据存储到内存中</li>
-</ul>
-<h2 id="Redis基本工作原理"><a href="#Redis基本工作原理" class="headerlink" title="Redis基本工作原理"></a>Redis基本工作原理</h2><ul>
-<li>数据从内存中读写</li>
-<li>数据保存到硬盘上防止重启数据丢失<blockquote>
-<p>增量数据保存到AOF文件</p>
-<p>全量数据RBD文件</p>
-</blockquote>
-</li>
-<li>单线程处理所有操作命令</li>
-</ul>
-<h1 id="Redis应用案例"><a href="#Redis应用案例" class="headerlink" title="Redis应用案例"></a>Redis应用案例</h1><h2 id="连续签到"><a href="#连续签到" class="headerlink" title="连续签到"></a>连续签到</h2><p>String数据结构</p>
-<ul>
-<li>可以存储字符串、数字、二进制数据</li>
-<li>通常和expire配合使用</li>
-<li>场景：存储计数、Session</li>
-</ul>
-<h2 id="消息通知"><a href="#消息通知" class="headerlink" title="消息通知"></a>消息通知</h2><p>用List作为消息队列</p>
-<ul>
-<li>QuickList由一个双向链表和listpack实现</li>
-</ul>
-<h2 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h2><p>一个用户有多项计数需求，可通过Hash结构存储</p>
-<ul>
-<li>Hash数据结构dict</li>
-<li>rehash</li>
-<li>渐进式rehash</li>
-</ul>
-<h2 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h2><p>zset数据结构 zskiplist</p>
-<h2 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h2><h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><p>可以使用Redis的setnx实现</p>
-<ul>
-<li>Redis是单线程执行命令</li>
-<li>setnx只有未设置过才能执行成功</li>
-</ul>
-<h1 id="Redis使用注意事项"><a href="#Redis使用注意事项" class="headerlink" title="Redis使用注意事项"></a>Redis使用注意事项</h1><h2 id="大Key、热Key"><a href="#大Key、热Key" class="headerlink" title="大Key、热Key"></a>大Key、热Key</h2><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>数据类型</th>
-<th>大Key标准</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String类型</td>
-<td>value的字节数大于10KB即为大Key</td>
-</tr>
-<tr>
-<td>Hash/Set/Zset/List等复杂数据结构类型</td>
-<td>元素个数大于5000个或总value字节数大于10MB即为大Key</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>大Key的危害</p>
-<ul>
-<li>读取成本高</li>
-<li>容易导致慢查询（过期、删除）</li>
-<li>主从复制异常、服务阻塞无法正常响应请求</li>
-</ul>
-<p>业务侧使用大Key的表现</p>
-<ul>
-<li>请求Redis超时报错</li>
-</ul>
-<h2 id="慢查询场景"><a href="#慢查询场景" class="headerlink" title="慢查询场景"></a>慢查询场景</h2><p>容易导致Redis慢查询的操作</p>
-<ol>
-<li>批量操作一次性传入过多的key/value，如mset/hmset/sadd/zadd等O(n)操作，建议单批次不要超过100，超过100之后性能下降明显</li>
-<li>zset大部分命令都是O(log(n))，当大小超过5k以上时，简单的zadd/zrem也可能导致慢查询</li>
-<li>操作的单个value过大，超过10KB。也即，避免使用大Key</li>
-<li>对大Key的delete/expire操作也可能导致慢查询，Redis4.0之前不支持异步删除unlink，大Key删除会阻塞Redis</li>
-</ol>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -5988,6 +5532,462 @@ if __name__ == &#39;__main__&#39;: # cmd
       </tags>
   </entry>
   <entry>
+    <title>Python网络爬虫学习</title>
+    <url>/2022/python_web_crawler/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2022.2.13</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="按模块学习"><a href="#按模块学习" class="headerlink" title="按模块学习"></a>按模块学习</h1><h2 id="urllib库"><a href="#urllib库" class="headerlink" title="urllib库"></a>urllib库</h2><h2 id="json库"><a href="#json库" class="headerlink" title="json库"></a>json库</h2><h1 id="按功能学习"><a href="#按功能学习" class="headerlink" title="按功能学习"></a>按功能学习</h1><h2 id="下载HTML源代码"><a href="#下载HTML源代码" class="headerlink" title="下载HTML源代码"></a>下载HTML源代码</h2><pre><code class="lang-python">from urllib.request import urlopen
+
+import sys
+
+html = urlopen(
+    &quot;url&quot;
+).read().decode(&#39;utf-8&#39;)
+
+if sys.getdefaultencoding() == &#39;ascii&#39;:
+    sys.stdout = open(&quot;2.输出html.html&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
+else:
+    sys.stdout = open(&quot;2.输出html.html&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
+
+print(html)
+</code></pre>
+<h2 id="下载网页图片"><a href="#下载网页图片" class="headerlink" title="下载网页图片"></a>下载网页图片</h2><pre><code class="lang-python">from urllib.request import urlopen
+import urllib.parse
+import sys
+import re
+import os
+
+def getHtml(url):
+    html = urlopen(url).read().decode(&#39;utf-8&#39;)
+    return html
+
+def printImg(imgList, url):
+    for i in imgList:
+        imgName = i.split(&quot;/&quot;)[-1]
+        imgPicture = urlopen(url + i)
+        File = open(&#39;\\image\\&#39; + imgName, &#39;wb&#39;)
+        File.write(imgPicture.read())
+        File.close()
+
+def downloadImg(url):
+    html = getHtml(url)
+    rule_1 = r&#39;&lt;img src=&quot;([^&quot;]+\.png)&quot;&#39;
+    rule_2 = r&#39;&lt;img src=&quot;([^&quot;]+\.jpg)&quot;&#39;
+    imgList_1 = re.findall(rule_1, html)
+    printImg(imgList_1, url)
+    imgList_2 = re.findall(rule_2, html)
+    printImg(imgList_2, url)
+
+if __name__ == &#39;__main__&#39;:
+    url = &quot;url&quot;
+    downloadImg(url)
+</code></pre>
+<h2 id="下载通知"><a href="#下载通知" class="headerlink" title="下载通知"></a>下载通知</h2><pre><code class="lang-python">from urllib.request import urlopen
+
+import sys
+import re
+
+def getHtml(url):
+    html = urlopen(url).read().decode(&#39;utf-8&#39;)
+    return html
+
+def printList(list_1, list_2, list_3):
+    if sys.getdefaultencoding() == &#39;ascii&#39;:
+        sys.stdout = open(&quot;4.爬取通知.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
+    else:
+        sys.stdout = open(&quot;4.爬取通知.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
+    for i in range(0, len(list_1)):
+        print(&#39;#%d&#39; % (i+1))
+        print(&#39;标题：&#39; + list_2[i])
+        print(&#39;日期：&#39; + list_3[i])
+        print(&#39;网址：&#39; + &#39;url&#39; + list_1[i])
+        print(&#39;&#39;)
+
+def download(url):
+    html = getHtml(url)
+    rule_1 = r&#39;&lt;a target=&quot;_blank&quot; href=&quot;([^&quot;]+\.htm)&quot;&gt;&#39;
+    List_1 = re.findall(rule_1, html)
+    rule_2 = r&#39;&lt;a target=&quot;_blank&quot; href=.*?&gt;(.*?)&lt;/a&gt;&#39;
+    List_2 = re.findall(rule_2, html)
+    rule_3 = r&#39;&lt;font color=&quot;#3a6399&quot;&gt;&amp;nbsp;&amp;nbsp;(.*?)&lt;/font&gt;&#39;
+    List_3 = re.findall(rule_3, html)
+    printList(List_1, List_2, List_3)
+
+if __name__ == &#39;__main__&#39;:
+    url = &quot;url&quot;
+    download(url)
+</code></pre>
+<h2 id="下载任意页数通知"><a href="#下载任意页数通知" class="headerlink" title="下载任意页数通知"></a>下载任意页数通知</h2><pre><code class="lang-python">from urllib.request import urlopen
+
+import sys
+import re
+
+def getHtml(url):
+    html = urlopen(url).read().decode(&#39;utf-8&#39;)
+    return html
+
+def printList(list_1, list_2, list_3):
+    if sys.getdefaultencoding() == &#39;ascii&#39;:
+        sys.stdout = open(&quot;5.爬取任意页数通知.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
+    else:
+        sys.stdout = open(&quot;5.爬取任意页数通知.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
+    print(&#39;通知页数：第&#39; + pageNumber + &#39;页&#39;)
+    print(&#39;&#39;)
+    for i in range(0, len(list_1)):
+        print(&#39;#%d&#39; % (i+1))
+        print(&#39;标题：&#39; + list_2[i])
+        print(&#39;日期：&#39; + list_3[i])
+        print(&#39;网址：&#39; + &#39;url&#39; + list_1[i])
+        print(&#39;&#39;)
+
+def download(url):
+    html = getHtml(url)
+    rule_1 = r&#39;&lt;a target=&quot;_blank&quot; href=&quot;([^&quot;]+\.htm)&quot;&gt;&#39;
+    List_1 = re.findall(rule_1, html)
+    rule_2 = r&#39;&lt;a target=&quot;_blank&quot; href=.*?&gt;(.*?)&lt;/a&gt;&#39;
+    List_2 = re.findall(rule_2, html)
+    rule_3 = r&#39;&lt;font color=&quot;#3a6399&quot;&gt;&amp;nbsp;&amp;nbsp;(.*?)&lt;/font&gt;&#39;
+    List_3 = re.findall(rule_3, html)
+    printList(List_1, List_2, List_3)
+
+if __name__ == &#39;__main__&#39;:
+    print(&#39;请输入需要爬取的通知页数：&#39;)
+    pageNumber = input()
+    url = &quot;url&quot; + pageNumber + &quot;.html&quot;
+    download(url)
+</code></pre>
+<h1 id="Bilibili-Favorites-Download"><a href="#Bilibili-Favorites-Download" class="headerlink" title="Bilibili-Favorites-Download"></a>Bilibili-Favorites-Download</h1><p>用于下载B站个人收藏夹信息</p>
+<p><a href="https://github.com/ShioKiri/Bilibili-Favorites-Download" target="_blank" rel="noopener">https://github.com/ShioKiri/Bilibili-Favorites-Download</a></p>
+<ul>
+<li>因为调用一个外部网站API查询了失效视频且没有处理失败情况，目前因为API有一定问题，不能稳定运行，可以自行删去处理失效视频的代码使用</li>
+<li>没有使用数据库和图形界面，直接保存为TXT或者CSV文件</li>
+</ul>
+<h2 id="生成TXT文件"><a href="#生成TXT文件" class="headerlink" title="生成TXT文件"></a>生成TXT文件</h2><p>按照一定格式保存为TXT，推荐使用编辑器打开TXT避免速度过慢</p>
+<pre><code class="lang-python">from urllib.request import urlopen
+import json
+import re
+import time
+import sys
+import logging
+# -*- coding: UTF-8 -*-
+
+bilibili_uid = 0
+aFavVideoCnt = 0
+totVideoCnt = 0
+totVideoNum = 0
+
+def initUid():
+    global bilibili_uid
+    bilibili_uid = int(input())
+
+def getJsonUrl(url):
+    Data = urlopen(url).read().decode(&#39;utf-8&#39;)
+    jsonData = json.loads(Data)
+    return jsonData
+
+def getFavoriteList(uid):
+    global totVideoNum
+    favoriteListUrl = &#39;https://api.bilibili.com/medialist/gateway/base/created?pn=1&amp;ps=100&amp;up_mid={uid}&amp;is_space=0&amp;jsonp=jsonp&#39;.format(uid=uid)
+    favoriteListData = getJsonUrl(favoriteListUrl)
+    listInfo = favoriteListData[&#39;data&#39;][&#39;list&#39;]
+    favNum = len(listInfo)
+    for i in range(0, favNum):
+        totVideoNum += listInfo[i][&#39;media_count&#39;]
+    for i in range(0, favNum):
+        print(&#39;收藏夹编号:#%d 名称:%s 视频数量:%d\n&#39; % (i+1, listInfo[i][&#39;title&#39;], listInfo[i][&#39;media_count&#39;]))
+        getFavListVideo(uid, listInfo[i][&#39;fid&#39;])
+
+def getFavListVideo(uid, fid):
+    global aFavVideoCnt, totVideoCnt, totVideoNum
+    aFavVideoCnt = 0
+    favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid,fid=fid,page=1)
+    favPageDate = getJsonUrl(favPageUrl)
+    printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;])
+    pageCount = favPageDate[&#39;data&#39;][&#39;pagecount&#39;]
+    for i in range(2, pageCount+1):
+        favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid,fid=fid,page=i)
+        favPageDate = getJsonUrl(favPageUrl)
+        printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;])
+
+def printInfo(Info):
+    print(&#39;投稿时间:&#39; + time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;pubdate&#39;])))
+    print(&#39;描述:%s&#39; % (Info[&#39;desc&#39;]))
+    print(&#39;分区:%s&#39; % (Info[&#39;tname&#39;]))
+    print(&#39;标签:%s&#39; % (Info[&#39;dynamic&#39;]))
+    print(&#39;up主用户名:%s  up主uid:%s&#39; % (Info[&#39;owner&#39;][&#39;name&#39;], Info[&#39;owner&#39;][&#39;mid&#39;]))
+    print(&#39;播放:%s  弹幕:%s  回复:%s  收藏:%s  硬币:%s  分享:%s  喜欢:%s&#39; % (Info[&#39;stat&#39;][&#39;view&#39;], Info[&#39;stat&#39;][&#39;danmaku&#39;], Info[&#39;stat&#39;][&#39;reply&#39;], Info[&#39;stat&#39;][&#39;favorite&#39;], Info[&#39;stat&#39;][&#39;coin&#39;], Info[&#39;stat&#39;][&#39;share&#39;], Info[&#39;stat&#39;][&#39;like&#39;],))
+    print(&#39;收藏时间:&#39; + time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;fav_at&#39;])))
+    print()
+
+def printVideoInfo(aPageInfo):
+    global aFavVideoCnt, totVideoCnt, totVideoNum
+    for i in range(0, len(aPageInfo)):
+        aFavVideoCnt += 1
+        totVideoCnt += 1
+        if totVideoCnt % 10 == 0 or totVideoCnt == totVideoNum: logging.info(&#39;已经完成了{num1}/{num2}个视频...&#39;.format(num1 = totVideoCnt,num2 = totVideoNum))
+        Info = aPageInfo[i]
+        video_id = Info[&#39;aid&#39;]
+        if Info[&#39;title&#39;] == &#39;已失效视频&#39;:
+            getInvalidVideoInfo(video_id, Info)
+        else:
+            print(&#39;视频编号:#%d  AV号:%d  视频标题:%s&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], Info[&#39;title&#39;]))
+            print(&#39;封面图片:%s&#39; % (Info[&#39;pic&#39;]))
+            printInfo(Info)
+
+biliplusApiCnt = 0
+runTime = 0
+
+def getInvalidVideoInfo(video_id, Info):
+    global aFavVideoCnt, biliplusApiCnt, runTime
+    biliplusApiCnt += 1
+    while biliplusApiCnt / ((time.time() - runTime) / 60.0) &gt;= 5: time.sleep(1)
+    url = &#39;https://www.biliplus.com/api/view?id={vid}&#39;.format(vid = video_id)
+    InvVideoInfo = getJsonUrl(url)
+    if &#39;code&#39; in InvVideoInfo:
+        print(&#39;视频编号:#%d  [已失效][BiliplusApi数据缺失]  AV号:%d  视频标题:已失效视频&#39; % (aFavVideoCnt, video_id))
+        print(&#39;封面图片:%s&#39; % (Info[&#39;pic&#39;]))
+        printInfo(Info)
+    else:
+        print(&#39;视频编号:#%d  [已失效][BiliplusApi获得标题与封面图片]  AV号:%d  视频标题:%s&#39; % (aFavVideoCnt, video_id, InvVideoInfo[&#39;title&#39;]))
+        print(&#39;封面图片:%s&#39; % (InvVideoInfo[&#39;pic&#39;]))
+        printInfo(Info)
+
+def start(): # for cmd
+    global totVideoNum, runTime
+    logging.basicConfig(level=logging.DEBUG)
+    if sys.getdefaultencoding() == &#39;ascii&#39;:
+        sys.stdout = open(&quot;FavoriteVideoList.txt&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
+    else:
+        sys.stdout = open(&quot;FavoriteVideoList.txt&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
+    initUid()
+    runTime = time.time()
+    getFavoriteList(bilibili_uid)
+    print(&#39;你的收藏夹共有%d个视频&#39; % (totVideoNum))
+    logging.info(&#39;已完成！&#39;)
+
+# def windowMain(Uid, filePath): # for window ui
+
+if __name__ == &#39;__main__&#39;: # cmd
+    start()
+</code></pre>
+<h2 id="生成CSV文件"><a href="#生成CSV文件" class="headerlink" title="生成CSV文件"></a>生成CSV文件</h2><p>生成可以用<code>Excel</code>打开的逗号分隔值文件，因为<code>Unicode(UTF-8)</code>文件头没有<code>BOM编码</code>会导致编码错误（后期会处理），可以使用<code>Notepad++</code>修改<code>Unicode(UTF-8)</code>为<code>ANSI</code>，或者修改为<code>带BOM编码格式的Unicode(UTF-8)文件</code>。</p>
+<pre><code class="lang-python">from urllib.request import urlopen
+import json
+import re
+import time
+import sys
+import logging
+# -*- coding: UTF-8 -*-
+
+bilibili_uid = 0
+aFavVideoCnt = 0
+totVideoCnt = 0
+totVideoNum = 0
+
+def initUid():
+    global bilibili_uid
+    bilibili_uid = int(input())
+
+def getJsonUrl(url):
+    Data = urlopen(url).read().decode(&#39;utf-8&#39;)
+    jsonData = json.loads(Data)
+    return jsonData
+
+def getFavoriteList(uid):
+    global totVideoNum
+    print(&#39;收藏夹编号,收藏夹名称,收藏夹视频数量,视频编号,AV号,视频状态,视频标题,封面图片,投稿时间,描述,分区,标签,up主用户名,up主uid,播放,弹幕,回复,收藏,硬币,分享,喜欢,收藏时间,&#39;)
+    favoriteListUrl = &#39;https://api.bilibili.com/medialist/gateway/base/created?pn=1&amp;ps=100&amp;up_mid={uid}&amp;is_space=0&amp;jsonp=jsonp&#39;.format(uid=uid)
+    favoriteListData = getJsonUrl(favoriteListUrl)
+    listInfo = favoriteListData[&#39;data&#39;][&#39;list&#39;]
+    favNum = len(listInfo)
+    for i in range(0, favNum):
+        totVideoNum += listInfo[i][&#39;media_count&#39;]
+    for i in range(0, favNum):
+        favInformation = &#39;#{x1},{x2},{x3}&#39;.format(x1=i+1, x2=listInfo[i][&#39;title&#39;], x3=listInfo[i][&#39;media_count&#39;])
+        getFavListVideo(uid, listInfo[i][&#39;fid&#39;], favInformation)
+
+def printInfo(Info):
+    print(time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;pubdate&#39;])), end=&#39;,&#39;)
+    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;desc&#39;]), end=&#39;,&#39;)
+    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;tname&#39;]), end=&#39;,&#39;)
+    print(&#39;&quot;%s&quot;&#39; % (Info[&#39;dynamic&#39;]), end=&#39;,&#39;)
+    print(&#39;&quot;%s&quot;,&quot;%s&quot;&#39; % (Info[&#39;owner&#39;][&#39;name&#39;], Info[&#39;owner&#39;][&#39;mid&#39;]), end=&#39;,&#39;)
+    print(&#39;%s,%s,%s,%s,%s,%s,%s&#39; % (Info[&#39;stat&#39;][&#39;view&#39;], Info[&#39;stat&#39;][&#39;danmaku&#39;], Info[&#39;stat&#39;][&#39;reply&#39;], Info[&#39;stat&#39;][&#39;favorite&#39;], Info[&#39;stat&#39;][&#39;coin&#39;], Info[&#39;stat&#39;][&#39;share&#39;], Info[&#39;stat&#39;][&#39;like&#39;],), end=&#39;,&#39;)
+    print(time.strftime(&quot;%Y-%m-%d-%H:%M:%S&quot;, time.gmtime(Info[&#39;fav_at&#39;])), end=&#39;,&#39;)
+    print()
+
+def getFavListVideo(uid, fid, favInfo):
+    global aFavVideoCnt, totVideoCnt, totVideoNum
+    aFavVideoCnt = 0
+    favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid, fid=fid, page=1)
+    favPageDate = getJsonUrl(favPageUrl)
+    printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;], favInfo)
+    pageCount = favPageDate[&#39;data&#39;][&#39;pagecount&#39;]
+    for i in range(2, pageCount+1):
+        favPageUrl = &#39;https://api.bilibili.com/x/space/fav/arc?vmid={uid}&amp;ps=30&amp;fid={fid}&amp;tid=0&amp;keyword=&amp;pn={page}&amp;order=fav_time&amp;jsonp=jsonp&#39;.format(uid=uid, fid=fid, page=i)
+        favPageDate = getJsonUrl(favPageUrl)
+        printVideoInfo(favPageDate[&#39;data&#39;][&#39;archives&#39;], favInfo)
+
+def printVideoInfo(aPageInfo, favInfo):
+    global aFavVideoCnt, totVideoCnt, totVideoNum
+    for i in range(0, len(aPageInfo)):
+        print(favInfo, end=&#39;,&#39;)
+        aFavVideoCnt += 1
+        totVideoCnt += 1
+        if totVideoCnt % 10 == 0 or totVideoCnt == totVideoNum: logging.info(&#39;已经完成了{num1}/{num2}个视频...&#39;.format(num1=totVideoCnt, num2=totVideoNum))
+        Info = aPageInfo[i]
+        video_id = Info[&#39;aid&#39;]
+        if Info[&#39;title&#39;] == &#39;已失效视频&#39;:
+            getInvalidVideoInfo(video_id, Info)
+        else:
+            print(&#39;#%d,%d,[有效],&quot;%s&quot;,&quot;%s&quot;&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], Info[&#39;title&#39;], Info[&#39;pic&#39;]), end=&#39;,&#39;)
+            printInfo(Info)
+
+biliplusApiCnt = 0
+runTime = 0
+
+def getInvalidVideoInfo(video_id, Info):
+    global aFavVideoCnt, biliplusApiCnt, runTime
+    biliplusApiCnt += 1
+    while biliplusApiCnt / ((time.time() - runTime) / 60.0) &gt;= 5: time.sleep(1)
+    url = &#39;https://www.biliplus.com/api/view?id={vid}&#39;.format(vid = video_id)
+    InvVideoInfo = getJsonUrl(url)
+    if &#39;code&#39; in InvVideoInfo:
+        print(&#39;#%d,%d,[失效][BiliplusApi数据缺失],已失效视频,(·w·)&#39; % (aFavVideoCnt, Info[&#39;aid&#39;]), end=&#39;,&#39;)
+        printInfo(Info)
+    else:
+        print(&#39;#%d,%d,有效,&quot;%s&quot;,&quot;%s&quot;&#39; % (aFavVideoCnt, Info[&#39;aid&#39;], InvVideoInfo[&#39;title&#39;], InvVideoInfo[&#39;pic&#39;]), end=&#39;,&#39;)
+        printInfo(Info)
+
+def start(): # for cmd
+    global totVideoNum, runTime
+    logging.basicConfig(level=logging.DEBUG)
+    if sys.getdefaultencoding() == &#39;ascii&#39;:
+        sys.stdout = open(&quot;FavoriteVideoList.csv&quot;, &quot;w&quot;, encoding = &#39;gb2312&#39;)
+    else:
+        sys.stdout = open(&quot;FavoriteVideoList.csv&quot;, &quot;w&quot;, encoding = &#39;utf-8&#39;)
+    initUid()
+    runTime = time.time()
+    getFavoriteList(bilibili_uid)
+    print(&#39;你的收藏夹共有%d个视频&#39; % (totVideoNum))
+    logging.info(&#39;已完成！&#39;)
+
+# def windowMain(Uid, filePath): # for window ui
+
+if __name__ == &#39;__main__&#39;: # cmd
+    start()
+</code></pre>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis数据库学习笔记</title>
+    <url>/2022/redis/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2023.03.05</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="什么是Redis"><a href="#什么是Redis" class="headerlink" title="什么是Redis"></a>什么是Redis</h1><h2 id="为什么需要Redis"><a href="#为什么需要Redis" class="headerlink" title="为什么需要Redis"></a>为什么需要Redis</h2><ul>
+<li>数据从单表，演进除了分库分表</li>
+<li>MySQL从单机演进出了集群<blockquote>
+<p>数据量增长</p>
+<p>读写数据压力的不断增加</p>
+</blockquote>
+</li>
+<li>数据分冷热<blockquote>
+<p>热数据：经常被访问到的数据</p>
+</blockquote>
+</li>
+<li>将热数据存储到内存中</li>
+</ul>
+<h2 id="Redis基本工作原理"><a href="#Redis基本工作原理" class="headerlink" title="Redis基本工作原理"></a>Redis基本工作原理</h2><ul>
+<li>数据从内存中读写</li>
+<li>数据保存到硬盘上防止重启数据丢失<blockquote>
+<p>增量数据保存到AOF文件</p>
+<p>全量数据RBD文件</p>
+</blockquote>
+</li>
+<li>单线程处理所有操作命令</li>
+</ul>
+<h1 id="Redis应用案例"><a href="#Redis应用案例" class="headerlink" title="Redis应用案例"></a>Redis应用案例</h1><h2 id="连续签到"><a href="#连续签到" class="headerlink" title="连续签到"></a>连续签到</h2><p>String数据结构</p>
+<ul>
+<li>可以存储字符串、数字、二进制数据</li>
+<li>通常和expire配合使用</li>
+<li>场景：存储计数、Session</li>
+</ul>
+<h2 id="消息通知"><a href="#消息通知" class="headerlink" title="消息通知"></a>消息通知</h2><p>用List作为消息队列</p>
+<ul>
+<li>QuickList由一个双向链表和listpack实现</li>
+</ul>
+<h2 id="计数"><a href="#计数" class="headerlink" title="计数"></a>计数</h2><p>一个用户有多项计数需求，可通过Hash结构存储</p>
+<ul>
+<li>Hash数据结构dict</li>
+<li>rehash</li>
+<li>渐进式rehash</li>
+</ul>
+<h2 id="排行榜"><a href="#排行榜" class="headerlink" title="排行榜"></a>排行榜</h2><p>zset数据结构 zskiplist</p>
+<h2 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h2><h2 id="分布式锁"><a href="#分布式锁" class="headerlink" title="分布式锁"></a>分布式锁</h2><p>可以使用Redis的setnx实现</p>
+<ul>
+<li>Redis是单线程执行命令</li>
+<li>setnx只有未设置过才能执行成功</li>
+</ul>
+<h1 id="Redis使用注意事项"><a href="#Redis使用注意事项" class="headerlink" title="Redis使用注意事项"></a>Redis使用注意事项</h1><h2 id="大Key、热Key"><a href="#大Key、热Key" class="headerlink" title="大Key、热Key"></a>大Key、热Key</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>大Key标准</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String类型</td>
+<td>value的字节数大于10KB即为大Key</td>
+</tr>
+<tr>
+<td>Hash/Set/Zset/List等复杂数据结构类型</td>
+<td>元素个数大于5000个或总value字节数大于10MB即为大Key</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>大Key的危害</p>
+<ul>
+<li>读取成本高</li>
+<li>容易导致慢查询（过期、删除）</li>
+<li>主从复制异常、服务阻塞无法正常响应请求</li>
+</ul>
+<p>业务侧使用大Key的表现</p>
+<ul>
+<li>请求Redis超时报错</li>
+</ul>
+<h2 id="慢查询场景"><a href="#慢查询场景" class="headerlink" title="慢查询场景"></a>慢查询场景</h2><p>容易导致Redis慢查询的操作</p>
+<ol>
+<li>批量操作一次性传入过多的key/value，如mset/hmset/sadd/zadd等O(n)操作，建议单批次不要超过100，超过100之后性能下降明显</li>
+<li>zset大部分命令都是O(log(n))，当大小超过5k以上时，简单的zadd/zrem也可能导致慢查询</li>
+<li>操作的单个value过大，超过10KB。也即，避免使用大Key</li>
+<li>对大Key的delete/expire操作也可能导致慢查询，Redis4.0之前不支持异步删除unlink，大Key删除会阻塞Redis</li>
+</ol>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《意识宇宙》</title>
     <url>/2019/science_fiction/</url>
     <content><![CDATA[<blockquote>
@@ -6526,36 +6526,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>「观测者轻语」杂谈</title>
-    <url>/2021/talk_1/</url>
-    <content><![CDATA[<p>1.关于生活意义</p>
-<p>2.关于电子游戏</p>
-<p>3.关于编程学习</p>
-<a id="more"></a>
-<h1 id="关于电子游戏"><a href="#关于电子游戏" class="headerlink" title="关于电子游戏"></a>关于电子游戏</h1><p>电子游戏作为一个近代的产物，具有极大的争议，不过具有成瘾性的游戏或许并不是一个有意义的游戏，我对此的理解为游戏作为一种事物的存在形式，一个合理且富有存在意义的电子游戏应该是至少具有一下三种性质中其中一种的通过电子计算机与计算机网络运行的交互程序。</p>
-<h2 id="艺术性"><a href="#艺术性" class="headerlink" title="艺术性"></a>艺术性</h2><p>图像、音乐、视频、文本可以作为一种游戏的子集。</p>
-<p>正如文本可以构造剧情，图像可以表现艺术，音乐可以显露和谐，视频可以记录实际，这四种艺术形式在合理的运用下可以表现出独特的效果，那么游戏则可以包容不同艺术独特的优点，例如视觉小说。</p>
-<h2 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h2><p>一定规则的游戏可以作为竞技的手段，这类游戏与电子计算机出现之前的棋牌类游戏有一定的相似之处，只不过规则与算法复杂化了，例如反恐精英，DOTA2。</p>
-<p>一定规则的游戏可以作为发挥个人创造能力的空间，满足非专业设计的创造满足感，例如模拟经营类游戏戴森球计划，沙盒游戏我的世界。</p>
-<h2 id="抽象性"><a href="#抽象性" class="headerlink" title="抽象性"></a>抽象性</h2><p>游戏也可以作为对现实世界的抽象，无论是3D建模还是物理引擎的设计都是基于现实世界的真实数学物理模型所做的简化操作，我们不可能通过模拟每一个原子的运动来建构一个世界，但可以通过对宏观现象的简化性描述来开始进行建构新的一个世界的起点。</p>
-<p>例如开放世界游戏GTA5，看门狗2</p>
-<blockquote>
-<p>Jason Gregory.游戏引擎架构[M]北京：电子工业出版社，2014.</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/talk_1_1.png" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/talk_1_2.png" alt></p>
-<h1 id="关于编程学习"><a href="#关于编程学习" class="headerlink" title="关于编程学习"></a>关于编程学习</h1><h2 id="信息资源的获取"><a href="#信息资源的获取" class="headerlink" title="信息资源的获取"></a>信息资源的获取</h2><p>有问题尽量使用谷歌，学会查找阅读文档，出现bug也可以尝试用stackoverflow搜索，很多时候使用英文搜素更可能找到有用的解决方案。</p>
-<h2 id="各种工具的用法"><a href="#各种工具的用法" class="headerlink" title="各种工具的用法"></a>各种工具的用法</h2><p>熟悉git和github的用法，可以先自己搭一个hexo博客试试，然后可以学习使用各种现代ide和编辑器，一开始学习可以使用ide（编辑器要配置不同语言的开发环境），但是一些依赖项的环境配置还是很难避免的。实际编程肯定也会使用更多的辅助工具，比如数据库的图形化显示。</p>
-<h2 id="学习顺序与学习内容"><a href="#学习顺序与学习内容" class="headerlink" title="学习顺序与学习内容"></a>学习顺序与学习内容</h2><p>我推荐先学习C++，这样可以建立对常用编程语言的快速学习能力，使用C++语言学习数据结构和算法，因为一来招聘会考算法，二来这方面会建立一些实际编程中一般性的思路。之后可以看CS的基础内容（操作系统，计算机组成，计算机网络，编译原理），学一些语言（Python、C#、Java）和开发框架（例如Spring Boot、Flutter），写一些实际项目（例如Windows桌面应用，Unity或者UE4游戏，网页前后端等），学习设计模式等软件开发的内容。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>杂谈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows软件快速指南</title>
     <url>/2019/software/</url>
     <content><![CDATA[<blockquote>
@@ -6634,6 +6604,36 @@ int main()
       </categories>
       <tags>
         <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「观测者轻语」杂谈</title>
+    <url>/2021/talk_1/</url>
+    <content><![CDATA[<p>1.关于生活意义</p>
+<p>2.关于电子游戏</p>
+<p>3.关于编程学习</p>
+<a id="more"></a>
+<h1 id="关于电子游戏"><a href="#关于电子游戏" class="headerlink" title="关于电子游戏"></a>关于电子游戏</h1><p>电子游戏作为一个近代的产物，具有极大的争议，不过具有成瘾性的游戏或许并不是一个有意义的游戏，我对此的理解为游戏作为一种事物的存在形式，一个合理且富有存在意义的电子游戏应该是至少具有一下三种性质中其中一种的通过电子计算机与计算机网络运行的交互程序。</p>
+<h2 id="艺术性"><a href="#艺术性" class="headerlink" title="艺术性"></a>艺术性</h2><p>图像、音乐、视频、文本可以作为一种游戏的子集。</p>
+<p>正如文本可以构造剧情，图像可以表现艺术，音乐可以显露和谐，视频可以记录实际，这四种艺术形式在合理的运用下可以表现出独特的效果，那么游戏则可以包容不同艺术独特的优点，例如视觉小说。</p>
+<h2 id="游戏性"><a href="#游戏性" class="headerlink" title="游戏性"></a>游戏性</h2><p>一定规则的游戏可以作为竞技的手段，这类游戏与电子计算机出现之前的棋牌类游戏有一定的相似之处，只不过规则与算法复杂化了，例如反恐精英，DOTA2。</p>
+<p>一定规则的游戏可以作为发挥个人创造能力的空间，满足非专业设计的创造满足感，例如模拟经营类游戏戴森球计划，沙盒游戏我的世界。</p>
+<h2 id="抽象性"><a href="#抽象性" class="headerlink" title="抽象性"></a>抽象性</h2><p>游戏也可以作为对现实世界的抽象，无论是3D建模还是物理引擎的设计都是基于现实世界的真实数学物理模型所做的简化操作，我们不可能通过模拟每一个原子的运动来建构一个世界，但可以通过对宏观现象的简化性描述来开始进行建构新的一个世界的起点。</p>
+<p>例如开放世界游戏GTA5，看门狗2</p>
+<blockquote>
+<p>Jason Gregory.游戏引擎架构[M]北京：电子工业出版社，2014.</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/talk_1_1.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/talk_1_2.png" alt></p>
+<h1 id="关于编程学习"><a href="#关于编程学习" class="headerlink" title="关于编程学习"></a>关于编程学习</h1><h2 id="信息资源的获取"><a href="#信息资源的获取" class="headerlink" title="信息资源的获取"></a>信息资源的获取</h2><p>有问题尽量使用谷歌，学会查找阅读文档，出现bug也可以尝试用stackoverflow搜索，很多时候使用英文搜素更可能找到有用的解决方案。</p>
+<h2 id="各种工具的用法"><a href="#各种工具的用法" class="headerlink" title="各种工具的用法"></a>各种工具的用法</h2><p>熟悉git和github的用法，可以先自己搭一个hexo博客试试，然后可以学习使用各种现代ide和编辑器，一开始学习可以使用ide（编辑器要配置不同语言的开发环境），但是一些依赖项的环境配置还是很难避免的。实际编程肯定也会使用更多的辅助工具，比如数据库的图形化显示。</p>
+<h2 id="学习顺序与学习内容"><a href="#学习顺序与学习内容" class="headerlink" title="学习顺序与学习内容"></a>学习顺序与学习内容</h2><p>我推荐先学习C++，这样可以建立对常用编程语言的快速学习能力，使用C++语言学习数据结构和算法，因为一来招聘会考算法，二来这方面会建立一些实际编程中一般性的思路。之后可以看CS的基础内容（操作系统，计算机组成，计算机网络，编译原理），学一些语言（Python、C#、Java）和开发框架（例如Spring Boot、Flutter），写一些实际项目（例如Windows桌面应用，Unity或者UE4游戏，网页前后端等），学习设计模式等软件开发的内容。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
       </tags>
   </entry>
   <entry>
@@ -6865,7 +6865,7 @@ int main()
     <title>构建第一个Vue 3项目</title>
     <url>/2023/vue/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.03.18</p>
+<p>更新于：A.D.2023.03.18</p>
 </blockquote>
 <a id="more"></a>
 <hr>
@@ -6997,19 +6997,22 @@ npm run serve
 ]]></content>
   </entry>
   <entry>
-    <title>gallery</title>
-    <url>/gallery/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<p>落影汐雾，学生 <del>曾经是OIer，用过的id是<code>ColorfulMist</code></del></p>
-<p>喜欢中文vocaloid、PC游戏、一点ACGN、电子产品和写代码</p>
+    <content><![CDATA[<p>落影汐雾（Shiokiri），想努力做一个有趣的人 <del>曾经是OIer，用过的id是<code>ColorfulMist</code></del></p>
+<p>喜欢电子产品、编程、PC/VR/Switch游戏、ACGN、中文VOCALOID、VRChat、Galgame</p>
+<p>日常使用Windows 10、Debian GNU/Linux、Android操作系统</p>
+<p>梦想是当互联网全栈工程师、游戏开发程序员/技术美术</p>
+<p>会用数位板摸鱼画点画，懂一点点3d建模，什么都想玩一点</p>
 <p>网站是高中时期摸鱼搭建的静态博客，使用 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>，主题是 <a href="https://github.com/viosey/hexo-theme-material" target="_blank" rel="noopener">Material</a></p>
 <hr>
 <p>交换友链在此回复名称+介绍+头像链接+主页链接即可\ (￣︶￣\ *))</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>gallery</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>links</title>
