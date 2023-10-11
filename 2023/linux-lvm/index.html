@@ -256,7 +256,7 @@
 
     
         <meta property="article:published_time" content="Thu Jul 06 2023 15:32:50 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jul 09 2023 22:40:36 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 11 2023 15:41:58 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -279,7 +279,7 @@
     "mainEntityOfPage": "https://x.lyxw.xyz/2023/linux-lvm/index.html",
     "headline": "Debian在LVM下ext4文件系统调整/和/home分区大小",
     "datePublished": "Thu Jul 06 2023 15:32:50 GMT+0800",
-    "dateModified": "Sun Jul 09 2023 22:40:36 GMT+0800",
+    "dateModified": "Wed Oct 11 2023 15:41:58 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "落影汐雾",
@@ -368,7 +368,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#过程"><span class="post-toc-number">2.</span> <span class="post-toc-text">过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用recovery-mode启动"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">使用recovery mode启动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看磁盘使用情况"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查看磁盘使用情况</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#卸载-home"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">卸载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缩减-home大小"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">缩减/home大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#挂载-home"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">挂载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看LVM卷组的元数据"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">查看LVM卷组的元数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩充-大小"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">扩充/大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检查结果"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">检查结果</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">3.</span> <span class="post-toc-text">注意事项</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">环境</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#过程"><span class="post-toc-number">2.</span> <span class="post-toc-text">过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用recovery-mode启动"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">使用recovery mode启动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看文件系统使用情况"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">查看文件系统使用情况</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看LVM元数据"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">查看LVM元数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看卷组"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">查看卷组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看逻辑卷"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">查看逻辑卷</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#卸载-home"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">卸载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#缩减-home大小"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">缩减/home大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#挂载-home"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">挂载/home</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩充-大小"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">扩充/大小</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#检查结果"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">检查结果</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#扩充交换空间大小"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">扩充交换空间大小</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">3.</span> <span class="post-toc-text">注意事项</span></a></li></ol>
     </ul>
     
 
@@ -561,7 +561,7 @@
               `&quot;&quot;&quot;            GPU: AMD ATI 04:00.0 Lucienne 
                               Memory: 1064MiB / 14868MiB
 </code></pre><h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id="使用recovery-mode启动"><a href="#使用recovery-mode启动" class="headerlink" title="使用recovery mode启动"></a>使用recovery mode启动</h2><p>在GRUB启动页面选择即可</p>
-<h2 id="查看磁盘使用情况"><a href="#查看磁盘使用情况" class="headerlink" title="查看磁盘使用情况"></a>查看磁盘使用情况</h2><pre><code># df -hT
+<h2 id="查看文件系统使用情况"><a href="#查看文件系统使用情况" class="headerlink" title="查看文件系统使用情况"></a>查看文件系统使用情况</h2><pre><code># df -hT
 </code></pre><p>示例（非操作过程中数据）：</p>
 <pre><code>文件系统                    类型      容量  已用  可用 已用% 挂载点
 udev                        devtmpfs  7.2G     0  7.2G    0% /dev
@@ -573,24 +573,7 @@ tmpfs                       tmpfs     5.0M  4.0K  5.0M    1% /run/lock
 /dev/nvme0n1p1              vfat      511M  5.8M  506M    2% /boot/efi
 /dev/mapper/debian--vg-home ext4      246G   39G  196G   17% /home
 tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
-</code></pre><h2 id="卸载-home"><a href="#卸载-home" class="headerlink" title="卸载/home"></a>卸载/home</h2><p>不能在线缩减，需要先卸载</p>
-<pre><code># umount /home 卸载挂载的lv
-# mount 查看挂载的lv是否卸载成功
-</code></pre><h2 id="缩减-home大小"><a href="#缩减-home大小" class="headerlink" title="缩减/home大小"></a>缩减/home大小</h2><blockquote>
-<p>不得更改顺序！！！必须先缩减逻辑卷的逻辑边界，再缩减物理边界</p>
-<p>确保缩减后的空间大小依然能存储原有的所有数据</p>
-</blockquote>
-<ol>
-<li>e2fsck 在缩减之前应该先强行检查文件，以确保文件系统处于一致性状态</li>
-<li>resize2fs 对lv逻辑卷的逻辑边界空间大小调整为缩减后的大小</li>
-<li>lvreduce 对lv逻辑卷的物理边界进行缩减</li>
-</ol>
-<pre><code># e2fsck -f /dev/mapper/debian--vg-home
-# resize2fs -p /dev/mapper/debian--vg-home 250G 调整逻辑卷的逻辑边界大小为250G
-# lvreduce -L 250G /dev/mapper/debian--vg-home 对逻辑卷的物理边界缩减为250G
-</code></pre><h2 id="挂载-home"><a href="#挂载-home" class="headerlink" title="挂载/home"></a>挂载/home</h2><p>挂载lv逻辑卷</p>
-<pre><code># mount /dev/mapper/debian--vg-home /home
-</code></pre><h2 id="查看LVM卷组的元数据"><a href="#查看LVM卷组的元数据" class="headerlink" title="查看LVM卷组的元数据"></a>查看LVM卷组的元数据</h2><pre><code># vgdisplay
+</code></pre><h2 id="查看LVM元数据"><a href="#查看LVM元数据" class="headerlink" title="查看LVM元数据"></a>查看LVM元数据</h2><h3 id="查看卷组"><a href="#查看卷组" class="headerlink" title="查看卷组"></a>查看卷组</h3><pre><code># vgdisplay
 </code></pre><p>示例（非操作过程中数据）：</p>
 <pre><code>  --- Volume group ---
   VG Name               debian-vg
@@ -612,8 +595,29 @@ tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
   Alloc PE / Size       121846 / 475.96 GiB
   Free  PE / Size       0 / 0   
   VG UUID               oU51kj-3uiu-4nPI-1OTp-K4NN-i4IG-gqsZrE
+</code></pre><h3 id="查看逻辑卷"><a href="#查看逻辑卷" class="headerlink" title="查看逻辑卷"></a>查看逻辑卷</h3><pre><code># lvdisplay
+</code></pre><h2 id="卸载-home"><a href="#卸载-home" class="headerlink" title="卸载/home"></a>卸载/home</h2><p>不能在线缩减，需要先卸载</p>
+<pre><code># umount /home 卸载挂载的lv
+# mount 查看挂载的lv是否卸载成功
+</code></pre><h2 id="缩减-home大小"><a href="#缩减-home大小" class="headerlink" title="缩减/home大小"></a>缩减/home大小</h2><blockquote>
+<p>不得更改顺序！！！必须先缩减逻辑卷的逻辑边界，再缩减物理边界</p>
+<p>确保缩减后的空间大小依然能存储原有的所有数据</p>
+</blockquote>
+<ol>
+<li>e2fsck 在缩减之前应该先强行检查文件，以确保文件系统处于一致性状态</li>
+<li>resize2fs 对lv逻辑卷的文件系统首先尽可能缩小</li>
+<li>lvreduce 对lv逻辑卷的物理边界缩减到需要的值</li>
+<li>resize2fs 扩展文件系统到物理边界大小</li>
+</ol>
+<p>缩减行为非常危险，缩减文件系统时要尽可能缩小，缩减逻辑卷物理边界时缩减到需要的值，然后再次调整文件系统（使用一段时间后，文件系统<code>df -hT</code>要比逻辑卷<code>fdisk -l</code> / <code>lvdisplay</code>小，硬盘元数据需要占用空间），这点所有的中文教程叙述都不正确，非常危险！</p>
+<pre><code># e2fsck -f /dev/mapper/debian--vg-home
+# resize2fs /dev/mapper/debian--vg-home 200GG 调整逻辑卷的文件系统大小为200G
+# lvreduce -L 250G /dev/mapper/debian--vg-home 对逻辑卷的物理边界缩减为250G
+# resize2fs -p /dev/mapper/debian--vg-home 扩展文件系统到物理边界大小
+</code></pre><h2 id="挂载-home"><a href="#挂载-home" class="headerlink" title="挂载/home"></a>挂载/home</h2><p>挂载lv逻辑卷</p>
+<pre><code># mount /dev/mapper/debian--vg-home /home
 </code></pre><h2 id="扩充-大小"><a href="#扩充-大小" class="headerlink" title="扩充/大小"></a>扩充/大小</h2><blockquote>
-<p>不得更改顺序！！！必须先扩展逻辑卷的物理边界，再扩展逻辑边界</p>
+<p>不得更改顺序！！！必须先扩展逻辑卷的物理边界，再调整文件系统</p>
 </blockquote>
 <ol>
 <li><p>lvextend 扩展逻辑卷的物理边界</p>
@@ -622,11 +626,11 @@ tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
 <li>lvextend -l +100%FREE /PATH/TO/LV_NAME  把所有空余容量进行分配</li>
 </ul>
 </li>
-<li><p>resize2fs 扩展逻辑卷的逻辑边界</p>
+<li><p>resize2fs 调整逻辑卷的文件系统</p>
 <ul>
-<li><p>resize2fs /PATH/TO/LV #    扩展逻辑边界到#，该值不能超过物理边界</p>
+<li><p>resize2fs /PATH/TO/LV #    调整文件系统到#，该值不能超过物理边界</p>
 </li>
-<li><p>resize2fs -p /PATH/TO/LV    -p表示扩展逻辑边界跟物理边界一样大</p>
+<li><p>resize2fs -p /PATH/TO/LV   -p 表示打印已完成的百分比进度条</p>
 </li>
 </ul>
 </li>
@@ -634,6 +638,12 @@ tmpfs                       tmpfs     1.5G  144K  1.5G    1% /run/user/1000
 <pre><code># lvextend -l +100%FREE /dev/mapper/debian--vg-root
 # resize2fs -p /dev/mapper/debian--vg-root
 </code></pre><h2 id="检查结果"><a href="#检查结果" class="headerlink" title="检查结果"></a>检查结果</h2><pre><code># df -hT
+</code></pre><h2 id="扩充交换空间大小"><a href="#扩充交换空间大小" class="headerlink" title="扩充交换空间大小"></a>扩充交换空间大小</h2><pre><code># free -m
+# swapoff /dev/VolGroup/lv_swap
+# lvextend -l +100%FREE /dev/mapper/debian--vg-swap_1
+# mkswap /dev/VolGroup/lv_swap
+# swapon /dev/VolGroup/lv_swap
+# free -m
 </code></pre><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
 <li><p>ext4才可以缩减，xfs不能缩减</p>
 </li>
