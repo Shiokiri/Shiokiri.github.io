@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>落影汐雾的x号虚空印刷站</title>
+  <title>落影汐雾的虚空印刷站</title>
   
   
-  <link href="https://x.lyxw.xyz/atom.xml" rel="self"/>
+  <link href="https://shiokiri.com/atom.xml" rel="self"/>
   
-  <link href="https://x.lyxw.xyz/"/>
+  <link href="https://shiokiri.com/"/>
   <updated>2022-06-28T09:44:26.530Z</updated>
-  <id>https://x.lyxw.xyz/</id>
+  <id>https://shiokiri.com/</id>
   
   <author>
     <name>落影汐雾</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>文章索引</title>
-    <link href="https://x.lyxw.xyz/2033/post-index/"/>
-    <id>https://x.lyxw.xyz/2033/post-index/</id>
+    <link href="https://shiokiri.com/2033/post-index/"/>
+    <id>https://shiokiri.com/2033/post-index/</id>
     <published>2033-07-12T15:59:59.000Z</published>
     <updated>2022-06-28T09:44:26.530Z</updated>
     
@@ -35,8 +35,8 @@
   
   <entry>
     <title>Debian在LVM下ext4文件系统调整/和/home分区大小</title>
-    <link href="https://x.lyxw.xyz/2023/linux-lvm/"/>
-    <id>https://x.lyxw.xyz/2023/linux-lvm/</id>
+    <link href="https://shiokiri.com/2023/linux-lvm/"/>
+    <id>https://shiokiri.com/2023/linux-lvm/</id>
     <published>2023-07-06T07:32:50.000Z</published>
     <updated>2023-10-11T07:54:31.694Z</updated>
     
@@ -47,19 +47,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Linux" scheme="https://x.lyxw.xyz/tags/Linux/"/>
+    <category term="Linux" scheme="https://shiokiri.com/tags/Linux/"/>
     
-    <category term="Debian" scheme="https://x.lyxw.xyz/tags/Debian/"/>
+    <category term="Debian" scheme="https://shiokiri.com/tags/Debian/"/>
     
   </entry>
   
   <entry>
     <title>构建第一个Vue 3项目</title>
-    <link href="https://x.lyxw.xyz/2023/vue/"/>
-    <id>https://x.lyxw.xyz/2023/vue/</id>
+    <link href="https://shiokiri.com/2023/vue/"/>
+    <id>https://shiokiri.com/2023/vue/</id>
     <published>2023-03-18T07:32:50.000Z</published>
     <updated>2023-07-09T14:40:40.451Z</updated>
     
@@ -70,19 +70,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="vue" scheme="https://x.lyxw.xyz/tags/vue/"/>
+    <category term="vue" scheme="https://shiokiri.com/tags/vue/"/>
     
-    <category term="前端" scheme="https://x.lyxw.xyz/tags/前端/"/>
+    <category term="前端" scheme="https://shiokiri.com/tags/前端/"/>
     
   </entry>
   
   <entry>
     <title>云服务器购买与Linux使用经验</title>
-    <link href="https://x.lyxw.xyz/2023/cloud_server/"/>
-    <id>https://x.lyxw.xyz/2023/cloud_server/</id>
+    <link href="https://shiokiri.com/2023/cloud_server/"/>
+    <id>https://shiokiri.com/2023/cloud_server/</id>
     <published>2023-03-17T07:32:50.000Z</published>
     <updated>2023-07-09T14:40:45.243Z</updated>
     
@@ -93,17 +93,17 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="服务器" scheme="https://x.lyxw.xyz/tags/服务器/"/>
+    <category term="服务器" scheme="https://shiokiri.com/tags/服务器/"/>
     
   </entry>
   
   <entry>
     <title>让我们开始记忆一些Linux命令</title>
-    <link href="https://x.lyxw.xyz/2023/linux/"/>
-    <id>https://x.lyxw.xyz/2023/linux/</id>
+    <link href="https://shiokiri.com/2023/linux/"/>
+    <id>https://shiokiri.com/2023/linux/</id>
     <published>2023-03-05T07:32:50.000Z</published>
     <updated>2023-07-09T14:42:26.023Z</updated>
     
@@ -114,17 +114,17 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Linux" scheme="https://x.lyxw.xyz/tags/Linux/"/>
+    <category term="Linux" scheme="https://shiokiri.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>3D游戏开发中美术/程序的软件流程</title>
-    <link href="https://x.lyxw.xyz/2022/3d-game-development/"/>
-    <id>https://x.lyxw.xyz/2022/3d-game-development/</id>
+    <link href="https://shiokiri.com/2022/3d-game-development/"/>
+    <id>https://shiokiri.com/2022/3d-game-development/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2023-03-04T19:01:59.397Z</updated>
     
@@ -135,19 +135,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="渲染" scheme="https://x.lyxw.xyz/tags/渲染/"/>
+    <category term="渲染" scheme="https://shiokiri.com/tags/渲染/"/>
     
-    <category term="三维建模" scheme="https://x.lyxw.xyz/tags/三维建模/"/>
+    <category term="三维建模" scheme="https://shiokiri.com/tags/三维建模/"/>
     
   </entry>
   
   <entry>
     <title>3D建模的PBR流程</title>
-    <link href="https://x.lyxw.xyz/2022/pbr/"/>
-    <id>https://x.lyxw.xyz/2022/pbr/</id>
+    <link href="https://shiokiri.com/2022/pbr/"/>
+    <id>https://shiokiri.com/2022/pbr/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2022-10-13T12:55:27.060Z</updated>
     
@@ -158,19 +158,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="渲染" scheme="https://x.lyxw.xyz/tags/渲染/"/>
+    <category term="渲染" scheme="https://shiokiri.com/tags/渲染/"/>
     
-    <category term="三维建模" scheme="https://x.lyxw.xyz/tags/三维建模/"/>
+    <category term="三维建模" scheme="https://shiokiri.com/tags/三维建模/"/>
     
   </entry>
   
   <entry>
     <title>Redis数据库学习笔记</title>
-    <link href="https://x.lyxw.xyz/2022/redis/"/>
-    <id>https://x.lyxw.xyz/2022/redis/</id>
+    <link href="https://shiokiri.com/2022/redis/"/>
+    <id>https://shiokiri.com/2022/redis/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2023-03-04T19:32:03.200Z</updated>
     
@@ -181,19 +181,19 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="数据库" scheme="https://x.lyxw.xyz/tags/数据库/"/>
+    <category term="数据库" scheme="https://shiokiri.com/tags/数据库/"/>
     
-    <category term="Redis" scheme="https://x.lyxw.xyz/tags/Redis/"/>
+    <category term="Redis" scheme="https://shiokiri.com/tags/Redis/"/>
     
   </entry>
   
   <entry>
     <title>Unity Shader入门学习</title>
-    <link href="https://x.lyxw.xyz/2022/unity-shader/"/>
-    <id>https://x.lyxw.xyz/2022/unity-shader/</id>
+    <link href="https://shiokiri.com/2022/unity-shader/"/>
+    <id>https://shiokiri.com/2022/unity-shader/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2022-09-27T14:25:17.681Z</updated>
     
@@ -204,17 +204,17 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Shader" scheme="https://x.lyxw.xyz/tags/Shader/"/>
+    <category term="Shader" scheme="https://shiokiri.com/tags/Shader/"/>
     
   </entry>
   
   <entry>
     <title>计算机科学与技术学习的前置知识</title>
-    <link href="https://x.lyxw.xyz/2022/before-cs/"/>
-    <id>https://x.lyxw.xyz/2022/before-cs/</id>
+    <link href="https://shiokiri.com/2022/before-cs/"/>
+    <id>https://shiokiri.com/2022/before-cs/</id>
     <published>2022-06-28T07:32:50.000Z</published>
     <updated>2023-03-04T19:28:08.527Z</updated>
     
@@ -225,19 +225,19 @@
     
     
     
-    <category term="计算机" scheme="https://x.lyxw.xyz/categories/计算机/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
-    <category term="技术工具" scheme="https://x.lyxw.xyz/tags/技术工具/"/>
+    <category term="技术工具" scheme="https://shiokiri.com/tags/技术工具/"/>
     
-    <category term="计算机科学" scheme="https://x.lyxw.xyz/tags/计算机科学/"/>
+    <category term="计算机科学" scheme="https://shiokiri.com/tags/计算机科学/"/>
     
   </entry>
   
   <entry>
     <title>MySQL数据库学习笔记</title>
-    <link href="https://x.lyxw.xyz/2022/MySQL/"/>
-    <id>https://x.lyxw.xyz/2022/MySQL/</id>
+    <link href="https://shiokiri.com/2022/MySQL/"/>
+    <id>https://shiokiri.com/2022/MySQL/</id>
     <published>2022-06-28T06:54:44.000Z</published>
     <updated>2022-06-28T07:16:50.039Z</updated>
     
@@ -248,21 +248,21 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    <category term="SQL" scheme="https://shiokiri.com/tags/SQL/"/>
     
-    <category term="SQL" scheme="https://x.lyxw.xyz/tags/SQL/"/>
+    <category term="MySQL" scheme="https://shiokiri.com/tags/MySQL/"/>
     
-    <category term="数据库" scheme="https://x.lyxw.xyz/tags/数据库/"/>
+    <category term="数据库" scheme="https://shiokiri.com/tags/数据库/"/>
     
   </entry>
   
   <entry>
     <title>C++Qt局域网聊天工具 开发记录</title>
-    <link href="https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/"/>
-    <id>https://x.lyxw.xyz/2022/C++Qt-LAN-Chat/</id>
+    <link href="https://shiokiri.com/2022/C++Qt-LAN-Chat/"/>
+    <id>https://shiokiri.com/2022/C++Qt-LAN-Chat/</id>
     <published>2022-06-27T11:46:49.000Z</published>
     <updated>2022-06-28T07:16:53.974Z</updated>
     
@@ -273,21 +273,21 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="C++" scheme="https://x.lyxw.xyz/tags/C/"/>
+    <category term="C++" scheme="https://shiokiri.com/tags/C/"/>
     
-    <category term="Qt" scheme="https://x.lyxw.xyz/tags/Qt/"/>
+    <category term="Qt" scheme="https://shiokiri.com/tags/Qt/"/>
     
-    <category term="计算机网络" scheme="https://x.lyxw.xyz/tags/计算机网络/"/>
+    <category term="计算机网络" scheme="https://shiokiri.com/tags/计算机网络/"/>
     
   </entry>
   
   <entry>
     <title>C++11学习笔记</title>
-    <link href="https://x.lyxw.xyz/2022/C++11/"/>
-    <id>https://x.lyxw.xyz/2022/C++11/</id>
+    <link href="https://shiokiri.com/2022/C++11/"/>
+    <id>https://shiokiri.com/2022/C++11/</id>
     <published>2022-04-01T13:41:25.000Z</published>
     <updated>2022-04-01T14:01:59.359Z</updated>
     
@@ -298,17 +298,17 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="C++11" scheme="https://x.lyxw.xyz/tags/C-11/"/>
+    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
     
   </entry>
   
   <entry>
     <title>游戏《递归的边界线Recursive Boundary》开发记录</title>
-    <link href="https://x.lyxw.xyz/2022/unity-project-recursive-boundary/"/>
-    <id>https://x.lyxw.xyz/2022/unity-project-recursive-boundary/</id>
+    <link href="https://shiokiri.com/2022/unity-project-recursive-boundary/"/>
+    <id>https://shiokiri.com/2022/unity-project-recursive-boundary/</id>
     <published>2022-04-01T13:04:25.000Z</published>
     <updated>2022-04-12T15:10:31.163Z</updated>
     
@@ -319,23 +319,23 @@
     
     
     
-    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    <category term="杂项" scheme="https://shiokiri.com/categories/杂项/"/>
     
     
-    <category term="Unity" scheme="https://x.lyxw.xyz/tags/Unity/"/>
+    <category term="Unity" scheme="https://shiokiri.com/tags/Unity/"/>
     
-    <category term="Blender" scheme="https://x.lyxw.xyz/tags/Blender/"/>
+    <category term="Blender" scheme="https://shiokiri.com/tags/Blender/"/>
     
-    <category term="C#" scheme="https://x.lyxw.xyz/tags/C/"/>
+    <category term="C#" scheme="https://shiokiri.com/tags/C/"/>
     
-    <category term="VRoid Studio" scheme="https://x.lyxw.xyz/tags/VRoid-Studio/"/>
+    <category term="VRoid Studio" scheme="https://shiokiri.com/tags/VRoid-Studio/"/>
     
   </entry>
   
   <entry>
     <title>「计算几何」</title>
-    <link href="https://x.lyxw.xyz/2022/computational-geometry/"/>
-    <id>https://x.lyxw.xyz/2022/computational-geometry/</id>
+    <link href="https://shiokiri.com/2022/computational-geometry/"/>
+    <id>https://shiokiri.com/2022/computational-geometry/</id>
     <published>2022-04-01T12:43:25.000Z</published>
     <updated>2022-04-01T12:50:13.925Z</updated>
     
@@ -346,19 +346,19 @@
     
     
     
-    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="C++11" scheme="https://x.lyxw.xyz/tags/C-11/"/>
+    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
     
-    <category term="计算几何" scheme="https://x.lyxw.xyz/tags/计算几何/"/>
+    <category term="计算几何" scheme="https://shiokiri.com/tags/计算几何/"/>
     
   </entry>
   
   <entry>
     <title>VRoid Studio-&gt;Blender-&gt;Unity制作人物模型</title>
-    <link href="https://x.lyxw.xyz/2022/vroid-studio-blender-unity/"/>
-    <id>https://x.lyxw.xyz/2022/vroid-studio-blender-unity/</id>
+    <link href="https://shiokiri.com/2022/vroid-studio-blender-unity/"/>
+    <id>https://shiokiri.com/2022/vroid-studio-blender-unity/</id>
     <published>2022-04-01T07:04:25.000Z</published>
     <updated>2022-04-01T13:39:37.318Z</updated>
     
@@ -369,21 +369,21 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Unity" scheme="https://x.lyxw.xyz/tags/Unity/"/>
+    <category term="Unity" scheme="https://shiokiri.com/tags/Unity/"/>
     
-    <category term="Blender" scheme="https://x.lyxw.xyz/tags/Blender/"/>
+    <category term="Blender" scheme="https://shiokiri.com/tags/Blender/"/>
     
-    <category term="VRoid Studio" scheme="https://x.lyxw.xyz/tags/VRoid-Studio/"/>
+    <category term="VRoid Studio" scheme="https://shiokiri.com/tags/VRoid-Studio/"/>
     
   </entry>
   
   <entry>
     <title>使用Gmail进行域名邮箱邮件收发</title>
-    <link href="https://x.lyxw.xyz/2022/domain_mail/"/>
-    <id>https://x.lyxw.xyz/2022/domain_mail/</id>
+    <link href="https://shiokiri.com/2022/domain_mail/"/>
+    <id>https://shiokiri.com/2022/domain_mail/</id>
     <published>2022-02-12T15:48:00.000Z</published>
     <updated>2022-04-01T12:47:18.190Z</updated>
     
@@ -394,19 +394,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="域名邮箱" scheme="https://x.lyxw.xyz/tags/域名邮箱/"/>
+    <category term="域名邮箱" scheme="https://shiokiri.com/tags/域名邮箱/"/>
     
-    <category term="Gmail" scheme="https://x.lyxw.xyz/tags/Gmail/"/>
+    <category term="Gmail" scheme="https://shiokiri.com/tags/Gmail/"/>
     
   </entry>
   
   <entry>
     <title>后端开发学习</title>
-    <link href="https://x.lyxw.xyz/2022/backend/"/>
-    <id>https://x.lyxw.xyz/2022/backend/</id>
+    <link href="https://shiokiri.com/2022/backend/"/>
+    <id>https://shiokiri.com/2022/backend/</id>
     <published>2022-01-29T20:24:25.000Z</published>
     <updated>2022-04-01T12:53:08.925Z</updated>
     
@@ -417,25 +417,25 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Java" scheme="https://x.lyxw.xyz/tags/Java/"/>
+    <category term="MySQL" scheme="https://shiokiri.com/tags/MySQL/"/>
     
-    <category term="MySQL" scheme="https://x.lyxw.xyz/tags/MySQL/"/>
+    <category term="Java" scheme="https://shiokiri.com/tags/Java/"/>
     
-    <category term="SpringBoot" scheme="https://x.lyxw.xyz/tags/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://shiokiri.com/tags/SpringBoot/"/>
     
-    <category term="SpringMVC" scheme="https://x.lyxw.xyz/tags/SpringMVC/"/>
+    <category term="SpringMVC" scheme="https://shiokiri.com/tags/SpringMVC/"/>
     
-    <category term="Golang" scheme="https://x.lyxw.xyz/tags/Golang/"/>
+    <category term="Golang" scheme="https://shiokiri.com/tags/Golang/"/>
     
   </entry>
   
   <entry>
     <title>电子产品评测</title>
-    <link href="https://x.lyxw.xyz/2022/electronics/"/>
-    <id>https://x.lyxw.xyz/2022/electronics/</id>
+    <link href="https://shiokiri.com/2022/electronics/"/>
+    <id>https://shiokiri.com/2022/electronics/</id>
     <published>2022-01-29T20:23:12.000Z</published>
     <updated>2022-06-23T18:28:23.019Z</updated>
     
@@ -446,19 +446,19 @@
     
     
     
-    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    <category term="杂项" scheme="https://shiokiri.com/categories/杂项/"/>
     
     
-    <category term="评测" scheme="https://x.lyxw.xyz/tags/评测/"/>
+    <category term="评测" scheme="https://shiokiri.com/tags/评测/"/>
     
-    <category term="电子产品" scheme="https://x.lyxw.xyz/tags/电子产品/"/>
+    <category term="电子产品" scheme="https://shiokiri.com/tags/电子产品/"/>
     
   </entry>
   
   <entry>
     <title>Python网络爬虫学习</title>
-    <link href="https://x.lyxw.xyz/2022/python_web_crawler/"/>
-    <id>https://x.lyxw.xyz/2022/python_web_crawler/</id>
+    <link href="https://shiokiri.com/2022/python_web_crawler/"/>
+    <id>https://shiokiri.com/2022/python_web_crawler/</id>
     <published>2022-01-11T17:01:20.000Z</published>
     <updated>2022-03-30T15:00:48.714Z</updated>
     
@@ -469,19 +469,19 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
     
-    <category term="爬虫" scheme="https://x.lyxw.xyz/tags/爬虫/"/>
+    <category term="爬虫" scheme="https://shiokiri.com/tags/爬虫/"/>
     
   </entry>
   
   <entry>
     <title>「观测者轻语」杂谈</title>
-    <link href="https://x.lyxw.xyz/2021/talk_1/"/>
-    <id>https://x.lyxw.xyz/2021/talk_1/</id>
+    <link href="https://shiokiri.com/2021/talk_1/"/>
+    <id>https://shiokiri.com/2021/talk_1/</id>
     <published>2021-08-08T02:18:09.000Z</published>
     <updated>2023-03-04T19:34:18.949Z</updated>
     
@@ -492,17 +492,17 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/tags/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/tags/杂谈/"/>
     
   </entry>
   
   <entry>
     <title>落影汐雾的记录集</title>
-    <link href="https://x.lyxw.xyz/2021/record_set/"/>
-    <id>https://x.lyxw.xyz/2021/record_set/</id>
+    <link href="https://shiokiri.com/2021/record_set/"/>
+    <id>https://shiokiri.com/2021/record_set/</id>
     <published>2021-07-31T20:33:26.000Z</published>
     <updated>2022-03-22T15:03:05.775Z</updated>
     
@@ -514,17 +514,17 @@
     
     
     
-    <category term="杂项" scheme="https://x.lyxw.xyz/categories/杂项/"/>
+    <category term="杂项" scheme="https://shiokiri.com/categories/杂项/"/>
     
     
-    <category term="记录" scheme="https://x.lyxw.xyz/tags/记录/"/>
+    <category term="记录" scheme="https://shiokiri.com/tags/记录/"/>
     
   </entry>
   
   <entry>
     <title>夏日小日记</title>
-    <link href="https://x.lyxw.xyz/2021/diary_1/"/>
-    <id>https://x.lyxw.xyz/2021/diary_1/</id>
+    <link href="https://shiokiri.com/2021/diary_1/"/>
+    <id>https://shiokiri.com/2021/diary_1/</id>
     <published>2021-07-29T02:18:09.000Z</published>
     <updated>2023-03-04T19:30:20.118Z</updated>
     
@@ -533,17 +533,17 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="日记" scheme="https://x.lyxw.xyz/tags/日记/"/>
+    <category term="日记" scheme="https://shiokiri.com/tags/日记/"/>
     
   </entry>
   
   <entry>
     <title>MMD制作简介</title>
-    <link href="https://x.lyxw.xyz/2020/MMD/"/>
-    <id>https://x.lyxw.xyz/2020/MMD/</id>
+    <link href="https://shiokiri.com/2020/MMD/"/>
+    <id>https://shiokiri.com/2020/MMD/</id>
     <published>2020-08-19T14:22:39.000Z</published>
     <updated>2020-08-20T01:02:07.511Z</updated>
     
@@ -552,17 +552,17 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="MMD" scheme="https://x.lyxw.xyz/tags/MMD/"/>
+    <category term="MMD" scheme="https://shiokiri.com/tags/MMD/"/>
     
   </entry>
   
   <entry>
     <title>烦躁沉寂的八月</title>
-    <link href="https://x.lyxw.xyz/2020/august/"/>
-    <id>https://x.lyxw.xyz/2020/august/</id>
+    <link href="https://shiokiri.com/2020/august/"/>
+    <id>https://shiokiri.com/2020/august/</id>
     <published>2020-08-16T14:03:37.000Z</published>
     <updated>2022-02-12T15:54:11.270Z</updated>
     
@@ -573,17 +573,17 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="回忆" scheme="https://x.lyxw.xyz/tags/回忆/"/>
+    <category term="回忆" scheme="https://shiokiri.com/tags/回忆/"/>
     
   </entry>
   
   <entry>
     <title>使用jsDelivr+PicGo对图片进行cdn加速</title>
-    <link href="https://x.lyxw.xyz/2020/cdn/"/>
-    <id>https://x.lyxw.xyz/2020/cdn/</id>
+    <link href="https://shiokiri.com/2020/cdn/"/>
+    <id>https://shiokiri.com/2020/cdn/</id>
     <published>2020-08-15T23:45:15.000Z</published>
     <updated>2020-08-16T01:10:55.429Z</updated>
     
@@ -592,19 +592,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Blog" scheme="https://x.lyxw.xyz/tags/Blog/"/>
+    <category term="Blog" scheme="https://shiokiri.com/tags/Blog/"/>
     
-    <category term="jsDelivr" scheme="https://x.lyxw.xyz/tags/jsDelivr/"/>
+    <category term="jsDelivr" scheme="https://shiokiri.com/tags/jsDelivr/"/>
     
   </entry>
   
   <entry>
     <title>一些metagame的介绍与评价（无剧透）</title>
-    <link href="https://x.lyxw.xyz/2020/metagame/"/>
-    <id>https://x.lyxw.xyz/2020/metagame/</id>
+    <link href="https://shiokiri.com/2020/metagame/"/>
+    <id>https://shiokiri.com/2020/metagame/</id>
     <published>2020-05-18T15:53:35.000Z</published>
     <updated>2022-02-12T15:53:26.003Z</updated>
     
@@ -613,19 +613,19 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="metagame" scheme="https://x.lyxw.xyz/tags/metagame/"/>
+    <category term="metagame" scheme="https://shiokiri.com/tags/metagame/"/>
     
-    <category term="galgame" scheme="https://x.lyxw.xyz/tags/galgame/"/>
+    <category term="galgame" scheme="https://shiokiri.com/tags/galgame/"/>
     
   </entry>
   
   <entry>
     <title>我接触与学习编程及OI的经历</title>
-    <link href="https://x.lyxw.xyz/2020/about-program/"/>
-    <id>https://x.lyxw.xyz/2020/about-program/</id>
+    <link href="https://shiokiri.com/2020/about-program/"/>
+    <id>https://shiokiri.com/2020/about-program/</id>
     <published>2020-02-29T02:18:09.000Z</published>
     <updated>2022-02-12T17:41:35.097Z</updated>
     
@@ -640,19 +640,19 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/tags/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/tags/编程/"/>
     
-    <category term="经历" scheme="https://x.lyxw.xyz/tags/经历/"/>
+    <category term="经历" scheme="https://shiokiri.com/tags/经历/"/>
     
   </entry>
   
   <entry>
     <title>Windows软件快速指南</title>
-    <link href="https://x.lyxw.xyz/2019/software/"/>
-    <id>https://x.lyxw.xyz/2019/software/</id>
+    <link href="https://shiokiri.com/2019/software/"/>
+    <id>https://shiokiri.com/2019/software/</id>
     <published>2019-10-27T09:44:02.000Z</published>
     <updated>2020-02-29T08:39:57.876Z</updated>
     
@@ -663,17 +663,17 @@
     
     
     
-    <category term="计算机" scheme="https://x.lyxw.xyz/categories/计算机/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
-    <category term="软件" scheme="https://x.lyxw.xyz/tags/软件/"/>
+    <category term="软件" scheme="https://shiokiri.com/tags/软件/"/>
     
   </entry>
   
   <entry>
     <title>PyQt5上手指南</title>
-    <link href="https://x.lyxw.xyz/2019/pyqt/"/>
-    <id>https://x.lyxw.xyz/2019/pyqt/</id>
+    <link href="https://shiokiri.com/2019/pyqt/"/>
+    <id>https://shiokiri.com/2019/pyqt/</id>
     <published>2019-10-25T11:50:55.000Z</published>
     <updated>2022-02-12T18:01:38.336Z</updated>
     
@@ -688,19 +688,19 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
     
-    <category term="PyQt" scheme="https://x.lyxw.xyz/tags/PyQt/"/>
+    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>VSCode配置Python环境及Python入门学习</title>
-    <link href="https://x.lyxw.xyz/2019/python/"/>
-    <id>https://x.lyxw.xyz/2019/python/</id>
+    <link href="https://shiokiri.com/2019/python/"/>
+    <id>https://shiokiri.com/2019/python/</id>
     <published>2019-10-17T08:46:37.000Z</published>
     <updated>2022-02-12T18:01:43.274Z</updated>
     
@@ -711,17 +711,17 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://x.lyxw.xyz/tags/Python/"/>
+    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Github Pages+HTML5 up制作个人主页及绑定二级域名</title>
-    <link href="https://x.lyxw.xyz/2019/html_page/"/>
-    <id>https://x.lyxw.xyz/2019/html_page/</id>
+    <link href="https://shiokiri.com/2019/html_page/"/>
+    <id>https://shiokiri.com/2019/html_page/</id>
     <published>2019-09-23T10:31:38.000Z</published>
     <updated>2019-09-23T10:38:45.345Z</updated>
     
@@ -733,19 +733,19 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="HTML" scheme="https://x.lyxw.xyz/tags/HTML/"/>
+    <category term="HTML" scheme="https://shiokiri.com/tags/HTML/"/>
     
-    <category term="CSS" scheme="https://x.lyxw.xyz/tags/CSS/"/>
+    <category term="CSS" scheme="https://shiokiri.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
     <title>「莫比乌斯反演」</title>
-    <link href="https://x.lyxw.xyz/2019/mobius/"/>
-    <id>https://x.lyxw.xyz/2019/mobius/</id>
+    <link href="https://shiokiri.com/2019/mobius/"/>
+    <id>https://shiokiri.com/2019/mobius/</id>
     <published>2019-09-23T01:40:00.000Z</published>
     <updated>2019-10-17T08:02:25.455Z</updated>
     
@@ -756,19 +756,19 @@
     
     
     
-    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="莫比乌斯反演" scheme="https://x.lyxw.xyz/tags/莫比乌斯反演/"/>
+    <category term="莫比乌斯反演" scheme="https://shiokiri.com/tags/莫比乌斯反演/"/>
     
-    <category term="整除分块" scheme="https://x.lyxw.xyz/tags/整除分块/"/>
+    <category term="整除分块" scheme="https://shiokiri.com/tags/整除分块/"/>
     
   </entry>
   
   <entry>
     <title>「后缀数组」</title>
-    <link href="https://x.lyxw.xyz/2019/SA/"/>
-    <id>https://x.lyxw.xyz/2019/SA/</id>
+    <link href="https://shiokiri.com/2019/SA/"/>
+    <id>https://shiokiri.com/2019/SA/</id>
     <published>2019-09-23T01:38:18.000Z</published>
     <updated>2019-10-17T08:05:57.161Z</updated>
     
@@ -779,17 +779,17 @@
     
     
     
-    <category term="算法" scheme="https://x.lyxw.xyz/categories/算法/"/>
+    <category term="算法" scheme="https://shiokiri.com/categories/算法/"/>
     
     
-    <category term="后缀数组" scheme="https://x.lyxw.xyz/tags/后缀数组/"/>
+    <category term="后缀数组" scheme="https://shiokiri.com/tags/后缀数组/"/>
     
   </entry>
   
   <entry>
     <title>「概率期望」</title>
-    <link href="https://x.lyxw.xyz/2019/probability/"/>
-    <id>https://x.lyxw.xyz/2019/probability/</id>
+    <link href="https://shiokiri.com/2019/probability/"/>
+    <id>https://shiokiri.com/2019/probability/</id>
     <published>2019-09-23T01:34:34.000Z</published>
     <updated>2021-08-02T07:07:11.597Z</updated>
     
@@ -800,19 +800,19 @@
     
     
     
-    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="概率" scheme="https://x.lyxw.xyz/tags/概率/"/>
+    <category term="概率" scheme="https://shiokiri.com/tags/概率/"/>
     
-    <category term="期望" scheme="https://x.lyxw.xyz/tags/期望/"/>
+    <category term="期望" scheme="https://shiokiri.com/tags/期望/"/>
     
   </entry>
   
   <entry>
     <title>C++STL的OI常用内容</title>
-    <link href="https://x.lyxw.xyz/2019/C++_stl/"/>
-    <id>https://x.lyxw.xyz/2019/C++_stl/</id>
+    <link href="https://shiokiri.com/2019/C++_stl/"/>
+    <id>https://shiokiri.com/2019/C++_stl/</id>
     <published>2019-09-23T01:13:16.000Z</published>
     <updated>2022-02-12T18:03:27.681Z</updated>
     
@@ -823,21 +823,21 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Queue" scheme="https://x.lyxw.xyz/tags/Queue/"/>
+    <category term="Queue" scheme="https://shiokiri.com/tags/Queue/"/>
     
-    <category term="Stack" scheme="https://x.lyxw.xyz/tags/Stack/"/>
+    <category term="Stack" scheme="https://shiokiri.com/tags/Stack/"/>
     
-    <category term="STL" scheme="https://x.lyxw.xyz/tags/STL/"/>
+    <category term="STL" scheme="https://shiokiri.com/tags/STL/"/>
     
   </entry>
   
   <entry>
     <title>「分层图」</title>
-    <link href="https://x.lyxw.xyz/2019/layered_graph/"/>
-    <id>https://x.lyxw.xyz/2019/layered_graph/</id>
+    <link href="https://shiokiri.com/2019/layered_graph/"/>
+    <id>https://shiokiri.com/2019/layered_graph/</id>
     <published>2019-09-23T01:10:16.000Z</published>
     <updated>2020-08-16T02:13:34.183Z</updated>
     
@@ -848,17 +848,17 @@
     
     
     
-    <category term="算法" scheme="https://x.lyxw.xyz/categories/算法/"/>
+    <category term="算法" scheme="https://shiokiri.com/categories/算法/"/>
     
     
-    <category term="分层图" scheme="https://x.lyxw.xyz/tags/分层图/"/>
+    <category term="分层图" scheme="https://shiokiri.com/tags/分层图/"/>
     
   </entry>
   
   <entry>
     <title>「网络流」</title>
-    <link href="https://x.lyxw.xyz/2019/network_flow/"/>
-    <id>https://x.lyxw.xyz/2019/network_flow/</id>
+    <link href="https://shiokiri.com/2019/network_flow/"/>
+    <id>https://shiokiri.com/2019/network_flow/</id>
     <published>2019-09-23T01:03:54.000Z</published>
     <updated>2020-08-16T02:13:54.776Z</updated>
     
@@ -869,17 +869,17 @@
     
     
     
-    <category term="算法" scheme="https://x.lyxw.xyz/categories/算法/"/>
+    <category term="算法" scheme="https://shiokiri.com/categories/算法/"/>
     
     
-    <category term="网络流" scheme="https://x.lyxw.xyz/tags/网络流/"/>
+    <category term="网络流" scheme="https://shiokiri.com/tags/网络流/"/>
     
   </entry>
   
   <entry>
     <title>「线段树」</title>
-    <link href="https://x.lyxw.xyz/2019/segment_tree/"/>
-    <id>https://x.lyxw.xyz/2019/segment_tree/</id>
+    <link href="https://shiokiri.com/2019/segment_tree/"/>
+    <id>https://shiokiri.com/2019/segment_tree/</id>
     <published>2019-09-23T00:53:53.000Z</published>
     <updated>2020-08-16T02:20:20.941Z</updated>
     
@@ -890,17 +890,17 @@
     
     
     
-    <category term="算法" scheme="https://x.lyxw.xyz/categories/算法/"/>
+    <category term="算法" scheme="https://shiokiri.com/categories/算法/"/>
     
     
-    <category term="线段树" scheme="https://x.lyxw.xyz/tags/线段树/"/>
+    <category term="线段树" scheme="https://shiokiri.com/tags/线段树/"/>
     
   </entry>
   
   <entry>
     <title>《意识宇宙》</title>
-    <link href="https://x.lyxw.xyz/2019/science_fiction/"/>
-    <id>https://x.lyxw.xyz/2019/science_fiction/</id>
+    <link href="https://shiokiri.com/2019/science_fiction/"/>
+    <id>https://shiokiri.com/2019/science_fiction/</id>
     <published>2019-09-22T13:22:07.000Z</published>
     <updated>2022-02-12T15:55:21.259Z</updated>
     
@@ -911,17 +911,17 @@
     
     
     
-    <category term="杂谈" scheme="https://x.lyxw.xyz/categories/杂谈/"/>
+    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
     
     
-    <category term="科幻" scheme="https://x.lyxw.xyz/tags/科幻/"/>
+    <category term="科幻" scheme="https://shiokiri.com/tags/科幻/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客搭建及Material主题使用指南</title>
-    <link href="https://x.lyxw.xyz/2019/blog/"/>
-    <id>https://x.lyxw.xyz/2019/blog/</id>
+    <link href="https://shiokiri.com/2019/blog/"/>
+    <id>https://shiokiri.com/2019/blog/</id>
     <published>2019-08-16T10:37:19.000Z</published>
     <updated>2022-02-12T16:35:22.084Z</updated>
     
@@ -933,17 +933,17 @@
     
     
     
-    <category term="技术" scheme="https://x.lyxw.xyz/categories/技术/"/>
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
     
     
-    <category term="Blog" scheme="https://x.lyxw.xyz/tags/Blog/"/>
+    <category term="Blog" scheme="https://shiokiri.com/tags/Blog/"/>
     
   </entry>
   
   <entry>
     <title>「FFT/NTT」「多项式」</title>
-    <link href="https://x.lyxw.xyz/2019/FFT/"/>
-    <id>https://x.lyxw.xyz/2019/FFT/</id>
+    <link href="https://shiokiri.com/2019/FFT/"/>
+    <id>https://shiokiri.com/2019/FFT/</id>
     <published>2019-08-15T12:16:04.000Z</published>
     <updated>2019-10-17T08:40:08.153Z</updated>
     
@@ -955,19 +955,19 @@
     
     
     
-    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="FFT" scheme="https://x.lyxw.xyz/tags/FFT/"/>
+    <category term="FFT" scheme="https://shiokiri.com/tags/FFT/"/>
     
-    <category term="NTT" scheme="https://x.lyxw.xyz/tags/NTT/"/>
+    <category term="NTT" scheme="https://shiokiri.com/tags/NTT/"/>
     
   </entry>
   
   <entry>
     <title>「动态规划」</title>
-    <link href="https://x.lyxw.xyz/2019/dp/"/>
-    <id>https://x.lyxw.xyz/2019/dp/</id>
+    <link href="https://shiokiri.com/2019/dp/"/>
+    <id>https://shiokiri.com/2019/dp/</id>
     <published>2019-08-14T07:04:06.000Z</published>
     <updated>2019-10-17T08:39:47.793Z</updated>
     
@@ -979,17 +979,17 @@
     
     
     
-    <category term="算法" scheme="https://x.lyxw.xyz/categories/算法/"/>
+    <category term="算法" scheme="https://shiokiri.com/categories/算法/"/>
     
     
-    <category term="动态规划" scheme="https://x.lyxw.xyz/tags/动态规划/"/>
+    <category term="动态规划" scheme="https://shiokiri.com/tags/动态规划/"/>
     
   </entry>
   
   <entry>
     <title>从零开始的C++学习</title>
-    <link href="https://x.lyxw.xyz/2019/C++/"/>
-    <id>https://x.lyxw.xyz/2019/C++/</id>
+    <link href="https://shiokiri.com/2019/C++/"/>
+    <id>https://shiokiri.com/2019/C++/</id>
     <published>2019-08-09T08:04:47.000Z</published>
     <updated>2022-04-01T14:10:32.542Z</updated>
     
@@ -1001,17 +1001,17 @@
     
     
     
-    <category term="编程" scheme="https://x.lyxw.xyz/categories/编程/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="C++" scheme="https://x.lyxw.xyz/tags/C/"/>
+    <category term="C++" scheme="https://shiokiri.com/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>「数论」</title>
-    <link href="https://x.lyxw.xyz/2019/number_theory/"/>
-    <id>https://x.lyxw.xyz/2019/number_theory/</id>
+    <link href="https://shiokiri.com/2019/number_theory/"/>
+    <id>https://shiokiri.com/2019/number_theory/</id>
     <published>2019-08-09T06:37:38.000Z</published>
     <updated>2020-07-11T23:09:07.593Z</updated>
     
@@ -1023,17 +1023,17 @@
     
     
     
-    <category term="数学" scheme="https://x.lyxw.xyz/categories/数学/"/>
+    <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="数论" scheme="https://x.lyxw.xyz/tags/数论/"/>
+    <category term="数论" scheme="https://shiokiri.com/tags/数论/"/>
     
   </entry>
   
   <entry>
     <title>Chrome浏览器 | 插件与设置</title>
-    <link href="https://x.lyxw.xyz/2019/chrome/"/>
-    <id>https://x.lyxw.xyz/2019/chrome/</id>
+    <link href="https://shiokiri.com/2019/chrome/"/>
+    <id>https://shiokiri.com/2019/chrome/</id>
     <published>2019-06-04T09:54:25.000Z</published>
     <updated>2022-02-12T18:02:14.329Z</updated>
     
@@ -1044,17 +1044,17 @@
     
     
     
-    <category term="计算机" scheme="https://x.lyxw.xyz/categories/计算机/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
-    <category term="Chrome" scheme="https://x.lyxw.xyz/tags/Chrome/"/>
+    <category term="Chrome" scheme="https://shiokiri.com/tags/Chrome/"/>
     
   </entry>
   
   <entry>
     <title>科学上网 | GFW与SSR简介</title>
-    <link href="https://x.lyxw.xyz/2019/GFW/"/>
-    <id>https://x.lyxw.xyz/2019/GFW/</id>
+    <link href="https://shiokiri.com/2019/GFW/"/>
+    <id>https://shiokiri.com/2019/GFW/</id>
     <published>2019-06-01T13:52:50.000Z</published>
     <updated>2022-02-08T15:24:34.023Z</updated>
     
@@ -1066,12 +1066,12 @@
     
     
     
-    <category term="计算机" scheme="https://x.lyxw.xyz/categories/计算机/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
-    <category term="GFW" scheme="https://x.lyxw.xyz/tags/GFW/"/>
+    <category term="GFW" scheme="https://shiokiri.com/tags/GFW/"/>
     
-    <category term="SSR" scheme="https://x.lyxw.xyz/tags/SSR/"/>
+    <category term="SSR" scheme="https://shiokiri.com/tags/SSR/"/>
     
   </entry>
   
