@@ -441,9 +441,9 @@
     <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="计算几何" scheme="https://shiokiri.com/tags/计算几何/"/>
-    
     <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
+    
+    <category term="计算几何" scheme="https://shiokiri.com/tags/计算几何/"/>
     
   </entry>
   
@@ -575,7 +575,7 @@
     <link href="https://shiokiri.com/2021-08-08-talk-1/"/>
     <id>https://shiokiri.com/2021-08-08-talk-1/</id>
     <published>2021-08-08T02:18:09.000Z</published>
-    <updated>2025-03-21T01:54:14.800Z</updated>
+    <updated>2025-03-21T02:40:59.631Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -790,9 +790,9 @@
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
-    
     <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
+    
+    <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
     
   </entry>
   
