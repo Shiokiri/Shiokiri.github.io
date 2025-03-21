@@ -214,11 +214,11 @@
   </entry>
   
   <entry>
-    <title>3D游戏开发中美术/程序的软件流程</title>
-    <link href="https://shiokiri.com/2022-09-27-3d-game-development/"/>
-    <id>https://shiokiri.com/2022-09-27-3d-game-development/</id>
+    <title>3D建模的PBR流程</title>
+    <link href="https://shiokiri.com/2022-09-27-pbr/"/>
+    <id>https://shiokiri.com/2022-09-27-pbr/</id>
     <published>2022-09-27T07:32:50.000Z</published>
-    <updated>2025-03-21T00:48:18.919Z</updated>
+    <updated>2022-10-13T12:55:27.060Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -237,11 +237,32 @@
   </entry>
   
   <entry>
-    <title>3D建模的PBR流程</title>
-    <link href="https://shiokiri.com/2022-09-27-pbr/"/>
-    <id>https://shiokiri.com/2022-09-27-pbr/</id>
+    <title>Unity Shader入门学习</title>
+    <link href="https://shiokiri.com/2022-09-27-unity-shader/"/>
+    <id>https://shiokiri.com/2022-09-27-unity-shader/</id>
     <published>2022-09-27T07:32:50.000Z</published>
-    <updated>2022-10-13T12:55:27.060Z</updated>
+    <updated>2022-09-27T14:25:17.681Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2022.09.27&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    
+    
+    <category term="Shader" scheme="https://shiokiri.com/tags/Shader/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3D游戏开发中美术/程序的软件流程</title>
+    <link href="https://shiokiri.com/2022-09-27-3d-game-development/"/>
+    <id>https://shiokiri.com/2022-09-27-3d-game-development/</id>
+    <published>2022-09-27T07:32:50.000Z</published>
+    <updated>2025-03-21T00:48:18.919Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -279,27 +300,6 @@
     <category term="数据库" scheme="https://shiokiri.com/tags/数据库/"/>
     
     <category term="Redis" scheme="https://shiokiri.com/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Unity Shader入门学习</title>
-    <link href="https://shiokiri.com/2022-09-27-unity-shader/"/>
-    <id>https://shiokiri.com/2022-09-27-unity-shader/</id>
-    <published>2022-09-27T07:32:50.000Z</published>
-    <updated>2022-09-27T14:25:17.681Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于：A.D.2022.09.27&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
-    
-    
-    <category term="Shader" scheme="https://shiokiri.com/tags/Shader/"/>
     
   </entry>
   
@@ -441,9 +441,9 @@
     <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
-    
     <category term="计算几何" scheme="https://shiokiri.com/tags/计算几何/"/>
+    
+    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
     
   </entry>
   
@@ -790,9 +790,9 @@
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
-    
     <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
+    
+    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
     
   </entry>
   
