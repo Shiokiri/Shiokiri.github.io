@@ -418,9 +418,9 @@
     
     <category term="Blender" scheme="https://shiokiri.com/tags/Blender/"/>
     
-    <category term="VRoid Studio" scheme="https://shiokiri.com/tags/VRoid-Studio/"/>
-    
     <category term="C#" scheme="https://shiokiri.com/tags/C/"/>
+    
+    <category term="VRoid Studio" scheme="https://shiokiri.com/tags/VRoid-Studio/"/>
     
   </entry>
   
@@ -790,9 +790,9 @@
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
-    
     <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
+    
+    <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
     
   </entry>
   

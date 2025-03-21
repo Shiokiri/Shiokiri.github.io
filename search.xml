@@ -173,6 +173,72 @@ Protocol）来达到保密、发送端认证、消息准确性等私人消息安
       </tags>
   </entry>
   <entry>
+    <title>「数论」</title>
+    <url>/2019-08-09-number-theory/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.08.09</p>
+</blockquote>
+<p>只会<code>GCD</code></p>
+<a id="more"></a>
+<hr>
+<h1 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h1><script type="math/tex; mode=display">(a+b) \bmod p=(a\bmod p+b\bmod p)\bmod p​</script><script type="math/tex; mode=display">(a-b) \bmod p=(a\bmod p-b\bmod p+p)\bmod p​</script><script type="math/tex; mode=display">(a\times b) \bmod p=(a\bmod p\times b\bmod p)\bmod p​</script><p>求$\dfrac{a}{b}\bmod p​$时,求$b^{-1}​$使$b*b^{-1}\equiv1\pmod p​$即$b​$的逆元</p>
+<p>有<script type="math/tex">\dfrac{a}{b}\bmod p=a\times b^{-1}\bmod p</script></p>
+<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><p>定理：当$p​$是质数时$a^{p-1}\equiv 1\pmod p​$</p>
+<p>逆元：由$a^{p-1}\equiv 1\pmod p​$得$a\times a^{p-2}\equiv 1\pmod p​$</p>
+<p>即$a^{p-2}$是$a$在模$p$意义下的逆元</p>
+<h1 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h1><p>若$gcd(a,p)=1$则$a^{\varphi(p)}\equiv1\pmod n$</p>
+<p>当$p$是质数时$\varphi(p)=p-1$</p>
+<p>即$a^{p-1}\equiv1\pmod n$即费马小定理</p>
+<h1 id="GCD-EXGCD"><a href="#GCD-EXGCD" class="headerlink" title="GCD EXGCD"></a>GCD EXGCD</h1><pre><code class="lang-c++">#define ll long long
+ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
+void exgcd(ll a, ll b, ll &amp;x, ll &amp;y) {
+    if(!b) x = 1, y = 0;
+    else exgcd(b, a % b, y, x), y -= a / b * x;
+}
+</code></pre>
+<p>$gcd$用来求解$a，b$的最大公约数</p>
+<p>$lcm(a,b)=\dfrac{a\times b}{gcd(a,b)}​$，lcm是最大公约数</p>
+<p>$exgcd$用来求解$ax+by=gcd(a,b)$，证明大概是化式子构造递归的解法，反正看了也早晚会忘就是了<del>逃</del></p>
+<p>$exgcd$还可以求解$ax\equiv b\pmod p​$形式的同余方程</p>
+<p>$exgcd(a,p,x,y)$求出来的$x$就是$a$关于$p$的逆元</p>
+<h1 id="CRT-exCRT"><a href="#CRT-exCRT" class="headerlink" title="CRT exCRT"></a>CRT exCRT</h1><p>求解一个同余方程组</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x \equiv a_1 \pmod {m_1} \\
+x \equiv a_2 \pmod {m_2} \\
+x \equiv a_n \pmod {m_n}
+\end{cases}</script><p>两种东西都可以通过exgcd两两合并同余方程求解，不过CRT可以直接构造出答案。</p>
+<p>CRT求解的$p​$是质数，exCRT的不是，都可以用exgcd合并做。</p>
+<p>推导参考这个blog：<a href="http://blog.miskcoo.com/2014/09/chinese-remainder-theorem" target="_blank" rel="noopener">扩展欧几里得算法与中国剩余定理</a></p>
+<p>CRT直接构造的解：</p>
+<p>令$M=\prod m_i, M_i=\frac M{m_i}​$，$t_i​$为$M_i​$在模$m_i​$意义下的逆元</p>
+<p>方程组的解为<script type="math/tex">x \equiv \sum_{i=1}^na_it_iM_i \pmod M​</script></p>
+<h1 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h1><p>求$n$是不是素数直接枚举$1$到$\sqrt{n}$试除</p>
+<p>埃筛</p>
+<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) if(!vis[i]) {
+    prime[++cnt] = i;
+    for(int j = 1; i * j &lt;= N; j++)
+           vis[i * j] = 1;
+}
+</code></pre>
+<p>线筛</p>
+<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) {
+    if(!vis[i]) prime[++cnt] = i;
+    for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
+        vis[i * prime[j]] = 1;
+        if(i % prime[j] == 0) break;
+    }
+}
+</code></pre>
+]]></content>
+      <categories>
+        <category>数学</category>
+      </categories>
+      <tags>
+        <tag>数论</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Chrome浏览器 | 插件与设置</title>
     <url>/2019-06-04-chrome/</url>
     <content><![CDATA[<blockquote>
@@ -277,69 +343,75 @@ Protocol）来达到保密、发送端认证、消息准确性等私人消息安
       </tags>
   </entry>
   <entry>
-    <title>「数论」</title>
-    <url>/2019-08-09-number-theory/</url>
+    <title>「FFT/NTT」「多项式」</title>
+    <url>/2019-08-15-fft-ntt/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.08.09</p>
+<p>更新于：A.D.2019.08.15</p>
 </blockquote>
-<p>只会<code>GCD</code></p>
+<p>必忘原理的<code>FFT</code></p>
 <a id="more"></a>
 <hr>
-<h1 id="取模"><a href="#取模" class="headerlink" title="取模"></a>取模</h1><script type="math/tex; mode=display">(a+b) \bmod p=(a\bmod p+b\bmod p)\bmod p​</script><script type="math/tex; mode=display">(a-b) \bmod p=(a\bmod p-b\bmod p+p)\bmod p​</script><script type="math/tex; mode=display">(a\times b) \bmod p=(a\bmod p\times b\bmod p)\bmod p​</script><p>求$\dfrac{a}{b}\bmod p​$时,求$b^{-1}​$使$b*b^{-1}\equiv1\pmod p​$即$b​$的逆元</p>
-<p>有<script type="math/tex">\dfrac{a}{b}\bmod p=a\times b^{-1}\bmod p</script></p>
-<h1 id="费马小定理"><a href="#费马小定理" class="headerlink" title="费马小定理"></a>费马小定理</h1><p>定理：当$p​$是质数时$a^{p-1}\equiv 1\pmod p​$</p>
-<p>逆元：由$a^{p-1}\equiv 1\pmod p​$得$a\times a^{p-2}\equiv 1\pmod p​$</p>
-<p>即$a^{p-2}$是$a$在模$p$意义下的逆元</p>
-<h1 id="欧拉定理"><a href="#欧拉定理" class="headerlink" title="欧拉定理"></a>欧拉定理</h1><p>若$gcd(a,p)=1$则$a^{\varphi(p)}\equiv1\pmod n$</p>
-<p>当$p$是质数时$\varphi(p)=p-1$</p>
-<p>即$a^{p-1}\equiv1\pmod n$即费马小定理</p>
-<h1 id="GCD-EXGCD"><a href="#GCD-EXGCD" class="headerlink" title="GCD EXGCD"></a>GCD EXGCD</h1><pre><code class="lang-c++">#define ll long long
-ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
-void exgcd(ll a, ll b, ll &amp;x, ll &amp;y) {
-    if(!b) x = 1, y = 0;
-    else exgcd(b, a % b, y, x), y -= a / b * x;
+<iframe src="//player.bilibili.com/player.html?aid=19141078&cid=31220967&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" width="360px" height="560px"> </iframe>
+
+<p>测试一下视频，然而貌似只有<code>bilibili</code>的外链比较好<span class="heimu" title="你知道的太多了">总不能放Youtube？</span>，然而鬼畜的二维码与顶部链接比前几年在<code>mcbbs</code>看的时候烂多了。</p>
+<hr>
+<p>在<code>2019年8月15日</code>，终于看懂了<code>FFT</code>的推导过程。</p>
+<p>首先是<code>FFT</code>的板子，这个写法其实很优美<span class="heimu" title="你知道的太多了">记不住的</span>。</p>
+<pre><code class="lang-c++">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cmath&gt;
+#include &lt;complex&gt;
+#define R register
+
+using namespace std;
+const int N = 4.2e6;
+const double PI = acos(-1);
+int n, r[N];
+class C {
+public:
+    double r, i;
+    C() { r = i = 0; }
+    C(R double x, R double y) { r = x; i = y; }
+    C operator + (R C&amp; x) { return C(r+x.r, i+x.i); }
+    C operator - (R C&amp; x) { return C(r-x.r, i-x.i); }
+    C operator * (R C&amp; x) { return C(r*x.r-i*x.i, r*x.i+i*x.r); }
+    void operator += (R C&amp; x) { r += x.r; i += x.i; }
+    void operator *= (R C&amp; x) { R double t = r; r = r*x.r-i*x.i; i = t*x.i+i*x.r; }
+}f[N], g[N];
+inline void FFT(R C *a, R int op)
+{
+    R C W, w, t, *a0, *a1;
+    R int i, j, k;
+    for (i = 0; i &lt; n; ++i)
+        if (i &lt; r[i]) t = a[i], a[i] = a[r[i]], a[r[i]] = t;
+    for(i = 1; i &lt; n; i &lt;&lt;= 1)
+        for(W = C(cos(PI/i), sin(PI/i) * op), j = 0; j &lt; n; j += i &lt;&lt; 1)
+            for(w = C(1, 0), a1 = i + (a0 = a + j), k = 0; k &lt; i; ++k, ++a0, ++a1, w*=W)
+                t = *a1 * w, *a1 = *a0 - t, *a0 += t;
+}
+int main()
+{
+    R int m, i, l = 0;
+    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
+    for(i = 0; i &lt;= n; i++) scanf(&quot;%lf&quot;, &amp;f[i].r);
+    for(i = 0; i &lt;= m; i++) scanf(&quot;%lf&quot;, &amp;g[i].r);
+    for(m += n, n = 1; n &lt;= m; n &lt;&lt;= 1, ++l);
+    for(i = 0; i &lt; n; ++i) r[i] = (r[i &gt;&gt; 1] &gt;&gt; 1) | ((i &amp; 1) &lt;&lt; (l - 1));
+    FFT(f, 1); FFT(g, 1);
+    for(i = 0; i &lt; n; ++i) f[i] *= g[i];
+    FFT(f, -1);
+    for(i = 0; i &lt;= m; ++i) printf(&quot;%.0lf &quot;, fabs(f[i].r) / n);
+    return 0;
 }
 </code></pre>
-<p>$gcd$用来求解$a，b$的最大公约数</p>
-<p>$lcm(a,b)=\dfrac{a\times b}{gcd(a,b)}​$，lcm是最大公约数</p>
-<p>$exgcd$用来求解$ax+by=gcd(a,b)$，证明大概是化式子构造递归的解法，反正看了也早晚会忘就是了<del>逃</del></p>
-<p>$exgcd$还可以求解$ax\equiv b\pmod p​$形式的同余方程</p>
-<p>$exgcd(a,p,x,y)$求出来的$x$就是$a$关于$p$的逆元</p>
-<h1 id="CRT-exCRT"><a href="#CRT-exCRT" class="headerlink" title="CRT exCRT"></a>CRT exCRT</h1><p>求解一个同余方程组</p>
-<script type="math/tex; mode=display">
-\begin{cases}
-x \equiv a_1 \pmod {m_1} \\
-x \equiv a_2 \pmod {m_2} \\
-x \equiv a_n \pmod {m_n}
-\end{cases}</script><p>两种东西都可以通过exgcd两两合并同余方程求解，不过CRT可以直接构造出答案。</p>
-<p>CRT求解的$p​$是质数，exCRT的不是，都可以用exgcd合并做。</p>
-<p>推导参考这个blog：<a href="http://blog.miskcoo.com/2014/09/chinese-remainder-theorem" target="_blank" rel="noopener">扩展欧几里得算法与中国剩余定理</a></p>
-<p>CRT直接构造的解：</p>
-<p>令$M=\prod m_i, M_i=\frac M{m_i}​$，$t_i​$为$M_i​$在模$m_i​$意义下的逆元</p>
-<p>方程组的解为<script type="math/tex">x \equiv \sum_{i=1}^na_it_iM_i \pmod M​</script></p>
-<h1 id="筛法"><a href="#筛法" class="headerlink" title="筛法"></a>筛法</h1><p>求$n$是不是素数直接枚举$1$到$\sqrt{n}$试除</p>
-<p>埃筛</p>
-<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) if(!vis[i]) {
-    prime[++cnt] = i;
-    for(int j = 1; i * j &lt;= N; j++)
-           vis[i * j] = 1;
-}
-</code></pre>
-<p>线筛</p>
-<pre><code class="lang-c++">for(int i = 2; i &lt;= N; i++) {
-    if(!vis[i]) prime[++cnt] = i;
-    for(int j = 1; j &lt;= cnt &amp;&amp; i * prime[j] &lt;= N; j++) {
-        vis[i * prime[j]] = 1;
-        if(i % prime[j] == 0) break;
-    }
-}
-</code></pre>
+<p>咕，马上补.</p>
 ]]></content>
       <categories>
         <category>数学</category>
       </categories>
       <tags>
-        <tag>数论</tag>
+        <tag>FFT</tag>
+        <tag>NTT</tag>
       </tags>
   </entry>
   <entry>
@@ -464,78 +536,6 @@ int main()
       </categories>
       <tags>
         <tag>动态规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「FFT/NTT」「多项式」</title>
-    <url>/2019-08-15-fft-ntt/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.08.15</p>
-</blockquote>
-<p>必忘原理的<code>FFT</code></p>
-<a id="more"></a>
-<hr>
-<iframe src="//player.bilibili.com/player.html?aid=19141078&cid=31220967&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false" width="360px" height="560px"> </iframe>
-
-<p>测试一下视频，然而貌似只有<code>bilibili</code>的外链比较好<span class="heimu" title="你知道的太多了">总不能放Youtube？</span>，然而鬼畜的二维码与顶部链接比前几年在<code>mcbbs</code>看的时候烂多了。</p>
-<hr>
-<p>在<code>2019年8月15日</code>，终于看懂了<code>FFT</code>的推导过程。</p>
-<p>首先是<code>FFT</code>的板子，这个写法其实很优美<span class="heimu" title="你知道的太多了">记不住的</span>。</p>
-<pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cmath&gt;
-#include &lt;complex&gt;
-#define R register
-
-using namespace std;
-const int N = 4.2e6;
-const double PI = acos(-1);
-int n, r[N];
-class C {
-public:
-    double r, i;
-    C() { r = i = 0; }
-    C(R double x, R double y) { r = x; i = y; }
-    C operator + (R C&amp; x) { return C(r+x.r, i+x.i); }
-    C operator - (R C&amp; x) { return C(r-x.r, i-x.i); }
-    C operator * (R C&amp; x) { return C(r*x.r-i*x.i, r*x.i+i*x.r); }
-    void operator += (R C&amp; x) { r += x.r; i += x.i; }
-    void operator *= (R C&amp; x) { R double t = r; r = r*x.r-i*x.i; i = t*x.i+i*x.r; }
-}f[N], g[N];
-inline void FFT(R C *a, R int op)
-{
-    R C W, w, t, *a0, *a1;
-    R int i, j, k;
-    for (i = 0; i &lt; n; ++i)
-        if (i &lt; r[i]) t = a[i], a[i] = a[r[i]], a[r[i]] = t;
-    for(i = 1; i &lt; n; i &lt;&lt;= 1)
-        for(W = C(cos(PI/i), sin(PI/i) * op), j = 0; j &lt; n; j += i &lt;&lt; 1)
-            for(w = C(1, 0), a1 = i + (a0 = a + j), k = 0; k &lt; i; ++k, ++a0, ++a1, w*=W)
-                t = *a1 * w, *a1 = *a0 - t, *a0 += t;
-}
-int main()
-{
-    R int m, i, l = 0;
-    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);
-    for(i = 0; i &lt;= n; i++) scanf(&quot;%lf&quot;, &amp;f[i].r);
-    for(i = 0; i &lt;= m; i++) scanf(&quot;%lf&quot;, &amp;g[i].r);
-    for(m += n, n = 1; n &lt;= m; n &lt;&lt;= 1, ++l);
-    for(i = 0; i &lt; n; ++i) r[i] = (r[i &gt;&gt; 1] &gt;&gt; 1) | ((i &amp; 1) &lt;&lt; (l - 1));
-    FFT(f, 1); FFT(g, 1);
-    for(i = 0; i &lt; n; ++i) f[i] *= g[i];
-    FFT(f, -1);
-    for(i = 0; i &lt;= m; ++i) printf(&quot;%.0lf &quot;, fabs(f[i].r) / n);
-    return 0;
-}
-</code></pre>
-<p>咕，马上补.</p>
-]]></content>
-      <categories>
-        <category>数学</category>
-      </categories>
-      <tags>
-        <tag>FFT</tag>
-        <tag>NTT</tag>
       </tags>
   </entry>
   <entry>
@@ -1028,270 +1028,6 @@ a[i] = lower_bound(b + 1, end, a[i]) - b;
       </tags>
   </entry>
   <entry>
-    <title>Github Pages+HTML5 up制作个人主页及绑定二级域名</title>
-    <url>/2019-09-23-html5-up/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.09.23</p>
-</blockquote>
-<p>好看是第一生产力​qwq</p>
-<a id="more"></a>
-<hr>
-<blockquote>
-<p><a href="http://chitanda.me/2015/11/03/multiple-git-pages-in-one-github-account/" target="_blank" rel="noopener">单个GitHub帐号下添加多个GitHub Pages的相关问题| 我很好奇</a></p>
-</blockquote>
-<p>首先我们要知道GitHub Pages可以有多个，项目名为<code>YourGitHubName.github.io</code>的Pages使用这个域名访问，新添加一个项目<code>ProjectName</code>并设置为Pages项目后，使用<code>YourGitHubName.github.io/ProjectName</code>进行访问，那么我们可以使用一个Pages托管Hexo博客，一个Pages托管个人主页.</p>
-<p>这里介绍一个网站提供了很多个人主页的模板<br><a href="https://html5up.net" target="_blank" rel="noopener">https://html5up.net</a><br>我们选择并下载其中一个，直接修改即可，有一定HTML和CSS基础都可以很轻松的修改，你需要一个浏览器并会使用控制台以及抓取元素和一个编辑器例如vscode即可开始编写.</p>
-<p>那么你还需要会使用git并把这个网站的源代码上传到GitHub的repo上，不会上网找个教程吧.</p>
-<p>那然后就是域名绑定了，如果你用域名绑定过GitHub Pages的话，你就知道域名的DNS设置要设置几个A选项，这里不讲那是啥玩意了，总之这个选项是设置GitHub的ip地址的，有空我再找链接吧，自己去查GitHub的文档就行。然后你要设置一个CNAME，设置<code>YoutGitHubName.github.io</code>，然后在Github的repo里添加一个CNAME文件内容是你的域名全称并且不带https，www这样的前缀.</p>
-<p>那么现在有两个页面，我们可以把主域名解析到个人主页上，使用blog二级域名解析到博客上，具体设置就是在域名DNS设置里设置二级域名并且同样解析到<code>YoutGitHubName.github.io</code>上，然后分别在个人主页的CNAME里设置<code>域名</code>和博客的CNAME里设置<code>blog.域名</code>，记得打开GitHub Pages绑定个人域名的https.</p>
-<p>现在等一会DNS解析生效和GitHub的https证书申请完毕应该就没什么问题了.</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「分层图」</title>
-    <url>/2019-09-23-layered-graph/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.09.23</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在一个无向图$G=(V,E)$中，可以改变$k$条边的权值为$\Delta w$，求单源最短路径。</p>
-<h1 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h1><p>分层图的想法就是如果有$k$条边权值变为$\Delta w$，就建$k+1$层图。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/fct.png" alt></p>
-<p>这个图实际上是这样的，对于每$1$层中相连的点对$(u,v)$连权值为$w$的无向边，对于每个在原图中相连的点对$(u,v)$由$k$层点$u<em>k$向$k+1$层点$v</em>{k+1}$以及$k$层点$v<em>k$向$k+1$层点$u</em>{k+1}$连权值为$\Delta w$的有向边，方向是从$k$层向$k+1$层。<br>这样构造完成一张分层图后，从第$1$层的起始点$s<em>1$求单源最短路径，最终第$k + 1$层的终点$t</em>{k+1}$的单源最短路径值即为答案所求。<br>原理其实很简单，如果从$k$层图到$k+1$层图，有向边$(u<em>k,v</em>{k+1})$是一条$\Delta w$权边，走这条边，相当于把$w$权边变成了$\Delta w$权边，并且进入了$k+1$层。这样如果有$k+1$层图的话，相当于进行了$k$次这种操作，自然就在$k+1$层图求最短路中实现了$k$次改变边权的目标。</p>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="P2939-USACO09FEB-改造路Revamping-Trails"><a href="#P2939-USACO09FEB-改造路Revamping-Trails" class="headerlink" title="P2939 [USACO09FEB]改造路Revamping Trails"></a><a href="https://www.luogu.org/problemnew/show/P2939" target="_blank" rel="noopener">P2939 [USACO09FEB]改造路Revamping Trails</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-const int N = 1e4 + 5, M = 5e4 + 5, K = 105;
-int n, m, k;
-struct Edge {
-    int Next, to, dis;
-}e[M * K * 2];
-int head[N * K], num;
-void add(int from, int to, int dis)
-{
-    e[++num].Next = head[from];
-    e[num].to = to;
-    e[num].dis = dis;
-    head[from] = num;
-}
-int dist[N * K], vis[N * K];
-struct node {
-    int u, d;
-    bool operator &lt; (const node &amp;x) const {
-        return d &gt; x.d;
-    }
-};
-priority_queue&lt;node&gt; q;
-void dijk()
-{
-    memset(dist, 0x3f, sizeof(dist));
-    dist[1] = 0;
-    q.push((node){1, 0});
-    while(!q.empty())
-    {
-        int u = q.top().u; q.pop();
-        if(vis[u]) continue;
-        vis[u] = 1;
-        for(int i = head[u]; i; i = e[i].Next)
-        {
-            int v = e[i].to, w = e[i].dis;
-            if(dist[v] &gt; dist[u] + w)
-            {
-                dist[v] = dist[u] + w;
-                if(!vis[v]) q.push((node){v, dist[v]});
-            }
-        }
-    }
-}
-int main()
-{
-    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
-    for(int i = 1, u, v, z; i &lt;= m; i++)
-    {
-        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z);
-        add(u, v, z); add(v, u, z);
-        for(int j = 1; j &lt;= k; j++)
-        {
-            add(j * n + u, j * n + v, z);
-            add(j * n + v, j * n + u, z);
-            add((j - 1) * n + u, j * n + v, 0);
-            add((j - 1) * n + v, j * n + u, 0);
-        }
-    }
-    dijk();
-    int ans = 0x3fffffff;
-    for(int i = 1; i &lt;= k + 1; i++)
-        ans = min(dist[i * n], ans);
-    printf(&quot;%d\n&quot;, ans);
-    return 0;
-}
-</code></pre>
-<h2 id="P4568-JLOI2011-飞行路线"><a href="#P4568-JLOI2011-飞行路线" class="headerlink" title="P4568 [JLOI2011]飞行路线"></a><a href="https://www.luogu.org/problemnew/show/P4568" target="_blank" rel="noopener">P4568 [JLOI2011]飞行路线</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;queue&gt;
-#include &lt;cstring&gt;
-
-using namespace std;
-const int N = 1e4 + 5, M = 5e4 + 5, K = 12;
-int n, m, k;
-int s, t;
-struct _edge {
-    int Next, v, w;
-}e[M * K * 4 + M * 2];
-int head[N * K], num;
-void add(int from, int to, int dis)
-{
-    e[++num].Next = head[from];
-    e[num].v = to;
-    e[num].w = dis;
-    head[from] = num;
-}
-int dist[N * K], vis[N * K];
-struct node {
-    int u, d;
-    bool operator &lt; (const node &amp;x) const {
-        return d &gt; x.d;
-    }
-};
-priority_queue&lt;node&gt; q;
-void dijk(int x)
-{
-    memset(dist, 0x3f, sizeof(dist));
-    dist[x] = 0;
-    q.push((node){x, 0});
-    while(!q.empty())
-    {
-        node tp = q.top(); q.pop();
-        int u = tp.u;
-        if(u == t + k * n) break;
-        if(vis[u]) continue;
-        vis[u] = 1;
-        for(int i = head[u]; i; i = e[i].Next)
-        {
-            int v = e[i].v, w = e[i].w;
-            if(dist[v] &gt; dist[u] + w)
-            {
-                dist[v] = dist[u] + w;
-                if(!vis[v]) q.push((node){v, dist[v]});
-            }
-        }
-    }
-}
-int main()
-{
-    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
-    scanf(&quot;%d%d&quot;, &amp;s, &amp;t); s++, t++;
-    for(int i = 1, u, v, z; i &lt;= m; i++)
-    {
-        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z); u++, v++;
-        add(u, v, z); add(v, u, z);
-        for(int j = 1; j &lt;= k; j++)
-        {
-            add(j * n + u, j * n + v, z);
-            add(j * n + v, j * n + u, z);
-            add((j - 1) * n + u, j * n + v, 0);
-            add((j - 1) * n + v, j * n + u, 0);
-        }
-    }
-    dijk(s);
-    int ans = 1e9;
-    for(int i = 0; i &lt;= k; i++)
-        ans = min(ans, dist[t + i * n]);
-    printf(&quot;%d\n&quot;, ans);
-    return 0;
-}
-</code></pre>
-<h2 id="P4822-BJWC2012-冻结"><a href="#P4822-BJWC2012-冻结" class="headerlink" title="P4822 [BJWC2012]冻结"></a><a href="https://www.luogu.org/problemnew/show/P4822" target="_blank" rel="noopener">P4822 [BJWC2012]冻结</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
-#include &lt;queue&gt;
-
-using namespace std;
-const int N = 55, M = 1005, K = 55;
-int n, m, k;
-struct Edge {
-    int Next, to, dis;
-}e[M * K * 10];
-int head[N * K * 10], num;
-void add(int from, int to, int dis)
-{
-    e[++num].Next = head[from];
-    e[num].to = to;
-    e[num].dis = dis;
-    head[from] = num;
-}
-struct node {
-    int u, d;
-    bool operator &lt; (const node&amp; x) const {
-        return d &gt; x.d;
-    } 
-};
-priority_queue&lt;node&gt; q;
-int dist[N * K * 10], vis[N * K * 10];
-void dijk()
-{
-    memset(dist, 0x3f, sizeof(dist));
-    dist[1] = 0;
-    q.push((node){1, 0});
-    while(!q.empty())
-    {
-        int u = q.top().u; q.pop();
-        if(vis[u]) continue;
-        vis[u] = 1;
-        for(int i = head[u]; i; i = e[i].Next)
-        {
-            int v = e[i].to, w = e[i].dis;
-            if(dist[v] &gt; dist[u] + w)
-            {
-                dist[v] = dist[u] + w;
-                if(!vis[v]) q.push((node){v, dist[v]});
-            }
-        }
-    }
-}
-int main()
-{
-    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
-    for(int i = 1, u, v, z; i &lt;= m; i++)
-    {
-        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z);
-        add(u, v, z); add(v, u, z);
-        for(int j = 1; j &lt;= k; j++)
-        {
-            add(j * n + u, j * n + v, z);
-            add(j * n + v, j * n + u, z);
-            add((j - 1) * n + u, j * n + v, z &gt;&gt; 1);
-            add((j - 1) * n + v, j * n + u, z &gt;&gt; 1);
-        }
-    }
-    dijk();
-    int ans = 0x7fffffff;
-    for(int i = 1; i &lt;= k + 1; i++)
-        ans = min(ans, dist[i * n]);
-    printf(&quot;%d\n&quot;, ans);
-    return 0;
-}
-</code></pre>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>分层图</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《意识宇宙》</title>
     <url>/2019-09-22-science-fiction/</url>
     <content><![CDATA[<blockquote>
@@ -1532,6 +1268,243 @@ COSMOS-2.BRANCH1.A.D.2019.09.31.A.M.5:02 \quad [数据删除]酒店第12楼层</
       </categories>
       <tags>
         <tag>科幻小说</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>「分层图」</title>
+    <url>/2019-09-23-layered-graph/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.09.23</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在一个无向图$G=(V,E)$中，可以改变$k$条边的权值为$\Delta w$，求单源最短路径。</p>
+<h1 id="分层图"><a href="#分层图" class="headerlink" title="分层图"></a>分层图</h1><p>分层图的想法就是如果有$k$条边权值变为$\Delta w$，就建$k+1$层图。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/fct.png" alt></p>
+<p>这个图实际上是这样的，对于每$1$层中相连的点对$(u,v)$连权值为$w$的无向边，对于每个在原图中相连的点对$(u,v)$由$k$层点$u<em>k$向$k+1$层点$v</em>{k+1}$以及$k$层点$v<em>k$向$k+1$层点$u</em>{k+1}$连权值为$\Delta w$的有向边，方向是从$k$层向$k+1$层。<br>这样构造完成一张分层图后，从第$1$层的起始点$s<em>1$求单源最短路径，最终第$k + 1$层的终点$t</em>{k+1}$的单源最短路径值即为答案所求。<br>原理其实很简单，如果从$k$层图到$k+1$层图，有向边$(u<em>k,v</em>{k+1})$是一条$\Delta w$权边，走这条边，相当于把$w$权边变成了$\Delta w$权边，并且进入了$k+1$层。这样如果有$k+1$层图的话，相当于进行了$k$次这种操作，自然就在$k+1$层图求最短路中实现了$k$次改变边权的目标。</p>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><h2 id="P2939-USACO09FEB-改造路Revamping-Trails"><a href="#P2939-USACO09FEB-改造路Revamping-Trails" class="headerlink" title="P2939 [USACO09FEB]改造路Revamping Trails"></a><a href="https://www.luogu.org/problemnew/show/P2939" target="_blank" rel="noopener">P2939 [USACO09FEB]改造路Revamping Trails</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+const int N = 1e4 + 5, M = 5e4 + 5, K = 105;
+int n, m, k;
+struct Edge {
+    int Next, to, dis;
+}e[M * K * 2];
+int head[N * K], num;
+void add(int from, int to, int dis)
+{
+    e[++num].Next = head[from];
+    e[num].to = to;
+    e[num].dis = dis;
+    head[from] = num;
+}
+int dist[N * K], vis[N * K];
+struct node {
+    int u, d;
+    bool operator &lt; (const node &amp;x) const {
+        return d &gt; x.d;
+    }
+};
+priority_queue&lt;node&gt; q;
+void dijk()
+{
+    memset(dist, 0x3f, sizeof(dist));
+    dist[1] = 0;
+    q.push((node){1, 0});
+    while(!q.empty())
+    {
+        int u = q.top().u; q.pop();
+        if(vis[u]) continue;
+        vis[u] = 1;
+        for(int i = head[u]; i; i = e[i].Next)
+        {
+            int v = e[i].to, w = e[i].dis;
+            if(dist[v] &gt; dist[u] + w)
+            {
+                dist[v] = dist[u] + w;
+                if(!vis[v]) q.push((node){v, dist[v]});
+            }
+        }
+    }
+}
+int main()
+{
+    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
+    for(int i = 1, u, v, z; i &lt;= m; i++)
+    {
+        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z);
+        add(u, v, z); add(v, u, z);
+        for(int j = 1; j &lt;= k; j++)
+        {
+            add(j * n + u, j * n + v, z);
+            add(j * n + v, j * n + u, z);
+            add((j - 1) * n + u, j * n + v, 0);
+            add((j - 1) * n + v, j * n + u, 0);
+        }
+    }
+    dijk();
+    int ans = 0x3fffffff;
+    for(int i = 1; i &lt;= k + 1; i++)
+        ans = min(dist[i * n], ans);
+    printf(&quot;%d\n&quot;, ans);
+    return 0;
+}
+</code></pre>
+<h2 id="P4568-JLOI2011-飞行路线"><a href="#P4568-JLOI2011-飞行路线" class="headerlink" title="P4568 [JLOI2011]飞行路线"></a><a href="https://www.luogu.org/problemnew/show/P4568" target="_blank" rel="noopener">P4568 [JLOI2011]飞行路线</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;queue&gt;
+#include &lt;cstring&gt;
+
+using namespace std;
+const int N = 1e4 + 5, M = 5e4 + 5, K = 12;
+int n, m, k;
+int s, t;
+struct _edge {
+    int Next, v, w;
+}e[M * K * 4 + M * 2];
+int head[N * K], num;
+void add(int from, int to, int dis)
+{
+    e[++num].Next = head[from];
+    e[num].v = to;
+    e[num].w = dis;
+    head[from] = num;
+}
+int dist[N * K], vis[N * K];
+struct node {
+    int u, d;
+    bool operator &lt; (const node &amp;x) const {
+        return d &gt; x.d;
+    }
+};
+priority_queue&lt;node&gt; q;
+void dijk(int x)
+{
+    memset(dist, 0x3f, sizeof(dist));
+    dist[x] = 0;
+    q.push((node){x, 0});
+    while(!q.empty())
+    {
+        node tp = q.top(); q.pop();
+        int u = tp.u;
+        if(u == t + k * n) break;
+        if(vis[u]) continue;
+        vis[u] = 1;
+        for(int i = head[u]; i; i = e[i].Next)
+        {
+            int v = e[i].v, w = e[i].w;
+            if(dist[v] &gt; dist[u] + w)
+            {
+                dist[v] = dist[u] + w;
+                if(!vis[v]) q.push((node){v, dist[v]});
+            }
+        }
+    }
+}
+int main()
+{
+    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
+    scanf(&quot;%d%d&quot;, &amp;s, &amp;t); s++, t++;
+    for(int i = 1, u, v, z; i &lt;= m; i++)
+    {
+        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z); u++, v++;
+        add(u, v, z); add(v, u, z);
+        for(int j = 1; j &lt;= k; j++)
+        {
+            add(j * n + u, j * n + v, z);
+            add(j * n + v, j * n + u, z);
+            add((j - 1) * n + u, j * n + v, 0);
+            add((j - 1) * n + v, j * n + u, 0);
+        }
+    }
+    dijk(s);
+    int ans = 1e9;
+    for(int i = 0; i &lt;= k; i++)
+        ans = min(ans, dist[t + i * n]);
+    printf(&quot;%d\n&quot;, ans);
+    return 0;
+}
+</code></pre>
+<h2 id="P4822-BJWC2012-冻结"><a href="#P4822-BJWC2012-冻结" class="headerlink" title="P4822 [BJWC2012]冻结"></a><a href="https://www.luogu.org/problemnew/show/P4822" target="_blank" rel="noopener">P4822 [BJWC2012]冻结</a></h2><pre><code class="lang-c++">#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;queue&gt;
+
+using namespace std;
+const int N = 55, M = 1005, K = 55;
+int n, m, k;
+struct Edge {
+    int Next, to, dis;
+}e[M * K * 10];
+int head[N * K * 10], num;
+void add(int from, int to, int dis)
+{
+    e[++num].Next = head[from];
+    e[num].to = to;
+    e[num].dis = dis;
+    head[from] = num;
+}
+struct node {
+    int u, d;
+    bool operator &lt; (const node&amp; x) const {
+        return d &gt; x.d;
+    } 
+};
+priority_queue&lt;node&gt; q;
+int dist[N * K * 10], vis[N * K * 10];
+void dijk()
+{
+    memset(dist, 0x3f, sizeof(dist));
+    dist[1] = 0;
+    q.push((node){1, 0});
+    while(!q.empty())
+    {
+        int u = q.top().u; q.pop();
+        if(vis[u]) continue;
+        vis[u] = 1;
+        for(int i = head[u]; i; i = e[i].Next)
+        {
+            int v = e[i].to, w = e[i].dis;
+            if(dist[v] &gt; dist[u] + w)
+            {
+                dist[v] = dist[u] + w;
+                if(!vis[v]) q.push((node){v, dist[v]});
+            }
+        }
+    }
+}
+int main()
+{
+    scanf(&quot;%d%d%d&quot;, &amp;n, &amp;m, &amp;k);
+    for(int i = 1, u, v, z; i &lt;= m; i++)
+    {
+        scanf(&quot;%d%d%d&quot;, &amp;u, &amp;v, &amp;z);
+        add(u, v, z); add(v, u, z);
+        for(int j = 1; j &lt;= k; j++)
+        {
+            add(j * n + u, j * n + v, z);
+            add(j * n + v, j * n + u, z);
+            add((j - 1) * n + u, j * n + v, z &gt;&gt; 1);
+            add((j - 1) * n + v, j * n + u, z &gt;&gt; 1);
+        }
+    }
+    dijk();
+    int ans = 0x7fffffff;
+    for(int i = 1; i &lt;= k + 1; i++)
+        ans = min(ans, dist[i * n]);
+    printf(&quot;%d\n&quot;, ans);
+    return 0;
+}
+</code></pre>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>分层图</tag>
       </tags>
   </entry>
   <entry>
@@ -2323,6 +2296,440 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>「后缀数组」</title>
+    <url>/2019-09-23-sa/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.09.23</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p>参考资料：<br>1.<a href="https://www.cnblogs.com/zwfymqz/p/8413523.html" target="_blank" rel="noopener">后缀数组详解</a><br>2.<a href="https://www.luogu.org/blog/i207M/hou-zhui-shuo-zu-xue-xi-bi-ji" target="_blank" rel="noopener">后缀数组-学习笔记</a><br>3.<a href="https://wenku.baidu.com/view/ed1be61e10a6f524ccbf85fd.html" target="_blank" rel="noopener">后缀数组——处理字符串的有力工具</a></p>
+</blockquote>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>$SA$排名为$i$的后缀的位置<br>$rk$位置为$i$的后缀的排名<br>$tp$第二关键字的排名为$i$的后缀的位置，还被用作$rank$的暂存<br>$tax$每个排名对应的后缀数量<br>后缀数组就是为了求出$sa$和$rk$</p>
+<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><p>$rk[sa[i]]=i$ $sa[rk[i]]=i$</p>
+<p>$LCP(x,y) $：字符串x与字符串y的最长公共前缀，在这里<strong>指x号后缀与与y号后缀的最长公共前缀</strong></p>
+<p>$height[i]=lcp ( sa[i],sa[i - 1] )$，即<strong>排名</strong>为$i$的后缀与<strong>排名</strong>为$i−1$的后缀的最长公共前缀</p>
+<p>$H[i]：height[rak[i]]$，即$i$号后缀与它前一名的后缀的最长公共前缀</p>
+<p>$H[i] \geqslant H[i - 1] - 1$ <strong>证明</strong> </p>
+<p>$LCP(i,j)=LCP(j,i) $</p>
+<p>$LCP(i,i)=len(sa[i])=n-sa[i]+1$</p>
+<p>$LCP(i,k)=min\left{height[j] \right}(i+1&lt;=j&lt;=k)$</p>
+<p>$S$不同的子串个数$\dfrac{n(n+1)}{2} -\sum_{i=1}^nheight[i]$</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre><code class="lang-c++">#include &lt;iostream&gt; 
+#include &lt;cstdio&gt;
+#include &lt;string&gt;
+#define R register int
+
+using namespace std;
+const int N = 1000005;
+string s;
+/* sa[i]：排名为i的后缀的位置
+rak[i]：从第i个位置开始的后缀的排名，下文为了叙述方便，把从第i个位置开始的后缀简称为后缀i
+tp[i]：基数排序的第二关键字，意义与sa一样，即第二关键字排名为i的后缀的位置
+tax[i]：i号元素出现了多少次。辅助基数排序
+s：字符串，s[i]表示字符串中第i个字符串*/
+int n, m, sa[N], rk[N], tp[N], c[N];
+void _sort() {
+    for(R i = 1; i &lt;= m; ++i) c[i] = 0;
+    for(R i = 1; i &lt;= n; ++i) c[rk[i]]++;
+    for(R i = 1; i &lt;= m; ++i) c[i] += c[i - 1];
+    for(R i = n; i &gt;= 1; --i) sa[c[rk[tp[i]]]--] = tp[i];
+}
+void SA() {
+    m = 150;
+    for(R i = 1; i &lt;= n; ++i) rk[i] = s[i - 1], tp[i] = i;
+    _sort();
+    for(R w = 1, p = 0; p &lt; n &amp;&amp; w &lt;= n; m = p, w &lt;&lt;= 1) {
+        p = 0;
+        for(R i = 1; i &lt;= w; ++i) tp[++p] = n - w + i;
+        for(R i = 1; i &lt;= n; ++i) if(sa[i] &gt; w) tp[++p] = sa[i] - w;
+        _sort();
+        swap(tp, rk);
+        rk[sa[1]] = p = 1;
+        for(R i = 2; i &lt;= n; ++i)
+            rk[sa[i]] = (tp[sa[i - 1]] == tp[sa[i]] &amp;&amp; tp[sa[i - 1] + w] == tp[sa[i] + w])
+            ? p : ++p;
+    }
+}
+/*i号后缀：从i开始的后缀
+lcp(x,y)：字符串x与字符串y的最长公共前缀，在这里指x号后缀与与y号后缀的最长公共前缀
+height[i]：lcp(sa[i],sa[i-1])，即排名为i的后缀与排名为i-1的后缀的最长公共前缀
+H[i]：height[rak[i]]，即i号后缀与它前一名的后缀的最长公共前缀*/
+int Height[N];
+void Get() {
+    int j, k = 0;
+    for(int i = 1; i &lt;= n; i++) {
+        if(k) k--;
+        j = sa[rk[i] - 1];
+        while(s[i + k - 1] == s[j + k - 1]) ++k;
+        Height[rk[i]] = k;
+    }
+}
+int main()
+{
+    cin &gt;&gt; s;
+    n = s.length();
+    SA();
+    for(R i = 1; i &lt;= n; ++i) printf(&quot;%d &quot;, sa[i]);
+    cout &lt;&lt; endl;
+    Get();
+    return 0;
+}
+</code></pre>
+<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p><a href="https://www.luogu.org/problemnew/show/P2408" target="_blank" rel="noopener">P2408 不同子串个数</a></p>
+<script type="math/tex; mode=display">
+ans=\dfrac{n(n+1)}{2}-\sum height[i]</script><pre><code class="lang-c++">#include &lt;iostream&gt; 
+#include &lt;cstdio&gt;
+#include &lt;string&gt;
+#define R register int
+
+using namespace std;
+const int N = 1000005;
+string s;
+int n, m, sa[N], rk[N], tp[N], c[N];
+void _sort() {
+    for(R i = 1; i &lt;= m; ++i) c[i] = 0;
+    for(R i = 1; i &lt;= n; ++i) c[rk[i]]++;
+    for(R i = 1; i &lt;= m; ++i) c[i] += c[i - 1];
+    for(R i = n; i &gt;= 1; --i) sa[c[rk[tp[i]]]--] = tp[i];
+}
+void SA() {
+    m = 150;
+    for(R i = 1; i &lt;= n; ++i) rk[i] = s[i - 1], tp[i] = i;
+    _sort();
+    for(R w = 1, p = 0; p &lt; n &amp;&amp; w &lt;= n; m = p, w &lt;&lt;= 1) {
+        p = 0;
+        for(R i = 1; i &lt;= w; ++i) tp[++p] = n - w + i;
+        for(R i = 1; i &lt;= n; ++i) if(sa[i] &gt; w) tp[++p] = sa[i] - w;
+        _sort();
+        swap(tp, rk);
+        rk[sa[1]] = p = 1;
+        for(R i = 2; i &lt;= n; ++i)
+            rk[sa[i]] = (tp[sa[i - 1]] == tp[sa[i]] &amp;&amp; tp[sa[i - 1] + w] == tp[sa[i] + w])
+            ? p : ++p;
+    }
+}
+int Height[N];//H[i] = Height[rk[i]]
+void Get() {
+    int j, k = 0;
+    for(int i = 1; i &lt;= n; ++i) {
+        if(k) k--;
+        j = sa[rk[i] - 1];
+        while(s[i + k - 1] == s[j + k - 1]) ++k;
+        Height[rk[i]] = k;
+    }
+}
+int main()
+{
+    cin &gt;&gt; n &gt;&gt; s;
+    SA();
+    Get();
+    long long ans = 1LL * n * (n + 1) / 2;
+    for(int i = 1; i &lt;= n; ++i)
+        ans -= Height[rk[i]];
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>后缀数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github Pages+HTML5 up制作个人主页及绑定二级域名</title>
+    <url>/2019-09-23-html5-up/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.09.23</p>
+</blockquote>
+<p>好看是第一生产力​qwq</p>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p><a href="http://chitanda.me/2015/11/03/multiple-git-pages-in-one-github-account/" target="_blank" rel="noopener">单个GitHub帐号下添加多个GitHub Pages的相关问题| 我很好奇</a></p>
+</blockquote>
+<p>首先我们要知道GitHub Pages可以有多个，项目名为<code>YourGitHubName.github.io</code>的Pages使用这个域名访问，新添加一个项目<code>ProjectName</code>并设置为Pages项目后，使用<code>YourGitHubName.github.io/ProjectName</code>进行访问，那么我们可以使用一个Pages托管Hexo博客，一个Pages托管个人主页.</p>
+<p>这里介绍一个网站提供了很多个人主页的模板<br><a href="https://html5up.net" target="_blank" rel="noopener">https://html5up.net</a><br>我们选择并下载其中一个，直接修改即可，有一定HTML和CSS基础都可以很轻松的修改，你需要一个浏览器并会使用控制台以及抓取元素和一个编辑器例如vscode即可开始编写.</p>
+<p>那么你还需要会使用git并把这个网站的源代码上传到GitHub的repo上，不会上网找个教程吧.</p>
+<p>那然后就是域名绑定了，如果你用域名绑定过GitHub Pages的话，你就知道域名的DNS设置要设置几个A选项，这里不讲那是啥玩意了，总之这个选项是设置GitHub的ip地址的，有空我再找链接吧，自己去查GitHub的文档就行。然后你要设置一个CNAME，设置<code>YoutGitHubName.github.io</code>，然后在Github的repo里添加一个CNAME文件内容是你的域名全称并且不带https，www这样的前缀.</p>
+<p>那么现在有两个页面，我们可以把主域名解析到个人主页上，使用blog二级域名解析到博客上，具体设置就是在域名DNS设置里设置二级域名并且同样解析到<code>YoutGitHubName.github.io</code>上，然后分别在个人主页的CNAME里设置<code>域名</code>和博客的CNAME里设置<code>blog.域名</code>，记得打开GitHub Pages绑定个人域名的https.</p>
+<p>现在等一会DNS解析生效和GitHub的https证书申请完毕应该就没什么问题了.</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PyQt5上手指南</title>
+    <url>/2019-10-25-pyqt/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.10.25</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>学习前提是需要对Python有一定的基础。</p>
+<p>首先我们需要安装。</p>
+<p>打开powershell输入：</p>
+<pre><code class="lang-powershell">pip install pyqt5-tools
+</code></pre>
+<p>安装完毕后输入：</p>
+<pre><code class="lang-powershell">designer
+</code></pre>
+<p>稍等，会弹出页面，如图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt1.png" alt></p>
+<p>现在创建一个MainWindow窗口，并进行编辑，如图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt2.png" alt></p>
+<p>默认的编辑模式是：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt3.png" alt></p>
+<p>这是用来拖动控件的，上方的TextLabel是显示信息用的Label控件，空白的地方是用来输入信息或者显示信息的Text Edit控件，PushButton是能对点击操作发出信号的Push Button控件。</p>
+<p>左侧的其他控件可以试试并查询功能。</p>
+<p>控件上面的文本和窗口标题文本都可以通过右侧的此窗口修改：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt4.png" alt></p>
+<p>现在我们切换到信号操作上：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt5.png" alt></p>
+<p>试一试点击一个控件后拖动，这是你可以选择信号发送到其他控件或者是窗口本身。</p>
+<p>因为信号所对应的命令还需要我们自己书写，所以我们随便指定一个命令：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt6.png" alt></p>
+<p>这个操作的含义是当点击时关闭窗口。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt7.png" alt></p>
+<p>现在是这样的，那么我们保存一下编辑好的界面。</p>
+<p>打开VSCode，进入保存文件的路径，我们需要把保存的.ui文件转换成.py文件以便接下来的操作。</p>
+<p>在终端里运行：</p>
+<pre><code class="lang-powershell">pyuic5 FileName.ui -o FileName.py
+</code></pre>
+<p>现在我们重新配置一下settings.js文件以避免一些插件检测语法上的错误</p>
+<script type="math/tex; mode=display">
+settings.js</script><pre><code class="lang-js">{
+    &quot;python.pythonPath&quot;: &quot;C:/Users/UserName/AppData/Local/Programs/Python/Python37-32/python.exe&quot;,//选择安装路径
+    &quot;python.linting.pylintArgs&quot;: [
+        &quot;--extension-pkg-whitelist=PyQt5&quot;,
+        &quot;--disable=W,C&quot;, &quot;--generate-members&quot;
+    ]//避免错误报错
+}
+</code></pre>
+<p>现在新建一个文件：</p>
+<pre><code class="lang-python">import sys
+import FileName
+from PyQt5.QtWidgets import QApplication, QMainWindow
+
+if __name__ == &#39;__main__&#39;:
+    app = QApplication(sys.argv)
+    MainWindow = QMainWindow()
+    ui = FileName.Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
+</code></pre>
+<p>运行此文件，即可看到我们刚才制作的窗口。</p>
+<p>下面的问题就是要添加对应的功能，我们打开刚才制作好的FileName.py进行修改。</p>
+]]></content>
+      <categories>
+        <category>编程</category>
+      </categories>
+      <tags>
+        <tag>PyQt</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows软件指南</title>
+    <url>/2019-10-28-software/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2019.10.28</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>断断续续写了一点自己了解过的软件，会一直更新</p>
+<h1 id="IDE及编辑器"><a href="#IDE及编辑器" class="headerlink" title="IDE及编辑器"></a>IDE及编辑器</h1><p>Visual Studio Code：编辑器，可以安装插件，实现对多种语言的支持</p>
+<p>Visual Studio：大型IDE，主要用于C++开发，对C#、Visual Basic支持较好</p>
+<p>Notepad++：高配版记事本，速度快，适合编辑多种文件，支持代码高亮</p>
+<p>Subline：编辑器，支持插件</p>
+<p>Vim：编辑器，独特的键盘指令及操作可以提高效率</p>
+<p>Eclipse：IDE，用于Java开发，可以安装插件支持其他语言</p>
+<p>Atom：GitHub开发的编辑器，比较漂亮，支持插件</p>
+<p>JetBrains系列：IntelliJ、CLion、PyCharm</p>
+<h1 id="系统安全及工具"><a href="#系统安全及工具" class="headerlink" title="系统安全及工具"></a>系统安全及工具</h1><p>火绒：比较舒服的安全工具，没有流氓行为</p>
+<p>Mem Reduct：清理内存</p>
+<p>CCleaner：清理硬盘垃圾文件</p>
+<p>DiskGenius：复杂分区操作，磁盘修复</p>
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><p>Listary：全硬盘文件搜索，界面类型及功能多样，适合日常使用</p>
+<p>Everything：全硬盘文件搜索，功能更加专一，适合复杂文件操作</p>
+<p>7-Zip：最好用的压缩软件，算法一流</p>
+<p>FastCopy：快速拷贝文件，比Windows系统快</p>
+<h1 id="系统美化及桌面整理"><a href="#系统美化及桌面整理" class="headerlink" title="系统美化及桌面整理"></a>系统美化及桌面整理</h1><p>Fences：桌面整理，效果很漂亮，支持扩展出多桌面</p>
+<p>Rolan：桌面轻量级收纳工具</p>
+<p>Startisback：让任务栏透明吧</p>
+<p>WallpaperEngine：让桌面壁纸动起来吧</p>
+<p>SAO-Utils：模拟刀剑神域的界面</p>
+<p>Live2dViewerEX：让live2d小人站在桌面上吧</p>
+<p>TrafficMonitor：显示网速、CPU及内存的悬浮窗，支持更换皮肤</p>
+<h1 id="IM（即时通讯）"><a href="#IM（即时通讯）" class="headerlink" title="IM（即时通讯）"></a>IM（即时通讯）</h1><p>TIM：QQ简化版本</p>
+<p>Telegram：电报桌面版</p>
+<p>Skype：微软的软件</p>
+<h1 id="硬件检测"><a href="#硬件检测" class="headerlink" title="硬件检测"></a>硬件检测</h1><p>卡硬工具箱：常用的各种工具都包括了，例如CPU-Z，GPU-Z，SSD测速，硬盘检测等</p>
+<p>aida64：硬件检测工具</p>
+<h1 id="工作及生活"><a href="#工作及生活" class="headerlink" title="工作及生活"></a>工作及生活</h1><p>Chrome：Google开发的浏览器</p>
+<p>Firefox：火狐浏览器</p>
+<p>potplayer：音视频播放器，可以更换皮肤，清爽流畅</p>
+<p>Bandicam：录屏软件</p>
+<p>Vieas：图片查看器，打开速度更快，还可简单编辑图片</p>
+<p>OneNote：记笔记神器，功能全面，网页剪取较好用</p>
+<p>OneDrive：微软云盘，存点随时用的文档</p>
+<p>印象笔记：经典笔记软件</p>
+<h1 id="文本排版和数学"><a href="#文本排版和数学" class="headerlink" title="文本排版和数学"></a>文本排版和数学</h1><p>Typora：Markdown编辑器</p>
+<p>Moeditor：Markdown编辑器</p>
+<p>LaTeX：排版及数学公式工具</p>
+<p>Matlab：数学计算及数学</p>
+<p>Mathematica：数学计算及数学</p>
+<p>GraphViz：图论</p>
+<p>geogebra：数学</p>
+<p>几何画板：几何</p>
+<h1 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h1><p>Steam：Valve的游戏发行平台</p>
+<p>Uplay：育碧发行平台</p>
+<p>origin：EA发行平台</p>
+<p>SSTap：用于境外服务器线路加速</p>
+<p>Fraps：显示帧数</p>
+<p>BakaXL：好看的MC启动器</p>
+<h1 id="梯子及暗网"><a href="#梯子及暗网" class="headerlink" title="梯子及暗网"></a>梯子及暗网</h1><p>Shadowsocks：ss</p>
+<p>ShadowsocksR：ssr</p>
+<p>V2Ray</p>
+<p>Brook</p>
+<p>Tor浏览器：洋葱浏览器</p>
+<h1 id="编程工具"><a href="#编程工具" class="headerlink" title="编程工具"></a>编程工具</h1><p>terminus：很漂亮的一个终端</p>
+<p>Git：版本控制</p>
+<hr>
+<p>以下内容待更新</p>
+<h1 id="微软系列"><a href="#微软系列" class="headerlink" title="微软系列"></a>微软系列</h1><p>Word、</p>
+<h1 id="Adobe系列"><a href="#Adobe系列" class="headerlink" title="Adobe系列"></a>Adobe系列</h1><p>Photoshop：</p>
+<h1 id="艺术设计工具"><a href="#艺术设计工具" class="headerlink" title="艺术设计工具"></a>艺术设计工具</h1><p>C4D：</p>
+<p>Blender：</p>
+<h1 id="ACGN"><a href="#ACGN" class="headerlink" title="ACGN"></a>ACGN</h1><p>MMD：</p>
+<p>Vocaloid：</p>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我接触与学习编程及OI的经历</title>
+    <url>/2020-02-29-about-program/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2025.03.21 </p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>想来自己接触编程的时间真的不算短了，也是三年多了，但是没有学会太多的知识，其原因一是没有坚持在闲暇的时候学习，自己也一直缺少主观的动力去努力学习，二是自己实践得少，没有全面的知识体系，解决问题的过程中编程容易陷入困难以至于放弃。虽然自己知识浅薄，但是编程的确是我一直喜欢的一项事物，在这里我简单写写这几年的编程学习经历吧。</p>
+<h1 id="2016"><a href="#2016" class="headerlink" title="2016"></a>2016</h1><p>2016年快要到了末尾，初中同学总是与我聊起些计算机方面的话题，不过仅限于些PC硬件，PS之类的平淡无奇的东西罢了，我也没什么动力去学习编程，尽管前几年一直对此方面非常感兴趣，也有意向去尝试，可我的确是不敢勇于尝试，也就是不愿跨出第一步去接触新事物罢了。</p>
+<p>不过有一天，一位同学给我看了一本书：《零基础学C语言》，据他所说仅仅是在书店买了一本，我看了看觉得不算很难，正巧当时在知乎看了一些编程的问题，也有兴趣学C语言，就顺理成章的买了一本，的确算不上一流的教材，不过庆幸的是我没有选择谭浩强之类的时代产物，也没有去看至于到诸如《C Primer Plus》等可能略微劝退我的书籍。现在依稀记得对于反码补码之类的东西理解有一些难度，不过还是很有兴趣的看完了，也写出了第一个Hello world，当时我很少写代码，大部分时间花都在翻翻书，还觉得程序框图挺有趣的，记得书上写了一些五子棋之类的游戏，当时也没全看懂。</p>
+<h1 id="2017"><a href="#2017" class="headerlink" title="2017"></a>2017</h1><p>书自然是看完了，可是会写多少了吗？恐怕不是的。而后呢？自然没有多大的兴趣，只记得自己把书看懂了，后来也没有写过几次C语言罢了，曾经安装过Python环境，也没有怎么写过。</p>
+<p>暑假的时候，在一些事情的影响下决定想学一学OI，自然开始看C++，因为比较底层的内容比如指针和二进制编码理解的还比较好所以几乎没什么阻力，当然没有看多少OOP的知识，然后就开始写写简单的OI题，看看数论，算法之类的，但是的确是非常水，贡献了很多时间给MC和B站之类的，于是到11月连DFS也写不熟练。就是这样去普及组水了个一等奖，当然本身也得顾及课内学习，况且是开学后才开始学算法的。</p>
+<p>之后我对编程迅速失去兴趣，又开始玩电子游戏，半年没写代码。主要原因是没什么学习目的，也没接去接触开源社区，不太明白怎么用网络学习新技术。大概还是动力和兴趣不足。</p>
+<h1 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h1><p>从四月开始到年底的时间都花在了OI上，主要是学了大量的算法和数据结构，以及一些C++。最后11月提高组喜获二等奖，这一年没什么想法，除了C++别的语言几乎没有写过，不过上网时间倒是出奇的长，看了很多个人博客和知乎……</p>
+<p>其实虽然我不是特别讨厌算法竞赛，但是确实没什么非常喜欢学习算法的感觉，就像是随波逐流地而来一样。而且说真的只要一个算法满足在数学形式上复杂或者抽象程度上高的话，我在学习它的时候就会遇到极大的困难，非常难以凭借自学的能力克服。</p>
+<h1 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h1><p>今年主要还是学习OI，五月份的时候搭了搭博客，然后这时候觉得科学上网还是方便一些，时间不太允许自己搭，于是找了个机场，才开始真正用上了一些有价值的工具。</p>
+<p>暑假开始便觉得OI只能拿个联赛一等奖，加上一直算法学习难度对我而言也是比较大，逐渐也就失去了热情，放弃了联赛之上比赛内容的学习。主要是保持每天做一些动态规划的题，学了一些自己喜欢的算法，不是联赛内容的算法看明白后写一写，就放弃继续做题了。</p>
+<p>在学校剩下的时间便用来学一点点C++、C#和Python，大部分时间都在改博客的样式和学一些前端和Node.js基础知识，看了一些计算机的基础理论比如计网之类的，不过重心肯定在OI上，这些只作为了一些消遣般的活动，投入时间也不多，所以知识水平并不高。当然，知乎也看了不少……</p>
+<p>最后11月喜获联赛的一等奖，基本是我真实水平，没什么好说的……退役后闲暇时间学了一些CSAPP和x86汇编，但是没有自己写过。</p>
+<h1 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h1><p>现在可能不会再有太多时间写代码了，放假的时候作为消遣应该还是会看看编程相关的内容。</p>
+<p>突发疫情，也不用去学校，现在主要想学学C++，C#、Python也想看一看。倒是有兴趣去学一些Unity，不过这些事肯定得放在放假的时候去做，因为上网课的时候还要先玩游戏……</p>
+<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>事到如今所有事都已成定局了，学OI也给我的算法水平带来了很大的提升吧，当然上网时间多了也接触到了更多编程相关的内容和技术。</p>
+<p>那么看来如果要保持长时间对编程的学习的话，适度的兴趣和合适的方法论是不可或缺的。兴趣的话就例如对于一些有趣事物的实现亦或是对科学知识的那种好奇心，方法论来说就是一些自学的方法诸如快速地获取并筛选信息、对一些语言知识和实践的综合运用和遇到问题时解决错误的步骤此类的问题。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>编程学习</tag>
+        <tag>OI学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一些metagame的介绍与评价（无剧透）</title>
+    <url>/2020-05-18-metagame/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2021.07.31</p>
+</blockquote>
+<p>meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。</p>
+<a id="more"></a>
+<hr>
+<blockquote>
+<p>后设小说（英语：Metafiction）又称元小说、超小说，是一种小说类型，透过自我意识的觉醒，刻意凸显书中虚构的错觉。威廉·加斯在1970年〈哲学与小说形式〉一文中首度提出“后设小说”的说法。典型的写作技巧包括将原先的剧情设定为一件文学作品，随后揭露故事的“真相”。后设小说透过讽刺和自我反省等手法，引导读者思考小说与现实之间的关联，进而有意识、有组织地探讨小说本身的虚构性。<br>出自：<a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA</a></p>
+</blockquote>
+<p>meta游戏与元小说类似，都会与现实中的读者或游玩者产生一定的交互，如同元小说会突出小说本身的虚构性，meta游戏也会着重显明自身世界的编程程序性或与该世界与玩家世界的关联性（我会将其分为程序代码型和平行世界型两种类型）并引导真实世界的游玩者通过游戏程序机制来获取到游戏世界本身并不具有的能力以此来改变游戏剧情，最终模糊虚拟和现实的边界。</p>
+<p>程序代码型的游戏会和计算机本身产生一定的交互，并需要通过游戏程序以外的计算机内部操作完成游戏剧情的推进，或（且）会明确游戏本身是程序运行的结果。</p>
+<p>平行世界型的游戏不会对计算机产生交互，但你可以通过自己的外部操作（存档/读档）改变平行世界的剧情走向，或（且）会明确游戏本身是独立于程序存在的一个世界，但程序可以改变此世界的一些时间线。</p>
+<p>一般来说虽然meta游戏中你都可以完全操控主角的操作，但程序代码型会倾向于使你对游戏本身产生更多的操作，同时从前期就开始就强调主角和游玩者是两个不同的角色，而平行世界型一般会在后期点明游玩者的介入性，并强调主角对游玩者的操控性，但不会着重强调这两个角色的区分性和发挥的不同作用。</p>
+<p>meta游戏的最主要特点是将真实世界中的游戏玩家作为游戏内容本身的参与者而不是游戏角色的操控者，也常常会有种说法指明meta游戏打破了第四面墙（显示器屏幕）。</p>
+<!--more-->
+<h1 id="Ever17-—the-out-of-infinity—-时空轮回"><a href="#Ever17-—the-out-of-infinity—-时空轮回" class="headerlink" title="Ever17 —the out of infinity— 时空轮回"></a>Ever17 —the out of infinity— 时空轮回</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta1.jpg" alt></p>
+<p>平行世界型</p>
+<p>AVG/galgame，科幻悬疑，设定不是非常非常科学但还是很有科学因素的，前期流程非常冗长无趣，主要体验最后解密快感。强烈推荐优先游玩此游戏，可以说此游戏也十分独特，且不存在惊吓和血腥内容。</p>
+<h1 id="Doki-Doki-Literature-Club-心跳文学部"><a href="#Doki-Doki-Literature-Club-心跳文学部" class="headerlink" title="Doki Doki Literature Club 心跳文学部"></a>Doki Doki Literature Club 心跳文学部</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta2.jpg" alt></p>
+<p>程序代码型</p>
+<p>AVG/<del>galgame</del>，剧情简短明确，流程在2h左右，主要体验比较独特的吓人方式，游戏制作方不建议心理承受能力差及13岁以下人群游玩。</p>
+<h1 id="君と彼女と彼女の恋"><a href="#君と彼女と彼女の恋" class="headerlink" title="君と彼女と彼女の恋"></a>君と彼女と彼女の恋</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_1.webp" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_2.webp" alt></p>
+<p>程序代码型</p>
+<p>AVG/<del>galgame</del>，部分精神污染极其严重，不要轻易尝试，有画面反色，文件修改等内容。前期的画面非常不错，淡色且偏水彩风格，适合看风景，前期一些设定让你一度以为这是个科幻故事，我倒是挺希望偏向一个科幻来叙事的，但是最后还是说归结到了计算机和程序这种设定上。总的来说也是很独特的游戏，这种风格的游戏几乎找不出第二个了。</p>
+<h1 id="Undertale"><a href="#Undertale" class="headerlink" title="Undertale"></a>Undertale</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta4.webp" alt></p>
+<p>平行世界型</p>
+<p>RPG游戏，总体来说也非常新奇，有很独特的地方，值得一玩。</p>
+<h1 id="Oneshot"><a href="#Oneshot" class="headerlink" title="Oneshot"></a>Oneshot</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta5.jpg" alt></p>
+<p>程序代码型</p>
+<p>冒险解谜游戏，一周目通关，部分解谜方式很新颖，会和你的计算机本身有所交互，没有在别的游戏里见过。二周目的剧情比较完善，也令人有所感动。缺点在于寻找东西的解谜就略显枯燥。</p>
+<h1 id="艾希-Icey"><a href="#艾希-Icey" class="headerlink" title="艾希 Icey"></a>艾希 Icey</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta6.jpg" alt></p>
+<p>程序代码型</p>
+<p>横版动作游戏，没有玩过，偏重于计算机方面的设定，平面砍杀，类似于空洞骑士。</p>
+<h1 id="史丹利的寓言-The-Stanley-Parable"><a href="#史丹利的寓言-The-Stanley-Parable" class="headerlink" title="史丹利的寓言 The Stanley Parable"></a>史丹利的寓言 The Stanley Parable</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta7.jpg" alt></p>
+<p>程序代码型</p>
+<p>冒险解谜游戏，有一些场景会有不安的感觉，本身内容不算太多，一共有十几个左右的结局。</p>
+<h1 id="恋爱绮谭-不存在的夏天"><a href="#恋爱绮谭-不存在的夏天" class="headerlink" title="恋爱绮谭~不存在的夏天~"></a>恋爱绮谭~不存在的夏天~</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta_8.jpg" alt></p>
+<p>平行世界型</p>
+<p>这部游戏的meta成分很少，寥寥几句话，但在国产galgame中是我见过的最新奇的一部作品了。<br>整个题材融合了虚拟主播、都市怪谈、中国传统灵异设定、MtF、校园恋爱、悬疑以及部分科学性的解释、各种让人会心一笑的梗、一些故事和哲学的讨论、结尾的meta元素也不显突兀。<br>不存在的夏天这一游戏名也一语双关，玩到后期我才明白这个名字的巧妙之处。<br>总体来说虽然分离的故事在一开始关联性不强，但在最后给出的解释都比较合理，串联起了不同人的故事，各种悬疑也都在后期给出逻辑上并不问题的答案，对于悬疑性的体验还是不错的。<br>我个人比较喜欢这种能融合各种现实元素的游戏，只得一提的便是游戏创新性设计的手机系统、前后文字位置的变化和声字不同的设计都显示出了这部游戏设计的独特之处，可以肯定这款游戏代表了国产galgame的一流水平。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>metagame</tag>
+        <tag>galgame</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>烦躁沉寂的八月</title>
+    <url>/2020-08-16-august/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2020.08.16 </p>
+</blockquote>
+<p>蝉时雨 化成淡墨渲染暮色</p>
+<a id="more"></a>
+<hr>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/august1.png" alt></p>
+<p>喜出望外（概率之中）地获得了20天假期，它被一如既往地在虚幻中无情地消耗殆尽而不留一点痕迹。在大量的睡梦中，这些假期被我无情的浪费了。计划好好写的作业只有物理生物语文都好好写了，罢了，已经没有什么耐心了。总之，时间过得如此之快，在还没有觉察之前它就已经悄然消逝了。</p>
+<p>八月的前几天是如此的燥热，空气沉闷得让人无法呼吸，我们只好打开空调以求得一丝舒适的机会。而后十几天却开始了大量的降雨，在北方这和往年是一样的，只不过比起去年来说下雨的次数频繁些，降雨量小些。</p>
+<p>天气从那时开始便一天比一天凉爽了，这样忙里偷闲日子也终将结束。</p>
+<p>放假以来我发现我对游戏完全失去了兴趣，没有任何欲望在可以趋使我打开那些各式各样的游戏。其他时间，我看了看动画片，这是个挺有趣的事，毕竟我之前几年很少看什么动画之类的东西。还有便是看了看C#和unity罢了，其他时间也没干什么。</p>
+<p>毕竟只是自己在寻找这什么意义而已吧，毕竟这样压抑的生活就没什么有趣的。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>回忆录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VSCode配置Python环境及Python入门学习</title>
     <url>/2019-10-17-python/</url>
     <content><![CDATA[<blockquote>
@@ -2608,387 +3015,87 @@ plt.show()
       </tags>
   </entry>
   <entry>
-    <title>PyQt5上手指南</title>
-    <url>/2019-10-25-pyqt/</url>
+    <title>MMD制作简介</title>
+    <url>/2020-08-19-mmd/</url>
     <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.10.25</p>
+<p>更新于：A.D.2020.08.19</p>
 </blockquote>
+<p>刚刚做的：【MMD/洛天依】你是分割我人生的线 又将它们相连~勾指起誓 [1080p60fps]</p>
 <a id="more"></a>
 <hr>
-<p>学习前提是需要对Python有一定的基础。</p>
-<p>首先我们需要安装。</p>
-<p>打开powershell输入：</p>
-<pre><code class="lang-powershell">pip install pyqt5-tools
-</code></pre>
-<p>安装完毕后输入：</p>
-<pre><code class="lang-powershell">designer
-</code></pre>
-<p>稍等，会弹出页面，如图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt1.png" alt></p>
-<p>现在创建一个MainWindow窗口，并进行编辑，如图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt2.png" alt></p>
-<p>默认的编辑模式是：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt3.png" alt></p>
-<p>这是用来拖动控件的，上方的TextLabel是显示信息用的Label控件，空白的地方是用来输入信息或者显示信息的Text Edit控件，PushButton是能对点击操作发出信号的Push Button控件。</p>
-<p>左侧的其他控件可以试试并查询功能。</p>
-<p>控件上面的文本和窗口标题文本都可以通过右侧的此窗口修改：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt4.png" alt></p>
-<p>现在我们切换到信号操作上：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt5.png" alt></p>
-<p>试一试点击一个控件后拖动，这是你可以选择信号发送到其他控件或者是窗口本身。</p>
-<p>因为信号所对应的命令还需要我们自己书写，所以我们随便指定一个命令：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt6.png" alt></p>
-<p>这个操作的含义是当点击时关闭窗口。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/pyqt7.png" alt></p>
-<p>现在是这样的，那么我们保存一下编辑好的界面。</p>
-<p>打开VSCode，进入保存文件的路径，我们需要把保存的.ui文件转换成.py文件以便接下来的操作。</p>
-<p>在终端里运行：</p>
-<pre><code class="lang-powershell">pyuic5 FileName.ui -o FileName.py
-</code></pre>
-<p>现在我们重新配置一下settings.js文件以避免一些插件检测语法上的错误</p>
-<script type="math/tex; mode=display">
-settings.js</script><pre><code class="lang-js">{
-    &quot;python.pythonPath&quot;: &quot;C:/Users/UserName/AppData/Local/Programs/Python/Python37-32/python.exe&quot;,//选择安装路径
-    &quot;python.linting.pylintArgs&quot;: [
-        &quot;--extension-pkg-whitelist=PyQt5&quot;,
-        &quot;--disable=W,C&quot;, &quot;--generate-members&quot;
-    ]//避免错误报错
-}
-</code></pre>
-<p>现在新建一个文件：</p>
-<pre><code class="lang-python">import sys
-import FileName
-from PyQt5.QtWidgets import QApplication, QMainWindow
+<div class="bilibili">
+    <iframe src="//player.bilibili.com/player.html?aid=541799937&bvid=BV1Ci4y1g7Aq&cid=226185631&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
 
-if __name__ == &#39;__main__&#39;:
-    app = QApplication(sys.argv)
-    MainWindow = QMainWindow()
-    ui = FileName.Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
-</code></pre>
-<p>运行此文件，即可看到我们刚才制作的窗口。</p>
-<p>下面的问题就是要添加对应的功能，我们打开刚才制作好的FileName.py进行修改。</p>
-]]></content>
-      <categories>
-        <category>编程</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>PyQt</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>「后缀数组」</title>
-    <url>/2019-09-23-sa/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.09.23</p>
-</blockquote>
-<a id="more"></a>
+<p>做了一个MMD</p>
+<p>先写一下用到的所有内容</p>
 <hr>
+<p>模型：TDA 改变学院风洛天依.pmx by 星空下の轩雨</p>
+<p>动作：勾指起誓-柔美版-动作数据.vmd by-2TIGers（呆喵挠琴）</p>
+<p>镜头：(Camera DL) 勾指起誓.vmd by SakuraHayato</p>
+<p>场景：skura no ame.pmx by 挽挽姌<br>School_Desk_Chair_TypeA.pmx by 下校</p>
+<p>MME：Rui_cg：ray-mmd-1.5.0<br>そぼろ：AutoLuminous4,Diffusion7<br>おたもん：likelooksBY<br>ビームマンP：Sakura_v2_32_64_MMM<br>iKeno,RedialC：ikClut_RC<br>ikeno：ikBokeh</p>
+<p>工具：Miku Miku Dance<br>Adobe Premiere Pro<br>Adobe After Effects</p>
+<hr>
+<p>简单讲一下制作步骤</p>
+<h1 id="获取软件及资源并学习"><a href="#获取软件及资源并学习" class="headerlink" title="获取软件及资源并学习"></a>获取软件及资源并学习</h1><p>如果制作一个MMD主要需要场景、人物模型、动作数据等，如果我们需要用到别人制作好的内容时，在作者允许使用的情况下注明原作者，即写清借物表。如果选择自己制作，可以制作其中的一项数据，比如使用3D建模软件例如Blender等制作场景及人物模型，在MMD中编辑动作数据等。</p>
+<h2 id="软件获取"><a href="#软件获取" class="headerlink" title="软件获取"></a>软件获取</h2><p>我提供一个</p>
 <blockquote>
-<p>参考资料：<br>1.<a href="https://www.cnblogs.com/zwfymqz/p/8413523.html" target="_blank" rel="noopener">后缀数组详解</a><br>2.<a href="https://www.luogu.org/blog/i207M/hou-zhui-shuo-zu-xue-xi-bi-ji" target="_blank" rel="noopener">后缀数组-学习笔记</a><br>3.<a href="https://wenku.baidu.com/view/ed1be61e10a6f524ccbf85fd.html" target="_blank" rel="noopener">后缀数组——处理字符串的有力工具</a></p>
+<p><a href="https://pan.baidu.com/s/1yJnCEJI6fSHhH3IkNHM4nA" target="_blank" rel="noopener">https://pan.baidu.com/s/1yJnCEJI6fSHhH3IkNHM4nA</a>  pnx9</p>
 </blockquote>
-<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>$SA$排名为$i$的后缀的位置<br>$rk$位置为$i$的后缀的排名<br>$tp$第二关键字的排名为$i$的后缀的位置，还被用作$rank$的暂存<br>$tax$每个排名对应的后缀数量<br>后缀数组就是为了求出$sa$和$rk$</p>
-<h1 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h1><p>$rk[sa[i]]=i$ $sa[rk[i]]=i$</p>
-<p>$LCP(x,y) $：字符串x与字符串y的最长公共前缀，在这里<strong>指x号后缀与与y号后缀的最长公共前缀</strong></p>
-<p>$height[i]=lcp ( sa[i],sa[i - 1] )$，即<strong>排名</strong>为$i$的后缀与<strong>排名</strong>为$i−1$的后缀的最长公共前缀</p>
-<p>$H[i]：height[rak[i]]$，即$i$号后缀与它前一名的后缀的最长公共前缀</p>
-<p>$H[i] \geqslant H[i - 1] - 1$ <strong>证明</strong> </p>
-<p>$LCP(i,j)=LCP(j,i) $</p>
-<p>$LCP(i,i)=len(sa[i])=n-sa[i]+1$</p>
-<p>$LCP(i,k)=min\left{height[j] \right}(i+1&lt;=j&lt;=k)$</p>
-<p>$S$不同的子串个数$\dfrac{n(n+1)}{2} -\sum_{i=1}^nheight[i]$</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre><code class="lang-c++">#include &lt;iostream&gt; 
-#include &lt;cstdio&gt;
-#include &lt;string&gt;
-#define R register int
-
-using namespace std;
-const int N = 1000005;
-string s;
-/* sa[i]：排名为i的后缀的位置
-rak[i]：从第i个位置开始的后缀的排名，下文为了叙述方便，把从第i个位置开始的后缀简称为后缀i
-tp[i]：基数排序的第二关键字，意义与sa一样，即第二关键字排名为i的后缀的位置
-tax[i]：i号元素出现了多少次。辅助基数排序
-s：字符串，s[i]表示字符串中第i个字符串*/
-int n, m, sa[N], rk[N], tp[N], c[N];
-void _sort() {
-    for(R i = 1; i &lt;= m; ++i) c[i] = 0;
-    for(R i = 1; i &lt;= n; ++i) c[rk[i]]++;
-    for(R i = 1; i &lt;= m; ++i) c[i] += c[i - 1];
-    for(R i = n; i &gt;= 1; --i) sa[c[rk[tp[i]]]--] = tp[i];
-}
-void SA() {
-    m = 150;
-    for(R i = 1; i &lt;= n; ++i) rk[i] = s[i - 1], tp[i] = i;
-    _sort();
-    for(R w = 1, p = 0; p &lt; n &amp;&amp; w &lt;= n; m = p, w &lt;&lt;= 1) {
-        p = 0;
-        for(R i = 1; i &lt;= w; ++i) tp[++p] = n - w + i;
-        for(R i = 1; i &lt;= n; ++i) if(sa[i] &gt; w) tp[++p] = sa[i] - w;
-        _sort();
-        swap(tp, rk);
-        rk[sa[1]] = p = 1;
-        for(R i = 2; i &lt;= n; ++i)
-            rk[sa[i]] = (tp[sa[i - 1]] == tp[sa[i]] &amp;&amp; tp[sa[i - 1] + w] == tp[sa[i] + w])
-            ? p : ++p;
-    }
-}
-/*i号后缀：从i开始的后缀
-lcp(x,y)：字符串x与字符串y的最长公共前缀，在这里指x号后缀与与y号后缀的最长公共前缀
-height[i]：lcp(sa[i],sa[i-1])，即排名为i的后缀与排名为i-1的后缀的最长公共前缀
-H[i]：height[rak[i]]，即i号后缀与它前一名的后缀的最长公共前缀*/
-int Height[N];
-void Get() {
-    int j, k = 0;
-    for(int i = 1; i &lt;= n; i++) {
-        if(k) k--;
-        j = sa[rk[i] - 1];
-        while(s[i + k - 1] == s[j + k - 1]) ++k;
-        Height[rk[i]] = k;
-    }
-}
-int main()
-{
-    cin &gt;&gt; s;
-    n = s.length();
-    SA();
-    for(R i = 1; i &lt;= n; ++i) printf(&quot;%d &quot;, sa[i]);
-    cout &lt;&lt; endl;
-    Get();
-    return 0;
-}
-</code></pre>
-<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p><a href="https://www.luogu.org/problemnew/show/P2408" target="_blank" rel="noopener">P2408 不同子串个数</a></p>
-<script type="math/tex; mode=display">
-ans=\dfrac{n(n+1)}{2}-\sum height[i]</script><pre><code class="lang-c++">#include &lt;iostream&gt; 
-#include &lt;cstdio&gt;
-#include &lt;string&gt;
-#define R register int
-
-using namespace std;
-const int N = 1000005;
-string s;
-int n, m, sa[N], rk[N], tp[N], c[N];
-void _sort() {
-    for(R i = 1; i &lt;= m; ++i) c[i] = 0;
-    for(R i = 1; i &lt;= n; ++i) c[rk[i]]++;
-    for(R i = 1; i &lt;= m; ++i) c[i] += c[i - 1];
-    for(R i = n; i &gt;= 1; --i) sa[c[rk[tp[i]]]--] = tp[i];
-}
-void SA() {
-    m = 150;
-    for(R i = 1; i &lt;= n; ++i) rk[i] = s[i - 1], tp[i] = i;
-    _sort();
-    for(R w = 1, p = 0; p &lt; n &amp;&amp; w &lt;= n; m = p, w &lt;&lt;= 1) {
-        p = 0;
-        for(R i = 1; i &lt;= w; ++i) tp[++p] = n - w + i;
-        for(R i = 1; i &lt;= n; ++i) if(sa[i] &gt; w) tp[++p] = sa[i] - w;
-        _sort();
-        swap(tp, rk);
-        rk[sa[1]] = p = 1;
-        for(R i = 2; i &lt;= n; ++i)
-            rk[sa[i]] = (tp[sa[i - 1]] == tp[sa[i]] &amp;&amp; tp[sa[i - 1] + w] == tp[sa[i] + w])
-            ? p : ++p;
-    }
-}
-int Height[N];//H[i] = Height[rk[i]]
-void Get() {
-    int j, k = 0;
-    for(int i = 1; i &lt;= n; ++i) {
-        if(k) k--;
-        j = sa[rk[i] - 1];
-        while(s[i + k - 1] == s[j + k - 1]) ++k;
-        Height[rk[i]] = k;
-    }
-}
-int main()
-{
-    cin &gt;&gt; n &gt;&gt; s;
-    SA();
-    Get();
-    long long ans = 1LL * n * (n + 1) / 2;
-    for(int i = 1; i &lt;= n; ++i)
-        ans -= Height[rk[i]];
-    cout &lt;&lt; ans &lt;&lt; endl;
-    return 0;
-}
-</code></pre>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>后缀数组</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我接触与学习编程及OI的经历</title>
-    <url>/2020-02-29-about-program/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2025.03.21 </p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<p>想来自己接触编程的时间真的不算短了，也是三年多了，但是没有学会太多的知识，其原因一是没有坚持在闲暇的时候学习，自己也一直缺少主观的动力去努力学习，二是自己实践得少，没有全面的知识体系，解决问题的过程中编程容易陷入困难以至于放弃。虽然自己知识浅薄，但是编程的确是我一直喜欢的一项事物，在这里我简单写写这几年的编程学习经历吧。</p>
-<h1 id="2016"><a href="#2016" class="headerlink" title="2016"></a>2016</h1><p>2016年快要到了末尾，初中同学总是与我聊起些计算机方面的话题，不过仅限于些PC硬件，PS之类的平淡无奇的东西罢了，我也没什么动力去学习编程，尽管前几年一直对此方面非常感兴趣，也有意向去尝试，可我的确是不敢勇于尝试，也就是不愿跨出第一步去接触新事物罢了。</p>
-<p>不过有一天，一位同学给我看了一本书：《零基础学C语言》，据他所说仅仅是在书店买了一本，我看了看觉得不算很难，正巧当时在知乎看了一些编程的问题，也有兴趣学C语言，就顺理成章的买了一本，的确算不上一流的教材，不过庆幸的是我没有选择谭浩强之类的时代产物，也没有去看至于到诸如《C Primer Plus》等可能略微劝退我的书籍。现在依稀记得对于反码补码之类的东西理解有一些难度，不过还是很有兴趣的看完了，也写出了第一个Hello world，当时我很少写代码，大部分时间花都在翻翻书，还觉得程序框图挺有趣的，记得书上写了一些五子棋之类的游戏，当时也没全看懂。</p>
-<h1 id="2017"><a href="#2017" class="headerlink" title="2017"></a>2017</h1><p>书自然是看完了，可是会写多少了吗？恐怕不是的。而后呢？自然没有多大的兴趣，只记得自己把书看懂了，后来也没有写过几次C语言罢了，曾经安装过Python环境，也没有怎么写过。</p>
-<p>暑假的时候，在一些事情的影响下决定想学一学OI，自然开始看C++，因为比较底层的内容比如指针和二进制编码理解的还比较好所以几乎没什么阻力，当然没有看多少OOP的知识，然后就开始写写简单的OI题，看看数论，算法之类的，但是的确是非常水，贡献了很多时间给MC和B站之类的，于是到11月连DFS也写不熟练。就是这样去普及组水了个一等奖，当然本身也得顾及课内学习，况且是开学后才开始学算法的。</p>
-<p>之后我对编程迅速失去兴趣，又开始玩电子游戏，半年没写代码。主要原因是没什么学习目的，也没接去接触开源社区，不太明白怎么用网络学习新技术。大概还是动力和兴趣不足。</p>
-<h1 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h1><p>从四月开始到年底的时间都花在了OI上，主要是学了大量的算法和数据结构，以及一些C++。最后11月提高组喜获二等奖，这一年没什么想法，除了C++别的语言几乎没有写过，不过上网时间倒是出奇的长，看了很多个人博客和知乎……</p>
-<p>其实虽然我不是特别讨厌算法竞赛，但是确实没什么非常喜欢学习算法的感觉，就像是随波逐流地而来一样。而且说真的只要一个算法满足在数学形式上复杂或者抽象程度上高的话，我在学习它的时候就会遇到极大的困难，非常难以凭借自学的能力克服。</p>
-<h1 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h1><p>今年主要还是学习OI，五月份的时候搭了搭博客，然后这时候觉得科学上网还是方便一些，时间不太允许自己搭，于是找了个机场，才开始真正用上了一些有价值的工具。</p>
-<p>暑假开始便觉得OI只能拿个联赛一等奖，加上一直算法学习难度对我而言也是比较大，逐渐也就失去了热情，放弃了联赛之上比赛内容的学习。主要是保持每天做一些动态规划的题，学了一些自己喜欢的算法，不是联赛内容的算法看明白后写一写，就放弃继续做题了。</p>
-<p>在学校剩下的时间便用来学一点点C++、C#和Python，大部分时间都在改博客的样式和学一些前端和Node.js基础知识，看了一些计算机的基础理论比如计网之类的，不过重心肯定在OI上，这些只作为了一些消遣般的活动，投入时间也不多，所以知识水平并不高。当然，知乎也看了不少……</p>
-<p>最后11月喜获联赛的一等奖，基本是我真实水平，没什么好说的……退役后闲暇时间学了一些CSAPP和x86汇编，但是没有自己写过。</p>
-<h1 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h1><p>现在可能不会再有太多时间写代码了，放假的时候作为消遣应该还是会看看编程相关的内容。</p>
-<p>突发疫情，也不用去学校，现在主要想学学C++，C#、Python也想看一看。倒是有兴趣去学一些Unity，不过这些事肯定得放在放假的时候去做，因为上网课的时候还要先玩游戏……</p>
-<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>事到如今所有事都已成定局了，学OI也给我的算法水平带来了很大的提升吧，当然上网时间多了也接触到了更多编程相关的内容和技术。</p>
-<p>那么看来如果要保持长时间对编程的学习的话，适度的兴趣和合适的方法论是不可或缺的。兴趣的话就例如对于一些有趣事物的实现亦或是对科学知识的那种好奇心，方法论来说就是一些自学的方法诸如快速地获取并筛选信息、对一些语言知识和实践的综合运用和遇到问题时解决错误的步骤此类的问题。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>编程学习</tag>
-        <tag>OI学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows软件指南</title>
-    <url>/2019-10-28-software/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2019.10.28</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<p>断断续续写了一点自己了解过的软件，会一直更新</p>
-<h1 id="IDE及编辑器"><a href="#IDE及编辑器" class="headerlink" title="IDE及编辑器"></a>IDE及编辑器</h1><p>Visual Studio Code：编辑器，可以安装插件，实现对多种语言的支持</p>
-<p>Visual Studio：大型IDE，主要用于C++开发，对C#、Visual Basic支持较好</p>
-<p>Notepad++：高配版记事本，速度快，适合编辑多种文件，支持代码高亮</p>
-<p>Subline：编辑器，支持插件</p>
-<p>Vim：编辑器，独特的键盘指令及操作可以提高效率</p>
-<p>Eclipse：IDE，用于Java开发，可以安装插件支持其他语言</p>
-<p>Atom：GitHub开发的编辑器，比较漂亮，支持插件</p>
-<p>JetBrains系列：IntelliJ、CLion、PyCharm</p>
-<h1 id="系统安全及工具"><a href="#系统安全及工具" class="headerlink" title="系统安全及工具"></a>系统安全及工具</h1><p>火绒：比较舒服的安全工具，没有流氓行为</p>
-<p>Mem Reduct：清理内存</p>
-<p>CCleaner：清理硬盘垃圾文件</p>
-<p>DiskGenius：复杂分区操作，磁盘修复</p>
-<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><p>Listary：全硬盘文件搜索，界面类型及功能多样，适合日常使用</p>
-<p>Everything：全硬盘文件搜索，功能更加专一，适合复杂文件操作</p>
-<p>7-Zip：最好用的压缩软件，算法一流</p>
-<p>FastCopy：快速拷贝文件，比Windows系统快</p>
-<h1 id="系统美化及桌面整理"><a href="#系统美化及桌面整理" class="headerlink" title="系统美化及桌面整理"></a>系统美化及桌面整理</h1><p>Fences：桌面整理，效果很漂亮，支持扩展出多桌面</p>
-<p>Rolan：桌面轻量级收纳工具</p>
-<p>Startisback：让任务栏透明吧</p>
-<p>WallpaperEngine：让桌面壁纸动起来吧</p>
-<p>SAO-Utils：模拟刀剑神域的界面</p>
-<p>Live2dViewerEX：让live2d小人站在桌面上吧</p>
-<p>TrafficMonitor：显示网速、CPU及内存的悬浮窗，支持更换皮肤</p>
-<h1 id="IM（即时通讯）"><a href="#IM（即时通讯）" class="headerlink" title="IM（即时通讯）"></a>IM（即时通讯）</h1><p>TIM：QQ简化版本</p>
-<p>Telegram：电报桌面版</p>
-<p>Skype：微软的软件</p>
-<h1 id="硬件检测"><a href="#硬件检测" class="headerlink" title="硬件检测"></a>硬件检测</h1><p>卡硬工具箱：常用的各种工具都包括了，例如CPU-Z，GPU-Z，SSD测速，硬盘检测等</p>
-<p>aida64：硬件检测工具</p>
-<h1 id="工作及生活"><a href="#工作及生活" class="headerlink" title="工作及生活"></a>工作及生活</h1><p>Chrome：Google开发的浏览器</p>
-<p>Firefox：火狐浏览器</p>
-<p>potplayer：音视频播放器，可以更换皮肤，清爽流畅</p>
-<p>Bandicam：录屏软件</p>
-<p>Vieas：图片查看器，打开速度更快，还可简单编辑图片</p>
-<p>OneNote：记笔记神器，功能全面，网页剪取较好用</p>
-<p>OneDrive：微软云盘，存点随时用的文档</p>
-<p>印象笔记：经典笔记软件</p>
-<h1 id="文本排版和数学"><a href="#文本排版和数学" class="headerlink" title="文本排版和数学"></a>文本排版和数学</h1><p>Typora：Markdown编辑器</p>
-<p>Moeditor：Markdown编辑器</p>
-<p>LaTeX：排版及数学公式工具</p>
-<p>Matlab：数学计算及数学</p>
-<p>Mathematica：数学计算及数学</p>
-<p>GraphViz：图论</p>
-<p>geogebra：数学</p>
-<p>几何画板：几何</p>
-<h1 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h1><p>Steam：Valve的游戏发行平台</p>
-<p>Uplay：育碧发行平台</p>
-<p>origin：EA发行平台</p>
-<p>SSTap：用于境外服务器线路加速</p>
-<p>Fraps：显示帧数</p>
-<p>BakaXL：好看的MC启动器</p>
-<h1 id="梯子及暗网"><a href="#梯子及暗网" class="headerlink" title="梯子及暗网"></a>梯子及暗网</h1><p>Shadowsocks：ss</p>
-<p>ShadowsocksR：ssr</p>
-<p>V2Ray</p>
-<p>Brook</p>
-<p>Tor浏览器：洋葱浏览器</p>
-<h1 id="编程工具"><a href="#编程工具" class="headerlink" title="编程工具"></a>编程工具</h1><p>terminus：很漂亮的一个终端</p>
-<p>Git：版本控制</p>
-<hr>
-<p>以下内容待更新</p>
-<h1 id="微软系列"><a href="#微软系列" class="headerlink" title="微软系列"></a>微软系列</h1><p>Word、</p>
-<h1 id="Adobe系列"><a href="#Adobe系列" class="headerlink" title="Adobe系列"></a>Adobe系列</h1><p>Photoshop：</p>
-<h1 id="艺术设计工具"><a href="#艺术设计工具" class="headerlink" title="艺术设计工具"></a>艺术设计工具</h1><p>C4D：</p>
-<p>Blender：</p>
-<h1 id="ACGN"><a href="#ACGN" class="headerlink" title="ACGN"></a>ACGN</h1><p>MMD：</p>
-<p>Vocaloid：</p>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一些metagame的介绍与评价（无剧透）</title>
-    <url>/2020-05-18-metagame/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2021.07.31</p>
-</blockquote>
-<p>meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。</p>
-<a id="more"></a>
-<hr>
+<h2 id="资源获取"><a href="#资源获取" class="headerlink" title="资源获取"></a>资源获取</h2><p>善用搜索引擎可以解决大部分问题</p>
+<p>介于之后需要访问大量墙掉的网站，需要准备某些工具，并且需要会在GitHub网页上进行阅读及操作和在大量日文网站上进行操作，所以还需要一个带有翻译功能的浏览器。</p>
+<p>参考：<a href="https://web.archive.org/web/20160622040846/http://konobaka.com/post/400994_16e51be" target="_blank" rel="noopener">https://web.archive.org/web/20160622040846/http://konobaka.com/post/400994_16e51be</a> (已删除，使用wayback machine查看，需要某些工具)</p>
+<p><a href="https://xywiki.com/MMD" target="_blank" rel="noopener">https://xywiki.com/MMD</a></p>
+<p><a href="https://blog.csdn.net/NSJim/article/details/105743730" target="_blank" rel="noopener">https://blog.csdn.net/NSJim/article/details/105743730</a></p>
+<p>以上是几篇对各种内容介绍比较全的文章</p>
+<p>这是MME的资源站点：<a href="https://w.atwiki.jp/vpvpwiki/pages/272.html" target="_blank" rel="noopener">https://w.atwiki.jp/vpvpwiki/pages/272.html</a></p>
+<p>你会经常访问到的网站：<a href="https://seiga.nicovideo.jp/" target="_blank" rel="noopener">https://seiga.nicovideo.jp/</a></p>
+<p><a href="https://www.nicovideo.jp/" target="_blank" rel="noopener">https://www.nicovideo.jp/</a></p>
+<p><a href="https://bowlroll.net/" target="_blank" rel="noopener">https://bowlroll.net/</a></p>
+<p>一些MME资源：<a href="https://onedrive.live.com/?id=EF581C37A4524EDA%21108&amp;cid=EF581C37A4524EDA" target="_blank" rel="noopener">https://onedrive.live.com/?id=EF581C37A4524EDA%21108&amp;cid=EF581C37A4524EDA</a> （注意是onedrive，需要使用工具）</p>
+<p>我提供一些，东西挺多的：<a href="https://pan.baidu.com/s/1whV2t1uWZHxvq63K3McKkg" target="_blank" rel="noopener">https://pan.baidu.com/s/1whV2t1uWZHxvq63K3McKkg</a>  i5b1</p>
+<h2 id="学习软件及MME使用"><a href="#学习软件及MME使用" class="headerlink" title="学习软件及MME使用"></a>学习软件及MME使用</h2><p>出现问题善用搜索引擎</p>
+<p>参考：<a href="https://www.bilibili.com/read/cv135853" target="_blank" rel="noopener">https://www.bilibili.com/read/cv135853</a> </p>
+<p><a href="https://space.bilibili.com/11831050" target="_blank" rel="noopener">https://space.bilibili.com/11831050</a></p>
+<p><a href="https://www.bilibili.com/read/cv2529911" target="_blank" rel="noopener">https://www.bilibili.com/read/cv2529911</a></p>
+<h1 id="进行MMD制作并导出原始文件"><a href="#进行MMD制作并导出原始文件" class="headerlink" title="进行MMD制作并导出原始文件"></a>进行MMD制作并导出原始文件</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd1.png" alt></p>
+<p>注意看一下上面的界面，首先除音频外所有内容都可以直接拖拽进入程序内，左下角第二栏是切换.pmx文件控制的内容的，在模型操作栏内切换到照明一栏时，在附件操作栏内可以切换.x文件控制的内容，右上角MMEffect控制部分MME的功能。其余内容不复杂，可以用b站或搜索引擎简要学习，或者说哪里需要使用就学习哪个部分。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd2.png" alt></p>
+<p>导出时帧率选择60fps，录制范围选择0~结束帧，不要勾选导出音频，可能出现bug，在后期编辑的时候加入音频。</p>
+<p>注意选择空余较大的硬盘分区，一分钟1080p60fps原始视频会占用大约30G空间。</p>
+<h1 id="后期处理及压制"><a href="#后期处理及压制" class="headerlink" title="后期处理及压制"></a>后期处理及压制</h1><h2 id="后期处理"><a href="#后期处理" class="headerlink" title="后期处理"></a>后期处理</h2><p>后期编辑时我们需要使用编辑软件加入音频，进行剪辑以及其他操作，推荐使用Pr和Ae。</p>
+<p>我们看一下Pr的界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd3.png" alt></p>
+<p>我们可以直接把需要的资源拖拽到左侧一栏中，在右侧下方一栏，下方四条轨道是音轨，我们把音频拖拽到上方，然后可以选择顶栏的音频一项进行调整。上方四条轨道是四个图层，上方的图层可以覆盖下方的图层，并且可以新建图层，这里我们把视频放在V1图层并且把视频和音频轨道对齐，多个视频也要对其，上方的图层可以增加特效和字幕，这里我用Ae制作字幕，V4轨道的字幕在右侧，V3轨道的字幕在左侧，在导出时一定要注意选择视频码率和音频码率及采样率，选择H.264即mp4格式，注意分辨率帧率保持与原视频一致。如果需要不被b站二压的话视频码率不能超过6000 KB/s，音频码率不能超过320 KB/s，并且采样率一定要为44100 Hz。</p>
+<p>参考b站官方的规定：</p>
 <blockquote>
-<p>后设小说（英语：Metafiction）又称元小说、超小说，是一种小说类型，透过自我意识的觉醒，刻意凸显书中虚构的错觉。威廉·加斯在1970年〈哲学与小说形式〉一文中首度提出“后设小说”的说法。典型的写作技巧包括将原先的剧情设定为一件文学作品，随后揭露故事的“真相”。后设小说透过讽刺和自我反省等手法，引导读者思考小说与现实之间的关联，进而有意识、有组织地探讨小说本身的虚构性。<br>出自：<a href="https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E5%BE%8C%E8%A8%AD%E5%B0%8F%E8%AA%AA</a></p>
+<p><a href="http://www.bilibili.com/read/cv311112" target="_blank" rel="noopener">http://www.bilibili.com/read/cv311112</a></p>
+<p><a href="http://www.bilibili.com/read/cv527957" target="_blank" rel="noopener">http://www.bilibili.com/read/cv527957</a></p>
 </blockquote>
-<p>meta游戏与元小说类似，都会与现实中的读者或游玩者产生一定的交互，如同元小说会突出小说本身的虚构性，meta游戏也会着重显明自身世界的编程程序性或与该世界与玩家世界的关联性（我会将其分为程序代码型和平行世界型两种类型）并引导真实世界的游玩者通过游戏程序机制来获取到游戏世界本身并不具有的能力以此来改变游戏剧情，最终模糊虚拟和现实的边界。</p>
-<p>程序代码型的游戏会和计算机本身产生一定的交互，并需要通过游戏程序以外的计算机内部操作完成游戏剧情的推进，或（且）会明确游戏本身是程序运行的结果。</p>
-<p>平行世界型的游戏不会对计算机产生交互，但你可以通过自己的外部操作（存档/读档）改变平行世界的剧情走向，或（且）会明确游戏本身是独立于程序存在的一个世界，但程序可以改变此世界的一些时间线。</p>
-<p>一般来说虽然meta游戏中你都可以完全操控主角的操作，但程序代码型会倾向于使你对游戏本身产生更多的操作，同时从前期就开始就强调主角和游玩者是两个不同的角色，而平行世界型一般会在后期点明游玩者的介入性，并强调主角对游玩者的操控性，但不会着重强调这两个角色的区分性和发挥的不同作用。</p>
-<p>meta游戏的最主要特点是将真实世界中的游戏玩家作为游戏内容本身的参与者而不是游戏角色的操控者，也常常会有种说法指明meta游戏打破了第四面墙（显示器屏幕）。</p>
-<!--more-->
-<h1 id="Ever17-—the-out-of-infinity—-时空轮回"><a href="#Ever17-—the-out-of-infinity—-时空轮回" class="headerlink" title="Ever17 —the out of infinity— 时空轮回"></a>Ever17 —the out of infinity— 时空轮回</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta1.jpg" alt></p>
-<p>平行世界型</p>
-<p>AVG/galgame，科幻悬疑，设定不是非常非常科学但还是很有科学因素的，前期流程非常冗长无趣，主要体验最后解密快感。强烈推荐优先游玩此游戏，可以说此游戏也十分独特，且不存在惊吓和血腥内容。</p>
-<h1 id="Doki-Doki-Literature-Club-心跳文学部"><a href="#Doki-Doki-Literature-Club-心跳文学部" class="headerlink" title="Doki Doki Literature Club 心跳文学部"></a>Doki Doki Literature Club 心跳文学部</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta2.jpg" alt></p>
-<p>程序代码型</p>
-<p>AVG/<del>galgame</del>，剧情简短明确，流程在2h左右，主要体验比较独特的吓人方式，游戏制作方不建议心理承受能力差及13岁以下人群游玩。</p>
-<h1 id="君と彼女と彼女の恋"><a href="#君と彼女と彼女の恋" class="headerlink" title="君と彼女と彼女の恋"></a>君と彼女と彼女の恋</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_1.webp" alt></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta3_2.webp" alt></p>
-<p>程序代码型</p>
-<p>AVG/<del>galgame</del>，部分精神污染极其严重，不要轻易尝试，有画面反色，文件修改等内容。前期的画面非常不错，淡色且偏水彩风格，适合看风景，前期一些设定让你一度以为这是个科幻故事，我倒是挺希望偏向一个科幻来叙事的，但是最后还是说归结到了计算机和程序这种设定上。总的来说也是很独特的游戏，这种风格的游戏几乎找不出第二个了。</p>
-<h1 id="Undertale"><a href="#Undertale" class="headerlink" title="Undertale"></a>Undertale</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta4.webp" alt></p>
-<p>平行世界型</p>
-<p>RPG游戏，总体来说也非常新奇，有很独特的地方，值得一玩。</p>
-<h1 id="Oneshot"><a href="#Oneshot" class="headerlink" title="Oneshot"></a>Oneshot</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta5.jpg" alt></p>
-<p>程序代码型</p>
-<p>冒险解谜游戏，一周目通关，部分解谜方式很新颖，会和你的计算机本身有所交互，没有在别的游戏里见过。二周目的剧情比较完善，也令人有所感动。缺点在于寻找东西的解谜就略显枯燥。</p>
-<h1 id="艾希-Icey"><a href="#艾希-Icey" class="headerlink" title="艾希 Icey"></a>艾希 Icey</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta6.jpg" alt></p>
-<p>程序代码型</p>
-<p>横版动作游戏，没有玩过，偏重于计算机方面的设定，平面砍杀，类似于空洞骑士。</p>
-<h1 id="史丹利的寓言-The-Stanley-Parable"><a href="#史丹利的寓言-The-Stanley-Parable" class="headerlink" title="史丹利的寓言 The Stanley Parable"></a>史丹利的寓言 The Stanley Parable</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta7.jpg" alt></p>
-<p>程序代码型</p>
-<p>冒险解谜游戏，有一些场景会有不安的感觉，本身内容不算太多，一共有十几个左右的结局。</p>
-<h1 id="恋爱绮谭-不存在的夏天"><a href="#恋爱绮谭-不存在的夏天" class="headerlink" title="恋爱绮谭~不存在的夏天~"></a>恋爱绮谭~不存在的夏天~</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/meta_8.jpg" alt></p>
-<p>平行世界型</p>
-<p>这部游戏的meta成分很少，寥寥几句话，但在国产galgame中是我见过的最新奇的一部作品了。<br>整个题材融合了虚拟主播、都市怪谈、中国传统灵异设定、MtF、校园恋爱、悬疑以及部分科学性的解释、各种让人会心一笑的梗、一些故事和哲学的讨论、结尾的meta元素也不显突兀。<br>不存在的夏天这一游戏名也一语双关，玩到后期我才明白这个名字的巧妙之处。<br>总体来说虽然分离的故事在一开始关联性不强，但在最后给出的解释都比较合理，串联起了不同人的故事，各种悬疑也都在后期给出逻辑上并不问题的答案，对于悬疑性的体验还是不错的。<br>我个人比较喜欢这种能融合各种现实元素的游戏，只得一提的便是游戏创新性设计的手机系统、前后文字位置的变化和声字不同的设计都显示出了这部游戏设计的独特之处，可以肯定这款游戏代表了国产galgame的一流水平。</p>
+<p>Pr Ae的导出快捷键都是<code>Ctrl+M</code>，这里看一下导出界面，一定注意红框内的内容是否正确。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd4.png" alt></p>
+<p>然后我们看一下Ae的这个字幕是怎么做的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd5.png" alt></p>
+<p>首先单击<code>新建合成</code>，注意接下来弹出的合成设置，将分辨率和帧速率设置成与你的视频相同，持续时间我们选10s。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd6.png" alt></p>
+<p>接下来看下图，我们先单击1箭头指向的按钮，使画面变为透明，然后使用2箭头的工具在视频中选择合适的位置书写字幕。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd7.png" alt></p>
+<p>之后在右侧一栏中调整字体等内容。最后我们制作特效。</p>
+<p>选择<code>菜单栏-窗口-效果和预设</code>，之后在右侧出现这一栏内容，选择其中的<code>*动画预设-Text-Blurs-蒸发</code>拖动到字幕上，当然也可以是其他内容。这个效果仅有出场效果，所以我们点击字幕，按下<code>u</code>键，找到动画的关键帧，两个关键帧分别为动画开始与动画结束。接下来用鼠标拖动选中两个关键帧并移动位置，之后按下复制快捷键复制两个关键帧，而后移动箭头，然后按下粘贴快捷键粘贴到前方，这时交换前方两个关键帧的位置，后方两个关键帧保持不变，这样前方的动画就变成了入场效果。最后调整这四个关键帧的位置，并且选择上方的第二行的按钮进行切片。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd8.png" alt></p>
+<p>最后进行导出，按下<code>Ctrl+M</code>，按123步骤操作下图界面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd9.png" alt></p>
+<p>步骤1：如图进行调整，如果没有安装QuickTime就去安装。<br>步骤2：选择输出路径。<br>步骤3：点击渲染。<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd10.png" alt></p>
+<p>最后将输出好的mov文件拖拽进入Pr进行对轨操作即可，如果有重合的部分可以用两条轨道交错放置字幕。</p>
+<h2 id="压制"><a href="#压制" class="headerlink" title="压制"></a>压制</h2><p>参考：<a href="https://www.bilibili.com/read/cv954478/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv954478/</a> </p>
+<p>使用小丸工具箱即可，可以先压制再在Pr中进行编辑。</p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>metagame</tag>
-        <tag>galgame</tag>
+        <tag>MMD</tag>
       </tags>
   </entry>
   <entry>
@@ -3015,29 +3122,6 @@ int main()
       <tags>
         <tag>Blog</tag>
         <tag>jsDelivr</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>烦躁沉寂的八月</title>
-    <url>/2020-08-16-august/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2020.08.16 </p>
-</blockquote>
-<p>蝉时雨 化成淡墨渲染暮色</p>
-<a id="more"></a>
-<hr>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/august1.png" alt></p>
-<p>喜出望外（概率之中）地获得了20天假期，它被一如既往地在虚幻中无情地消耗殆尽而不留一点痕迹。在大量的睡梦中，这些假期被我无情的浪费了。计划好好写的作业只有物理生物语文都好好写了，罢了，已经没有什么耐心了。总之，时间过得如此之快，在还没有觉察之前它就已经悄然消逝了。</p>
-<p>八月的前几天是如此的燥热，空气沉闷得让人无法呼吸，我们只好打开空调以求得一丝舒适的机会。而后十几天却开始了大量的降雨，在北方这和往年是一样的，只不过比起去年来说下雨的次数频繁些，降雨量小些。</p>
-<p>天气从那时开始便一天比一天凉爽了，这样忙里偷闲日子也终将结束。</p>
-<p>放假以来我发现我对游戏完全失去了兴趣，没有任何欲望在可以趋使我打开那些各式各样的游戏。其他时间，我看了看动画片，这是个挺有趣的事，毕竟我之前几年很少看什么动画之类的东西。还有便是看了看C#和unity罢了，其他时间也没干什么。</p>
-<p>毕竟只是自己在寻找这什么意义而已吧，毕竟这样压抑的生活就没什么有趣的。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>回忆录</tag>
       </tags>
   </entry>
   <entry>
@@ -4707,90 +4791,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>MMD制作简介</title>
-    <url>/2020-08-19-mmd/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2020.08.19</p>
-</blockquote>
-<p>刚刚做的：【MMD/洛天依】你是分割我人生的线 又将它们相连~勾指起誓 [1080p60fps]</p>
-<a id="more"></a>
-<hr>
-<div class="bilibili">
-    <iframe src="//player.bilibili.com/player.html?aid=541799937&bvid=BV1Ci4y1g7Aq&cid=226185631&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</div>
-
-<p>做了一个MMD</p>
-<p>先写一下用到的所有内容</p>
-<hr>
-<p>模型：TDA 改变学院风洛天依.pmx by 星空下の轩雨</p>
-<p>动作：勾指起誓-柔美版-动作数据.vmd by-2TIGers（呆喵挠琴）</p>
-<p>镜头：(Camera DL) 勾指起誓.vmd by SakuraHayato</p>
-<p>场景：skura no ame.pmx by 挽挽姌<br>School_Desk_Chair_TypeA.pmx by 下校</p>
-<p>MME：Rui_cg：ray-mmd-1.5.0<br>そぼろ：AutoLuminous4,Diffusion7<br>おたもん：likelooksBY<br>ビームマンP：Sakura_v2_32_64_MMM<br>iKeno,RedialC：ikClut_RC<br>ikeno：ikBokeh</p>
-<p>工具：Miku Miku Dance<br>Adobe Premiere Pro<br>Adobe After Effects</p>
-<hr>
-<p>简单讲一下制作步骤</p>
-<h1 id="获取软件及资源并学习"><a href="#获取软件及资源并学习" class="headerlink" title="获取软件及资源并学习"></a>获取软件及资源并学习</h1><p>如果制作一个MMD主要需要场景、人物模型、动作数据等，如果我们需要用到别人制作好的内容时，在作者允许使用的情况下注明原作者，即写清借物表。如果选择自己制作，可以制作其中的一项数据，比如使用3D建模软件例如Blender等制作场景及人物模型，在MMD中编辑动作数据等。</p>
-<h2 id="软件获取"><a href="#软件获取" class="headerlink" title="软件获取"></a>软件获取</h2><p>我提供一个</p>
-<blockquote>
-<p><a href="https://pan.baidu.com/s/1yJnCEJI6fSHhH3IkNHM4nA" target="_blank" rel="noopener">https://pan.baidu.com/s/1yJnCEJI6fSHhH3IkNHM4nA</a>  pnx9</p>
-</blockquote>
-<h2 id="资源获取"><a href="#资源获取" class="headerlink" title="资源获取"></a>资源获取</h2><p>善用搜索引擎可以解决大部分问题</p>
-<p>介于之后需要访问大量墙掉的网站，需要准备某些工具，并且需要会在GitHub网页上进行阅读及操作和在大量日文网站上进行操作，所以还需要一个带有翻译功能的浏览器。</p>
-<p>参考：<a href="https://web.archive.org/web/20160622040846/http://konobaka.com/post/400994_16e51be" target="_blank" rel="noopener">https://web.archive.org/web/20160622040846/http://konobaka.com/post/400994_16e51be</a> (已删除，使用wayback machine查看，需要某些工具)</p>
-<p><a href="https://xywiki.com/MMD" target="_blank" rel="noopener">https://xywiki.com/MMD</a></p>
-<p><a href="https://blog.csdn.net/NSJim/article/details/105743730" target="_blank" rel="noopener">https://blog.csdn.net/NSJim/article/details/105743730</a></p>
-<p>以上是几篇对各种内容介绍比较全的文章</p>
-<p>这是MME的资源站点：<a href="https://w.atwiki.jp/vpvpwiki/pages/272.html" target="_blank" rel="noopener">https://w.atwiki.jp/vpvpwiki/pages/272.html</a></p>
-<p>你会经常访问到的网站：<a href="https://seiga.nicovideo.jp/" target="_blank" rel="noopener">https://seiga.nicovideo.jp/</a></p>
-<p><a href="https://www.nicovideo.jp/" target="_blank" rel="noopener">https://www.nicovideo.jp/</a></p>
-<p><a href="https://bowlroll.net/" target="_blank" rel="noopener">https://bowlroll.net/</a></p>
-<p>一些MME资源：<a href="https://onedrive.live.com/?id=EF581C37A4524EDA%21108&amp;cid=EF581C37A4524EDA" target="_blank" rel="noopener">https://onedrive.live.com/?id=EF581C37A4524EDA%21108&amp;cid=EF581C37A4524EDA</a> （注意是onedrive，需要使用工具）</p>
-<p>我提供一些，东西挺多的：<a href="https://pan.baidu.com/s/1whV2t1uWZHxvq63K3McKkg" target="_blank" rel="noopener">https://pan.baidu.com/s/1whV2t1uWZHxvq63K3McKkg</a>  i5b1</p>
-<h2 id="学习软件及MME使用"><a href="#学习软件及MME使用" class="headerlink" title="学习软件及MME使用"></a>学习软件及MME使用</h2><p>出现问题善用搜索引擎</p>
-<p>参考：<a href="https://www.bilibili.com/read/cv135853" target="_blank" rel="noopener">https://www.bilibili.com/read/cv135853</a> </p>
-<p><a href="https://space.bilibili.com/11831050" target="_blank" rel="noopener">https://space.bilibili.com/11831050</a></p>
-<p><a href="https://www.bilibili.com/read/cv2529911" target="_blank" rel="noopener">https://www.bilibili.com/read/cv2529911</a></p>
-<h1 id="进行MMD制作并导出原始文件"><a href="#进行MMD制作并导出原始文件" class="headerlink" title="进行MMD制作并导出原始文件"></a>进行MMD制作并导出原始文件</h1><p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd1.png" alt></p>
-<p>注意看一下上面的界面，首先除音频外所有内容都可以直接拖拽进入程序内，左下角第二栏是切换.pmx文件控制的内容的，在模型操作栏内切换到照明一栏时，在附件操作栏内可以切换.x文件控制的内容，右上角MMEffect控制部分MME的功能。其余内容不复杂，可以用b站或搜索引擎简要学习，或者说哪里需要使用就学习哪个部分。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd2.png" alt></p>
-<p>导出时帧率选择60fps，录制范围选择0~结束帧，不要勾选导出音频，可能出现bug，在后期编辑的时候加入音频。</p>
-<p>注意选择空余较大的硬盘分区，一分钟1080p60fps原始视频会占用大约30G空间。</p>
-<h1 id="后期处理及压制"><a href="#后期处理及压制" class="headerlink" title="后期处理及压制"></a>后期处理及压制</h1><h2 id="后期处理"><a href="#后期处理" class="headerlink" title="后期处理"></a>后期处理</h2><p>后期编辑时我们需要使用编辑软件加入音频，进行剪辑以及其他操作，推荐使用Pr和Ae。</p>
-<p>我们看一下Pr的界面。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd3.png" alt></p>
-<p>我们可以直接把需要的资源拖拽到左侧一栏中，在右侧下方一栏，下方四条轨道是音轨，我们把音频拖拽到上方，然后可以选择顶栏的音频一项进行调整。上方四条轨道是四个图层，上方的图层可以覆盖下方的图层，并且可以新建图层，这里我们把视频放在V1图层并且把视频和音频轨道对齐，多个视频也要对其，上方的图层可以增加特效和字幕，这里我用Ae制作字幕，V4轨道的字幕在右侧，V3轨道的字幕在左侧，在导出时一定要注意选择视频码率和音频码率及采样率，选择H.264即mp4格式，注意分辨率帧率保持与原视频一致。如果需要不被b站二压的话视频码率不能超过6000 KB/s，音频码率不能超过320 KB/s，并且采样率一定要为44100 Hz。</p>
-<p>参考b站官方的规定：</p>
-<blockquote>
-<p><a href="http://www.bilibili.com/read/cv311112" target="_blank" rel="noopener">http://www.bilibili.com/read/cv311112</a></p>
-<p><a href="http://www.bilibili.com/read/cv527957" target="_blank" rel="noopener">http://www.bilibili.com/read/cv527957</a></p>
-</blockquote>
-<p>Pr Ae的导出快捷键都是<code>Ctrl+M</code>，这里看一下导出界面，一定注意红框内的内容是否正确。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd4.png" alt></p>
-<p>然后我们看一下Ae的这个字幕是怎么做的。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd5.png" alt></p>
-<p>首先单击<code>新建合成</code>，注意接下来弹出的合成设置，将分辨率和帧速率设置成与你的视频相同，持续时间我们选10s。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd6.png" alt></p>
-<p>接下来看下图，我们先单击1箭头指向的按钮，使画面变为透明，然后使用2箭头的工具在视频中选择合适的位置书写字幕。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd7.png" alt></p>
-<p>之后在右侧一栏中调整字体等内容。最后我们制作特效。</p>
-<p>选择<code>菜单栏-窗口-效果和预设</code>，之后在右侧出现这一栏内容，选择其中的<code>*动画预设-Text-Blurs-蒸发</code>拖动到字幕上，当然也可以是其他内容。这个效果仅有出场效果，所以我们点击字幕，按下<code>u</code>键，找到动画的关键帧，两个关键帧分别为动画开始与动画结束。接下来用鼠标拖动选中两个关键帧并移动位置，之后按下复制快捷键复制两个关键帧，而后移动箭头，然后按下粘贴快捷键粘贴到前方，这时交换前方两个关键帧的位置，后方两个关键帧保持不变，这样前方的动画就变成了入场效果。最后调整这四个关键帧的位置，并且选择上方的第二行的按钮进行切片。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd8.png" alt></p>
-<p>最后进行导出，按下<code>Ctrl+M</code>，按123步骤操作下图界面。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd9.png" alt></p>
-<p>步骤1：如图进行调整，如果没有安装QuickTime就去安装。<br>步骤2：选择输出路径。<br>步骤3：点击渲染。<br><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/mmd10.png" alt></p>
-<p>最后将输出好的mov文件拖拽进入Pr进行对轨操作即可，如果有重合的部分可以用两条轨道交错放置字幕。</p>
-<h2 id="压制"><a href="#压制" class="headerlink" title="压制"></a>压制</h2><p>参考：<a href="https://www.bilibili.com/read/cv954478/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv954478/</a> </p>
-<p>使用小丸工具箱即可，可以先压制再在Pr中进行编辑。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>MMD</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++11学习笔记</title>
     <url>/2022-04-01-cpp-11/</url>
     <content><![CDATA[<blockquote>
@@ -4838,6 +4838,58 @@ int x = 0, y = 0;
       </categories>
       <tags>
         <tag>C++11</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏《递归的边界线Recursive Boundary》开发记录</title>
+    <url>/2022-04-01-unity/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2022.04.12</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>括号内的英文为Unity内置概念</p>
+<h1 id="剧情编写与游戏流程设计"><a href="#剧情编写与游戏流程设计" class="headerlink" title="剧情编写与游戏流程设计"></a>剧情编写与游戏流程设计</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p>构思了游戏主要设定，编写了游戏剧情文本，分为五个部分，分别在五个场景中计划进行应用</p>
+<p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
+<h2 id="游戏流程设计"><a href="#游戏流程设计" class="headerlink" title="游戏流程设计"></a>游戏流程设计</h2><p>设计了游戏流程：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/unity-project-recursive-boundary-1.png" alt></p>
+<h1 id="Unity引擎操作与C-脚本编写"><a href="#Unity引擎操作与C-脚本编写" class="headerlink" title="Unity引擎操作与C#脚本编写"></a>Unity引擎操作与C#脚本编写</h1><h2 id="渲染管线选取与美术资源预处理"><a href="#渲染管线选取与美术资源预处理" class="headerlink" title="渲染管线选取与美术资源预处理"></a>渲染管线选取与美术资源预处理</h2><p>可编程渲染管线是一个瘦 API 层，允许使用 C# 脚本来调度和配置渲染命令。Unity 将这些命令传递给它的低级图形架构，后者随后将指令发送给图形 API。Unity 的可编程渲染管线 (Scriptable Render Pipeline, SRP) 是一项可以通过 C# 脚本来控制渲染的功能。SRP 技术可以强化通用渲染管线 (URP) 和高清渲染管线 (HDRP)。</p>
+<p>本次项目选用了通用渲染管线（Universal Render Pipeline），首先通过Unity对美术素材中的Shader升级为URP格式，并手动处理升级失败的Shader。</p>
+<p>为树木材质升级失败的场景手动摆放了不同风格的树木，为场景选择了天空盒（Skybox），并调整了场景太阳光点光源设置，调整了URP渲染管线的配置。</p>
+<h2 id="人物模型制作与数据格式转换"><a href="#人物模型制作与数据格式转换" class="headerlink" title="人物模型制作与数据格式转换"></a>人物模型制作与数据格式转换</h2><p>使用人形模型生成软件VRoid Studio进行角色设计，通过数位板（设备：Wocam CTL672）对贴图进行绘画，选择合适三角形面数导出为VRM数据格式，通过GitHub下载Blender Python插件cats-blender-plugin-0-19-0并安装，转换VRM数据格式为通用数据格式FBX，并对模型网格（Mesh），骨骼（Skeleton）等内容进行修复。</p>
+<p>在动画网站<a href="https://www.mixamo.com/" target="_blank" rel="noopener">https://www.mixamo.com/</a>上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</p>
+<p>导入FBX模型文件进入Unity，设置模型动画格式为人形（Humanoid），选择合适的材质球（Material）格式。</p>
+<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）完善了默认的走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
+<p>配置了瞄准动画的动画状态机设置，并通过检测鼠标右键点击切换动画状态，使用了遮罩（Mask）和IK Pass实现了动画转换，制作了选取头部、颈部、与上肢的骨骼遮罩，使瞄准动画的上体动作不在受到基本动画状态的影响。</p>
+<h2 id="第三人称射击系统与粒子特效"><a href="#第三人称射击系统与粒子特效" class="headerlink" title="第三人称射击系统与粒子特效"></a>第三人称射击系统与粒子特效</h2><p>通过光线投射方法计算当前屏幕中心点在场景模型中的投影，并通过投影点与子弹发出点的坐标计算欧拉角，对子弹使用实例化方法，实例一发子弹沿欧拉角方向射出，给出初始速度，并且使子弹完全沿光线方向射出，不受重力影响。</p>
+<p>配置了子弹的材质（Material）光效，使得子弹模型显示为红色，并在击中目标后显示绿色粒子光效，未击中目标时显示红色粒子光效。</p>
+<p>在瞄准时将虚拟摄像机切换瞄准虚拟摄像机（VirtualCamera），使得人物模型在视野中心偏右，并通过调整图片Alpha值的方法控制UI中心准星的显示，取消瞄准时切换到常规虚拟摄像机，并禁止子弹发出。</p>
+<p>调整了常规和瞄准的视角，常规状态时鼠标可环绕，而模型不会转动方向，瞄准状态时模型随鼠标环绕而转动方向。</p>
+<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的setter修改射中物体对象的私有属性血量。</p>
+<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程中代码挂载的对象只产生一份。</p>
+<p>设计工具类Singleton类并编写虚函数和方法，通过泛型继承Singleton类实现这一设计模式。</p>
+<h2 id="场景异步加载与跨场景人物传送"><a href="#场景异步加载与跨场景人物传送" class="headerlink" title="场景异步加载与跨场景人物传送"></a>场景异步加载与跨场景人物传送</h2><p>通过C#协程（Coroutines）方法，调用UnityEngine继承类中的异步（Asynchronous）加载方法，对场景实行多线程加载。</p>
+<p>设计代码，使用枚举数据类型，在O(n)的时间复杂度下找到对应标签的传送地点，并通过GameManager的单例方法删除原场景中的人物，并使用单例方法在新场景中通过玩家预制体（Prefab）生成玩家（Player）</p>
+<p>通过URP Shader制作传送门特效，为传送门挂载脚本，将传送门保存为预制体（Prefab），在所有场景中摆放传送门并设置传送门自身标签与传送目的标签。</p>
+<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种私有数据存储于数据类中。</p>
+<p>通过另一个接口类的公有方法对其他类暴露，并通过C#语法糖为变量设置了getter setter。</p>
+<h2 id="游戏操作界面UI设计"><a href="#游戏操作界面UI设计" class="headerlink" title="游戏操作界面UI设计"></a>游戏操作界面UI设计</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
+<p>通过一张图片作为底色，控制一张图片的长度实现血量条和子弹条。</p>
+<h1 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h1><h2 id="完成游戏整体设计"><a href="#完成游戏整体设计" class="headerlink" title="完成游戏整体设计"></a>完成游戏整体设计</h2><p>对按照现有整体游戏控制框架，进一步完善游戏内容：</p>
+<p>设计游戏主界面UI，并编写代码完成UI系统</p>
+<p>设计游戏总流程的状态机，编写代码控制对话系统。</p>
+<p>设计敌人的行为树，并编写代码与完善模型与动画资源，完成敌人系统。</p>
+<p>设计数据存储结构，完成数据存档系统。</p>
+<h2 id="完成编写实现风格化渲染的Unity-Shader"><a href="#完成编写实现风格化渲染的Unity-Shader" class="headerlink" title="完成编写实现风格化渲染的Unity Shader"></a>完成编写实现风格化渲染的Unity Shader</h2><p>对至少完成对人物模型的Unity Shader编写，实现二维卡通渲染效果，凸出表现阴影和高光部分。</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>Unity</tag>
+        <tag>Blender</tag>
+        <tag>C#</tag>
+        <tag>VRoid Studio</tag>
       </tags>
   </entry>
   <entry>
@@ -4990,58 +5042,6 @@ int x = 0, y = 0;
         <tag>Unity</tag>
         <tag>Blender</tag>
         <tag>VRoid Studio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏《递归的边界线Recursive Boundary》开发记录</title>
-    <url>/2022-04-01-unity/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.04.12</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<p>括号内的英文为Unity内置概念</p>
-<h1 id="剧情编写与游戏流程设计"><a href="#剧情编写与游戏流程设计" class="headerlink" title="剧情编写与游戏流程设计"></a>剧情编写与游戏流程设计</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p>构思了游戏主要设定，编写了游戏剧情文本，分为五个部分，分别在五个场景中计划进行应用</p>
-<p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
-<h2 id="游戏流程设计"><a href="#游戏流程设计" class="headerlink" title="游戏流程设计"></a>游戏流程设计</h2><p>设计了游戏流程：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/unity-project-recursive-boundary-1.png" alt></p>
-<h1 id="Unity引擎操作与C-脚本编写"><a href="#Unity引擎操作与C-脚本编写" class="headerlink" title="Unity引擎操作与C#脚本编写"></a>Unity引擎操作与C#脚本编写</h1><h2 id="渲染管线选取与美术资源预处理"><a href="#渲染管线选取与美术资源预处理" class="headerlink" title="渲染管线选取与美术资源预处理"></a>渲染管线选取与美术资源预处理</h2><p>可编程渲染管线是一个瘦 API 层，允许使用 C# 脚本来调度和配置渲染命令。Unity 将这些命令传递给它的低级图形架构，后者随后将指令发送给图形 API。Unity 的可编程渲染管线 (Scriptable Render Pipeline, SRP) 是一项可以通过 C# 脚本来控制渲染的功能。SRP 技术可以强化通用渲染管线 (URP) 和高清渲染管线 (HDRP)。</p>
-<p>本次项目选用了通用渲染管线（Universal Render Pipeline），首先通过Unity对美术素材中的Shader升级为URP格式，并手动处理升级失败的Shader。</p>
-<p>为树木材质升级失败的场景手动摆放了不同风格的树木，为场景选择了天空盒（Skybox），并调整了场景太阳光点光源设置，调整了URP渲染管线的配置。</p>
-<h2 id="人物模型制作与数据格式转换"><a href="#人物模型制作与数据格式转换" class="headerlink" title="人物模型制作与数据格式转换"></a>人物模型制作与数据格式转换</h2><p>使用人形模型生成软件VRoid Studio进行角色设计，通过数位板（设备：Wocam CTL672）对贴图进行绘画，选择合适三角形面数导出为VRM数据格式，通过GitHub下载Blender Python插件cats-blender-plugin-0-19-0并安装，转换VRM数据格式为通用数据格式FBX，并对模型网格（Mesh），骨骼（Skeleton）等内容进行修复。</p>
-<p>在动画网站<a href="https://www.mixamo.com/" target="_blank" rel="noopener">https://www.mixamo.com/</a>上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</p>
-<p>导入FBX模型文件进入Unity，设置模型动画格式为人形（Humanoid），选择合适的材质球（Material）格式。</p>
-<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）完善了默认的走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
-<p>配置了瞄准动画的动画状态机设置，并通过检测鼠标右键点击切换动画状态，使用了遮罩（Mask）和IK Pass实现了动画转换，制作了选取头部、颈部、与上肢的骨骼遮罩，使瞄准动画的上体动作不在受到基本动画状态的影响。</p>
-<h2 id="第三人称射击系统与粒子特效"><a href="#第三人称射击系统与粒子特效" class="headerlink" title="第三人称射击系统与粒子特效"></a>第三人称射击系统与粒子特效</h2><p>通过光线投射方法计算当前屏幕中心点在场景模型中的投影，并通过投影点与子弹发出点的坐标计算欧拉角，对子弹使用实例化方法，实例一发子弹沿欧拉角方向射出，给出初始速度，并且使子弹完全沿光线方向射出，不受重力影响。</p>
-<p>配置了子弹的材质（Material）光效，使得子弹模型显示为红色，并在击中目标后显示绿色粒子光效，未击中目标时显示红色粒子光效。</p>
-<p>在瞄准时将虚拟摄像机切换瞄准虚拟摄像机（VirtualCamera），使得人物模型在视野中心偏右，并通过调整图片Alpha值的方法控制UI中心准星的显示，取消瞄准时切换到常规虚拟摄像机，并禁止子弹发出。</p>
-<p>调整了常规和瞄准的视角，常规状态时鼠标可环绕，而模型不会转动方向，瞄准状态时模型随鼠标环绕而转动方向。</p>
-<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的setter修改射中物体对象的私有属性血量。</p>
-<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程中代码挂载的对象只产生一份。</p>
-<p>设计工具类Singleton类并编写虚函数和方法，通过泛型继承Singleton类实现这一设计模式。</p>
-<h2 id="场景异步加载与跨场景人物传送"><a href="#场景异步加载与跨场景人物传送" class="headerlink" title="场景异步加载与跨场景人物传送"></a>场景异步加载与跨场景人物传送</h2><p>通过C#协程（Coroutines）方法，调用UnityEngine继承类中的异步（Asynchronous）加载方法，对场景实行多线程加载。</p>
-<p>设计代码，使用枚举数据类型，在O(n)的时间复杂度下找到对应标签的传送地点，并通过GameManager的单例方法删除原场景中的人物，并使用单例方法在新场景中通过玩家预制体（Prefab）生成玩家（Player）</p>
-<p>通过URP Shader制作传送门特效，为传送门挂载脚本，将传送门保存为预制体（Prefab），在所有场景中摆放传送门并设置传送门自身标签与传送目的标签。</p>
-<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种私有数据存储于数据类中。</p>
-<p>通过另一个接口类的公有方法对其他类暴露，并通过C#语法糖为变量设置了getter setter。</p>
-<h2 id="游戏操作界面UI设计"><a href="#游戏操作界面UI设计" class="headerlink" title="游戏操作界面UI设计"></a>游戏操作界面UI设计</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
-<p>通过一张图片作为底色，控制一张图片的长度实现血量条和子弹条。</p>
-<h1 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h1><h2 id="完成游戏整体设计"><a href="#完成游戏整体设计" class="headerlink" title="完成游戏整体设计"></a>完成游戏整体设计</h2><p>对按照现有整体游戏控制框架，进一步完善游戏内容：</p>
-<p>设计游戏主界面UI，并编写代码完成UI系统</p>
-<p>设计游戏总流程的状态机，编写代码控制对话系统。</p>
-<p>设计敌人的行为树，并编写代码与完善模型与动画资源，完成敌人系统。</p>
-<p>设计数据存储结构，完成数据存档系统。</p>
-<h2 id="完成编写实现风格化渲染的Unity-Shader"><a href="#完成编写实现风格化渲染的Unity-Shader" class="headerlink" title="完成编写实现风格化渲染的Unity Shader"></a>完成编写实现风格化渲染的Unity Shader</h2><p>对至少完成对人物模型的Unity Shader编写，实现二维卡通渲染效果，凸出表现阴影和高光部分。</p>
-]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>Unity</tag>
-        <tag>Blender</tag>
-        <tag>VRoid Studio</tag>
-        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -5281,6 +5281,27 @@ SELECT 列, 列 FROM 表 WHERE 列 != 值;
         <tag>MySQL</tag>
         <tag>SQL</tag>
         <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3D游戏开发中美术/程序的软件流程</title>
+    <url>/2022-09-27-3d-game-development/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2022.09.27</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="美术工作流"><a href="#美术工作流" class="headerlink" title="美术工作流"></a>美术工作流</h1><h1 id="Unity工作流"><a href="#Unity工作流" class="headerlink" title="Unity工作流"></a>Unity工作流</h1><p>mermaid插件寄了，而我却没有能力修好它……更没有把这篇文章写完</p>
+<pre><div class="mermaid">graph LR
+    A --&gt; B</div></pre>
+
+<h1 id="UE工作流"><a href="#UE工作流" class="headerlink" title="UE工作流"></a>UE工作流</h1>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>渲染</tag>
+        <tag>三维建模</tag>
       </tags>
   </entry>
   <entry>
@@ -6416,27 +6437,6 @@ void TcpClient::closeEvent(QCloseEvent *)
       </tags>
   </entry>
   <entry>
-    <title>3D游戏开发中美术/程序的软件流程</title>
-    <url>/2022-09-27-3d-game-development/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.09.27</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="美术工作流"><a href="#美术工作流" class="headerlink" title="美术工作流"></a>美术工作流</h1><h1 id="Unity工作流"><a href="#Unity工作流" class="headerlink" title="Unity工作流"></a>Unity工作流</h1><p>mermaid插件寄了，而我却没有能力修好它……更没有把这篇文章写完</p>
-<pre><div class="mermaid">graph LR
-    A --&gt; B</div></pre>
-
-<h1 id="UE工作流"><a href="#UE工作流" class="headerlink" title="UE工作流"></a>UE工作流</h1>]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>渲染</tag>
-        <tag>三维建模</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3D建模的PBR流程</title>
     <url>/2022-09-27-pbr/</url>
     <content><![CDATA[<blockquote>
@@ -6578,6 +6578,27 @@ void TcpClient::closeEvent(QCloseEvent *)
       </tags>
   </entry>
   <entry>
+    <title>Unity Shader入门学习</title>
+    <url>/2022-09-27-unity-shader/</url>
+    <content><![CDATA[<blockquote>
+<p>更新于：A.D.2022.09.27</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<h1 id="什么是Shader"><a href="#什么是Shader" class="headerlink" title="什么是Shader"></a>什么是Shader</h1><h2 id="三种Shader语言"><a href="#三种Shader语言" class="headerlink" title="三种Shader语言"></a>三种Shader语言</h2><ol>
+<li>基于OpenGL的OpenGL Shading Language，简称GLSL。</li>
+<li>基于DirectX的High Level Shading Language，简称HLSL。</li>
+<li>NVIDIA公司的C for Graphic，简称Cg语言。</li>
+</ol>
+<h2 id="Unity-Shader"><a href="#Unity-Shader" class="headerlink" title="Unity Shader"></a>Unity Shader</h2>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Shader</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>开始记忆一些Linux命令</title>
     <url>/2023-03-05-linux/</url>
     <content><![CDATA[<blockquote>
@@ -6654,27 +6675,6 @@ cd !$ 把上个命令的参数作为cd参数使用
       </categories>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity Shader入门学习</title>
-    <url>/2022-09-27-unity-shader/</url>
-    <content><![CDATA[<blockquote>
-<p>更新于：A.D.2022.09.27</p>
-</blockquote>
-<a id="more"></a>
-<hr>
-<h1 id="什么是Shader"><a href="#什么是Shader" class="headerlink" title="什么是Shader"></a>什么是Shader</h1><h2 id="三种Shader语言"><a href="#三种Shader语言" class="headerlink" title="三种Shader语言"></a>三种Shader语言</h2><ol>
-<li>基于OpenGL的OpenGL Shading Language，简称GLSL。</li>
-<li>基于DirectX的High Level Shading Language，简称HLSL。</li>
-<li>NVIDIA公司的C for Graphic，简称Cg语言。</li>
-</ol>
-<h2 id="Unity-Shader"><a href="#Unity-Shader" class="headerlink" title="Unity Shader"></a>Unity Shader</h2>]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Shader</tag>
       </tags>
   </entry>
   <entry>
@@ -7335,11 +7335,6 @@ Priority Weight Port Target 设为 5 0 25565 example.com
 ]]></content>
   </entry>
   <entry>
-    <title>tags</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>gallery</title>
     <url>/gallery/index.html</url>
     <content><![CDATA[]]></content>
@@ -7347,6 +7342,11 @@ Priority Weight Port Target 设为 5 0 25565 example.com
   <entry>
     <title>links</title>
     <url>/links/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>tags</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
