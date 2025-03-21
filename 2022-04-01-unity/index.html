@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://shiokiri.disqus.com">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            游戏《递归的边界线Recursive Boundary》开发记录 | 
+        
+        落影汐雾的虚空印刷站
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="
+更新于：A.D.2022.04.12
+">
+    <meta name="keywords" content=",Unity,Blender,C#,VRoid Studio">
+    <meta name="theme-color" content="#66CCFF">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/css/material.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/css/style.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/css/prettify.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/css/prettify/atelier-seaside-light.min.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #66CCFF !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #66CCFF !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #66CCFF !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-image: url(https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/img/bg.jpg);
+        background-size: cover;
+        /* background-position: center; */
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/css/material-icons.css",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/js/jquery.min.js", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="落影汐雾的虚空印刷站">
+    <meta name="msapplication-starturl" content="https://shiokiri.com/2022-04-01-unity/">
+    <meta name="msapplication-navbutton-color" content="#66CCFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="落影汐雾的虚空印刷站">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png">
+
+    <!-- Site Verification -->
+    <meta name="google-site-verification" content="UA-151632153-1">
+    
+
+    <!-- RSS -->
+    
+        
+            <link rel="alternate" type="application/atom+xml" href="/atom.xml">
+        
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shiokiri.com/2022-04-01-unity/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="游戏《递归的边界线Recursive Boundary》开发记录 | 落影汐雾的虚空印刷站">
+    <meta property="og:image" content="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png">
+    <meta property="og:description" content="
+更新于：A.D.2022.04.12
+">
+    <meta property="og:article:tag" content="Unity"> <meta property="og:article:tag" content="Blender"> <meta property="og:article:tag" content="C#"> <meta property="og:article:tag" content="VRoid Studio"> 
+
+    
+        <meta property="article:published_time" content="Fri Apr 01 2022 21:04:25 GMT+0800">
+        <meta property="article:modified_time" content="Tue Apr 12 2022 23:10:31 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shiokiri.com/2022-04-01-unity/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://shiokiri.com/2022-04-01-unity/index.html",
+    "headline": "游戏《递归的边界线Recursive Boundary》开发记录",
+    "datePublished": "Fri Apr 01 2022 21:04:25 GMT+0800",
+    "dateModified": "Tue Apr 12 2022 23:10:31 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "落影汐雾",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png"
+        },
+        "description": "夜雾里去闪烁 光年外去诉说 🌟 不存在的夏天 ~"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "落影汐雾的虚空印刷站",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png"
+        }
+    },
+    "keywords": ",Unity,Blender,C#,VRoid Studio",
+    "description": "
+更新于：A.D.2022.04.12
+",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- live2d start -->
+            <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+            <!-- live2d end -->
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn" class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#剧情编写与游戏流程设计"><span class="post-toc-number">1.</span> <span class="post-toc-text">剧情编写与游戏流程设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#剧本编写"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">剧本编写</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏流程设计"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">游戏流程设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Unity引擎操作与C-脚本编写"><span class="post-toc-number">2.</span> <span class="post-toc-text">Unity引擎操作与C#脚本编写</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#渲染管线选取与美术资源预处理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">渲染管线选取与美术资源预处理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物模型制作与数据格式转换"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">人物模型制作与数据格式转换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称控制系统与动画系统"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">第三人称控制系统与动画系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三人称射击系统与粒子特效"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">第三人称射击系统与粒子特效</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#通过泛型应用单例设计模式"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">通过泛型应用单例设计模式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#场景异步加载与跨场景人物传送"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">场景异步加载与跨场景人物传送</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#人物属性数据设计与存储系统"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">人物属性数据设计与存储系统</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#游戏操作界面UI设计"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">游戏操作界面UI设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#开发计划"><span class="post-toc-number">3.</span> <span class="post-toc-text">开发计划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完成游戏整体设计"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">完成游戏整体设计</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#完成编写实现风格化渲染的Unity-Shader"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">完成编写实现风格化渲染的Unity Shader</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/img/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                游戏《递归的边界线Recursive Boundary》开发记录
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png" width="44px" height="44px" alt="Author Avatar">
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>落影汐雾</strong>
+        <span>4月 01, 2022</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQVLEIBAF0Nz/0rq1Smf83Q0kWo+VNWYIjwUwn74+/nW78PDw8PDw8PDwHsa74vZDR98+f/X81096veVjw8PDwzvD+2WpXTSgZCLmY8PDw8M7yXs1oFfPJN/Kl/X8ve+3GTw8PLzn894fmpMtofpePDw8vL/Oqx64Xz2ZTBkeHh7e03jJD/5e3JAcoPPAd2PWgoeHhxfzqpHByb+P3u/h4eHhBbxySdO4sOB9bzfXlOHh4eEFvPlxOQ9zkzCiNx48PDy8k7xeqNqLa/NwNrkqi8IIPDw8vG28/LK/cBHVutBasM3g4eHhHecVrprio3Cy/fSmGA8PD+8uXm8h7sW4kyKDqNgLDw8PbzNvUlRajWUXBA3JpOPh4eFt5uXXYJOlP/lvdRsYZS14eHh4i3ijTuNigvzSqxpw4OHh4Z3kTbqex695GBFtTnh4eHibeZMCqSSYqIbC1YnGw8PDO8/rDT0PFKplBwu2Cjw8PLzNvMKP/KCwoLqgJ6VXybfw8PDwTvKSi/x8ge6ValWRzdIBPDw8vEW8atyQD653EO+VGuDh4eHdxZsv7pNNJWnNXwx4eHh423jVJTg//laX/l4MgYeHh3eeVy3DWhW8roLh4eHhneFVWy8gyHvIt58ojMDDw8PbwLviNo8MeoFF+eiPh4eHd4SXDDcJeavXYHmwO6opw8PDw9vGmyzQycJdDXYXZy14eHh4t/Kqi3g1dKiy8fDw8J7PK7+yWFKQH8q373t4eHh44zAin4h8OiZvxMPDw7uLl0cAk5LW+bYRRR54eHh4m3n/r+Hh4eHh4eHh4T2gfQIcx4aSBcThQgAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Blender/">Blender</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/C/">C#</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/Unity/">Unity</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/VRoid-Studio/">VRoid Studio</a>
+    </li></ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=游戏《递归的边界线Recursive Boundary》开发记录&url=https://shiokiri.com/2022-04-01-unity/index.html&pic=https://shiokiri.comhttps://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=游戏《递归的边界线Recursive Boundary》开发记录&url=https://shiokiri.com/2022-04-01-unity/index.html&via=落影汐雾" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shiokiri.com/2022-04-01-unity/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+        <a class="post_share-link" href="https://telegram.me/share/url?url=https://shiokiri.com/2022-04-01-unity/index.html&text=游戏《递归的边界线Recursive Boundary》开发记录" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Telegram
+            </li>
+        </a>
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>更新于：A.D.2022.04.12</p>
+</blockquote>
+<a id="more"></a>
+<hr>
+<p>括号内的英文为Unity内置概念</p>
+<h1 id="剧情编写与游戏流程设计"><a href="#剧情编写与游戏流程设计" class="headerlink" title="剧情编写与游戏流程设计"></a>剧情编写与游戏流程设计</h1><h2 id="剧本编写"><a href="#剧本编写" class="headerlink" title="剧本编写"></a>剧本编写</h2><p>构思了游戏主要设定，编写了游戏剧情文本，分为五个部分，分别在五个场景中计划进行应用</p>
+<p><a href="https://y.lyxw.xyz/2022/03/29/%E9%80%92%E5%BD%92%E7%9A%84%E8%BE%B9%E7%95%8C%E7%BA%BF.html" target="_blank" rel="noopener">递归的边界线</a></p>
+<h2 id="游戏流程设计"><a href="#游戏流程设计" class="headerlink" title="游戏流程设计"></a>游戏流程设计</h2><p>设计了游戏流程：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/unity-project-recursive-boundary-1.png" alt></p>
+<h1 id="Unity引擎操作与C-脚本编写"><a href="#Unity引擎操作与C-脚本编写" class="headerlink" title="Unity引擎操作与C#脚本编写"></a>Unity引擎操作与C#脚本编写</h1><h2 id="渲染管线选取与美术资源预处理"><a href="#渲染管线选取与美术资源预处理" class="headerlink" title="渲染管线选取与美术资源预处理"></a>渲染管线选取与美术资源预处理</h2><p>可编程渲染管线是一个瘦 API 层，允许使用 C# 脚本来调度和配置渲染命令。Unity 将这些命令传递给它的低级图形架构，后者随后将指令发送给图形 API。Unity 的可编程渲染管线 (Scriptable Render Pipeline, SRP) 是一项可以通过 C# 脚本来控制渲染的功能。SRP 技术可以强化通用渲染管线 (URP) 和高清渲染管线 (HDRP)。</p>
+<p>本次项目选用了通用渲染管线（Universal Render Pipeline），首先通过Unity对美术素材中的Shader升级为URP格式，并手动处理升级失败的Shader。</p>
+<p>为树木材质升级失败的场景手动摆放了不同风格的树木，为场景选择了天空盒（Skybox），并调整了场景太阳光点光源设置，调整了URP渲染管线的配置。</p>
+<h2 id="人物模型制作与数据格式转换"><a href="#人物模型制作与数据格式转换" class="headerlink" title="人物模型制作与数据格式转换"></a>人物模型制作与数据格式转换</h2><p>使用人形模型生成软件VRoid Studio进行角色设计，通过数位板（设备：Wocam CTL672）对贴图进行绘画，选择合适三角形面数导出为VRM数据格式，通过GitHub下载Blender Python插件cats-blender-plugin-0-19-0并安装，转换VRM数据格式为通用数据格式FBX，并对模型网格（Mesh），骨骼（Skeleton）等内容进行修复。</p>
+<p>在动画网站<a href="https://www.mixamo.com/" target="_blank" rel="noopener">https://www.mixamo.com/</a>上传模型，并根据具体模型选取动画，并调整网站动画参数，减少穿模，错位，最后下载动画数据FBX文件，并导入Unity。</p>
+<p>导入FBX模型文件进入Unity，设置模型动画格式为人形（Humanoid），选择合适的材质球（Material）格式。</p>
+<h2 id="第三人称控制系统与动画系统"><a href="#第三人称控制系统与动画系统" class="headerlink" title="第三人称控制系统与动画系统"></a>第三人称控制系统与动画系统</h2><p>通过Unity官方资源Starter Assets获取基本人形控制器，替换人形的模型与骨骼，替换脚本控制器为当前人物的控制器，通过Unity动画状态机（Animator）完善了默认的走路、跑动、跳跃、静止四种基本状态的状态转换路线。</p>
+<p>配置了瞄准动画的动画状态机设置，并通过检测鼠标右键点击切换动画状态，使用了遮罩（Mask）和IK Pass实现了动画转换，制作了选取头部、颈部、与上肢的骨骼遮罩，使瞄准动画的上体动作不在受到基本动画状态的影响。</p>
+<h2 id="第三人称射击系统与粒子特效"><a href="#第三人称射击系统与粒子特效" class="headerlink" title="第三人称射击系统与粒子特效"></a>第三人称射击系统与粒子特效</h2><p>通过光线投射方法计算当前屏幕中心点在场景模型中的投影，并通过投影点与子弹发出点的坐标计算欧拉角，对子弹使用实例化方法，实例一发子弹沿欧拉角方向射出，给出初始速度，并且使子弹完全沿光线方向射出，不受重力影响。</p>
+<p>配置了子弹的材质（Material）光效，使得子弹模型显示为红色，并在击中目标后显示绿色粒子光效，未击中目标时显示红色粒子光效。</p>
+<p>在瞄准时将虚拟摄像机切换瞄准虚拟摄像机（VirtualCamera），使得人物模型在视野中心偏右，并通过调整图片Alpha值的方法控制UI中心准星的显示，取消瞄准时切换到常规虚拟摄像机，并禁止子弹发出。</p>
+<p>调整了常规和瞄准的视角，常规状态时鼠标可环绕，而模型不会转动方向，瞄准状态时模型随鼠标环绕而转动方向。</p>
+<p>射中目标后，通过子弹附着的代码，检测刚体碰撞，并获取碰撞物体的对象，通过对象附着的代码暴露出的setter修改射中物体对象的私有属性血量。</p>
+<h2 id="通过泛型应用单例设计模式"><a href="#通过泛型应用单例设计模式" class="headerlink" title="通过泛型应用单例设计模式"></a>通过泛型应用单例设计模式</h2><p>对游戏管理器（GameManager）和场景管理器（SceneController）的代码设计采用单例的设计模式，使整个游戏过程中代码挂载的对象只产生一份。</p>
+<p>设计工具类Singleton类并编写虚函数和方法，通过泛型继承Singleton类实现这一设计模式。</p>
+<h2 id="场景异步加载与跨场景人物传送"><a href="#场景异步加载与跨场景人物传送" class="headerlink" title="场景异步加载与跨场景人物传送"></a>场景异步加载与跨场景人物传送</h2><p>通过C#协程（Coroutines）方法，调用UnityEngine继承类中的异步（Asynchronous）加载方法，对场景实行多线程加载。</p>
+<p>设计代码，使用枚举数据类型，在O(n)的时间复杂度下找到对应标签的传送地点，并通过GameManager的单例方法删除原场景中的人物，并使用单例方法在新场景中通过玩家预制体（Prefab）生成玩家（Player）</p>
+<p>通过URP Shader制作传送门特效，为传送门挂载脚本，将传送门保存为预制体（Prefab），在所有场景中摆放传送门并设置传送门自身标签与传送目的标签。</p>
+<h2 id="人物属性数据设计与存储系统"><a href="#人物属性数据设计与存储系统" class="headerlink" title="人物属性数据设计与存储系统"></a>人物属性数据设计与存储系统</h2><p>对人物设计了最大血量，当前血量，最大子弹，当前子弹4种私有数据存储于数据类中。</p>
+<p>通过另一个接口类的公有方法对其他类暴露，并通过C#语法糖为变量设置了getter setter。</p>
+<h2 id="游戏操作界面UI设计"><a href="#游戏操作界面UI设计" class="headerlink" title="游戏操作界面UI设计"></a>游戏操作界面UI设计</h2><p>通过对人物模型附着子物体摄像机，将摄像机画面输出到渲染管线纹理（RenderPipeline Texture），将渲染管线纹理输出到材质球（Material），将材质球输出到UI的image对象中，调整UI中image对象的位置，实现了实时头像的显示。</p>
+<p>通过一张图片作为底色，控制一张图片的长度实现血量条和子弹条。</p>
+<h1 id="开发计划"><a href="#开发计划" class="headerlink" title="开发计划"></a>开发计划</h1><h2 id="完成游戏整体设计"><a href="#完成游戏整体设计" class="headerlink" title="完成游戏整体设计"></a>完成游戏整体设计</h2><p>对按照现有整体游戏控制框架，进一步完善游戏内容：</p>
+<p>设计游戏主界面UI，并编写代码完成UI系统</p>
+<p>设计游戏总流程的状态机，编写代码控制对话系统。</p>
+<p>设计敌人的行为树，并编写代码与完善模型与动画资源，完成敌人系统。</p>
+<p>设计数据存储结构，完成数据存档系统。</p>
+<h2 id="完成编写实现风格化渲染的Unity-Shader"><a href="#完成编写实现风格化渲染的Unity-Shader" class="headerlink" title="完成编写实现风格化渲染的Unity Shader"></a>完成编写实现风格化渲染的Unity Shader</h2><p>对至少完成对人物模型的Unity Shader编写，实现二维卡通渲染效果，凸出表现阴影和高光部分。</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文由 落影汐雾 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a>
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="https://shiokiri.com/2022-04-01-unity/">https://shiokiri.com/2022-04-01-unity/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shiokiri.com/2022-04-01-unity/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shiokiri.com/2022-04-01-unity/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shiokiri.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2022-04-01-cpp-11/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2022-04-01-computational-geometry/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar3.png" alt="落影汐雾's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        i@shiokiri.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:i@shiokiri.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2025/03/">三月 2025<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2024/04/">四月 2024<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/03/">三月 2023<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/09/">九月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/06/">六月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/02/">二月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/01/">一月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/08/">八月 2021<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">五月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">2</span></a>
+            </li></ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/技术/">技术<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/数学/">数学<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/杂项/">杂项<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/编程/">编程<span class="sidebar_archives-count">13</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机/">计算机<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/随笔/">随笔<span class="sidebar_archives-count">7</span></a>
+            </li></ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于">
+                
+                    <i class="material-icons sidebar-material-icons">assignment_ind</i>
+                
+                关于
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/chat" title="闲聊">
+                
+                    <i class="material-icons sidebar-material-icons">chat_bubble_outline</i>
+                
+                闲聊
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">apps</i>
+                
+                友链
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">style</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="映像">
+                
+                    <i class="material-icons sidebar-material-icons">crop_original</i>
+                
+                映像
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间线">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间线
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">51</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material" class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--right-section sns-list">
+     <!-- Github -->
+     
+        <a href="https://github.com/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Telegram -->
+    
+        <a href="https://t.me/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-telegram">
+                <span class="visuallyhidden">Telegram</span>
+            </button><!--
+    --></a>
+    
+
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/shiokirixw" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="https://weibo.com/u/5836584232" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+   
+    <!-- LinkedIn -->
+    
+        <a href="https://www.linkedin.com/in/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-linkedin">
+                <span class="visuallyhidden">LinkedIn</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+        <a href="https://space.bilibili.com/51283000" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
+                <span class="visuallyhidden">Bilibili</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- V2EX -->
+    
+        <a href="https://www.v2ex.com/member/pxltq" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-v2ex">
+                <span class="visuallyhidden">V2EX</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Segmentfault -->
+    
+
+    <!-- Steam-->
+    
+        <a href="https://steamcommunity.com/id/shiokiri" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-steam">
+                <span class="visuallyhidden">Steam</span>
+            </button><!--
+     --></a>
+    
+</div>
+
+        <!--Copyright-->
+        <script>
+            var now = new Date(); 
+            function createtime() { 
+                var grt= new Date("05/31/2019 21:52:00");
+                now.setTime(now.getTime()+250); 
+                days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" d "+hnum + " h " + mnum + " m " + snum + " s";
+            } 
+            setInterval("createtime()",250);
+        </script>
+
+        <div id="copyright">
+            <span id="timeDate"></span>
+            <span class="my-face">ღゝ◡╹)ノ♡</span>
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;落影汐雾
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/js/lazyload.min.js", true)</script>
+
+
+
+    <script>lsloader.load("js_js","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/js/js.min.js", true)</script>
+
+
+
+    <script>lsloader.load("np_js","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/js/nprogress.js", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shiokiri.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","https://cdn.jsdelivr.net/gh/shiokiri/shioKiri.github.io/js/prettify.min.js", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2019;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+            <!-- live2d -->
+            <script src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/live2d-widget/autoload.js"></script>
+            <!-- fireworks -->
+            <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 9; pointer-events: none;" ></canvas> 
+            <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/js/src/fireworks.js"></script>
+            <!-- aplayer -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/aplayer/APlayer.min.css">
+            <div id="aplayer" style="z-index: 11;"></div>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.1/aplayer/APlayer.min.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/shiokiri/cdn@1.2/aplayer/music.js"></script>
+            
+                <script src='https://unpkg.com/mermaid@8.8.3/dist/mermaid.min.js'></script>
+                <script>
+                  if (window.mermaid) {
+                    mermaid.initialize({theme: 'forest'});
+                  }
+                </script>
+            
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+    
+</html>

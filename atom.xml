@@ -6,7 +6,7 @@
   <link href="https://shiokiri.com/atom.xml" rel="self"/>
   
   <link href="https://shiokiri.com/"/>
-  <updated>2022-06-28T09:44:26.530Z</updated>
+  <updated>2025-03-21T01:52:37.038Z</updated>
   <id>https://shiokiri.com/</id>
   
   <author>
@@ -17,28 +17,120 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>文章索引</title>
-    <link href="https://shiokiri.com/2033/post-index/"/>
-    <id>https://shiokiri.com/2033/post-index/</id>
-    <published>2033-07-12T15:59:59.000Z</published>
-    <updated>2022-06-28T09:44:26.530Z</updated>
+    <title>2016年至2025年日记收录</title>
+    <link href="https://shiokiri.com/2025-03-21-diary/"/>
+    <id>https://shiokiri.com/2025-03-21-diary/</id>
+    <published>2025-03-21T07:32:50.000Z</published>
+    <updated>2025-03-21T01:52:37.038Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于： A.D.2022.06.28&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2025.03.21&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
     
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
+    
+    
+    <category term="回忆录" scheme="https://shiokiri.com/tags/回忆录/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft Spigot开服记录</title>
+    <link href="https://shiokiri.com/2024-04-05-minecraft-server/"/>
+    <id>https://shiokiri.com/2024-04-05-minecraft-server/</id>
+    <published>2024-04-05T07:32:50.000Z</published>
+    <updated>2025-03-21T00:56:30.758Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2024.04.05&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    
+    
+    <category term="Minecraft服务器" scheme="https://shiokiri.com/tags/Minecraft服务器/"/>
+    
+    <category term="Spigot" scheme="https://shiokiri.com/tags/Spigot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VRChat穿衣/换衣/上传模型流程</title>
+    <link href="https://shiokiri.com/2023-12-01-vrchat/"/>
+    <id>https://shiokiri.com/2023-12-01-vrchat/</id>
+    <published>2023-12-21T07:32:50.000Z</published>
+    <updated>2025-03-21T00:56:27.848Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2023.12.21&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    
+    
+    <category term="VRChat" scheme="https://shiokiri.com/tags/VRChat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写一个Chrome extensions存储标签栏网页至书签</title>
+    <link href="https://shiokiri.com/2023-11-02-chrome-extensions/"/>
+    <id>https://shiokiri.com/2023-11-02-chrome-extensions/</id>
+    <published>2023-11-02T07:32:50.000Z</published>
+    <updated>2025-03-21T00:50:50.722Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2023.11.02&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
+    
+    
+    <category term="Chrome插件" scheme="https://shiokiri.com/tags/Chrome插件/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建一个物理服务器并安装Unraid</title>
+    <link href="https://shiokiri.com/2023-10-24-server-and-unraid/"/>
+    <id>https://shiokiri.com/2023-10-24-server-and-unraid/</id>
+    <published>2023-10-23T16:00:00.000Z</published>
+    <updated>2025-03-21T00:50:47.981Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2023.10.24&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
+    
+    
+    <category term="物理服务器" scheme="https://shiokiri.com/tags/物理服务器/"/>
+    
+    <category term="Unraid" scheme="https://shiokiri.com/tags/Unraid/"/>
     
   </entry>
   
   <entry>
     <title>Debian在LVM下ext4文件系统调整/和/home分区大小</title>
-    <link href="https://shiokiri.com/2023/linux-lvm/"/>
-    <id>https://shiokiri.com/2023/linux-lvm/</id>
+    <link href="https://shiokiri.com/2023-07-06-linux-lvm/"/>
+    <id>https://shiokiri.com/2023-07-06-linux-lvm/</id>
     <published>2023-07-06T07:32:50.000Z</published>
-    <updated>2023-10-11T07:54:31.694Z</updated>
+    <updated>2025-03-21T00:58:55.726Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -47,7 +139,7 @@
     
     
     
-    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
     <category term="Linux" scheme="https://shiokiri.com/tags/Linux/"/>
@@ -58,10 +150,10 @@
   
   <entry>
     <title>构建第一个Vue 3项目</title>
-    <link href="https://shiokiri.com/2023/vue/"/>
-    <id>https://shiokiri.com/2023/vue/</id>
+    <link href="https://shiokiri.com/2023-03-18-vue/"/>
+    <id>https://shiokiri.com/2023-03-18-vue/</id>
     <published>2023-03-18T07:32:50.000Z</published>
-    <updated>2023-07-09T14:40:40.451Z</updated>
+    <updated>2025-03-21T01:13:31.016Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -70,7 +162,7 @@
     
     
     
-    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
     <category term="vue" scheme="https://shiokiri.com/tags/vue/"/>
@@ -81,10 +173,10 @@
   
   <entry>
     <title>云服务器购买与Linux使用经验</title>
-    <link href="https://shiokiri.com/2023/cloud_server/"/>
-    <id>https://shiokiri.com/2023/cloud_server/</id>
+    <link href="https://shiokiri.com/2023-03-17-cloud-server/"/>
+    <id>https://shiokiri.com/2023-03-17-cloud-server/</id>
     <published>2023-03-17T07:32:50.000Z</published>
-    <updated>2023-07-09T14:40:45.243Z</updated>
+    <updated>2025-03-21T00:56:47.958Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -93,7 +185,7 @@
     
     
     
-    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
     <category term="服务器" scheme="https://shiokiri.com/tags/服务器/"/>
@@ -101,11 +193,11 @@
   </entry>
   
   <entry>
-    <title>让我们开始记忆一些Linux命令</title>
-    <link href="https://shiokiri.com/2023/linux/"/>
-    <id>https://shiokiri.com/2023/linux/</id>
+    <title>开始记忆一些Linux命令</title>
+    <link href="https://shiokiri.com/2023-03-05-linux/"/>
+    <id>https://shiokiri.com/2023-03-05-linux/</id>
     <published>2023-03-05T07:32:50.000Z</published>
-    <updated>2023-07-09T14:42:26.023Z</updated>
+    <updated>2025-03-21T00:56:53.129Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -114,7 +206,7 @@
     
     
     
-    <category term="技术" scheme="https://shiokiri.com/categories/技术/"/>
+    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
     
     
     <category term="Linux" scheme="https://shiokiri.com/tags/Linux/"/>
@@ -123,10 +215,10 @@
   
   <entry>
     <title>3D游戏开发中美术/程序的软件流程</title>
-    <link href="https://shiokiri.com/2022/3d-game-development/"/>
-    <id>https://shiokiri.com/2022/3d-game-development/</id>
+    <link href="https://shiokiri.com/2022-09-27-3d-game-development/"/>
+    <id>https://shiokiri.com/2022-09-27-3d-game-development/</id>
     <published>2022-09-27T07:32:50.000Z</published>
-    <updated>2023-03-04T19:01:59.397Z</updated>
+    <updated>2025-03-21T00:48:18.919Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -146,8 +238,8 @@
   
   <entry>
     <title>3D建模的PBR流程</title>
-    <link href="https://shiokiri.com/2022/pbr/"/>
-    <id>https://shiokiri.com/2022/pbr/</id>
+    <link href="https://shiokiri.com/2022-09-27-pbr/"/>
+    <id>https://shiokiri.com/2022-09-27-pbr/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2022-10-13T12:55:27.060Z</updated>
     
@@ -169,8 +261,8 @@
   
   <entry>
     <title>Redis数据库学习笔记</title>
-    <link href="https://shiokiri.com/2022/redis/"/>
-    <id>https://shiokiri.com/2022/redis/</id>
+    <link href="https://shiokiri.com/2022-09-27-redis/"/>
+    <id>https://shiokiri.com/2022-09-27-redis/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2023-03-04T19:32:03.200Z</updated>
     
@@ -192,8 +284,8 @@
   
   <entry>
     <title>Unity Shader入门学习</title>
-    <link href="https://shiokiri.com/2022/unity-shader/"/>
-    <id>https://shiokiri.com/2022/unity-shader/</id>
+    <link href="https://shiokiri.com/2022-09-27-unity-shader/"/>
+    <id>https://shiokiri.com/2022-09-27-unity-shader/</id>
     <published>2022-09-27T07:32:50.000Z</published>
     <updated>2022-09-27T14:25:17.681Z</updated>
     
@@ -212,11 +304,11 @@
   </entry>
   
   <entry>
-    <title>计算机科学与技术学习的前置知识</title>
-    <link href="https://shiokiri.com/2022/before-cs/"/>
-    <id>https://shiokiri.com/2022/before-cs/</id>
+    <title>编程与CS学习的必要前置知识</title>
+    <link href="https://shiokiri.com/2022-06-28-before-cs-learning/"/>
+    <id>https://shiokiri.com/2022-06-28-before-cs-learning/</id>
     <published>2022-06-28T07:32:50.000Z</published>
-    <updated>2023-03-04T19:28:08.527Z</updated>
+    <updated>2025-03-21T01:56:18.766Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -225,7 +317,7 @@
     
     
     
-    <category term="计算机" scheme="https://shiokiri.com/categories/计算机/"/>
+    <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
     <category term="技术工具" scheme="https://shiokiri.com/tags/技术工具/"/>
@@ -236,8 +328,8 @@
   
   <entry>
     <title>MySQL数据库学习笔记</title>
-    <link href="https://shiokiri.com/2022/MySQL/"/>
-    <id>https://shiokiri.com/2022/MySQL/</id>
+    <link href="https://shiokiri.com/2022-06-28-mysql/"/>
+    <id>https://shiokiri.com/2022-06-28-mysql/</id>
     <published>2022-06-28T06:54:44.000Z</published>
     <updated>2022-06-28T07:16:50.039Z</updated>
     
@@ -251,9 +343,9 @@
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="SQL" scheme="https://shiokiri.com/tags/SQL/"/>
-    
     <category term="MySQL" scheme="https://shiokiri.com/tags/MySQL/"/>
+    
+    <category term="SQL" scheme="https://shiokiri.com/tags/SQL/"/>
     
     <category term="数据库" scheme="https://shiokiri.com/tags/数据库/"/>
     
@@ -261,10 +353,10 @@
   
   <entry>
     <title>C++Qt局域网聊天工具 开发记录</title>
-    <link href="https://shiokiri.com/2022/C++Qt-LAN-Chat/"/>
-    <id>https://shiokiri.com/2022/C++Qt-LAN-Chat/</id>
+    <link href="https://shiokiri.com/2022-06-27-cpp-qt/"/>
+    <id>https://shiokiri.com/2022-06-27-cpp-qt/</id>
     <published>2022-06-27T11:46:49.000Z</published>
-    <updated>2022-06-28T07:16:53.974Z</updated>
+    <updated>2025-03-21T00:48:10.489Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
@@ -286,8 +378,8 @@
   
   <entry>
     <title>C++11学习笔记</title>
-    <link href="https://shiokiri.com/2022/C++11/"/>
-    <id>https://shiokiri.com/2022/C++11/</id>
+    <link href="https://shiokiri.com/2022-04-01-cpp-11/"/>
+    <id>https://shiokiri.com/2022-04-01-cpp-11/</id>
     <published>2022-04-01T13:41:25.000Z</published>
     <updated>2022-04-01T14:01:59.359Z</updated>
     
@@ -307,8 +399,8 @@
   
   <entry>
     <title>游戏《递归的边界线Recursive Boundary》开发记录</title>
-    <link href="https://shiokiri.com/2022/unity-project-recursive-boundary/"/>
-    <id>https://shiokiri.com/2022/unity-project-recursive-boundary/</id>
+    <link href="https://shiokiri.com/2022-04-01-unity/"/>
+    <id>https://shiokiri.com/2022-04-01-unity/</id>
     <published>2022-04-01T13:04:25.000Z</published>
     <updated>2022-04-12T15:10:31.163Z</updated>
     
@@ -334,8 +426,8 @@
   
   <entry>
     <title>「计算几何」</title>
-    <link href="https://shiokiri.com/2022/computational-geometry/"/>
-    <id>https://shiokiri.com/2022/computational-geometry/</id>
+    <link href="https://shiokiri.com/2022-04-01-computational-geometry/"/>
+    <id>https://shiokiri.com/2022-04-01-computational-geometry/</id>
     <published>2022-04-01T12:43:25.000Z</published>
     <updated>2022-04-01T12:50:13.925Z</updated>
     
@@ -349,16 +441,16 @@
     <category term="数学" scheme="https://shiokiri.com/categories/数学/"/>
     
     
-    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
-    
     <category term="计算几何" scheme="https://shiokiri.com/tags/计算几何/"/>
+    
+    <category term="C++11" scheme="https://shiokiri.com/tags/C-11/"/>
     
   </entry>
   
   <entry>
     <title>VRoid Studio-&gt;Blender-&gt;Unity制作人物模型</title>
-    <link href="https://shiokiri.com/2022/vroid-studio-blender-unity/"/>
-    <id>https://shiokiri.com/2022/vroid-studio-blender-unity/</id>
+    <link href="https://shiokiri.com/2022-04-01-vroid-studio/"/>
+    <id>https://shiokiri.com/2022-04-01-vroid-studio/</id>
     <published>2022-04-01T07:04:25.000Z</published>
     <updated>2022-04-01T13:39:37.318Z</updated>
     
@@ -382,14 +474,14 @@
   
   <entry>
     <title>使用Gmail进行域名邮箱邮件收发</title>
-    <link href="https://shiokiri.com/2022/domain_mail/"/>
-    <id>https://shiokiri.com/2022/domain_mail/</id>
+    <link href="https://shiokiri.com/2022-02-12-domain-mail/"/>
+    <id>https://shiokiri.com/2022-02-12-domain-mail/</id>
     <published>2022-02-12T15:48:00.000Z</published>
-    <updated>2022-04-01T12:47:18.190Z</updated>
+    <updated>2025-03-21T00:51:09.471Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于：A.D.2022.02.13&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2025.03.21&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -405,8 +497,8 @@
   
   <entry>
     <title>后端开发学习</title>
-    <link href="https://shiokiri.com/2022/backend/"/>
-    <id>https://shiokiri.com/2022/backend/</id>
+    <link href="https://shiokiri.com/2022-01-30-backend/"/>
+    <id>https://shiokiri.com/2022-01-30-backend/</id>
     <published>2022-01-29T20:24:25.000Z</published>
     <updated>2022-04-01T12:53:08.925Z</updated>
     
@@ -420,9 +512,9 @@
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="MySQL" scheme="https://shiokiri.com/tags/MySQL/"/>
-    
     <category term="Java" scheme="https://shiokiri.com/tags/Java/"/>
+    
+    <category term="MySQL" scheme="https://shiokiri.com/tags/MySQL/"/>
     
     <category term="SpringBoot" scheme="https://shiokiri.com/tags/SpringBoot/"/>
     
@@ -434,8 +526,8 @@
   
   <entry>
     <title>电子产品评测</title>
-    <link href="https://shiokiri.com/2022/electronics/"/>
-    <id>https://shiokiri.com/2022/electronics/</id>
+    <link href="https://shiokiri.com/2022-01-30-electronics/"/>
+    <id>https://shiokiri.com/2022-01-30-electronics/</id>
     <published>2022-01-29T20:23:12.000Z</published>
     <updated>2022-06-23T18:28:23.019Z</updated>
     
@@ -457,8 +549,8 @@
   
   <entry>
     <title>Python网络爬虫学习</title>
-    <link href="https://shiokiri.com/2022/python_web_crawler/"/>
-    <id>https://shiokiri.com/2022/python_web_crawler/</id>
+    <link href="https://shiokiri.com/2022-01-12-python-web-crawler/"/>
+    <id>https://shiokiri.com/2022-01-12-python-web-crawler/</id>
     <published>2022-01-11T17:01:20.000Z</published>
     <updated>2022-03-30T15:00:48.714Z</updated>
     
@@ -480,35 +572,37 @@
   
   <entry>
     <title>「观测者轻语」杂谈</title>
-    <link href="https://shiokiri.com/2021/talk_1/"/>
-    <id>https://shiokiri.com/2021/talk_1/</id>
+    <link href="https://shiokiri.com/2021-08-08-talk-1/"/>
+    <id>https://shiokiri.com/2021-08-08-talk-1/</id>
     <published>2021-08-08T02:18:09.000Z</published>
-    <updated>2023-03-04T19:34:18.949Z</updated>
+    <updated>2025-03-21T01:54:14.800Z</updated>
     
     
-    <summary type="html">&lt;p&gt;1.关于生活意义&lt;/p&gt;
-&lt;p&gt;2.关于电子游戏&lt;/p&gt;
-&lt;p&gt;3.关于编程学习&lt;/p&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2025.03.21&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/tags/杂谈/"/>
+    <category term="编程学习" scheme="https://shiokiri.com/tags/编程学习/"/>
+    
+    <category term="电子游戏" scheme="https://shiokiri.com/tags/电子游戏/"/>
     
   </entry>
   
   <entry>
     <title>落影汐雾的记录集</title>
-    <link href="https://shiokiri.com/2021/record_set/"/>
-    <id>https://shiokiri.com/2021/record_set/</id>
+    <link href="https://shiokiri.com/2021-08-01-record_set/"/>
+    <id>https://shiokiri.com/2021-08-01-record_set/</id>
     <published>2021-07-31T20:33:26.000Z</published>
-    <updated>2022-03-22T15:03:05.775Z</updated>
+    <updated>2025-03-21T01:05:08.748Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;最后更新：A.D.2022.2.13&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2025.03.21&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;这篇文章大概就是用来在网页上看看的……\ (￣︶￣\ *))&lt;/p&gt;</summary>
     
@@ -522,33 +616,39 @@
   </entry>
   
   <entry>
-    <title>夏日小日记</title>
-    <link href="https://shiokiri.com/2021/diary_1/"/>
-    <id>https://shiokiri.com/2021/diary_1/</id>
+    <title>2021夏日小日记</title>
+    <link href="https://shiokiri.com/2021-07-29-diary/"/>
+    <id>https://shiokiri.com/2021-07-29-diary/</id>
     <published>2021-07-29T02:18:09.000Z</published>
-    <updated>2023-03-04T19:30:20.118Z</updated>
+    <updated>2025-03-21T01:53:10.613Z</updated>
     
     
-    <summary type="html">&lt;p&gt;以此或多或少记录下一点暑假的生活 \ (￣︶￣\ *))&lt;/p&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2021.09.01&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以此或多或少记录下一点暑假的生活 \ (￣︶￣\ *))&lt;/p&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
-    <category term="日记" scheme="https://shiokiri.com/tags/日记/"/>
+    <category term="回忆录" scheme="https://shiokiri.com/tags/回忆录/"/>
     
   </entry>
   
   <entry>
     <title>MMD制作简介</title>
-    <link href="https://shiokiri.com/2020/MMD/"/>
-    <id>https://shiokiri.com/2020/MMD/</id>
+    <link href="https://shiokiri.com/2020-08-19-mmd/"/>
+    <id>https://shiokiri.com/2020-08-19-mmd/</id>
     <published>2020-08-19T14:22:39.000Z</published>
-    <updated>2020-08-20T01:02:07.511Z</updated>
+    <updated>2025-03-21T01:14:32.507Z</updated>
     
     
-    <summary type="html">&lt;p&gt;刚刚做的：【MMD/洛天依】你是分割我人生的线 又将它们相连~勾指起誓 [1080p60fps]&lt;/p&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2020.08.19&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;刚刚做的：【MMD/洛天依】你是分割我人生的线 又将它们相连~勾指起誓 [1080p60fps]&lt;/p&gt;</summary>
     
     
     
@@ -561,34 +661,38 @@
   
   <entry>
     <title>烦躁沉寂的八月</title>
-    <link href="https://shiokiri.com/2020/august/"/>
-    <id>https://shiokiri.com/2020/august/</id>
+    <link href="https://shiokiri.com/2020-08-16-august/"/>
+    <id>https://shiokiri.com/2020-08-16-august/</id>
     <published>2020-08-16T14:03:37.000Z</published>
-    <updated>2022-02-12T15:54:11.270Z</updated>
+    <updated>2025-03-21T01:51:53.071Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;蝉时雨 化成淡墨渲染暮色&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+&lt;p&gt;更新于：A.D.2020.08.16 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;蝉时雨 化成淡墨渲染暮色&lt;/p&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
-    <category term="回忆" scheme="https://shiokiri.com/tags/回忆/"/>
+    <category term="回忆录" scheme="https://shiokiri.com/tags/回忆录/"/>
     
   </entry>
   
   <entry>
     <title>使用jsDelivr+PicGo对图片进行cdn加速</title>
-    <link href="https://shiokiri.com/2020/cdn/"/>
-    <id>https://shiokiri.com/2020/cdn/</id>
+    <link href="https://shiokiri.com/2020-08-16-cdn/"/>
+    <id>https://shiokiri.com/2020-08-16-cdn/</id>
     <published>2020-08-15T23:45:15.000Z</published>
-    <updated>2020-08-16T01:10:55.429Z</updated>
+    <updated>2025-03-21T01:14:36.561Z</updated>
     
     
-    <summary type="html">&lt;p&gt;GitHub Pages上图片的访问速度不佳，而且使用不便，现在来用&lt;code&gt;GitHub+jsDelivr+PicGo&lt;/code&gt;解决这个问题。&lt;/p&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2020.08.16&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;GitHub Pages上图片的访问速度不佳，而且使用不便，现在来用&lt;code&gt;GitHub+jsDelivr+PicGo&lt;/code&gt;解决这个问题。&lt;/p&gt;</summary>
     
     
     
@@ -603,17 +707,20 @@
   
   <entry>
     <title>一些metagame的介绍与评价（无剧透）</title>
-    <link href="https://shiokiri.com/2020/metagame/"/>
-    <id>https://shiokiri.com/2020/metagame/</id>
+    <link href="https://shiokiri.com/2020-05-18-metagame/"/>
+    <id>https://shiokiri.com/2020-05-18-metagame/</id>
     <published>2020-05-18T15:53:35.000Z</published>
-    <updated>2022-02-12T15:53:26.003Z</updated>
+    <updated>2025-03-21T01:49:47.089Z</updated>
     
     
-    <summary type="html">&lt;p&gt;meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。&lt;/p&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2021.07.31&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;meta这个概念最早源于元小说（Metafiction），比如乔斯坦·贾德的《苏菲的世界》就属于这一类小说。&lt;/p&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
     <category term="metagame" scheme="https://shiokiri.com/tags/metagame/"/>
@@ -624,41 +731,37 @@
   
   <entry>
     <title>我接触与学习编程及OI的经历</title>
-    <link href="https://shiokiri.com/2020/about-program/"/>
-    <id>https://shiokiri.com/2020/about-program/</id>
+    <link href="https://shiokiri.com/2020-02-29-about-program/"/>
+    <id>https://shiokiri.com/2020-02-29-about-program/</id>
     <published>2020-02-29T02:18:09.000Z</published>
-    <updated>2022-02-12T17:41:35.097Z</updated>
+    <updated>2025-03-21T01:51:27.967Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2025.03.21 &lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
-    <category term="编程" scheme="https://shiokiri.com/tags/编程/"/>
+    <category term="编程学习" scheme="https://shiokiri.com/tags/编程学习/"/>
     
-    <category term="经历" scheme="https://shiokiri.com/tags/经历/"/>
+    <category term="OI学习" scheme="https://shiokiri.com/tags/OI学习/"/>
     
   </entry>
   
   <entry>
-    <title>Windows软件快速指南</title>
-    <link href="https://shiokiri.com/2019/software/"/>
-    <id>https://shiokiri.com/2019/software/</id>
+    <title>Windows软件指南</title>
+    <link href="https://shiokiri.com/2019-10-28-software/"/>
+    <id>https://shiokiri.com/2019-10-28-software/</id>
     <published>2019-10-27T09:44:02.000Z</published>
-    <updated>2020-02-29T08:39:57.876Z</updated>
+    <updated>2025-03-21T01:14:47.978Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019.10.28&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.10.28&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -672,41 +775,37 @@
   
   <entry>
     <title>PyQt5上手指南</title>
-    <link href="https://shiokiri.com/2019/pyqt/"/>
-    <id>https://shiokiri.com/2019/pyqt/</id>
+    <link href="https://shiokiri.com/2019-10-25-pyqt/"/>
+    <id>https://shiokiri.com/2019-10-25-pyqt/</id>
     <published>2019-10-25T11:50:55.000Z</published>
-    <updated>2022-02-12T18:01:38.336Z</updated>
+    <updated>2025-03-21T01:14:50.372Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;更新于：A.D.2019.10.25&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
     
     
     
     <category term="编程" scheme="https://shiokiri.com/categories/编程/"/>
     
     
-    <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
-    
     <category term="Python" scheme="https://shiokiri.com/tags/Python/"/>
+    
+    <category term="PyQt" scheme="https://shiokiri.com/tags/PyQt/"/>
     
   </entry>
   
   <entry>
     <title>VSCode配置Python环境及Python入门学习</title>
-    <link href="https://shiokiri.com/2019/python/"/>
-    <id>https://shiokiri.com/2019/python/</id>
+    <link href="https://shiokiri.com/2019-10-17-python/"/>
+    <id>https://shiokiri.com/2019-10-17-python/</id>
     <published>2019-10-17T08:46:37.000Z</published>
-    <updated>2022-02-12T18:01:43.274Z</updated>
+    <updated>2025-03-21T01:14:52.155Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019.10.17 内容完善中!&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.10.17&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -720,14 +819,14 @@
   
   <entry>
     <title>Github Pages+HTML5 up制作个人主页及绑定二级域名</title>
-    <link href="https://shiokiri.com/2019/html_page/"/>
-    <id>https://shiokiri.com/2019/html_page/</id>
+    <link href="https://shiokiri.com/2019-09-23-html5-up/"/>
+    <id>https://shiokiri.com/2019-09-23-html5-up/</id>
     <published>2019-09-23T10:31:38.000Z</published>
-    <updated>2019-09-23T10:38:45.345Z</updated>
+    <updated>2025-03-21T01:15:06.937Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;好看是第一生产力​qwq&lt;/p&gt;</summary>
     
@@ -744,14 +843,14 @@
   
   <entry>
     <title>「莫比乌斯反演」</title>
-    <link href="https://shiokiri.com/2019/mobius/"/>
-    <id>https://shiokiri.com/2019/mobius/</id>
+    <link href="https://shiokiri.com/2019-09-23-mobius/"/>
+    <id>https://shiokiri.com/2019-09-23-mobius/</id>
     <published>2019-09-23T01:40:00.000Z</published>
-    <updated>2019-10-17T08:02:25.455Z</updated>
+    <updated>2025-03-21T01:15:02.025Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -767,14 +866,14 @@
   
   <entry>
     <title>「后缀数组」</title>
-    <link href="https://shiokiri.com/2019/SA/"/>
-    <id>https://shiokiri.com/2019/SA/</id>
+    <link href="https://shiokiri.com/2019-09-23-sa/"/>
+    <id>https://shiokiri.com/2019-09-23-sa/</id>
     <published>2019-09-23T01:38:18.000Z</published>
-    <updated>2019-10-17T08:05:57.161Z</updated>
+    <updated>2025-03-21T01:14:56.618Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -788,14 +887,14 @@
   
   <entry>
     <title>「概率期望」</title>
-    <link href="https://shiokiri.com/2019/probability/"/>
-    <id>https://shiokiri.com/2019/probability/</id>
+    <link href="https://shiokiri.com/2019-09-23-probability/"/>
+    <id>https://shiokiri.com/2019-09-23-probability/</id>
     <published>2019-09-23T01:34:34.000Z</published>
-    <updated>2021-08-02T07:07:11.597Z</updated>
+    <updated>2025-03-21T01:14:58.552Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -811,14 +910,14 @@
   
   <entry>
     <title>C++STL的OI常用内容</title>
-    <link href="https://shiokiri.com/2019/C++_stl/"/>
-    <id>https://shiokiri.com/2019/C++_stl/</id>
+    <link href="https://shiokiri.com/2019-09-23-cpp-stl/"/>
+    <id>https://shiokiri.com/2019-09-23-cpp-stl/</id>
     <published>2019-09-23T01:13:16.000Z</published>
-    <updated>2022-02-12T18:03:27.681Z</updated>
+    <updated>2025-03-21T01:15:09.442Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23 &lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -836,14 +935,14 @@
   
   <entry>
     <title>「分层图」</title>
-    <link href="https://shiokiri.com/2019/layered_graph/"/>
-    <id>https://shiokiri.com/2019/layered_graph/</id>
+    <link href="https://shiokiri.com/2019-09-23-layered-graph/"/>
+    <id>https://shiokiri.com/2019-09-23-layered-graph/</id>
     <published>2019-09-23T01:10:16.000Z</published>
-    <updated>2020-08-16T02:13:34.183Z</updated>
+    <updated>2025-03-21T01:15:03.907Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -857,14 +956,14 @@
   
   <entry>
     <title>「网络流」</title>
-    <link href="https://shiokiri.com/2019/network_flow/"/>
-    <id>https://shiokiri.com/2019/network_flow/</id>
+    <link href="https://shiokiri.com/2019-09-23-network-flow/"/>
+    <id>https://shiokiri.com/2019-09-23-network-flow/</id>
     <published>2019-09-23T01:03:54.000Z</published>
-    <updated>2020-08-16T02:13:54.776Z</updated>
+    <updated>2025-03-21T01:15:00.417Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -878,14 +977,14 @@
   
   <entry>
     <title>「线段树」</title>
-    <link href="https://shiokiri.com/2019/segment_tree/"/>
-    <id>https://shiokiri.com/2019/segment_tree/</id>
+    <link href="https://shiokiri.com/2019-09-23-segment-tree/"/>
+    <id>https://shiokiri.com/2019-09-23-segment-tree/</id>
     <published>2019-09-23T00:53:53.000Z</published>
-    <updated>2020-08-16T02:20:20.941Z</updated>
+    <updated>2025-03-21T01:14:54.154Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-09-23&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.09.23&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -899,35 +998,35 @@
   
   <entry>
     <title>《意识宇宙》</title>
-    <link href="https://shiokiri.com/2019/science_fiction/"/>
-    <id>https://shiokiri.com/2019/science_fiction/</id>
+    <link href="https://shiokiri.com/2019-09-22-science-fiction/"/>
+    <id>https://shiokiri.com/2019-09-22-science-fiction/</id>
     <published>2019-09-22T13:22:07.000Z</published>
-    <updated>2022-02-12T15:55:21.259Z</updated>
+    <updated>2025-03-21T01:53:39.577Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-10-26&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.10.26&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
     
-    <category term="杂谈" scheme="https://shiokiri.com/categories/杂谈/"/>
+    <category term="随笔" scheme="https://shiokiri.com/categories/随笔/"/>
     
     
-    <category term="科幻" scheme="https://shiokiri.com/tags/科幻/"/>
+    <category term="科幻小说" scheme="https://shiokiri.com/tags/科幻小说/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客搭建及Material主题使用指南</title>
-    <link href="https://shiokiri.com/2019/blog/"/>
-    <id>https://shiokiri.com/2019/blog/</id>
+    <link href="https://shiokiri.com/2019-08-16-blog/"/>
+    <id>https://shiokiri.com/2019-08-16-blog/</id>
     <published>2019-08-16T10:37:19.000Z</published>
-    <updated>2022-02-12T16:35:22.084Z</updated>
+    <updated>2025-03-21T01:15:13.328Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于： A.D.2022.2.13&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2022.2.13&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;前端真好玩qvq&lt;/p&gt;</summary>
     
@@ -942,14 +1041,14 @@
   
   <entry>
     <title>「FFT/NTT」「多项式」</title>
-    <link href="https://shiokiri.com/2019/FFT/"/>
-    <id>https://shiokiri.com/2019/FFT/</id>
+    <link href="https://shiokiri.com/2019-08-15-fft-ntt/"/>
+    <id>https://shiokiri.com/2019-08-15-fft-ntt/</id>
     <published>2019-08-15T12:16:04.000Z</published>
-    <updated>2019-10-17T08:40:08.153Z</updated>
+    <updated>2025-03-21T01:15:15.321Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-08-15&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.08.15&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;必忘原理的&lt;code&gt;FFT&lt;/code&gt;&lt;/p&gt;</summary>
     
@@ -966,14 +1065,14 @@
   
   <entry>
     <title>「动态规划」</title>
-    <link href="https://shiokiri.com/2019/dp/"/>
-    <id>https://shiokiri.com/2019/dp/</id>
+    <link href="https://shiokiri.com/2019-08-14-dp/"/>
+    <id>https://shiokiri.com/2019-08-14-dp/</id>
     <published>2019-08-14T07:04:06.000Z</published>
-    <updated>2019-10-17T08:39:47.793Z</updated>
+    <updated>2025-03-21T01:15:17.516Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-10-17&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.10.17&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;推不出的&lt;code&gt;DP&lt;/code&gt;方程&lt;/p&gt;</summary>
     
@@ -988,14 +1087,14 @@
   
   <entry>
     <title>从零开始的C++学习</title>
-    <link href="https://shiokiri.com/2019/C++/"/>
-    <id>https://shiokiri.com/2019/C++/</id>
+    <link href="https://shiokiri.com/2019-08-09-cpp/"/>
+    <id>https://shiokiri.com/2019-08-09-cpp/</id>
     <published>2019-08-09T08:04:47.000Z</published>
-    <updated>2022-04-01T14:10:32.542Z</updated>
+    <updated>2025-03-21T01:15:22.418Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;更新于：A.D.2019-10-17 &lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.10.17 &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;Visual Studio&lt;/code&gt;过于复杂&lt;/p&gt;</summary>
     
@@ -1010,14 +1109,14 @@
   
   <entry>
     <title>「数论」</title>
-    <link href="https://shiokiri.com/2019/number_theory/"/>
-    <id>https://shiokiri.com/2019/number_theory/</id>
+    <link href="https://shiokiri.com/2019-08-09-number-theory/"/>
+    <id>https://shiokiri.com/2019-08-09-number-theory/</id>
     <published>2019-08-09T06:37:38.000Z</published>
-    <updated>2020-07-11T23:09:07.593Z</updated>
+    <updated>2025-03-21T01:15:20.586Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-08-09&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.08.09&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;只会&lt;code&gt;GCD&lt;/code&gt;&lt;/p&gt;</summary>
     
@@ -1032,14 +1131,14 @@
   
   <entry>
     <title>Chrome浏览器 | 插件与设置</title>
-    <link href="https://shiokiri.com/2019/chrome/"/>
-    <id>https://shiokiri.com/2019/chrome/</id>
+    <link href="https://shiokiri.com/2019-06-04-chrome/"/>
+    <id>https://shiokiri.com/2019-06-04-chrome/</id>
     <published>2019-06-04T09:54:25.000Z</published>
-    <updated>2022-02-12T18:02:14.329Z</updated>
+    <updated>2025-03-21T01:15:24.974Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-06-04&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.06.04&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -1053,14 +1152,14 @@
   
   <entry>
     <title>科学上网 | GFW与SSR简介</title>
-    <link href="https://shiokiri.com/2019/GFW/"/>
-    <id>https://shiokiri.com/2019/GFW/</id>
+    <link href="https://shiokiri.com/2019-06-01-gfw/"/>
+    <id>https://shiokiri.com/2019-06-01-gfw/</id>
     <published>2019-06-01T13:52:50.000Z</published>
-    <updated>2022-02-08T15:24:34.023Z</updated>
+    <updated>2025-03-21T01:15:27.467Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Update on A.D.2019-05-31&lt;/p&gt;
+&lt;p&gt;更新于：A.D.2019.05.31&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Across the Great Wall we can reach every corner in the world.&lt;/p&gt;</summary>
     
